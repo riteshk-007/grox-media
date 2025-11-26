@@ -106,11 +106,11 @@ const Footer: React.FC = () => {
                             </div>
                             <div className="min-w-0 flex-1">
                                 <a
-                                    href="mailto:hello@groxmedia.in"
+                                    href="mailto:groxmedia55@gmail.com"
                                     className="text-gray-700 font-semibold text-sm sm:text-base hover:text-groxOrange transition-colors duration-200 block break-all"
 
                                 >
-                                    hello@groxmedia.in
+                                    groxmedia55@gmail.com
                                 </a>
                                 <div className="text-gray-500 text-xs sm:text-sm mt-0.5">
                                     24-hour response time

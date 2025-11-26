@@ -120,7 +120,7 @@ function buildUserTemplate({ name, message }: { name: string; message?: string }
         <strong>GroxMedia</strong><br/>
         Your Trusted IT Service Partner<br/>
         Web Development | Digital Marketing | Graphic Design | MVP Development<br/><br/>
-        📞 +91 92668 06477 • ✉️ hello@groxmedia.in<br/>
+        📞 +91 92668 06477 • ✉️ groxmedia55@gmail.com<br/>
         🌐 www.groxmedia.in
       </div>
     </div>

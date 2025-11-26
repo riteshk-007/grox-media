@@ -44,10 +44,10 @@ export default function PrivacyPage() {
                     <p className="text-gray-700 mb-6">We may use third-party services (analytics, hosting, chat) that may collect limited technical data. We choose trusted providers and don&apos;t share personal data except to deliver services you request.</p>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Your choices</h3>
-                    <p className="text-gray-700 mb-6">You can ask us to remove your data by contacting hello@groxmedia.in. We&apos;ll respond quickly and delete your personal information where required.</p>
+                    <p className="text-gray-700 mb-6">You can ask us to remove your data by contacting groxmedia55@gmail.com. We&apos;ll respond quickly and delete your personal information where required.</p>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact</h3>
-                    <p className="text-gray-700">If you have questions about privacy, email us at <a href="mailto:hello@groxmedia.in" className="text-groxBlue font-semibold hover:underline">hello@groxmedia.in</a>.</p>
+                    <p className="text-gray-700">If you have questions about privacy, email us at <a href="mailto:groxmedia55@gmail.com" className="text-groxBlue font-semibold hover:underline">groxmedia55@gmail.com</a>.</p>
                 </div>
             </div>
         </main>

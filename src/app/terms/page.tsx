@@ -44,7 +44,7 @@ export default function TermsPage() {
                     <p className="text-gray-700 mb-6">We do our best to provide accurate information, but we aren&apos;t liable for indirect damages. For custom work, see our agreement terms.</p>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact</h3>
-                    <p className="text-gray-700">Questions about these terms? Email <a href="mailto:hello@groxmedia.in" className="text-groxBlue font-semibold hover:underline">hello@groxmedia.in</a>.</p>
+                    <p className="text-gray-700">Questions about these terms? Email <a href="mailto:groxmedia55@gmail.com" className="text-groxBlue font-semibold hover:underline">groxmedia55@gmail.com</a>.</p>
                 </div>
             </div>
         </main>
