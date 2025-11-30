@@ -6,12 +6,14 @@ import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import Faq from "@/components/shared/Faq";
 import Testimonials from "@/components/Testimonials";
+import WhyChooseUsSection from "@/components/shared/WhyChooseUsSection";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Hero />
       <Services />
+      <WhyChooseUsSection />
       <About />
       <Technologies />
       <Portfolio />

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    Shield,
     Clock,
     Users,
     Headphones,
@@ -11,7 +10,6 @@ import {
     ArrowRight,
     IndianRupee
 } from 'lucide-react';
-import HeadText from './Head-Text';
 
 const WhyChooseUsSection = () => {
     const benefits = [
@@ -72,9 +70,20 @@ const WhyChooseUsSection = () => {
 
             <div className="max-w-7xl mx-auto relative z-10">
 
-                <HeadText title="We Don't Just Code, We Create Success" icon={<Shield className="w-4 h-4" />} icontitle="  WHY CHOOSE GROXMEDIA"
-                    description="150+ businesses trust us for their digital transformation.
-                        Here's why we're the right choice for your next project." />
+
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 capitalize">
+                        Why Choose <span className="text-groxBlue"> Grox Media</span>
+                    </h2>
+                    <h3 className="text-lg text-gray-600  mx-auto text2xl md:text-3xl font-medium my-4">
+                        We Don&apos;t Just Code, We Create Success
+                    </h3>
+
+                    {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        150+ businesses trust us for their digital transformation.
+                        Here&apos;s why we&apos;re the right choice for your next project.
+                    </p> */}
+                </div>
 
 
                 {/* Benefits Grid */}
