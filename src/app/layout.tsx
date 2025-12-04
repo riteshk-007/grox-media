@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'GroxMedia - IT Services',
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "GroxMedia - Digital Excellence Redefined",
     description: "Expert IT solutions including web development, graphic designing, and digital marketing.",
     creator: '@groxmedia',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,

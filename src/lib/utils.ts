@@ -26,7 +26,7 @@ export const toBase64 = (str: string) =>
     : window.btoa(str)
 
 // Replace clearly invalid or known-bad image URLs with a local fallback to avoid 404s from the Next image optimizer
-export function safeImageUrl(src?: string | null, fallback: string = '/og-image.png'): string {
+export function safeImageUrl(src?: string | null, fallback: string = '/og-image.jpg'): string {
   if (!src || typeof src !== 'string') return fallback;
   try {
     // Allow root-relative assets as-is
