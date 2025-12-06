@@ -30,10 +30,10 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              We Are <span className="text-groxBlue">GroxMedia</span>
+              We Are <span className="text-groxBlue">Grox Media</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              At GroxMedia, we believe in the power of digital transformation.
+              At Grox Media, we believe in the power of digital transformation.
               We are a team of passionate developers, designers, and strategists
               dedicated to helping businesses thrive in the digital age.
             </p>

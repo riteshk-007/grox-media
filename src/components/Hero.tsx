@@ -169,7 +169,7 @@ const Hero = () => {
                 </h1>
 
                 <p className="text-lg text-gray-100 md:text-gray-700 font-medium drop-shadow">
-                  GroxMedia transforms your vision into powerful digital
+                  Grox Media transforms your vision into powerful digital
                   solutions. We specialize in cutting-edge web development,
                   stunning design, and strategic growth.
                 </p>

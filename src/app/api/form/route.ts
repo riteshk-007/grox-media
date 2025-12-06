@@ -67,17 +67,23 @@ function buildAdminTemplate({
           <div class="label">Mobile</div>
           <div class="value">${mobileNumber}</div>
         </div>
-        ${age ? `<div class="field"><div class="label">Age</div><div class="value">${age}</div></div>` : ""}
+        ${
+          age
+            ? `<div class="field"><div class="label">Age</div><div class="value">${age}</div></div>`
+            : ""
+        }
         <div class="field">
           <div class="label">Message</div>
           <div class="value">${message.replace(/\n/g, "<br>")}</div>
         </div>
         <p style="font-size:12px;color:#999;text-align:right;margin-top:20px;">
-          Submitted: ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })}
+          Submitted: ${new Date().toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+          })}
         </p>
       </div>
       <div class="footer">
-        <strong>GroxMedia Admin Notification</strong><br/>
+        <strong>Grox Media Admin Notification</strong><br/>
         This is an automated message from your website contact form.
       </div>
     </div>
@@ -86,7 +92,13 @@ function buildAdminTemplate({
 }
 
 // 🌟 CLIENT TEMPLATE
-function buildUserTemplate({ name, message }: { name: string; message?: string }) {
+function buildUserTemplate({
+  name,
+  message,
+}: {
+  name: string;
+  message?: string;
+}) {
   return `
   <html>
   <head>
@@ -106,7 +118,7 @@ function buildUserTemplate({ name, message }: { name: string; message?: string }
   <body>
     <div class="container">
       <div class="header">
-        <h2>Thank You for Contacting GroxMedia</h2>
+        <h2>Thank You for Contacting Grox Media</h2>
       </div>
       <div class="body">
         <p>Hi <strong>${name}</strong>,</p>
@@ -114,10 +126,10 @@ function buildUserTemplate({ name, message }: { name: string; message?: string }
         <p>Here is a copy of your message:</p>
         <div class="message-box">${(message || "").replace(/\n/g, "<br>")}</div>
         <p>If this is urgent, please call us directly at <strong>+91 92668 06477</strong>.</p>
-        <p>Best Regards,<br/><strong>The GroxMedia Team</strong></p>
+        <p>Best Regards,<br/><strong>The Grox Media Team</strong></p>
       </div>
       <div class="footer">
-        <strong>GroxMedia</strong><br/>
+        <strong>Grox Media</strong><br/>
         Your Trusted IT Service Partner<br/>
         Web Development | Digital Marketing | Graphic Design | MVP Development<br/><br/>
         📞 +91 92668 06477 • ✉️ groxmedia55@gmail.com<br/>
@@ -129,11 +141,17 @@ function buildUserTemplate({ name, message }: { name: string; message?: string }
 }
 
 // 🔧 CORS Headers Helper
-function setCorsHeaders(response: NextResponse, origin: string | null): NextResponse {
+function setCorsHeaders(
+  response: NextResponse,
+  origin: string | null
+): NextResponse {
   if (origin && ALLOWED_ORIGINS.includes(origin)) {
     response.headers.set("Access-Control-Allow-Origin", origin);
     response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
-    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    response.headers.set(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
     response.headers.set("Access-Control-Max-Age", "86400"); // 24 hours
   }
   return response;
@@ -175,16 +193,16 @@ export async function POST(request: NextRequest) {
     // 📨 Send both mails in parallel
     await Promise.all([
       transporter.sendMail({
-        from: `"GroxMedia" <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
+        from: `"Grox Media" <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
         to: adminRecipients,
         subject: `New Contact: ${name} | ${mobileNumber}`,
         html: buildAdminTemplate({ name, email, mobileNumber, message, age }),
         replyTo: email,
       }),
       transporter.sendMail({
-        from: `"GroxMedia" <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
+        from: `"Grox Media" <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
         to: email,
-        subject: `Thanks for contacting GroxMedia`,
+        subject: `Thanks for contacting Grox Media`,
         html: buildUserTemplate({ name, message }),
       }),
     ]);

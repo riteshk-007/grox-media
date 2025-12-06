@@ -29,7 +29,7 @@ const testimonials = [
     company: "TechFlow",
     role: "CTO",
     quote:
-      "GroxMedia transformed our digital presence. The team is incredibly talented.",
+      "Grox Media transformed our digital presence. The team is incredibly talented.",
   },
   {
     name: "Priya Patel",
@@ -50,7 +50,7 @@ const Testimonials = () => {
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Don&apos;t just take our word for it. Here&apos;s what our clients
           have to say about their experience with{" "}
-          <span className="text-groxBlue">GroxMedia</span>.
+          <span className="text-groxBlue">Grox Media</span>.
         </p>
       </div>
 

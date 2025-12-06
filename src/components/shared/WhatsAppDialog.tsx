@@ -93,7 +93,7 @@ const WhatsAppDialog: React.FC<WhatsAppDialogProps> = ({
           <h3 className="text-xl font-bold text-gray-900 mb-2">
             Open WhatsApp?
           </h3>
-          <p className="text-gray-600 mb-2">Chat with GroxMedia on WhatsApp</p>
+          <p className="text-gray-600 mb-2">Chat with Grox Media on WhatsApp</p>
 
           {/* Phone number with highlight */}
           <div className="bg-green-50 border-l-4 border-green-500 p-3 my-4">

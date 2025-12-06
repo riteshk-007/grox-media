@@ -33,24 +33,24 @@ const satoshiBlack = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "GroxMedia - Digital Excellence Redefined",
-    template: "%s | GroxMedia",
+    default: "Grox Media - Digital Excellence Redefined",
+    template: "%s | Grox Media",
   },
   description:
-    "GroxMedia provides top-quality IT services. Expert web development, graphic designing, digital marketing, and complete IT solutions for businesses.",
+    "Grox Media provides top-quality IT services. Expert web development, graphic designing, digital marketing, and complete IT solutions for businesses.",
   keywords: [
     "IT services",
     "web development",
     "graphic designing",
     "digital marketing",
-    "GroxMedia",
+    "Grox Media",
     "IT company",
     "SEO services",
     "social media marketing",
   ],
-  authors: [{ name: "GroxMedia Team" }],
-  creator: "GroxMedia",
-  publisher: "GroxMedia",
+  authors: [{ name: "Grox Media Team" }],
+  creator: "Grox Media",
+  publisher: "Grox Media",
   formatDetection: {
     email: false,
     address: false,
@@ -61,11 +61,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "GroxMedia - Digital Excellence Redefined",
+    title: "Grox Media - Digital Excellence Redefined",
     description:
       "Expert IT solutions including web development, graphic designing, and digital marketing.",
     url: "https://groxmedia.in",
-    siteName: "GroxMedia",
+    siteName: "Grox Media",
     locale: "en_IN",
     type: "website",
     images: [
@@ -73,13 +73,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "GroxMedia - IT Services",
+        alt: "Grox Media - IT Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GroxMedia - Digital Excellence Redefined",
+    title: "Grox Media - Digital Excellence Redefined",
     description:
       "Expert IT solutions including web development, graphic designing, and digital marketing.",
     creator: "@groxmedia",
