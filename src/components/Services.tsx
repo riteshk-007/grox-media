@@ -19,9 +19,9 @@ const services = [
   },
   {
     icon: <Palette className="h-8 w-8 text-groxOrange" />,
-    title: "UI/UX Design",
+    title: "Graphic Design",
     description:
-      "Intuitive and visually stunning designs that enhance user engagement and brand identity.",
+      "Intuitive and visually stunning designs that enhance user engagement and brand identity. We create logos, brochures, flyers, and more.",
   },
   {
     icon: <Megaphone className="h-8 w-8 text-groxBlue" />,
@@ -43,9 +43,9 @@ const services = [
   },
   {
     icon: <BarChart className="h-8 w-8 text-groxOrange" />,
-    title: "Analytics & Growth",
+    title: "Video Editing",
     description:
-      "Data-driven insights to optimize performance and scale your business.",
+      "We create engaging and professional videos for your business. We edit videos, create animations, and more.",
   },
 ];
 
