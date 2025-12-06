@@ -62,7 +62,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -70,15 +70,15 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-5 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+              className="bg-white p-3 md:p-5 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
             >
-              <div className="mb-6 bg-gray-50 w-16 h-16 flex items-center justify-center">
+              <div className="mb-3 md:mb-6 bg-gray-50 md:w-16 md:h-16 w-12 h-12 flex items-center justify-center">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-base md:text-xl font-bold text-gray-900 mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-xs md:text-base">
                 {service.description}
               </p>
             </motion.div>
