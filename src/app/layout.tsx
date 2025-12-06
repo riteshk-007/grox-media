@@ -5,8 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/shared/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import { Toaster } from "@/components/ui/sonner";
-import { Analytics } from "@vercel/analytics/next"
-
+import { Analytics } from "@vercel/analytics/next";
 
 const satoshiRegular = localFont({
   src: "./fonts/Satoshi-Regular.otf",
@@ -35,9 +34,10 @@ const satoshiBlack = localFont({
 export const metadata: Metadata = {
   title: {
     default: "GroxMedia - Digital Excellence Redefined",
-    template: "%s | GroxMedia"
+    template: "%s | GroxMedia",
   },
-  description: "GroxMedia provides top-quality IT services. Expert web development, graphic designing, digital marketing, and complete IT solutions for businesses.",
+  description:
+    "GroxMedia provides top-quality IT services. Expert web development, graphic designing, digital marketing, and complete IT solutions for businesses.",
   keywords: [
     "IT services",
     "web development",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "GroxMedia",
     "IT company",
     "SEO services",
-    "social media marketing"
+    "social media marketing",
   ],
   authors: [{ name: "GroxMedia Team" }],
   creator: "GroxMedia",
@@ -56,32 +56,34 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://groxmedia.in'),
+  metadataBase: new URL("https://groxmedia.in"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     title: "GroxMedia - Digital Excellence Redefined",
-    description: "Expert IT solutions including web development, graphic designing, and digital marketing.",
-    url: 'https://groxmedia.in',
-    siteName: 'GroxMedia',
-    locale: 'en_IN',
-    type: 'website',
+    description:
+      "Expert IT solutions including web development, graphic designing, and digital marketing.",
+    url: "https://groxmedia.in",
+    siteName: "GroxMedia",
+    locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'GroxMedia - IT Services',
-      }
+        alt: "GroxMedia - IT Services",
+      },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "GroxMedia - Digital Excellence Redefined",
-    description: "Expert IT solutions including web development, graphic designing, and digital marketing.",
-    creator: '@groxmedia',
-    images: ['/og-image.jpg'],
+    description:
+      "Expert IT solutions including web development, graphic designing, and digital marketing.",
+    creator: "@groxmedia",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -89,9 +91,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -106,13 +108,16 @@ export default function RootLayout({
       <head>
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       </head>
       <body
-        className={`${satoshiRegular.variable} ${satoshiMedium.variable} ${satoshiBold.variable} ${satoshiBlack.variable} font-satoshi-regular antialiased`}
+        className={`${satoshiRegular.variable} ${satoshiMedium.variable} ${satoshiBold.variable} ${satoshiBlack.variable} font-satoshi-regular antialiased overflow-x-hidden w-full`}
       >
-
         <Navbar />
         {children}
         <FloatingContactButton />
@@ -124,5 +129,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
