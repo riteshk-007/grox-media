@@ -7,7 +7,6 @@ import {
   Megaphone,
   Smartphone,
   Globe,
-  BarChart,
   Video,
 } from "lucide-react";
 

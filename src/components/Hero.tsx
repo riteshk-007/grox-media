@@ -103,19 +103,6 @@ const Hero = () => {
     }
   };
 
-  const scrollToForm = () => {
-    const formSection = document.querySelector('form[id="contact-form"]');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      // If form not found, scroll to the form in hero section
-      const heroForm = document.querySelector(".relative.bg-white.p-8");
-      if (heroForm) {
-        heroForm.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    }
-  };
-
   return (
     <section className="relative w-full lg:h-[85dvh] md:bg-white p-2 overflow-x-hidden overflow-y-auto pt-24 md:pt-20">
       {/* Desktop Video Background */}
