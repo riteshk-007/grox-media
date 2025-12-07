@@ -177,19 +177,12 @@ const Hero = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
-                    onClick={scrollToForm}
-                    className="bg-groxBlue hover:bg-blue-800 text-white text-lg px-8 py-6 h-auto"
-                  >
-                    Start Your Project
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                  <Button
-                    size="lg"
                     variant="outline"
                     onClick={() => router.push("/portfolio")}
-                    className="border-gray-300 text-gray-700 hover:bg-gray-50 text-lg px-8 py-6 h-auto"
+                    className="bg-groxBlue hover:bg-blue-800 text-white text-lg px-8 py-6 h-auto"
                   >
                     View Our Work
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
 

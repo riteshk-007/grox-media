@@ -8,6 +8,7 @@ import {
   Smartphone,
   Globe,
   BarChart,
+  Video,
 } from "lucide-react";
 
 const services = [
@@ -42,7 +43,7 @@ const services = [
       "Rank higher on search engines and drive organic traffic to your website.",
   },
   {
-    icon: <BarChart className="h-8 w-8 text-groxOrange" />,
+    icon: <Video className="h-8 w-8 text-groxOrange" />,
     title: "Video Editing",
     description:
       "We create engaging and professional videos for your business. We edit videos, create animations, and more.",
