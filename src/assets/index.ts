@@ -1,19 +1,25 @@
-import biglogoremove from "./logo-big-remove.png"
-import biglogo from "./logo-big.jpg"
-import smlogoremove from "./sm-logo-remove.png"
-import smlogo from "./sm-logo.png"
+import biglogoremove from "./logo-big-remove.png";
+import biglogo from "./logo-big.jpg";
+import smlogoremove from "./sm-logo-remove.png";
+import smlogo from "./sm-logo.png";
 
-// Services 
-import web from "./web.png";
-import mvp from "./mvp.png";
-import digital from "./digital.png";
-import graphic from "./graphic.png";
+// Services
+import web from "./website.jpg";
+import mvp from "./mvp.jpg";
+import digital from "./digital-marketing.jpg";
+import graphic from "./graphic.jpg";
 
+// about
+import about from "./about.jpg";
 
 export {
-    biglogoremove,
-    biglogo,
-    smlogoremove,
-    smlogo
-    , web, mvp, digital, graphic
-}
+  biglogoremove,
+  biglogo,
+  smlogoremove,
+  smlogo,
+  web,
+  mvp,
+  digital,
+  graphic,
+  about,
+};

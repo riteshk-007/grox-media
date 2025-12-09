@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
+import { about } from "@/assets";
 
 const About = () => {
   return (
@@ -18,7 +20,7 @@ const About = () => {
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-groxBlue/10 -z-10" />
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-groxOrange/10 -z-10" />
               <div className="bg-gray-100 overflow-hidden h-[400px] w-full relative flex items-center justify-center">
-                <span className="text-gray-400">About Image Placeholder</span>
+                <Image src={about} alt="About" fill className="object-cover" />
               </div>
             </div>
           </motion.div>
