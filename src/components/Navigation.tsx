@@ -32,7 +32,7 @@ const Navigation = () => {
             >
                 <Image
                     src={biglogoremove}
-                    alt='CodeXprime Logo'
+                    alt='Grox Media Logo'
                     width={150}
                     height={50}
                     className='h-auto w-auto md:max-h-12 max-h-10'
