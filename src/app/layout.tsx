@@ -6,7 +6,6 @@ import Footer from "@/components/shared/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
-import SnowfallEffect from "@/components/Snowfall";
 
 const satoshiRegular = localFont({
   src: "./fonts/Satoshi-Regular.otf",
@@ -120,7 +119,6 @@ export default function RootLayout({
         className={`${satoshiRegular.variable} ${satoshiMedium.variable} ${satoshiBold.variable} ${satoshiBlack.variable} font-satoshi-regular antialiased overflow-x-hidden w-full`}
       >
         <Navbar />
-        <SnowfallEffect />
         {children}
         <FloatingContactButton />
         <Toaster />

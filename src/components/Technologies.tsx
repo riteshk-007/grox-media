@@ -8,7 +8,7 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiPostgresql,
-  SiAmazonwebservices,
+  SiAmazonaws,
   SiFigma,
 } from "react-icons/si";
 
@@ -19,7 +19,7 @@ const technologies = [
   { name: "Tailwind CSS", icon: SiTailwindcss },
   { name: "Node.js", icon: SiNodedotjs },
   { name: "PostgreSQL", icon: SiPostgresql },
-  { name: "AWS", icon: SiAmazonwebservices },
+  { name: "AWS", icon: SiAmazonaws },
   { name: "Figma", icon: SiFigma },
 ];
 
