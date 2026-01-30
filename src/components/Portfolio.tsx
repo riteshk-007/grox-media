@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import EnquiryDialog from "./EnquiryDialog";
+import Link from "next/link";
 
 type Project = {
   title: string;
@@ -17,98 +17,95 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Panacea Medcare",
+    category: "Healthcare Website",
+    description:
+      "A multilingual doctor and healthcare website built with Next.js, supporting English, French, and Arabic for a global audience.",
+    image:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/panacea.jpeg",
+    tags: ["Next.js", "Internationalization (i18n)", "Healthcare"],
+    results: "Expanded reach with multilingual support",
+    link: "https://panaceamedcare.com/",
+  },
+  {
+    title: "SLJ Solutions",
+    category: "Interior Design Website",
+    description:
+      "A modern static interior design website built with Next.js, including an admin panel for content management.",
+    image:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/slj.jpeg",
+    tags: ["Next.js", "React", "Admin Panel"],
+    results: "Clean UI with easy content updates",
+    link: "https://sljsolutions.com/",
+  },
+  {
+    title: "DFIX Kart",
+    category: "E-commerce Platform",
+    description:
+      "A full-scale tape-selling e-commerce platform with a Next.js client, React (Vite) admin panel, and Node.js backend using PostgreSQL.",
+    image:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/difx.jpeg",
+    tags: [
+      "Next.js 14",
+      "React (Vite)",
+      "Node.js",
+      "PostgreSQL",
+      "E-commerce",
+    ],
+    results: "Scalable multi-panel e-commerce system",
+    link: "https://dfixkart.com/",
+  },
+  {
+    title: "Shrestha Academy",
+    category: "EdTech Platform",
+    description:
+      "A complete MERN stack education platform offering online courses, e-books, progress indicators, and offline classroom management.",
+    image:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/shreeshta.jpeg",
+    tags: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "MERN Stack",
+    ],
+    results: "Centralized learning with online & offline course management",
+    link: "https://shresthaacademy.com/",
+  },
+  {
+    title: "Desi To Global Travel",
+    category: "Travel & Tour Platform",
+    description:
+      "A full-stack travel and tour booking platform with dynamic packages, inquiries, and admin management.",
+    image:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/global.jpeg",
+    tags: ["Next.js", "React", "Node.js", "Full Stack"],
+    results: "End-to-end travel booking and management system",
+    link: "https://www.desitoglobaltravel.com/",
+  },
+  {
     title: "Monark FX",
     category: "Financial Services",
     description:
-      "A modern financial services platform with payment systems & live Zoom sessions.",
+      "A modern financial services platform with integrated payment systems and live Zoom sessions for trading consultations.",
     image:
-      "https://g0p7auwucr.ufs.sh/f/ULWZqXBivs80g1M2zj90TDwQ1qFAjO9JoI2uaLHf4ZBU8vPk",
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/monark.jpeg",
     tags: [
+      "Next.js",
       "React",
-      "NextJS",
-      "NodeJS",
+      "Node.js",
       "PostgreSQL",
       "Razorpay",
       "Zoom SDK",
-      "CI/CD",
     ],
-    results: "Streamlined payments",
+    results: "Streamlined payments and live trading sessions",
     link: "https://monarkfx.com",
   },
-  {
-    title: "EDAWS",
-    category: "NGO Platform",
-    description: "Donation platform for NGOs with campaign management.",
-    image: "https://utfs.io/f/1e42b816-777d-4944-8aa3-dfc8b3c2991a-qmpdsf.jpg",
-    tags: ["Next.js", "Tailwind", "Prisma", "Razorpay"],
-    results: "Donation growth",
-    link: "https://www.edaws.in",
-  },
-
-  {
-    title: "Equity Tank",
-    category: "Stock Market Platform",
-    description: "User-friendly stock dashboard with animations.",
-    image: "https://utfs.io/f/add4e9aa-851e-48f6-bb30-e8c8a0b564cd-iyt33x.jpg",
-    tags: ["React", "NextJS", "TailwindCSS", "Framer Motion"],
-    results: "Better engagement",
-    link: "https://equitytank.com",
-  },
-  {
-    title: "EOAN",
-    category: "E-commerce",
-    description: "Modern online furniture e-commerce store.",
-    image: "https://utfs.io/f/0cb7d590-e0d1-4ce8-8807-7db34d50d1be-da5jf4.jpg",
-    tags: ["WordPress", "PHP", "WooCommerce"],
-    results: "Boosted sales",
-    link: "https://eoan.in",
-  },
-  {
-    title: "TRX Academy",
-    category: "Stock Market Training",
-    description: "Live sessions and professional courses.",
-    image:
-      "https://g0p7auwucr.ufs.sh/f/ULWZqXBivs80DwIeWWmEwLedJguv0UbtiA6GHWYay4nfP9BK",
-    tags: ["React", "NextJS", "PostgreSQL", "Zoom SDK"],
-    results: "Better user learning",
-  },
-  // {
-  //     title: "Sharma Fitness",
-  //     category: "E-commerce",
-  //     description:
-  //         "Gym equipment store optimized for conversions.",
-  //     image: "https://utfs.io/f/0d43ad81-130f-481f-9567-37e491bff626-hswoyi.jpg",
-  //     tags: ["WordPress", "WooCommerce", "Elementor"],
-  //     results: "Increased sales",
-  // },
 ];
 
+
 const Portfolio = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const handleCardClick = (project: Project, e: React.MouseEvent) => {
-    // Don't open dialog if clicking on the external link button
-    const target = e.target as HTMLElement;
-    if (
-      target.closest("a") ||
-      target.closest("button") ||
-      target.tagName === "A" ||
-      target.tagName === "BUTTON"
-    ) {
-      return;
-    }
-    setSelectedProject(project);
-    setIsDialogOpen(true);
-  };
-
-  const handleCloseDialog = () => {
-    setIsDialogOpen(false);
-    setTimeout(() => {
-      setSelectedProject(null);
-    }, 300);
-  };
-
   return (
     <section id="portfolio" className="py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-4">
@@ -128,67 +125,52 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              onClick={(e) => handleCardClick(project, e)}
-              className="group bg-white shadow-md border rounded overflow-hidden hover:shadow-2xl transition-all cursor-pointer"
+              className="group bg-white shadow-md border overflow-hidden hover:shadow-2xl transition-all h-full"
             >
-              {/* REAL IMAGE (NO COLOR) */}
-              <div className="h-48 w-full overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={400}
-                  height={300}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <p className="text-sm font-semibold text-blue-600 mb-1">
-                  {project.category}
-                </p>
-
-                <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-
-                <p className="text-gray-600 text-sm mb-4">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs px-2 py-1 bg-gray-100 border rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              <Link href={project.link || "#"} target="_blank" className="flex flex-col h-full">
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  </div>
                 </div>
 
-                {/* {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <Button variant="secondary">
-                      Visit <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
-                  </a>
-                )} */}
-              </div>
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <p className="text-sm font-semibold text-blue-600 mb-1">
+                        {project.category}
+                      </p>
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">{project.title}</h3>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs px-2 py-1 bg-gray-100 text-gray-600 border rounded-md"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Enquiry Dialog */}
-      <EnquiryDialog
-        show={isDialogOpen}
-        onClose={handleCloseDialog}
-        project={selectedProject}
-      />
     </section>
   );
 };
