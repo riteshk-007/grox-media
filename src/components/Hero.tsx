@@ -104,7 +104,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full lg:h-[85dvh] md:bg-white p-2 overflow-x-hidden overflow-y-auto pt-24 md:pt-20">
+    <section className="relative w-full lg:h-[90dvh] md:bg-white p-2 overflow-x-hidden overflow-y-auto pt-24 md:pt-20">
       {/* Desktop Video Background */}
       <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full overflow-hidden">
         <video
@@ -217,11 +217,10 @@ const Hero = () => {
                             onChange={(e) =>
                               handleInputChange("name", e.target.value)
                             }
-                            className={`w-full p-2 rounded-lg border-2 outline-none bg-gray-50 text-black placeholder:text-gray-500 transition-all duration-200 focus:bg-white focus:shadow-lg text-base ${
-                              errors.name
+                            className={`w-full p-2 rounded-lg border-2 outline-none bg-gray-50 text-black placeholder:text-gray-500 transition-all duration-200 focus:bg-white focus:shadow-lg text-base ${errors.name
                                 ? "border-red-400 focus:border-red-500"
                                 : "border-gray-300 focus:border-groxBlue"
-                            }`}
+                              }`}
                           />
                           {errors.name && (
                             <p className="text-red-500 text-sm mt-2">
@@ -239,11 +238,10 @@ const Hero = () => {
                             onChange={(e) =>
                               handleInputChange("email", e.target.value)
                             }
-                            className={`w-full p-2 rounded-lg border-2 outline-none bg-gray-50 text-black placeholder:text-gray-500 transition-all duration-200 focus:bg-white focus:shadow-lg text-base ${
-                              errors.email
+                            className={`w-full p-2 rounded-lg border-2 outline-none bg-gray-50 text-black placeholder:text-gray-500 transition-all duration-200 focus:bg-white focus:shadow-lg text-base ${errors.email
                                 ? "border-red-400 focus:border-red-500"
                                 : "border-gray-300 focus:border-groxBlue"
-                            }`}
+                              }`}
                           />
                           {errors.email && (
                             <p className="text-red-500 text-sm mt-2">
@@ -261,11 +259,10 @@ const Hero = () => {
                             onChange={(e) =>
                               handleInputChange("phone", e.target.value)
                             }
-                            className={`w-full p-2 rounded-lg border-2 outline-none bg-gray-50 text-black placeholder:text-gray-500 transition-all duration-200 focus:bg-white focus:shadow-lg text-base ${
-                              errors.phone
+                            className={`w-full p-2 rounded-lg border-2 outline-none bg-gray-50 text-black placeholder:text-gray-500 transition-all duration-200 focus:bg-white focus:shadow-lg text-base ${errors.phone
                                 ? "border-red-400 focus:border-red-500"
                                 : "border-gray-300 focus:border-groxBlue"
-                            }`}
+                              }`}
                           />
                           {errors.phone && (
                             <p className="text-red-500 text-sm mt-2">
