@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 
 type FormData = {
@@ -135,6 +135,26 @@ const Contact = () => {
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900">Location</h3>
                                     <p className="text-gray-600">New Delhi, India</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start">
+                                <div className="bg-pink-50 p-3 mr-4">
+                                    <Instagram className="h-6 w-6 text-pink-600" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-semibold text-gray-900">Instagram</h3>
+                                    <a href="https://www.instagram.com/groxmedia55/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 transition-colors block break-all">@groxmedia55</a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start">
+                                <div className="bg-blue-50 p-3 mr-4">
+                                    <Linkedin className="h-6 w-6 text-blue-700" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-semibold text-gray-900">LinkedIn</h3>
+                                    <a href="https://www.linkedin.com/in/manish-kumar-7a757b211/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 transition-colors block break-all">Manish Kumar</a>
                                 </div>
                             </div>
                         </div>

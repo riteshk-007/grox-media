@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { toast } from "sonner";
-import { Phone, Mail, Clock, Send } from "lucide-react";
+import { Phone, Mail, Clock, Send, Instagram, Linkedin } from "lucide-react";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { MdCheck } from "react-icons/md";
@@ -322,11 +322,10 @@ const ContactSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`flex-1 ${
-                      isSubmitting
-                        ? "opacity-60 cursor-not-allowed"
-                        : "hover:bg-gray-800"
-                    } bg-black text-white py-3 px-6 font-medium transition-colors  flex items-center justify-center gap-2 mb-3 sm:mb-0`}
+                    className={`flex-1 ${isSubmitting
+                      ? "opacity-60 cursor-not-allowed"
+                      : "hover:bg-gray-800"
+                      } bg-black text-white py-3 px-6 font-medium transition-colors  flex items-center justify-center gap-2 mb-3 sm:mb-0`}
                   >
                     {isSubmitting ? (
                       <>
@@ -430,6 +429,29 @@ const ContactSection = () => {
                   <p className="text-gray-600">
                     Monday - Saturday: 10:00 AM - 7:00 PM
                   </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                    <Instagram className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Instagram</h4>
+                    <a href="https://www.instagram.com/groxmedia55/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 block break-all">
+                      @groxmedia55
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                    <Linkedin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/manish-kumar-7a757b211/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 block break-all">
+                      Manish Kumar
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

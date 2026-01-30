@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -117,6 +117,38 @@ const Footer: React.FC = () => {
                 <div className="text-gray-500 text-xs sm:text-sm mt-0.5">
                   24-hour response time
                 </div>
+              </div>
+            </div>
+
+            {/* Instagram Contact */}
+            <div className="flex items-start gap-3 mt-4">
+              <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-500 text-white flex items-center justify-center flex-shrink-0">
+                <Instagram className="w-5 h-5" />
+              </div>
+              <div className="min-w-0 flex-1 pt-2">
+                <Link
+                  href="https://www.instagram.com/groxmedia55/"
+                  target="_blank"
+                  className="text-gray-700 font-semibold text-sm sm:text-base hover:text-pink-600 transition-colors duration-200 block"
+                >
+                  Instagram
+                </Link>
+              </div>
+            </div>
+
+            {/* LinkedIn Contact */}
+            <div className="flex items-start gap-3 mt-4">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 text-white flex items-center justify-center flex-shrink-0">
+                <Linkedin className="w-5 h-5" />
+              </div>
+              <div className="min-w-0 flex-1 pt-2">
+                <Link
+                  href="https://www.linkedin.com/in/manish-kumar-7a757b211/"
+                  target="_blank"
+                  className="text-gray-700 font-semibold text-sm sm:text-base hover:text-blue-700 transition-colors duration-200 block"
+                >
+                  LinkedIn
+                </Link>
               </div>
             </div>
           </div>
