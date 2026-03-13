@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "www.groxmedia.in",
+  "Id": "15944c03-ca61-4248-aa19-7ca1c4877591"
+}
