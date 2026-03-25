@@ -29,7 +29,7 @@ export default async function BlogPreview() {
   if (!withImages.length) return null;
 
   return (
-    <section className="py-10 md:py-16">
+    <section className="py-10 md:py-16 overflow-x-hidden">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="flex justify-center">

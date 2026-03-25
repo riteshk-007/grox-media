@@ -10,7 +10,7 @@ export default function PortfolioPreview() {
   const top = projects.slice(0, 6);
 
   return (
-    <section id="portfolio" className="py-16 md:py-24">
+    <section id="portfolio" className="py-16 md:py-24 overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <SectionBadge>Our Work</SectionBadge>

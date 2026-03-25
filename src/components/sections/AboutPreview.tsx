@@ -14,7 +14,7 @@ const points = [
 
 export default function AboutPreview() {
   return (
-    <section id="about" className="py-16 md:py-24">
+    <section id="about" className="py-10 md:py-16 overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div

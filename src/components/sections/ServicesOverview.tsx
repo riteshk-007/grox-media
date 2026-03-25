@@ -72,7 +72,7 @@ const services = [
 
 export default function ServicesOverview() {
   return (
-    <section id="services" className="py-16 md:py-24">
+    <section id="services" className="py-16 md:py-24 overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <SectionBadge>Our Services</SectionBadge>

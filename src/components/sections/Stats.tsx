@@ -49,7 +49,7 @@ function CountCell({
 
 export default function Stats() {
   return (
-    <section className="py-10 md:py-14">
+    <section className="py-10 md:py-14 overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl font-extrabold text-[#111827] md:text-4xl">
           Why Choose Grox Media

@@ -23,7 +23,7 @@ function MarqueeBand() {
 
 export default function VideoShowcase() {
   return (
-    <section className="relative min-h-[500px] overflow-hidden bg-gradient-to-br from-amber-500 via-groxOrange to-[#1a1a2e] py-16 md:py-24">
+    <section className="relative min-h-[500px] overflow-x-hidden bg-gradient-to-br from-amber-500 via-groxOrange to-[#1a1a2e] py-16 md:py-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_50%)] opacity-40" />
       <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <p className="text-lg font-semibold italic leading-relaxed text-white/95 md:text-xl md:leading-relaxed">

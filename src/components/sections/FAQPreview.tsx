@@ -9,7 +9,7 @@ const preview = FAQ_ITEMS.slice(0, 5);
 
 export default function FAQPreview() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-12 md:py-16 overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[2fr_3fr] lg:items-start">
           <motion.div
