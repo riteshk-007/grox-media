@@ -173,7 +173,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
       <section className="relative overflow-hidden pt-24 pb-12">
         <div className="pointer-events-none absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-400/20 to-orange-400/20 blur-3xl -z-10" />
         <div className="relative mx-auto max-w-4xl px-6 text-center">

@@ -57,7 +57,7 @@ export default function Stats() {
         <p className="mx-auto mt-3 max-w-2xl text-center text-[#6b7280]">
           We Don&apos;t Just Code, We Create Success
         </p>
-        <div className="mt-10 gap-4  pb-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 md:overflow-visible md:pb-0 hide-scrollbar">
+        <div className="mt-10 gap-2 md:gap-4  pb-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 md:overflow-visible md:pb-0 hide-scrollbar">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}

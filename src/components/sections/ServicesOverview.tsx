@@ -19,7 +19,7 @@ const services = [
     description:
       "Custom websites built with modern technologies for speed, performance, and SEO-ready structure.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/website.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/website.mp4",
     posterSrc: web,
     Icon: Code,
   },
@@ -28,7 +28,7 @@ const services = [
     description:
       "Performance-focused marketing campaigns that generate qualified leads and improve conversions.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/digital%20marketing.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/digital%20marketing.mp4",
     posterSrc: digital,
     Icon: Megaphone,
   },
@@ -37,7 +37,7 @@ const services = [
     description:
       "Native and cross-platform mobile applications for iOS and Android with smooth user experiences.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/mobile%20app.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/mobile%20app.mp4",
     posterSrc: mvp,
     Icon: Smartphone,
   },
@@ -46,7 +46,7 @@ const services = [
     description:
       "Technical SEO, content optimization, and performance improvements to help you rank higher and grow organically.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/SEO.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/SEO.mp4",
     posterSrc: web,
     Icon: Search,
   },
@@ -55,7 +55,7 @@ const services = [
     description:
       "Logos, brand identity, and creative assets that make your business recognizable and trustworthy.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/branding.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/branding.mp4",
     posterSrc: graphic,
     Icon: Palette,
   },
@@ -64,7 +64,7 @@ const services = [
     description:
       "Reliable IT support and maintenance to keep your systems fast, secure, and always available.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/IT%20Support.mov",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/IT%20Support.mov",
     posterSrc: about,
     Icon: Headphones,
   },
