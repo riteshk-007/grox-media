@@ -76,7 +76,7 @@ export default function ServicesOverview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <SectionBadge>Our Services</SectionBadge>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#111827] md:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold tracking-tight text-[#111827] md:text-4xl lg:text-5xl">
             Comprehensive Digital Solutions for Your Business
           </h2>
         </div>

@@ -40,7 +40,7 @@ export default function AboutPreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
           >
-            <h2 className="text-3xl font-extrabold text-[#111827] md:text-4xl">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] md:text-4xl">
               We Are Grox Media
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#6b7280]">

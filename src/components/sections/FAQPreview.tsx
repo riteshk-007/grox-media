@@ -17,7 +17,7 @@ export default function FAQPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-extrabold leading-tight text-[#111827] md:text-4xl lg:text-5xl">
+            <h2 className="text-2xl sm:text-3xl font-extrabold leading-tight text-[#111827] md:text-4xl lg:text-5xl">
               Frequently Asked Questions
             </h2>
             <p className="mt-4 text-[#6b7280]">
@@ -25,7 +25,7 @@ export default function FAQPreview() {
             </p>
             <Link
               href="/faqs"
-              className="mt-6 inline-flex text-sm font-semibold text-groxBlue hover:underline"
+              className="mt-6 inline-flex text-sm sm:text-base font-semibold text-groxBlue hover:underline"
             >
               View all FAQs →
             </Link>

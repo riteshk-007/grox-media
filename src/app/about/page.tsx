@@ -133,7 +133,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.15 }}
-            className="mt-6 text-4xl font-extrabold text-[#111827] md:text-5xl lg:text-6xl"
+            className="mt-6 text-2xl sm:text-3xl font-extrabold text-[#111827] md:text-5xl lg:text-6xl"
           >
             We Are Grox Media
           </motion.h1>
@@ -161,7 +161,7 @@ export default function AboutPage() {
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50">
               <Target className="h-8 w-8 text-[#1e40af]" />
             </div>
-            <h2 className="mb-4 text-2xl font-bold text-[#111827]">
+            <h2 className="mb-4 text-2xl sm:text-3xl font-bold text-[#111827]">
               Our Mission
             </h2>
             <p className="text-base leading-loose text-gray-500 md:text-lg">
@@ -179,7 +179,7 @@ export default function AboutPage() {
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-50">
               <Eye className="h-8 w-8 text-[#ea580c]" />
             </div>
-            <h2 className="mb-4 text-2xl font-bold text-[#111827]">
+            <h2 className="mb-4 text-2xl sm:text-3xl font-bold text-[#111827]">
               Our Vision
             </h2>
             <p className="text-base leading-loose text-gray-500 md:text-lg">
@@ -195,7 +195,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <motion.div {...fadeUp} transition={{ duration: 0.55 }}>
             <SectionBadge className="mb-4">Our Story</SectionBadge>
-            <h2 className="mb-6 text-3xl font-bold leading-snug text-[#111827] md:text-4xl md:leading-snug">
+            <h2 className="mb-6 text-2xl sm:text-3xl font-bold leading-snug text-[#111827] md:text-4xl md:leading-snug">
               Crafting Digital Excellence Since Day One
             </h2>
             <p className="mb-6 text-base leading-loose text-gray-500 md:text-lg">
@@ -297,7 +297,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div {...fadeUp} className="text-center">
           <SectionBadge>Our Values</SectionBadge>
-          <h2 className="mt-4 text-3xl font-bold text-[#111827] md:text-4xl">
+          <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
             What Drives Us
           </h2>
         </motion.div>
@@ -316,7 +316,7 @@ export default function AboutPage() {
               >
                 <v.icon className="h-7 w-7 text-[#1e40af]" />
               </div>
-              <h3 className="mb-3 text-lg font-bold text-[#111827]">
+              <h3 className="mb-3 text-lg sm:text-base font-bold text-[#111827]">
                 {v.title}
               </h3>
               <p className="text-sm leading-loose text-gray-500 md:text-base md:leading-loose">
@@ -338,7 +338,7 @@ export default function AboutPage() {
         className="bg-gradient-to-r from-[#1e40af] to-[#111827] py-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl font-bold leading-snug text-white md:text-4xl md:leading-snug">
+          <h2 className="text-2xl sm:text-3xl font-bold leading-snug text-white md:text-4xl md:leading-snug">
             Let&apos;s Work Together
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-white/70 md:text-xl">

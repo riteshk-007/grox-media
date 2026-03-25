@@ -14,7 +14,7 @@ export default function PortfolioPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <SectionBadge>Our Work</SectionBadge>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#111827] md:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold tracking-tight text-[#111827] md:text-4xl lg:text-5xl">
             Turning Visions Into Digital Reality
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-[#6b7280]">
@@ -49,20 +49,20 @@ export default function PortfolioPreview() {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-groxBlue">
+                  <p className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-groxBlue">
                     {project.category}
                   </p>
-                  <h3 className="mt-1 text-xl font-bold text-[#111827]">
+                  <h3 className="mt-1 text-xl sm:text-2xl font-bold text-[#111827]">
                     {project.title}
                   </h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-[#6b7280]">
+                  <p className="mt-2 line-clamp-2 text-sm sm:text-base text-[#6b7280]">
                     {project.description}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-700"
+                        className="rounded-full bg-gray-100 px-3 py-1 text-xs sm:text-sm text-gray-700"
                       >
                         {tag}
                       </span>
@@ -77,7 +77,7 @@ export default function PortfolioPreview() {
         <div className="mt-12 flex justify-center">
           <Link
             href="/portfolio"
-            className="rounded-full border-2 border-gray-300 px-8 py-3 text-sm font-semibold text-[#111827] transition hover:border-groxBlue hover:text-groxBlue"
+            className="rounded-full border-2 border-gray-300 px-8 py-3 text-sm sm:text-base font-semibold text-[#111827] transition hover:border-groxBlue hover:text-groxBlue"
           >
             View All
           </Link>

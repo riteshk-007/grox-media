@@ -138,7 +138,7 @@ const Faq: React.FC<FaqProps> = ({ limit }) => {
 
   return (
     <section className="mx-auto w-full max-w-4xl px-4 py-12">
-      <h2 className="mb-8 text-center text-3xl font-bold text-[#111827]">
+      <h2 className="mb-8 text-center text-2xl sm:text-3xl font-bold text-[#111827]">
         Frequently Asked Questions
       </h2>
 
@@ -158,7 +158,7 @@ const Faq: React.FC<FaqProps> = ({ limit }) => {
           <button
             type="button"
             onClick={() => router.push("/faqs")}
-            className="inline-block rounded-full bg-groxBlue px-8 py-4 text-lg font-medium text-white transition hover:bg-blue-800"
+            className="inline-block rounded-full bg-groxBlue px-8 py-4 text-lg sm:text-base font-medium text-white transition hover:bg-blue-800"
             aria-label="View all FAQs"
           >
             View all FAQs

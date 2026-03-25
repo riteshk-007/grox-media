@@ -127,7 +127,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {showIntro ? (
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-[#111827] md:text-4xl">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] md:text-4xl">
               Let&apos;s Build Something Amazing Together
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-[#6b7280]">
@@ -208,7 +208,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
             viewport={{ once: true }}
             className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm md:p-8"
           >
-            <h3 className="text-xl font-bold text-[#111827]">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#111827]">
               Send Us a Message
             </h3>
             <p className="mt-1 text-sm text-[#6b7280]">

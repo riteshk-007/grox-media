@@ -30,7 +30,7 @@ export default function FaqsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="mt-6 text-4xl font-extrabold text-[#111827] md:text-5xl lg:text-6xl"
+            className="mt-6 text-2xl sm:text-3xl font-extrabold text-[#111827] md:text-5xl lg:text-6xl"
           >
             Frequently Asked Questions
           </motion.h1>
@@ -54,7 +54,7 @@ export default function FaqsPage() {
             viewport={{ once: true }}
             className="lg:sticky lg:top-32 lg:self-start"
           >
-            <h2 className="text-3xl font-extrabold leading-tight text-[#111827] md:text-4xl">
+            <h2 className="text-2xl sm:text-3xl font-extrabold leading-tight text-[#111827] md:text-4xl">
               Got Questions?
               <br />
               <span className="text-[#ea580c]">We&apos;ve Got Answers.</span>
@@ -134,7 +134,7 @@ export default function FaqsPage() {
           className="mt-16 flex flex-col items-center justify-center gap-4 bg-gray-50/50 py-16 sm:flex-row"
         >
           <div className="text-center sm:text-left">
-            <h3 className="text-2xl font-bold text-[#111827]">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#111827]">
               Still Have Questions?
             </h3>
             <p className="mt-2 text-gray-500">

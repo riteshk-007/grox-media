@@ -51,7 +51,7 @@ export default function Stats() {
   return (
     <section className="py-10 md:py-14 overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-3xl font-extrabold text-[#111827] md:text-4xl">
+        <h2 className="text-center text-2xl sm:text-3xl font-extrabold text-[#111827] md:text-4xl">
           Why Choose Grox Media
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-[#6b7280]">
@@ -68,7 +68,7 @@ export default function Stats() {
               className="min-w-[140px] flex-shrink-0 rounded-2xl border border-gray-100 bg-white p-5 text-center shadow-sm md:min-w-0"
             >
               {"raw" in s ? (
-                <div className="text-3xl font-bold text-[#111827]">{s.raw}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-[#111827]">{s.raw}</div>
               ) : (
                 <CountCell target={s.target} suffix={s.suffix} />
               )}

@@ -187,7 +187,7 @@ export default function ContactPage() {
           <motion.h1
             {...fadeUp}
             transition={{ duration: 0.45, delay: 0.15 }}
-            className="mt-6 text-4xl font-extrabold leading-tight text-[#111827] md:text-5xl lg:text-6xl"
+            className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight text-[#111827] md:text-5xl lg:text-6xl"
           >
             Let&apos;s Build Something Amazing Together
           </motion.h1>
@@ -239,7 +239,7 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
             className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-10 lg:col-span-3"
           >
-            <h2 className="mb-2 text-2xl font-bold text-[#111827]">
+            <h2 className="mb-2 text-2xl sm:text-3xl font-bold text-[#111827]">
               Send Us a Message
             </h2>
             <p className="mb-8 text-sm text-gray-400">
@@ -350,7 +350,7 @@ export default function ContactPage() {
         className="bg-gradient-to-r from-amber-500 via-orange-500 to-[#1a1a2e] py-16"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white">
             Ready to Transform Your Digital Presence?
           </h2>
           <p className="mt-3 text-lg text-white/80">
