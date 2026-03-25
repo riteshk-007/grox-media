@@ -7,6 +7,7 @@ import Stats from "@/components/sections/Stats";
 import Testimonials from "@/components/sections/Testimonials";
 import AboutPreview from "@/components/sections/AboutPreview";
 import TechStack from "@/components/sections/TechStack";
+import BlogPreview from "@/components/sections/BlogPreview";
 import FAQPreview from "@/components/sections/FAQPreview";
 import Contact from "@/components/Contact";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Testimonials />
       <AboutPreview />
       <TechStack />
+      <BlogPreview />
       <FAQPreview />
       <Contact />
     </main>

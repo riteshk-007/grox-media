@@ -2,49 +2,71 @@
 
 import { motion } from "framer-motion";
 import SectionBadge from "@/components/ui/SectionBadge";
-import { Palette, Smartphone, Globe, Video } from "lucide-react";
-import Image from "next/image";
-import { web, digital } from "@/assets";
+import {
+  Code,
+  Megaphone,
+  Smartphone,
+  Search,
+  Palette,
+  Headphones,
+} from "lucide-react";
+import { web, digital, mvp, graphic, about } from "@/assets";
+import ServiceVideoCard from "@/components/sections/ServiceVideoCard";
 
-const largeCards = [
+const services = [
   {
-    title: "Web Development",
+    title: "Website Development",
     description:
-      "Custom websites built with Next.js, React, and modern technologies for speed and performance.",
-    image: web,
-    alt: "Web development",
+      "Custom websites built with modern technologies for speed, performance, and SEO-ready structure.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/website.mp4",
+    posterSrc: web,
+    Icon: Code,
   },
   {
-    title: "Digital Marketing & Design",
+    title: "Lead Generation & Performance Marketing",
     description:
-      "Strategic marketing campaigns and intuitive, visually stunning designs that grow your audience and strengthen your brand.",
-    image: digital,
-    alt: "Digital marketing and design",
-  },
-];
-
-const smallCards = [
-  {
-    icon: Smartphone,
-    title: "App Development",
-    description: "Native and cross-platform mobile applications for iOS and Android.",
+      "Performance-focused marketing campaigns that generate qualified leads and improve conversions.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/digital%20marketing.mp4",
+    posterSrc: digital,
+    Icon: Megaphone,
   },
   {
-    icon: Globe,
-    title: "SEO Optimization",
-    description: "Rank higher on search engines and drive organic traffic.",
-  },
-  {
-    icon: Video,
-    title: "Video Editing",
+    title: "Android/iOS App Development",
     description:
-      "Engaging professional videos, animations, and edits for your business.",
+      "Native and cross-platform mobile applications for iOS and Android with smooth user experiences.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/mobile%20app.mp4",
+    posterSrc: mvp,
+    Icon: Smartphone,
   },
   {
-    icon: Palette,
-    title: "Graphic Design",
+    title: "Search Engine Optimization",
     description:
-      "Logos, brochures, flyers, and creatives that elevate brand identity.",
+      "Technical SEO, content optimization, and performance improvements to help you rank higher and grow organically.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/SEO.mp4",
+    posterSrc: web,
+    Icon: Search,
+  },
+  {
+    title: "Branding",
+    description:
+      "Logos, brand identity, and creative assets that make your business recognizable and trustworthy.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/branding.mp4",
+    posterSrc: graphic,
+    Icon: Palette,
+  },
+  {
+    title: "IT Support",
+    description:
+      "Reliable IT support and maintenance to keep your systems fast, secure, and always available.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/IT%20Support.mov",
+    posterSrc: about,
+    Icon: Headphones,
   },
 ];
 
@@ -59,55 +81,25 @@ export default function ServicesOverview() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {largeCards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg"
-            >
-              <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-xl bg-gray-100">
-                <Image
-                  src={card.image}
-                  alt={card.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-[#111827]">{card.title}</h3>
-              <p className="mt-2 leading-relaxed text-[#6b7280]">
-                {card.description}
-              </p>
-            </motion.div>
+        <motion.div
+          className="mt-6 md:mt-12 grid grid-cols-2 gap-2 md:gap-6 lg:grid-cols-3"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          {services.map((svc, i) => (
+            <ServiceVideoCard
+              key={svc.title}
+              title={svc.title}
+              description={svc.description}
+              videoSrc={svc.videoSrc}
+              posterSrc={svc.posterSrc}
+              icon={svc.Icon}
+              delay={i * 0.06}
+            />
           ))}
-        </div>
-
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {smallCards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
-              whileHover={{ y: -4 }}
-              className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="mb-4 inline-flex rounded-xl bg-groxBlue/10 p-3 text-groxBlue">
-                <card.icon className="h-6 w-6" />
-              </div>
-              <h4 className="font-bold text-[#111827]">{card.title}</h4>
-              <p className="mt-2 text-sm leading-relaxed text-[#6b7280]">
-                {card.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

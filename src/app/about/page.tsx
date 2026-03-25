@@ -279,7 +279,7 @@ export default function AboutPage() {
             />
             <CountStat
               icon={Briefcase}
-              target={150}
+              target={5000}
               suffix="+"
               label="Projects Done"
             />

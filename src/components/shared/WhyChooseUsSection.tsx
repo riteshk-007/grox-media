@@ -61,8 +61,8 @@ const WhyChooseUsSection = () => {
       icon: <Trophy className="w-7 h-7" />,
       title: "Proven Results",
       description:
-        "150+ successful projects with 99% client satisfaction rate and industry-leading performance.",
-      stat: "150+",
+        "5000+ successful projects with 99% client satisfaction rate and industry-leading performance.",
+      stat: "5000+",
       label: "Projects Done",
       accent: "border-[#00C49A] text-[#00C49A]",
     },

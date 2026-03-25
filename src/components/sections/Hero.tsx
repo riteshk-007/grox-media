@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 const fade = {
   initial: { opacity: 0, y: 28 },
@@ -65,18 +66,16 @@ export default function Hero() {
           className="mt-12 flex flex-col items-center gap-6 sm:flex-row sm:justify-center"
         >
           <div className="flex -space-x-3">
-            {["from-violet-500 to-fuchsia-500", "from-sky-500 to-blue-600", "from-amber-500 to-orange-500"].map(
-              (g, i) => (
-                <div
-                  key={i}
-                  className={`h-12 w-12 rounded-full border-2 border-white bg-gradient-to-br ${g} shadow-sm`}
-                  aria-hidden
-                />
+            {["/user1.jpg", "/user2.jpg", "/user3.jpg"].map(
+              (img, i) => (
+                <div key={i}>
+                  <Image src={img} alt="Client" className="object-cover rounded-full h-12 w-12" width={48} height={48} />
+                </div>
               )
             )}
           </div>
           <p className="text-sm font-semibold text-[#374151]">
-            Trusted by 150+ Clients
+            Trusted by 5000+ Clients
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-[#6b7280]">
             <span className="inline-flex items-center gap-1.5">

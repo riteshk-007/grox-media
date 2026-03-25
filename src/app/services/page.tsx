@@ -8,8 +8,6 @@ import {
   Megaphone,
   Smartphone,
   Search,
-  Video,
-  ArrowRight,
   Users,
   Clock,
   IndianRupee,
@@ -20,55 +18,63 @@ import {
 } from "lucide-react";
 import SectionBadge from "@/components/ui/SectionBadge";
 import TechStack from "@/components/sections/TechStack";
+import { web, digital, mvp, graphic, about } from "@/assets";
+import ServiceVideoCard from "@/components/sections/ServiceVideoCard";
 
-const sixServices = [
+const servicesVideo = [
   {
+    title: "Website Development",
+    description:
+      "Custom websites built with modern technologies for speed, performance, and SEO-ready structure.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/website.mp4",
+    posterSrc: web,
     icon: Code,
-    title: "Web Development",
-    description:
-      "Custom websites built with Next.js, React, and modern technologies for speed and performance.",
-    iconBg: "bg-blue-50 text-blue-600",
-    blob: "from-blue-400 to-blue-600",
   },
   {
-    icon: Palette,
-    title: "Graphic Design",
+    title: "Lead Generation & Performance Marketing",
     description:
-      "Intuitive and visually stunning designs that enhance user engagement and brand identity. We create logos, brochures, flyers, and more.",
-    iconBg: "bg-pink-50 text-pink-600",
-    blob: "from-pink-400 to-pink-600",
-  },
-  {
+      "Performance-focused marketing campaigns that generate qualified leads and improve conversions.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/digital%20marketing.mp4",
+    posterSrc: digital,
     icon: Megaphone,
-    title: "Digital Marketing",
-    description:
-      "Strategic marketing campaigns to grow your audience and increase conversions.",
-    iconBg: "bg-orange-50 text-orange-600",
-    blob: "from-orange-400 to-orange-600",
   },
   {
+    title: "Android/iOS App Development",
+    description:
+      "Native and cross-platform mobile applications for iOS and Android with smooth user experiences.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/mobile%20app.mp4",
+    posterSrc: mvp,
     icon: Smartphone,
-    title: "App Development",
-    description:
-      "Native and cross-platform mobile applications for iOS and Android.",
-    iconBg: "bg-green-50 text-green-600",
-    blob: "from-green-400 to-green-600",
   },
   {
+    title: "Search Engine Optimization",
+    description:
+      "Technical SEO, content optimization, and performance improvements to help you rank higher and grow organically.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/SEO.mp4",
+    posterSrc: web,
     icon: Search,
-    title: "SEO Optimization",
-    description:
-      "Rank higher on search engines and drive organic traffic to your website.",
-    iconBg: "bg-purple-50 text-purple-600",
-    blob: "from-purple-400 to-purple-600",
   },
   {
-    icon: Video,
-    title: "Video Editing",
+    title: "Branding",
     description:
-      "We create engaging and professional videos for your business. We edit videos, create animations, and more.",
-    iconBg: "bg-red-50 text-red-600",
-    blob: "from-red-400 to-red-600",
+      "Logos, brand identity, and creative assets that make your business recognizable and trustworthy.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/branding.mp4",
+    posterSrc: graphic,
+    icon: Palette,
+  },
+  {
+    title: "IT Support",
+    description:
+      "Reliable IT support and maintenance to keep your systems fast, secure, and always available.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/IT%20Support.mov",
+    posterSrc: about,
+    icon: Headphones,
   },
 ];
 
@@ -143,11 +149,11 @@ const whyUs = [
   },
   {
     icon: Trophy,
-    stat: "150+",
+      stat: "5000+",
     label: "Projects Done",
     title: "Proven Results",
     description:
-      "150+ successful projects with 99% client satisfaction rate and industry-leading performance.",
+      "5000+ successful projects with 99% client satisfaction rate and industry-leading performance.",
   },
 ];
 
@@ -191,37 +197,17 @@ export default function ServicesPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {sixServices.map((s, i) => (
-            <motion.div
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
+          {servicesVideo.map((s, i) => (
+            <ServiceVideoCard
               key={s.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-            >
-              <div
-                className={`absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br ${s.blob} opacity-10 transition-opacity group-hover:opacity-20`}
-              />
-              <div
-                className={`relative mb-6 flex h-16 w-16 items-center justify-center rounded-2xl ${s.iconBg}`}
-              >
-                <s.icon className="h-8 w-8" />
-              </div>
-              <h2 className="mb-4 text-xl font-bold text-[#111827]">
-                {s.title}
-              </h2>
-              <p className="mb-6 leading-relaxed text-gray-500">
-                {s.description}
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-[#1e40af] hover:underline"
-              >
-                Learn More <ArrowRight className="h-4 w-4" />
-              </Link>
-            </motion.div>
+              title={s.title}
+              description={s.description}
+              videoSrc={s.videoSrc}
+              posterSrc={s.posterSrc}
+              icon={s.icon}
+              delay={i * 0.06}
+            />
           ))}
         </div>
       </div>

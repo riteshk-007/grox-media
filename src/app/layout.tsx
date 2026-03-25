@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import FloatingButtons from "@/components/layout/FloatingButtons";
-import { Toaster } from "@/components/ui/sonner";
-import { Analytics } from "@vercel/analytics/next";
+import AppShell from "@/components/layout/AppShell";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -99,12 +95,7 @@ export default function RootLayout({
       <body
         className={`${plusJakarta.variable} font-jakarta antialiased pb-24 md:pb-16`}
       >
-        <Navbar />
-        {children}
-        <FloatingButtons />
-        <Toaster />
-        <Footer />
-        <Analytics />
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );

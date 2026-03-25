@@ -13,6 +13,10 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: "pub-a3d2b35862c1483894ffbee942bb995e.r2.dev"
+            },
+            {
+                protocol: 'https',
+                hostname: 'cdn.sanity.io'
             }
         ]
     }

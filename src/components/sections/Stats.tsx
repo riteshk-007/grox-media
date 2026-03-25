@@ -14,7 +14,7 @@ const stats: StatItem[] = [
   { label: "Cost Saving", target: 40, suffix: "%" },
   { label: "Available", raw: "24/7" },
   { label: "Modern Stack", target: 100, suffix: "%" },
-  { label: "Projects Done", target: 150, suffix: "+" },
+  { label: "Projects Done", target: 5000, suffix: "+" },
 ];
 
 function CountCell({
