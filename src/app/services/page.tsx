@@ -180,7 +180,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="mt-6 text-4xl font-extrabold text-[#111827] md:text-5xl lg:text-6xl"
+            className="mt-6 text-2xl sm:text-4xl font-extrabold text-[#111827] md:text-5xl lg:text-6xl"
           >
             Comprehensive Digital Solutions Tailored to Your Business
           </motion.h1>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid w-full min-w-0 grid-cols-2 gap-6 overflow-x-hidden lg:grid-cols-3">
+        <div className="grid w-full min-w-0  gap-2 md:gap-6  lg:grid-cols-3">
           {servicesVideo.map((s, i) => (
             <ServiceVideoCard
               key={s.title}
@@ -216,7 +216,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Our Process</SectionBadge>
-            <h2 className="mt-4 text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
               How We Bring Your Ideas to Life
             </h2>
           </motion.div>
@@ -272,7 +272,7 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-6xl px-6 py-20">
         <motion.div {...fadeUp} className="text-center">
           <SectionBadge>Why Us</SectionBadge>
-          <h2 className="mt-4 text-3xl font-bold text-[#111827] md:text-4xl">
+          <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
             We Don&apos;t Just Code, We Create Success
           </h2>
         </motion.div>
@@ -312,7 +312,7 @@ export default function ServicesPage() {
         className="bg-gradient-to-r from-orange-500 via-orange-600 to-[#1a1a2e] py-20"
       >
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
             Ready to Start Your Project?
           </h2>
           <p className="mt-4 text-white/70">
