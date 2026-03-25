@@ -90,8 +90,8 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="py-14 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-14 md:py-16 overflow-x-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}
         <div className="text-center">
           <SectionBadge>Client Testimonials</SectionBadge>
