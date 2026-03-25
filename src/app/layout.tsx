@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import AppShell from "@/components/layout/AppShell";
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+const sharpLight = localFont({
+  src: [{ path: "../fonts/SharpGrotesk-Light20.otf", weight: "300", style: "normal" }],
   variable: "--font-jakarta",
-  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const sharpHeading = localFont({
+  src: [{ path: "../fonts/SharpGrotesk-Medium25.otf", weight: "500", style: "normal" }],
+  variable: "--font-sharp-heading",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -93,7 +99,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       </head>
       <body
-        className={`${plusJakarta.variable} font-jakarta antialiased pb-24 md:pb-16`}
+        className={`${sharpLight.variable} ${sharpHeading.variable} font-jakarta antialiased pb-24 md:pb-16`}
       >
         <AppShell>{children}</AppShell>
       </body>

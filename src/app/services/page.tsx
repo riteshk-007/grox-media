@@ -149,7 +149,7 @@ const whyUs = [
   },
   {
     icon: Trophy,
-      stat: "5000+",
+    stat: "5000+",
     label: "Projects Done",
     title: "Proven Results",
     description:
@@ -197,7 +197,7 @@ export default function ServicesPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
+        <div className="grid w-full min-w-0 grid-cols-2 gap-6 overflow-x-hidden lg:grid-cols-3">
           {servicesVideo.map((s, i) => (
             <ServiceVideoCard
               key={s.title}

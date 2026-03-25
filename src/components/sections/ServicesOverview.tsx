@@ -82,7 +82,7 @@ export default function ServicesOverview() {
         </div>
 
         <motion.div
-          className="mt-6 md:mt-12 grid grid-cols-2 gap-2 md:gap-6 lg:grid-cols-3"
+          className="mt-6 md:mt-12 grid w-full min-w-0  gap-2  md:gap-6 lg:grid-cols-3"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

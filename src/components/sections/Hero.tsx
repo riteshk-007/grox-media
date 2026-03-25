@@ -25,7 +25,7 @@ export default function Hero() {
         <motion.h1
           {...fade}
           transition={{ duration: 0.55, delay: 0.12 }}
-          className="mt-6 text-balance text-5xl font-extrabold leading-tight tracking-tight text-[#111827] md:text-7xl"
+          className="mt-6 text-balance text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight text-[#111827] md:text-7xl"
         >
           We Build{" "}
           <span className="text-groxOrange">Digital</span>{" "}

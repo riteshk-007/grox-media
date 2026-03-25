@@ -70,7 +70,8 @@ export default function Testimonials() {
     const el = scrollRef.current;
     if (!el) return;
     const card = el.querySelector<HTMLElement>("[data-card]");
-    const w = (card?.offsetWidth ?? 300) + 24;
+    const gap = 16;
+    const w = (card?.offsetWidth ?? 280) + gap;
     el.scrollBy({ left: dir * w, behavior: "smooth" });
   };
 
@@ -78,8 +79,10 @@ export default function Testimonials() {
     const el = scrollRef.current;
     if (!el) return;
     const onScroll = () => {
-      const w = el.querySelector<HTMLElement>("[data-card]")?.offsetWidth ?? 300;
-      const i = Math.round(el.scrollLeft / (w + 24));
+      const card = el.querySelector<HTMLElement>("[data-card]");
+      const gap = 16;
+      const w = (card?.offsetWidth ?? 280) + gap;
+      const i = Math.round(el.scrollLeft / w);
       setDot(Math.min(testimonials.length - 1, Math.max(0, i)));
     };
     el.addEventListener("scroll", onScroll, { passive: true });
@@ -87,26 +90,36 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-14 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <div className="text-center">
           <SectionBadge>Client Testimonials</SectionBadge>
-          <h2 className="mt-4 text-3xl font-extrabold text-[#111827] md:text-4xl">
+          <h2 className="mt-4 text-2xl font-extrabold text-[#111827] sm:text-3xl md:text-4xl">
             Happy Clients Testimonials
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-[#6b7280]">
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-[#6b7280] sm:text-base">
             Don&apos;t just take our word for it. Here&apos;s what our clients
             have to say about their experience with Grox Media.
           </p>
         </div>
 
-        <div className="relative mt-12">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-white to-transparent md:hidden" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-white to-transparent md:hidden" />
+        {/* Cards */}
+        <div className="relative mt-10">
+          {/* Fade edges — mobile only */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-6 bg-gradient-to-r from-white to-transparent lg:hidden" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-6 bg-gradient-to-l from-white to-transparent lg:hidden" />
 
           <div
             ref={scrollRef}
-            className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [scrollbar-width:thin] lg:grid lg:grid-cols-2 xl:grid-cols-4 lg:overflow-visible lg:pb-0 lg:[scrollbar-width:auto]"
+            className={[
+              /* mobile/tablet: horizontal scroll */
+              "flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3",
+              "[scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+              /* desktop: switch to grid */
+              "lg:grid lg:grid-cols-2 lg:overflow-visible lg:pb-0 xl:grid-cols-4",
+              "lg:[scrollbar-width:auto]",
+            ].join(" ")}
           >
             {testimonials.map((t, i) => (
               <motion.div
@@ -116,20 +129,35 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="snap-center min-w-[min(100%,300px)] flex-shrink-0 rounded-2xl border border-gray-100 bg-white p-8 shadow-sm lg:min-w-0 lg:w-full"
+                className={[
+                  /* sizing */
+                  "w-[calc(85vw-16px)] max-w-[340px] flex-none snap-center",
+                  /* desktop overrides */
+                  "lg:w-full lg:max-w-none lg:flex-auto",
+                  /* card styles */
+                  "rounded-2xl border border-gray-100 bg-white p-5 shadow-sm sm:p-6",
+                  /* ← keep height flexible so text never clips */
+                  "flex flex-col",
+                ].join(" ")}
               >
-                <Quote className="h-8 w-8 text-gray-200" />
-                <p className="mt-4 text-lg italic leading-relaxed text-[#374151]">
+                <Quote className="h-6 w-6 flex-shrink-0 text-gray-200 sm:h-7 sm:w-7" />
+
+                {/* Quote text — flex-1 so card grows with content */}
+                <p className="mt-3 flex-1 text-sm italic leading-relaxed text-[#374151] sm:text-base">
                   &quot;{t.quote}&quot;
                 </p>
-                <div className="my-6 h-px bg-gray-100" />
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-groxBlue text-lg font-bold text-white">
+
+                <div className="my-4 h-px bg-gray-100" />
+
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-groxBlue text-sm font-bold text-white sm:h-11 sm:w-11 sm:text-base">
                     {t.name.charAt(0)}
                   </div>
-                  <div>
-                    <p className="font-bold text-[#111827]">{t.name}</p>
-                    <p className="text-sm text-[#6b7280]">
+                  <div className="min-w-0">
+                    <p className="truncate font-bold text-[#111827] text-sm sm:text-base">
+                      {t.name}
+                    </p>
+                    <p className="truncate text-xs text-[#6b7280] sm:text-sm">
                       {t.role}, {t.company}
                     </p>
                   </div>
@@ -138,31 +166,34 @@ export default function Testimonials() {
             ))}
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-4 lg:hidden">
+          {/* Nav dots + arrows — mobile/tablet only */}
+          <div className="mt-6 flex items-center justify-center gap-4 lg:hidden">
             <button
               type="button"
               onClick={() => scrollBy(-1)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm active:scale-95 transition-transform"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-5 w-5 text-gray-600" />
             </button>
-            <div className="flex gap-2">
+
+            <div className="flex gap-1.5">
               {testimonials.map((_, i) => (
                 <span
                   key={i}
-                  className={`h-2 w-2 rounded-full transition ${i === dot ? "bg-groxBlue" : "bg-gray-200"
+                  className={`h-2 rounded-full transition-all duration-300 ${i === dot ? "w-5 bg-groxBlue" : "w-2 bg-gray-200"
                     }`}
                 />
               ))}
             </div>
+
             <button
               type="button"
               onClick={() => scrollBy(1)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm active:scale-95 transition-transform"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-5 w-5 text-gray-600" />
             </button>
           </div>
         </div>

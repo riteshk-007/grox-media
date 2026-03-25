@@ -15,7 +15,7 @@ const leftLinks = [
 
 const rightLinks = [
   { name: "Portfolio", href: "/portfolio" },
-  { name: "Blog", href: "/blogs" },
+
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

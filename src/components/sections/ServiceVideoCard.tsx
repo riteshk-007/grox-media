@@ -1,8 +1,8 @@
 "use client";
 
 import Image, { type StaticImageData } from "next/image";
-import { motion } from "framer-motion";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import type { LucideIcon } from "lucide-react";
 
 type ServiceVideoCardProps = {
@@ -14,8 +14,8 @@ type ServiceVideoCardProps = {
   delay?: number;
 };
 
-const VIDEO_CACHE_NAME = "grox-video-cache-v1";
-const VIDEO_CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
+// We don't manually fetch/cache videos; we rely on browser caching.
+// Also, we only load/play the video once the card is in viewport.
 
 export default function ServiceVideoCard({
   title,
@@ -25,101 +25,48 @@ export default function ServiceVideoCard({
   icon: Icon,
   delay = 0,
 }: ServiceVideoCardProps) {
+  const cardRef = useRef<HTMLDivElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const inView = useInView(cardRef, { once: true, margin: "-20% 0px" });
+
+  const [activated, setActivated] = useState(false);
+
   const [ready, setReady] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
-  const [videoObjectUrl, setVideoObjectUrl] = useState<string | null>(null);
-  const didResolveRef = useRef(false);
-
-  const cacheKey = useMemo(
-    () => `groxVideoFetchedAt:${videoSrc}`,
-    [videoSrc]
-  );
-
 
   useEffect(() => {
-    let isMounted = true;
-    let objectUrlToRevoke: string | null = null;
-    didResolveRef.current = false;
+    if (!inView) return;
+    setActivated(true);
+  }, [inView]);
 
-    // If for any reason the first frame doesn't arrive (very slow network),
-    // still drop the poster after a short time to avoid "stuck poster".
-    const fallbackTimer = window.setTimeout(() => {
-      if (!isMounted) return;
-      didResolveRef.current = true;
-      setVideoFailed(false);
-      setReady(true);
-    }, 8000);
-
-    async function loadWithCache() {
-      setReady(false);
-      setVideoFailed(false);
-
-      try {
-        // If Cache API is not available, just use direct src.
-        if (typeof window === "undefined" || !("caches" in window)) {
-          return;
-        }
-
-        const now = Date.now();
-        const cachedAtStr = window.localStorage.getItem(cacheKey);
-        const cachedAt = cachedAtStr ? Number(cachedAtStr) : 0;
-        const isFresh =
-          cachedAt > 0 && now - cachedAt < VIDEO_CACHE_TTL_MS;
-
-        const cache = await caches.open(VIDEO_CACHE_NAME);
-
-        // 1) Try cache (fresh)
-        if (isFresh) {
-          const cachedResponse = await cache.match(videoSrc);
-          if (cachedResponse) {
-            const blob = await cachedResponse.blob();
-            if (!isMounted) return;
-            objectUrlToRevoke = URL.createObjectURL(blob);
-            setVideoObjectUrl(objectUrlToRevoke);
-            return;
-          }
-        }
-
-        // 2) Fetch and cache
-        const res = await fetch(videoSrc, { mode: "cors" });
-        if (!res.ok) throw new Error(`Failed to fetch video: ${res.status}`);
-
-        // Store in Cache Storage for faster next visits.
-        const resClone = res.clone();
-        await cache.put(videoSrc, resClone);
-
-        window.localStorage.setItem(cacheKey, String(now));
-
-        const blob = await res.blob();
-        if (!isMounted) return;
-        objectUrlToRevoke = URL.createObjectURL(blob);
-        setVideoObjectUrl(objectUrlToRevoke);
-      } catch {
-        // Fallback: use the direct `videoSrc` (no caching).
-        if (!isMounted) return;
-        setVideoObjectUrl(null);
+  useEffect(() => {
+    if (!activated) return;
+    const v = videoRef.current;
+    if (!v) return;
+    try {
+      v.load();
+      const p = v.play();
+      if (p && typeof (p as Promise<void>).catch === "function") {
+        (p as Promise<void>).catch(() => {});
       }
+    } catch {
+      // ignore
     }
-
-    loadWithCache();
-
-    return () => {
-      isMounted = false;
-      window.clearTimeout(fallbackTimer);
-      if (objectUrlToRevoke) URL.revokeObjectURL(objectUrlToRevoke);
-    };
-  }, [videoSrc, cacheKey]);
+  }, [activated]);
 
   const showPoster = !ready || videoFailed;
 
   return (
     <motion.div
+      ref={(el) => {
+        cardRef.current = el;
+      }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
       whileHover={{ y: -4 }}
-      className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-3 md:p-5 shadow-sm transition-shadow hover:shadow-lg"
+      className="min-w-0 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-3 md:p-5 shadow-sm transition-shadow hover:shadow-lg"
     >
       <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-gray-100">
         {/* Video poster stays until video is ready; no separate skeleton */}
@@ -138,20 +85,22 @@ export default function ServiceVideoCard({
         <video
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${ready && !videoFailed ? "opacity-100" : "opacity-0"
             }`}
-          src={videoObjectUrl ?? videoSrc}
+          ref={videoRef}
+          src={activated ? videoSrc : undefined}
           muted
           loop
           autoPlay
           playsInline
-          preload="auto"
+          preload={activated ? "metadata" : "none"}
           onLoadedData={() => {
-            if (didResolveRef.current) return;
-            didResolveRef.current = true;
             setVideoFailed(false);
             setReady(true);
           }}
           onError={() => {
             setVideoFailed(true);
+          }}
+          onCanPlay={() => {
+            setVideoFailed(false);
             setReady(true);
           }}
         />
