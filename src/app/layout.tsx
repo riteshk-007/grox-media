@@ -1,34 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/shared/Footer";
-import FloatingContactButton from "@/components/FloatingContactButton";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import FloatingButtons from "@/components/layout/FloatingButtons";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
 
-const satoshiRegular = localFont({
-  src: "./fonts/Satoshi-Regular.otf",
-  variable: "--font-satoshi-regular",
-  weight: "400",
-});
-
-const satoshiMedium = localFont({
-  src: "./fonts/Satoshi-Medium.otf",
-  variable: "--font-satoshi-medium",
-  weight: "500",
-});
-
-const satoshiBold = localFont({
-  src: "./fonts/Satoshi-Bold.otf",
-  variable: "--font-satoshi-bold",
-  weight: "700",
-});
-
-const satoshiBlack = localFont({
-  src: "./fonts/Satoshi-Black.otf",
-  variable: "--font-satoshi-black",
-  weight: "900",
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -106,7 +88,6 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <head>
-        {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -116,14 +97,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       </head>
       <body
-        className={`${satoshiRegular.variable} ${satoshiMedium.variable} ${satoshiBold.variable} ${satoshiBlack.variable} font-satoshi-regular antialiased overflow-x-hidden w-full`}
+        className={`${plusJakarta.variable} font-jakarta antialiased pb-24 md:pb-16`}
       >
         <Navbar />
         {children}
-        <FloatingContactButton />
+        <FloatingButtons />
         <Toaster />
         <Footer />
-
         <Analytics />
       </body>
     </html>

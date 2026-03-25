@@ -1,9 +1,10 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import React, { useMemo, useState } from "react";
-import { Plus } from "lucide-react";
+import AccordionItem from "@/components/ui/AccordionItem";
 
-type FaqItem = {
+export type FaqItem = {
   question: string;
   answer: string;
 };
@@ -12,7 +13,7 @@ type FaqProps = {
   limit?: number;
 };
 
-const DEFAULT_FAQS: FaqItem[] = [
+export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What IT services does Grox Media offer?",
     answer:
@@ -126,7 +127,7 @@ const Faq: React.FC<FaqProps> = ({ limit }) => {
   const [showAll] = useState(false);
   const router = useRouter();
 
-  const faqs = useMemo(() => DEFAULT_FAQS, []);
+  const faqs = useMemo(() => FAQ_ITEMS, []);
 
   const hasLimit = typeof limit === "number" && limit > 0;
   const initialCount = hasLimit ? Math.min(limit!, faqs.length) : faqs.length;
@@ -136,43 +137,34 @@ const Faq: React.FC<FaqProps> = ({ limit }) => {
   const shouldShowButton = hasLimit && limit! < faqs.length && !showAll;
 
   return (
-    <section className="w-full max-w-4xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold mb-8 text-center">
+    <section className="mx-auto w-full max-w-4xl px-4 py-12">
+      <h2 className="mb-8 text-center text-3xl font-bold text-[#111827]">
         Frequently Asked Questions
       </h2>
 
-      <div className="space-y-4">
+      <div className="space-y-0">
         {visibleFaqs.map((f, idx) => (
-          <div
-            key={idx}
-            className="p-6 bg-white border border-gray-200 hover:border-groxBlue transition-colors duration-300"
-          >
-            <div className="flex items-start gap-4">
-              <div className="mt-1 text-groxBlue">
-                <Plus className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">
-                  {f.question}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{f.answer}</p>
-              </div>
-            </div>
-          </div>
+          <AccordionItem
+            key={f.question}
+            question={f.question}
+            answer={f.answer}
+            accent={idx % 2 === 0 ? "blue" : "orange"}
+          />
         ))}
       </div>
 
-      {shouldShowButton && (
+      {shouldShowButton ? (
         <div className="mt-10 text-center">
           <button
+            type="button"
             onClick={() => router.push("/faqs")}
-            className="inline-block bg-groxBlue text-white px-8 py-4 text-lg font-medium hover:bg-blue-800 transition-colors rounded-none"
+            className="inline-block rounded-full bg-groxBlue px-8 py-4 text-lg font-medium text-white transition hover:bg-blue-800"
             aria-label="View all FAQs"
           >
             View all FAQs
           </button>
         </div>
-      )}
+      ) : null}
     </section>
   );
 };

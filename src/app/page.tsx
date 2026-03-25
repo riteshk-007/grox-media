@@ -1,24 +1,28 @@
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import About from "@/components/About";
-import Technologies from "@/components/Technologies";
-import Portfolio from "@/components/Portfolio";
+import Hero from "@/components/sections/Hero";
+import LogoMarquee from "@/components/sections/LogoMarquee";
+import ServicesOverview from "@/components/sections/ServicesOverview";
+import VideoShowcase from "@/components/sections/VideoShowcase";
+import PortfolioPreview from "@/components/sections/PortfolioPreview";
+import Stats from "@/components/sections/Stats";
+import Testimonials from "@/components/sections/Testimonials";
+import AboutPreview from "@/components/sections/AboutPreview";
+import TechStack from "@/components/sections/TechStack";
+import FAQPreview from "@/components/sections/FAQPreview";
 import Contact from "@/components/Contact";
-import Faq from "@/components/shared/Faq";
-import Testimonials from "@/components/Testimonials";
-import WhyChooseUsSection from "@/components/shared/WhyChooseUsSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white overflow-x-hidden">
+    <main className="min-h-screen">
       <Hero />
-      <Services />
-      <WhyChooseUsSection />
-      <About />
-      <Technologies />
-      <Portfolio />
+      <LogoMarquee />
+      <ServicesOverview />
+      <VideoShowcase />
+      <PortfolioPreview />
+      <Stats />
       <Testimonials />
-      <Faq limit={4} />
+      <AboutPreview />
+      <TechStack />
+      <FAQPreview />
       <Contact />
     </main>
   );
