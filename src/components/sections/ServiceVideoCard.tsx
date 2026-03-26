@@ -1,6 +1,5 @@
 "use client";
 
-import Image, { type StaticImageData } from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import type { LucideIcon } from "lucide-react";
@@ -9,19 +8,14 @@ type ServiceVideoCardProps = {
   title: string;
   description: string;
   videoSrc: string;
-  posterSrc: StaticImageData;
   icon?: LucideIcon;
   delay?: number;
 };
-
-// We don't manually fetch/cache videos; we rely on browser caching.
-// Also, we only load/play the video once the card is in viewport.
 
 export default function ServiceVideoCard({
   title,
   description,
   videoSrc,
-  posterSrc,
   icon: Icon,
   delay = 0,
 }: ServiceVideoCardProps) {
@@ -30,9 +24,6 @@ export default function ServiceVideoCard({
   const inView = useInView(cardRef, { once: true, margin: "-20% 0px" });
 
   const [activated, setActivated] = useState(false);
-
-  const [ready, setReady] = useState(false);
-  const [videoFailed, setVideoFailed] = useState(false);
 
   useEffect(() => {
     if (!inView) return;
@@ -47,14 +38,12 @@ export default function ServiceVideoCard({
       v.load();
       const p = v.play();
       if (p && typeof (p as Promise<void>).catch === "function") {
-        (p as Promise<void>).catch(() => {});
+        (p as Promise<void>).catch(() => { });
       }
     } catch {
       // ignore
     }
   }, [activated]);
-
-  const showPoster = !ready || videoFailed;
 
   return (
     <motion.div
@@ -68,23 +57,9 @@ export default function ServiceVideoCard({
       whileHover={{ y: -4 }}
       className="min-w-0 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-3 md:p-5 shadow-sm transition-shadow hover:shadow-lg"
     >
-      <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-gray-100">
-        {/* Video poster stays until video is ready; no separate skeleton */}
-        <Image
-          src={posterSrc}
-          alt={title}
-          fill
-          priority={delay === 0}
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className={`object-cover transition-opacity duration-300 ${showPoster ? "opacity-100" : "opacity-0"
-            }`}
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/10 to-transparent opacity-50" />
-
+      <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-gray-900">
         <video
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${ready && !videoFailed ? "opacity-100" : "opacity-0"
-            }`}
+          className="absolute inset-0 h-full w-full object-cover"
           ref={videoRef}
           src={activated ? videoSrc : undefined}
           muted
@@ -92,17 +67,6 @@ export default function ServiceVideoCard({
           autoPlay
           playsInline
           preload={activated ? "metadata" : "none"}
-          onLoadedData={() => {
-            setVideoFailed(false);
-            setReady(true);
-          }}
-          onError={() => {
-            setVideoFailed(true);
-          }}
-          onCanPlay={() => {
-            setVideoFailed(false);
-            setReady(true);
-          }}
         />
       </div>
 
@@ -120,4 +84,3 @@ export default function ServiceVideoCard({
     </motion.div>
   );
 }
-

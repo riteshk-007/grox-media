@@ -11,7 +11,8 @@ import {
   Headphones,
 } from "lucide-react";
 import { web, digital, mvp, graphic, about } from "@/assets";
-import ServiceVideoCard from "@/components/sections/ServiceVideoCard";
+import ServiceVideoCard from "./ServiceVideoCard";
+
 
 const services = [
   {
@@ -88,15 +89,14 @@ export default function ServicesOverview() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          {services.map((svc, i) => (
+          {services.map((svc) => (
             <ServiceVideoCard
               key={svc.title}
               title={svc.title}
               description={svc.description}
               videoSrc={svc.videoSrc}
-              posterSrc={svc.posterSrc}
               icon={svc.Icon}
-              delay={i * 0.06}
+
             />
           ))}
         </motion.div>

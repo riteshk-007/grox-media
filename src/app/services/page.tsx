@@ -21,60 +21,61 @@ import TechStack from "@/components/sections/TechStack";
 import { web, digital, mvp, graphic, about } from "@/assets";
 import ServiceVideoCard from "@/components/sections/ServiceVideoCard";
 
-const servicesVideo = [
+
+const services = [
   {
     title: "Website Development",
     description:
       "Custom websites built with modern technologies for speed, performance, and SEO-ready structure.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/website.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/website.mp4",
     posterSrc: web,
-    icon: Code,
+    Icon: Code,
   },
   {
     title: "Lead Generation & Performance Marketing",
     description:
       "Performance-focused marketing campaigns that generate qualified leads and improve conversions.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/digital%20marketing.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/digital%20marketing.mp4",
     posterSrc: digital,
-    icon: Megaphone,
+    Icon: Megaphone,
   },
   {
     title: "Android/iOS App Development",
     description:
       "Native and cross-platform mobile applications for iOS and Android with smooth user experiences.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/mobile%20app.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/mobile%20app.mp4",
     posterSrc: mvp,
-    icon: Smartphone,
+    Icon: Smartphone,
   },
   {
     title: "Search Engine Optimization",
     description:
       "Technical SEO, content optimization, and performance improvements to help you rank higher and grow organically.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/SEO.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/SEO.mp4",
     posterSrc: web,
-    icon: Search,
+    Icon: Search,
   },
   {
     title: "Branding",
     description:
       "Logos, brand identity, and creative assets that make your business recognizable and trustworthy.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/branding.mp4",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/branding.mp4",
     posterSrc: graphic,
-    icon: Palette,
+    Icon: Palette,
   },
   {
     title: "IT Support",
     description:
       "Reliable IT support and maintenance to keep your systems fast, secure, and always available.",
     videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/IT%20Support.mov",
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/IT%20Support.mov",
     posterSrc: about,
-    icon: Headphones,
+    Icon: Headphones,
   },
 ];
 
@@ -196,17 +197,16 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="grid w-full min-w-0  gap-2 md:gap-6  lg:grid-cols-3">
-          {servicesVideo.map((s, i) => (
+          {services.map((svc) => (
             <ServiceVideoCard
-              key={s.title}
-              title={s.title}
-              description={s.description}
-              videoSrc={s.videoSrc}
-              posterSrc={s.posterSrc}
-              icon={s.icon}
-              delay={i * 0.06}
+              key={svc.title}
+              title={svc.title}
+              description={svc.description}
+              videoSrc={svc.videoSrc}
+              icon={svc.Icon}
+
             />
           ))}
         </div>
