@@ -52,7 +52,7 @@ export default function PortfolioPreview() {
                   <p className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-groxBlue">
                     {project.category}
                   </p>
-                  <h3 className="mt-1 text-xl sm:text-2xl font-bold text-[#111827]">
+                  <h3 className="mt-1 text-lg  font-semibold text-[#111827]">
                     {project.title}
                   </h3>
                   <p className="mt-2 line-clamp-2 text-sm sm:text-base text-[#6b7280]">

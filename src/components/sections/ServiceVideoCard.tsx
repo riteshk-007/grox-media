@@ -57,7 +57,7 @@ export default function ServiceVideoCard({
       whileHover={{ y: -4 }}
       className="min-w-0 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-3 md:p-5 shadow-sm transition-shadow hover:shadow-lg"
     >
-      <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-gray-900">
+      <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-gray-200">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           ref={videoRef}
@@ -76,7 +76,7 @@ export default function ServiceVideoCard({
             <Icon className="md:h-5 md:w-5 h-4 w-4" />
           </div>
         ) : null}
-        <h3 className="md:text-xl text-base font-bold text-[#111827]">{title}</h3>
+        <h3 className="md:text-lg text-base font-bold text-[#111827]">{title}</h3>
         <p className="mt-2 leading-relaxed text-xs md:text-sm text-[#6b7280]">
           {description}
         </p>

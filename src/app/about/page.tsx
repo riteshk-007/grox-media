@@ -150,7 +150,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <motion.div
             {...fadeUp}
@@ -191,7 +191,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <motion.div {...fadeUp} transition={{ duration: 0.55 }}>
             <SectionBadge className="mb-4">Our Story</SectionBadge>
@@ -294,7 +294,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
         <motion.div {...fadeUp} className="text-center">
           <SectionBadge>Our Values</SectionBadge>
           <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">

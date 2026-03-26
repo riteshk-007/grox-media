@@ -123,7 +123,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
   );
 
   return (
-    <section id="contact" className="border-t border-gray-100 py-20 overflow-x-hidden">
+    <section id="contact" className="border-t border-gray-100 py-10 md:py-16 overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {showIntro ? (
           <div className="text-center">

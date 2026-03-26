@@ -45,11 +45,10 @@ export default function PortfolioPage() {
               key={f}
               type="button"
               onClick={() => setActive(f)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
-                active === f
-                  ? "bg-groxBlue text-white shadow-sm"
-                  : "border border-gray-200 bg-white text-[#6b7280] hover:border-gray-300"
-              }`}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition ${active === f
+                ? "bg-groxBlue text-white shadow-sm"
+                : "border border-gray-200 bg-white text-[#6b7280] hover:border-gray-300"
+                }`}
             >
               {f}
             </button>
@@ -87,7 +86,7 @@ export default function PortfolioPage() {
                     <p className="text-xs font-semibold uppercase tracking-wide text-groxBlue">
                       {project.category}
                     </p>
-                    <h3 className="mt-1 text-xl font-bold text-[#111827]">
+                    <h3 className="mt-1 text-lg font-semibold text-[#111827]">
                       {project.title}
                     </h3>
                     <p className="mt-2 line-clamp-3 text-sm text-[#6b7280]">
