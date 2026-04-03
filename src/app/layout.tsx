@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import AppShell from "@/components/layout/AppShell";
+import Script from "next/script";
 
 const sharpLight = localFont({
   src: [{ path: "../fonts/SharpGrotesk-Light20.otf", weight: "300", style: "normal" }],
@@ -97,6 +98,19 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18058800777"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18058800777');
+          `}
+        </Script>
       </head>
       <body
         className={`${sharpLight.variable} ${sharpHeading.variable} font-jakarta antialiased pb-24 md:pb-16 overflow-x-hidden`}
