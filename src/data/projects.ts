@@ -34,21 +34,20 @@ export const projects: Project[] = [
     filter: "Web Development",
   },
   {
-    title: "DFIX Kart",
-    category: "E-commerce Platform",
+    title: "Pure Earth Cleanings",
+    category: "Cleaning Services",
     description:
-      "A full-scale tape-selling e-commerce platform with a Next.js client, React (Vite) admin panel, and Node.js backend using PostgreSQL.",
-    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/difx.jpeg",
+      "At Pure Earth Cleanings, we’ve been delivering professional cleaning services across Australia for over 10 years. Whether it’s your home, office, gym, restaurant, or childcare center — we’re committed to providing spotless results every time.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/pureearthcleaning.png",
     tags: [
-      "Next.js 14",
-      "React (Vite)",
-      "Node.js",
-      "PostgreSQL",
-      "E-commerce",
+      "Wordpress",
+      "Elementor Pro",
+      "PHP",
+
     ],
     results: "Scalable multi-panel e-commerce system",
-    link: "https://dfixkart.com/",
-    filter: "E-commerce",
+    link: "https://pureearthcleaning.com.au",
+    filter: "Web Development",
   },
   {
     title: "Shrestha Academy",
