@@ -436,8 +436,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-1">Instagram</h4>
-                    <a href="https://www.instagram.com/groxmedia55/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 block break-all">
-                      @groxmedia55
+                    <a href="https://www.instagram.com/groxmedia1?igsh=MW5wYTA4aTQ2aWt6bw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 block break-all">
+                      @groxmedia1
                     </a>
                   </div>
                 </div>

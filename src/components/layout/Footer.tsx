@@ -74,7 +74,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-4 pt-2">
                 <a
-                  href="https://www.instagram.com/groxmedia55/"
+                  href="https://www.instagram.com/groxmedia1?igsh=MW5wYTA4aTQ2aWt6bw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-pink-500 to-orange-500 text-white transition hover:opacity-90"

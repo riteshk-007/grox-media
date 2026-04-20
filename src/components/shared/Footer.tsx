@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="min-w-0 flex-1 pt-2">
                 <Link
-                  href="https://www.instagram.com/groxmedia55/"
+                  href="https://www.instagram.com/groxmedia1?igsh=MW5wYTA4aTQ2aWt6bw%3D%3D"
                   target="_blank"
                   className="text-gray-700 font-semibold text-sm sm:text-base hover:text-pink-600 transition-colors duration-200 block"
                 >

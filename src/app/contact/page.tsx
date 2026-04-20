@@ -135,12 +135,12 @@ export default function ContactPage() {
       value: (
         <div className="flex flex-col gap-2 text-sm">
           <a
-            href="https://www.instagram.com/groxmedia55/"
+            href="https://www.instagram.com/groxmedia1?igsh=MW5wYTA4aTQ2aWt6bw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 font-semibold text-[#1e40af] hover:underline"
           >
-            Instagram @groxmedia55
+            Instagram @groxmedia1
             <ExternalLink className="h-3.5 w-3.5" />
           </a>
           <a

@@ -17,7 +17,7 @@ export default function FloatingButtons() {
         transition={{ delay: 0.3 }}
       >
         <Link
-          href="https://www.instagram.com/groxmedia55/"
+          href="https://www.instagram.com/groxmedia1?igsh=MW5wYTA4aTQ2aWt6bw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"

@@ -176,12 +176,12 @@ const Contact = ({ showIntro = true }: ContactProps) => {
               <Instagram className="h-6 w-6 text-pink-600" />,
               "Instagram",
               <a
-                href="https://www.instagram.com/groxmedia55/"
+                href="https://www.instagram.com/groxmedia1?igsh=MW5wYTA4aTQ2aWt6bw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="break-all hover:text-pink-600"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
               >
-                @groxmedia55
+                @groxmedia1
               </a>
             )}
             {infoCard(
