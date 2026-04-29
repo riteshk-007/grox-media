@@ -19,9 +19,9 @@ function Row({
       {doubled.map((item, i) => (
         <div
           key={`${item.name}-${i}`}
-          className="flex shrink-0 items-center gap-2 opacity-40 transition hover:opacity-70"
+          className="flex shrink-0 items-center gap-2 opacity-50 transition hover:opacity-100"
         >
-          <item.Icon className="h-8 w-8 text-gray-700" aria-hidden />
+          <item.Icon className="h-8 w-8 transition-colors" style={{ color: item.color }} aria-hidden />
           <span className="whitespace-nowrap text-sm font-semibold text-gray-600">
             {item.name}
           </span>

@@ -38,7 +38,11 @@ export default function TechStack() {
                       transition={{ duration: 0.3, delay: Math.min(i * 0.02, 0.6) }}
                       className="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-3.5 py-2 text-sm sm:text-base font-medium text-[#374151] shadow-sm"
                     >
-                      <tech.Icon className="h-5 w-5 shrink-0 text-[#111827]" aria-hidden />
+                      <tech.Icon 
+                        className="h-5 w-5 shrink-0 transition-colors" 
+                        style={{ color: tech.color }} 
+                        aria-hidden 
+                      />
                       {tech.name}
                     </motion.div>
                   );
