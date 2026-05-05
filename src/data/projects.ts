@@ -11,6 +11,39 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Aashey",
+    category: "Ecommerce (Ghee)",
+    description:
+      "A premium ecommerce platform for selling high-quality Ghee, built with Next.js, React, and Node.js.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/aashey.jpeg",
+    tags: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+    results: "High-performance ecommerce store for dairy products",
+    link: "https://aashey.com/",
+    filter: "E-commerce",
+  },
+  {
+    title: "Nutry Bites",
+    category: "Ecommerce (Makhana)",
+    description:
+      "A specialized ecommerce platform for selling healthy Makhana snacks, developed using Next.js, React, and Node.js.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/nutrybites.jpeg",
+    tags: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+    results: "Seamless shopping experience for healthy snacks",
+    link: "https://nutrybites.co.in/",
+    filter: "E-commerce",
+  },
+  {
+    title: "Shree Ganesh Traders",
+    category: "B2B Trading Platform",
+    description:
+      "A static B2B trading website built with Next.js for Shree Ganesh Traders, focusing on inquiry management and product display.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/sreeganeshtraders.jpeg",
+    tags: ["Next.js", "React", "Static Site", "B2B"],
+    results: "Enhanced online presence and inquiry handling",
+    link: "https://sreeganeshtraders.com/",
+    filter: "Web Development",
+  },
+  {
     title: "Panacea Medcare",
     category: "Healthcare Website",
     description:
