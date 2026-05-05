@@ -143,4 +143,15 @@ export const projects: Project[] = [
     link: "https://monarkfx.com",
     filter: "Finance",
   },
+  {
+    title: "Eoan",
+    category: "Furniture Ecommerce",
+    description:
+      "A premium furniture ecommerce store built with WordPress, offering a wide range of modern and traditional home decor solutions.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/EOAN.png",
+    tags: ["WordPress", "WooCommerce", "Ecommerce", "Furniture"],
+    results: "Scalable online furniture retail platform",
+    link: "https://eoan.in",
+    filter: "E-commerce",
+  },
 ];
