@@ -44,6 +44,17 @@ export const projects: Project[] = [
     filter: "Web Development",
   },
   {
+    title: "Folio First Consulting",
+    category: "Financial Consulting Platform",
+    description:
+      "Navigate the bureaucratic maze of IEPF claims and share transmission with India's most trusted experts. Effortless, secure, and fully guided.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/foliofirstconsulting.jpeg",
+    tags: ["Next.js", "Financial Claims", "IEPF", "Consulting"],
+    results: "Expert financial legacy reclamation and guidance",
+    link: "https://foliofirstconsulting.com/",
+    filter: "Finance",
+  },
+  {
     title: "Panacea Medcare",
     category: "Healthcare Website",
     description:
