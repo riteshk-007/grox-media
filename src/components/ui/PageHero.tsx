@@ -3,12 +3,26 @@
 import { motion } from "framer-motion";
 import SectionBadge from "./SectionBadge";
 import { cn } from "@/lib/utils";
+import { fadeUp, defaultTransition } from "@/lib/motion";
+
+type PageHeroVariant = "services" | "portfolio" | "about" | "contact" | "blog" | "faq" | "default";
 
 type PageHeroProps = {
   badge: string;
   title: React.ReactNode;
   subtitle?: string;
   className?: string;
+  variant?: PageHeroVariant;
+};
+
+const gradients: Record<PageHeroVariant, string> = {
+  services:  "from-blue-600/15 via-groxBlue/8 to-transparent",
+  portfolio: "from-groxOrange/15 via-amber-400/8 to-transparent",
+  about:     "from-emerald-500/15 via-teal-400/8 to-transparent",
+  contact:   "from-violet-500/15 via-purple-400/8 to-transparent",
+  blog:      "from-rose-500/15 via-pink-400/8 to-transparent",
+  faq:       "from-amber-500/15 via-yellow-400/8 to-transparent",
+  default:   "from-amber-400/20 via-groxOrange/10 to-groxBlue/10",
 };
 
 export default function PageHero({
@@ -16,6 +30,7 @@ export default function PageHero({
   title,
   subtitle,
   className,
+  variant = "default",
 }: PageHeroProps) {
   return (
     <section
@@ -24,12 +39,17 @@ export default function PageHero({
         className
       )}
     >
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-amber-400/20 via-groxOrange/10 to-groxBlue/10 blur-3xl opacity-40" />
+      <div
+        className={cn(
+          "pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br blur-3xl opacity-50",
+          gradients[variant]
+        )}
+      />
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
+          initial={fadeUp.hidden}
+          animate={fadeUp.visible}
+          transition={defaultTransition}
           className="flex flex-col items-center gap-4"
         >
           <SectionBadge>{badge}</SectionBadge>

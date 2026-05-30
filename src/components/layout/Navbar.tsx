@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useDragControls } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +15,6 @@ const leftLinks = [
 
 const rightLinks = [
   { name: "Portfolio", href: "/portfolio" },
-
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -26,6 +25,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const dragControls = useDragControls();
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -37,6 +38,12 @@ export default function Navbar() {
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
+
+  // Prevent body scroll when drawer open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -131,19 +138,41 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+            {/* Backdrop */}
             <button
               type="button"
               className="absolute inset-0 bg-black/40 backdrop-blur-sm"
               aria-label="Close menu"
               onClick={() => setMobileOpen(false)}
             />
+
+            {/* Drawer — draggable right to dismiss */}
             <motion.div
+              ref={drawerRef}
+              drag="x"
+              dragControls={dragControls}
+              dragConstraints={{ left: 0, right: 400 }}
+              dragElastic={{ left: 0, right: 0.3 }}
+              onDragEnd={(_, info) => {
+                if (info.offset.x > 80 || info.velocity.x > 500) {
+                  setMobileOpen(false);
+                }
+              }}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 280 }}
-              className="absolute right-0 top-0 flex h-full w-[min(100%,380px)] flex-col bg-white shadow-2xl"
+              className="absolute right-0 top-0 flex h-full w-[min(100%,380px)] flex-col bg-white shadow-2xl touch-pan-y"
             >
+              {/* Drag handle */}
+              <div
+                className="absolute left-0 top-0 h-full w-6 cursor-grab active:cursor-grabbing"
+                onPointerDown={(e) => dragControls.start(e)}
+                aria-hidden
+              >
+                <div className="absolute left-2 top-1/2 h-12 w-1 -translate-y-1/2 rounded-full bg-gray-300" />
+              </div>
+
               <div className="flex items-center justify-between border-b border-gray-100 px-4 py-4">
                 <span className="text-sm font-semibold text-gray-900">Menu</span>
                 <button
@@ -155,6 +184,7 @@ export default function Navbar() {
                   <X className="h-6 w-6" />
                 </button>
               </div>
+
               <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-4">
                 {navLinks.map((l, i) => (
                   <motion.div

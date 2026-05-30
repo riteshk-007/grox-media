@@ -36,6 +36,7 @@ export default function PortfolioPage() {
         badge="Our Work"
         title="Turning Visions Into Digital Reality"
         subtitle="Explore our latest client projects and see how we deliver results."
+        variant="portfolio"
       />
 
       <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
