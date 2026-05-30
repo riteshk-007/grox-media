@@ -26,7 +26,7 @@ jobs:
             pnpm install
 
             echo "🔨 Building Next.js..."
-            NODE_OPTIONS="--max-old-space-size=2048" pnpm run build
+            NODE_OPTIONS="--max-old-space-size=1024" pnpm run build
 
             echo "🔄 Restarting PM2 (zero downtime)..."
             pm2 reload grox-media --update-env || pm2 start ecosystem.config.js
