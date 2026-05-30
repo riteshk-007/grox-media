@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import SectionBadge from "./SectionBadge";
 import { cn } from "@/lib/utils";
-import { fadeUp, defaultTransition } from "@/lib/motion";
 
 type PageHeroVariant = "services" | "portfolio" | "about" | "contact" | "blog" | "faq" | "default";
 
@@ -47,9 +46,9 @@ export default function PageHero({
       />
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <motion.div
-          initial={fadeUp.hidden}
-          animate={fadeUp.visible}
-          transition={defaultTransition}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
           className="flex flex-col items-center gap-4"
         >
           <SectionBadge>{badge}</SectionBadge>

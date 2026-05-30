@@ -9,6 +9,25 @@ export type Project = {
   filter?: string;
 };
 
+export type GraphicSubCategory = "Social Media Graphics" | "3D Work";
+
+export type GraphicItem = {
+  title: string;
+  image: string;
+  subCategory: GraphicSubCategory;
+};
+
+export type VideoPlatform = "Instagram" | "YouTube" | "Facebook";
+
+export type VideoItem = {
+  title: string;
+  thumbnail: string;
+  videoSrc: string;
+  client: string;
+  type: string;
+  platform: VideoPlatform;
+};
+
 export const projects: Project[] = [
   {
     title: "Aashey",
@@ -59,8 +78,7 @@ export const projects: Project[] = [
     category: "Healthcare Website",
     description:
       "A multilingual doctor and healthcare website built with Next.js, supporting English, French, and Arabic for a global audience.",
-    image:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/panacea.jpeg",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/panacea.jpeg",
     tags: ["Next.js", "Internationalization (i18n)", "Healthcare"],
     results: "Expanded reach with multilingual support",
     link: "https://panaceamedcare.com/",
@@ -81,14 +99,9 @@ export const projects: Project[] = [
     title: "Pure Earth Cleanings",
     category: "Cleaning Services",
     description:
-      "At Pure Earth Cleanings, we’ve been delivering professional cleaning services across Australia for over 10 years. Whether it’s your home, office, gym, restaurant, or childcare center — we’re committed to providing spotless results every time.",
+      "Professional cleaning services across Australia for over 10 years — home, office, gym, restaurant, and childcare.",
     image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/pureearthcleaning.png",
-    tags: [
-      "Wordpress",
-      "Elementor Pro",
-      "PHP",
-
-    ],
+    tags: ["Wordpress", "Elementor Pro", "PHP"],
     results: "Scalable multi-panel e-commerce system",
     link: "https://pureearthcleaning.com.au",
     filter: "Web Development",
@@ -98,16 +111,8 @@ export const projects: Project[] = [
     category: "EdTech Platform",
     description:
       "A complete MERN stack education platform offering online courses, e-books, progress indicators, and offline classroom management.",
-    image:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/shreeshta.jpeg",
-    tags: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "MERN Stack",
-    ],
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/shreeshta.jpeg",
+    tags: ["Next.js", "React", "Node.js", "Express", "PostgreSQL", "MERN Stack"],
     results: "Centralized learning with online & offline course management",
     link: "https://shresthaacademy.com/",
     filter: "EdTech",
@@ -117,8 +122,7 @@ export const projects: Project[] = [
     category: "Travel & Tour Platform",
     description:
       "A full-stack travel and tour booking platform with dynamic packages, inquiries, and admin management.",
-    image:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/global.jpeg",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/global.jpeg",
     tags: ["Next.js", "React", "Node.js", "Full Stack"],
     results: "End-to-end travel booking and management system",
     link: "https://www.desitoglobaltravel.com/",
@@ -129,16 +133,8 @@ export const projects: Project[] = [
     category: "Financial Services",
     description:
       "A modern financial services platform with integrated payment systems and live Zoom sessions for trading consultations.",
-    image:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/monark.jpeg",
-    tags: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "PostgreSQL",
-      "Razorpay",
-      "Zoom SDK",
-    ],
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/monark.jpeg",
+    tags: ["Next.js", "React", "Node.js", "PostgreSQL", "Razorpay", "Zoom SDK"],
     results: "Streamlined payments and live trading sessions",
     link: "https://monarkfx.com",
     filter: "Finance",
@@ -155,3 +151,46 @@ export const projects: Project[] = [
     filter: "E-commerce",
   },
 ];
+
+const _BASE = "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev";
+const _SM  = `${_BASE}/graphic/social-media-graphics`;
+
+const _socialMediaGraphics: GraphicItem[] = Array.from({ length: 53 }, (_, i) => ({
+  title: `Social Media Graphic ${i + 1}`,
+  image: `${_SM}/social-media-graphics%20(${i + 1}).jpeg`,
+  subCategory: "Social Media Graphics" as GraphicSubCategory,
+}));
+
+const _3D_BASE = `${_BASE}/graphic/3d-work`;
+const _3dWork: GraphicItem[] = [
+  { title: "3D Work 1 (JPEG)", image: `${_3D_BASE}/3d-work%20(1).jpeg`, subCategory: "3D Work" },
+  { title: "3D Work 1 (JPG)",  image: `${_3D_BASE}/3d-work%20(1).jpg`,  subCategory: "3D Work" },
+  { title: "3D Work 1 (PNG)",  image: `${_3D_BASE}/3d-work%20(1).png`,  subCategory: "3D Work" },
+  { title: "3D Work 2 (JPEG)", image: `${_3D_BASE}/3d-work%20(2).jpeg`, subCategory: "3D Work" },
+  { title: "3D Work 2 (JPG)",  image: `${_3D_BASE}/3d-work%20(2).jpg`,  subCategory: "3D Work" },
+  { title: "3D Work 3",        image: `${_3D_BASE}/3d-work%20(3).jpg`,  subCategory: "3D Work" },
+  { title: "3D Work 4",        image: `${_3D_BASE}/3d-work%20(4).jpg`,  subCategory: "3D Work" },
+  { title: "3D Work 5",        image: `${_3D_BASE}/3d-work%20(5).jpg`,  subCategory: "3D Work" },
+  { title: "3D Work 6",        image: `${_3D_BASE}/3d-work%20(6).jpg`,  subCategory: "3D Work" },
+  { title: "3D Work 7",        image: `${_3D_BASE}/3d-work%20(7).jpg`,  subCategory: "3D Work" },
+  { title: "3D Work 8",        image: `${_3D_BASE}/3d-work%20(8).jpg`,  subCategory: "3D Work" },
+];
+
+export const graphicItems: GraphicItem[] = [
+  ..._socialMediaGraphics,
+  ..._3dWork,
+];
+
+const _VID_BASE = "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/video-editing";
+
+const _platforms: VideoPlatform[] = ["Instagram", "Instagram", "Instagram", "Instagram", "Instagram", "Instagram", "Instagram", "Instagram", "Instagram"];
+const _types = ["Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film"];
+
+export const videoItems: VideoItem[] = Array.from({ length: 9 }, (_, i) => ({
+  title: `Video Edit ${i + 1}`,
+  videoSrc: `${_VID_BASE}/video-editing%20(${i + 1}).mp4`,
+  thumbnail: `${_VID_BASE}/video-editing%20(${i + 1}).mp4`,
+  client: "Grox Media",
+  type: _types[i],
+  platform: _platforms[i],
+}));

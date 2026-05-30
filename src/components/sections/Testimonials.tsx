@@ -1,64 +1,82 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionBadge from "@/components/ui/SectionBadge";
 
 const testimonials = [
   {
     name: "Dinesh Verma",
-    company: "MonarkFX",
+    company: "Monark FX",
     role: "Founder & CEO",
+    project: "Financial Services Platform",
+    stars: 5,
     quote:
-      "Professional and timely delivery. The website exceeded our expectations.",
+      "Grox Media built our entire trading platform from scratch — Razorpay integration, live Zoom sessions, client dashboards. Everything worked on day one. The attention to detail on the payment flows was exceptional. Couldn't have asked for a better partner.",
   },
   {
     name: "Sanjeev Kumar",
     company: "EDAWS",
     role: "Founder",
-    quote: "Reliable partner. Smooth process and quality work guaranteed.",
+    project: "Business Website",
+    stars: 5,
+    quote:
+      "Fast turnaround, clean code, and they actually listened to what we needed. No unnecessary back-and-forth. The site went live ahead of schedule and has been running without issues ever since.",
   },
   {
     name: "Nitesh",
     company: "Nifty Nitesh",
     role: "Founder",
-    quote: "Solid development and excellent support. Highly recommended.",
-  },
-  {
-    name: "Rahul Sharma",
-    company: "TechFlow",
-    role: "CTO",
+    project: "Brand & Web",
+    stars: 5,
     quote:
-      "Grox Media transformed our digital presence. The team is incredibly talented.",
+      "These guys know their craft. They handled everything — design, development, deployment. Post-launch support was quick whenever I had questions. Genuinely reliable team.",
   },
   {
-    name: "Priya Patel",
-    company: "DesignStudio",
-    role: "Creative Director",
+    name: "Rohit Agarwal",
+    company: "Aashey",
+    role: "Founder",
+    project: "Ecommerce Store",
+    stars: 5,
     quote:
-      "A perfect blend of creativity and technical expertise. Loved working with them.",
+      "We needed a premium ecommerce experience for our ghee brand and Grox Media delivered exactly that. The product pages, cart flow, and mobile experience are all top-notch. Sales have been strong since launch.",
   },
   {
-    name: "Vikram Singh",
-    company: "BrightCart",
+    name: "Priya Sharma",
+    company: "Nutry Bites",
     role: "Co-founder",
+    project: "Ecommerce Platform",
+    stars: 5,
     quote:
-      "Clear communication, fast iterations, and a storefront that actually converts.",
+      "Our makhana brand needed a website that felt fresh and trustworthy. The team nailed the design on the first revision. The checkout process is smooth and our customers love it.",
   },
   {
-    name: "Ananya Mehta",
-    company: "HealthFirst Clinics",
-    role: "Operations Head",
+    name: "Vikram Mehra",
+    company: "SLJ Solutions",
+    role: "Director",
+    project: "Interior Design Website",
+    stars: 5,
     quote:
-      "They made our patient portal intuitive and secure. Our team adopted it without friction.",
+      "The portfolio website they built for us genuinely impresses clients before we even walk into a meeting. The admin panel makes updating projects effortless. Great investment.",
   },
   {
-    name: "Karan Malhotra",
-    company: "UrbanBuild",
-    role: "Marketing Director",
+    name: "Dr. Ananya Bose",
+    company: "Panacea Medcare",
+    role: "Medical Director",
+    project: "Healthcare Website",
+    stars: 5,
     quote:
-      "Campaign landing pages and tracking set up properly from day one. Rare to see that discipline.",
+      "Building a multilingual healthcare website — English, French, and Arabic — is not simple. Grox Media handled the i18n implementation perfectly. The site looks professional and performs well globally.",
+  },
+  {
+    name: "Arjun Shrestha",
+    company: "Shrestha Academy",
+    role: "Founder & Director",
+    project: "EdTech Platform",
+    stars: 5,
+    quote:
+      "Our MERN stack platform handles thousands of students — online courses, e-books, offline class management, progress tracking. Grox Media architected it all cleanly. Scalable, stable, and exactly what we envisioned.",
   },
 ];
 
@@ -140,10 +158,23 @@ export default function Testimonials() {
                   "flex flex-col",
                 ].join(" ")}
               >
-                <Quote className="h-6 w-6 flex-shrink-0 text-gray-200 sm:h-7 sm:w-7" />
+                {/* Top row — quote icon + stars */}
+                <div className="flex items-start justify-between gap-2">
+                  <Quote className="h-6 w-6 flex-shrink-0 text-groxOrange/30 sm:h-7 sm:w-7" />
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: t.stars }).map((_, si) => (
+                      <Star key={si} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                </div>
 
-                {/* Quote text — flex-1 so card grows with content */}
-                <p className="mt-3 flex-1 text-sm italic leading-relaxed text-[#374151] sm:text-base">
+                {/* Project badge */}
+                <span className="mt-3 inline-block self-start rounded-full bg-groxBlue/8 px-2.5 py-0.5 text-[11px] font-semibold text-groxBlue">
+                  {t.project}
+                </span>
+
+                {/* Quote text */}
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-[#374151] sm:text-base">
                   &quot;{t.quote}&quot;
                 </p>
 

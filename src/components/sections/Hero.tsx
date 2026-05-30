@@ -4,9 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
-import { fadeUp, defaultTransition } from "@/lib/motion";
-
-const fade = { initial: fadeUp.hidden, animate: fadeUp.visible };
+const fade = {
+  initial: { opacity: 0, y: 28 },
+  animate: { opacity: 1, y: 0 },
+};
 
 export default function Hero() {
   return (
