@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
+
 function MarqueeBand() {
-  /* Extra spaces around bullets so the ticker does not look cramped */
   const phrase = "Develop it from Best   •   Develop it Once   •   ";
   const repeated = Array(14).fill(phrase).join("");
   return (
@@ -10,10 +12,7 @@ function MarqueeBand() {
         <span className="inline-block shrink-0 whitespace-nowrap px-8 text-base font-extrabold leading-normal tracking-[0.06em] text-white md:px-12 md:text-lg md:tracking-[0.08em]">
           {repeated}
         </span>
-        <span
-          className="inline-block shrink-0 whitespace-nowrap px-8 text-base font-extrabold leading-normal tracking-[0.06em] text-white md:px-12 md:text-lg md:tracking-[0.08em]"
-          aria-hidden
-        >
+        <span className="inline-block shrink-0 whitespace-nowrap px-8 text-base font-extrabold leading-normal tracking-[0.06em] text-white md:px-12 md:text-lg md:tracking-[0.08em]" aria-hidden>
           {repeated}
         </span>
       </div>
@@ -22,8 +21,29 @@ function MarqueeBand() {
 }
 
 export default function VideoShowcase() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const videoRef   = useRef<HTMLVideoElement>(null);
+  const inView = useInView(sectionRef, { once: true, margin: "-10% 0px" });
+  const [activated, setActivated] = useState(false);
+
+  useEffect(() => {
+    if (!inView) return;
+    setActivated(true);
+  }, [inView]);
+
+  useEffect(() => {
+    if (!activated) return;
+    const v = videoRef.current;
+    if (!v) return;
+    v.load();
+    v.play().catch(() => {});
+  }, [activated]);
+
   return (
-    <section className="relative min-h-[500px] overflow-x-hidden bg-gradient-to-br from-amber-500 via-groxOrange to-[#1a1a2e] py-16 md:py-24">
+    <section
+      ref={sectionRef}
+      className="relative min-h-[500px] overflow-x-hidden bg-gradient-to-br from-amber-500 via-groxOrange to-[#1a1a2e] py-16 md:py-24"
+    >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_50%)] opacity-40" />
       <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <p className="text-lg font-semibold italic leading-relaxed text-white/95 md:text-xl md:leading-relaxed">
@@ -31,18 +51,19 @@ export default function VideoShowcase() {
         </p>
         <div className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-2 shadow-2xl backdrop-blur-md lg:max-w-7xl">
           <div className="relative aspect-video overflow-hidden rounded-2xl bg-black/40">
+            {/* Skeleton placeholder until video loads */}
+            {!activated && (
+              <div className="absolute inset-0 animate-pulse bg-white/10 rounded-2xl" />
+            )}
             <video
+              ref={videoRef}
               className="h-full w-full object-cover"
-              autoPlay
+              src={activated ? "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/bgvideo.mp4" : undefined}
               muted
               loop
               playsInline
-            >
-              <source
-                src="https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/bgvideo.mp4"
-                type="video/webm"
-              />
-            </video>
+              preload="none"
+            />
           </div>
         </div>
       </div>

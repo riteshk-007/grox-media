@@ -40,7 +40,6 @@ export default function VideoLightbox({ items, startIndex, onClose }: Props) {
     };
   }, [onClose, prev, next]);
 
-  // Auto-play on index change
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
@@ -73,47 +72,38 @@ export default function VideoLightbox({ items, startIndex, onClose }: Props) {
         {index + 1} / {items.length}
       </div>
 
-      {/* Prev */}
-      <button
-        onClick={prev}
-        aria-label="Previous"
-        className="absolute left-3 top-1/2 z-20 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl transition hover:bg-gray-100 sm:left-6"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
+      {/* Video area — full height, centered, with side space for arrows */}
+      <div className="relative flex h-full w-full items-center justify-center px-16 sm:px-20 py-16">
 
-      {/* Next */}
-      <button
-        onClick={next}
-        aria-label="Next"
-        className="absolute right-3 top-1/2 z-20 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl transition hover:bg-gray-100 sm:right-6"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </button>
-
-      {/* Video */}
-      <div className="relative flex h-full w-full items-center justify-center px-20 py-16">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={index}
             custom={direction}
             variants={{
-              enter: (dir: number) => ({ x: dir > 0 ? "40%" : "-40%", opacity: 0, scale: 0.94 }),
+              enter: (dir: number) => ({ x: dir > 0 ? "35%" : "-35%", opacity: 0, scale: 0.95 }),
               center: { x: 0, opacity: 1, scale: 1 },
-              exit:   (dir: number) => ({ x: dir > 0 ? "-40%" : "40%", opacity: 0, scale: 0.94 }),
+              exit:   (dir: number) => ({ x: dir > 0 ? "-35%" : "35%", opacity: 0, scale: 0.95 }),
             }}
             initial="enter"
             animate="center"
             exit="exit"
             transition={{ duration: 0.28, ease: "easeInOut" }}
-            className="flex max-h-[80vh] w-full max-w-md items-center justify-center"
+            className="h-full flex items-center justify-center"
           >
-            {/* 1:1 container */}
-            <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl" style={{ aspectRatio: "1/1" }}>
+            {/* 1:1 ratio — height drives size, no crop */}
+            <div
+              className="relative overflow-hidden rounded-2xl shadow-2xl bg-black"
+              style={{
+                height: "min(80vh, 80vw)",
+                width:  "min(80vh, 80vw)",
+                maxHeight: "80vh",
+                maxWidth: "calc(100vw - 8rem)",
+              }}
+            >
               <video
                 ref={videoRef}
                 src={current.videoSrc}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
                 controls
                 autoPlay
                 loop
@@ -122,24 +112,38 @@ export default function VideoLightbox({ items, startIndex, onClose }: Props) {
             </div>
           </motion.div>
         </AnimatePresence>
+
+        {/* Prev — inside padding area, vertically centered */}
+        <button
+          onClick={prev}
+          aria-label="Previous"
+          className="absolute left-2 top-1/2 z-20 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl transition hover:bg-gray-100 sm:left-4"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+
+        {/* Next */}
+        <button
+          onClick={next}
+          aria-label="Next"
+          className="absolute right-2 top-1/2 z-20 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl transition hover:bg-gray-100 sm:right-4"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
       </div>
 
-      {/* Bottom title + dots */}
-      <div className="absolute inset-x-0 bottom-0 z-20 bg-black/60 px-4 py-3 text-center backdrop-blur-sm">
-        <p className="text-sm font-semibold text-white">{current.title}</p>
-        <p className="mt-0.5 text-xs text-white/50">{current.type} · {current.platform}</p>
-        <div className="mt-2 flex justify-center gap-1.5">
-          {items.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => { setDirection(i > index ? 1 : -1); setIndex(i); }}
-              aria-label={`Go to ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-200 ${
-                i === index ? "w-5 bg-white" : "w-1.5 bg-white/30 hover:bg-white/60"
-              }`}
-            />
-          ))}
-        </div>
+      {/* Dot indicators only — no title text */}
+      <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-1.5">
+        {items.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => { setDirection(i > index ? 1 : -1); setIndex(i); }}
+            aria-label={`Go to ${i + 1}`}
+            className={`h-1.5 rounded-full transition-all duration-200 ${
+              i === index ? "w-5 bg-white" : "w-1.5 bg-white/30 hover:bg-white/60"
+            }`}
+          />
+        ))}
       </div>
     </motion.div>
   );

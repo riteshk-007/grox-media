@@ -156,15 +156,6 @@ export default function PortfolioPage() {
                       className="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-zoom-in">
                       <div className="relative aspect-square overflow-hidden rounded-xl">
                         <LazyImage src={item.image} alt={item.title} sizes="20vw" className="transition-transform duration-500 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
-                        <div className="absolute left-2 top-2">
-                          <span className="rounded-full bg-groxBlue/90 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm">
-                            {item.subCategory}
-                          </span>
-                        </div>
-                        <div className="absolute bottom-0 left-0 right-0 p-2.5">
-                          <p className="text-xs font-semibold text-white leading-tight drop-shadow">{item.title}</p>
-                        </div>
                       </div>
                     </motion.div>
                   ))}

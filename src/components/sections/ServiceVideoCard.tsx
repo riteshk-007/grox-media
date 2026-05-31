@@ -57,16 +57,19 @@ export default function ServiceVideoCard({
       whileHover={{ y: -4 }}
       className="min-w-0 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-3 md:p-5 shadow-sm transition-shadow hover:shadow-lg"
     >
-      <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-gray-200">
+      <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-gray-100">
+        {/* Skeleton shimmer until video activates */}
+        {!activated && (
+          <div className="absolute inset-0 animate-pulse bg-gray-200 rounded-xl" />
+        )}
         <video
           className="absolute inset-0 h-full w-full object-cover"
           ref={videoRef}
           src={activated ? videoSrc : undefined}
           muted
           loop
-          autoPlay
           playsInline
-          preload={activated ? "metadata" : "none"}
+          preload="none"
         />
       </div>
 
