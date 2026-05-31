@@ -105,6 +105,7 @@ export default function VideoLightbox({ items, startIndex, onClose }: Props) {
                 src={current.videoSrc}
                 className="h-full w-full object-contain"
                 controls
+                controlsList="nodownload"
                 autoPlay
                 loop
                 playsInline
