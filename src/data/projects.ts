@@ -9,7 +9,7 @@ export type Project = {
   filter?: string;
 };
 
-export type GraphicSubCategory = "Social Media Graphics" | "3D Work" | "Logos";
+export type GraphicSubCategory = "Logos" | "Packaging" | "Social Media Graphics" | "3D Work";
 
 export type GraphicItem = {
   title: string;
@@ -161,6 +161,8 @@ const _socialMediaGraphics: GraphicItem[] = Array.from({ length: 53 }, (_, i) =>
   subCategory: "Social Media Graphics" as GraphicSubCategory,
 }));
 
+const _packaging: GraphicItem[] = [];
+
 const _3D_BASE = `${_BASE}/graphic/3d-work`;
 const _3dWork: GraphicItem[] = [
   { title: "3D Work 1 (JPEG)", image: `${_3D_BASE}/3d-work%20(1).jpeg`, subCategory: "3D Work" },
@@ -184,9 +186,10 @@ const _logos: GraphicItem[] = Array.from({ length: 96 }, (_, i) => ({
 }));
 
 export const graphicItems: GraphicItem[] = [
+  ..._logos,
+  ..._packaging,
   ..._socialMediaGraphics,
   ..._3dWork,
-  ..._logos,
 ];
 
 const _VID_BASE = "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/video-editing";

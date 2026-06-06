@@ -28,9 +28,15 @@ const tabs: { id: Tab; label: string; icon: React.ElementType }[] = [
 
 type WebFilter = "All" | "E-commerce" | "Web Development" | "Healthcare" | "EdTech" | "Travel" | "Finance";
 const webFilters: WebFilter[] = ["All", "E-commerce", "Web Development", "Healthcare", "EdTech", "Travel", "Finance"];
-const graphicSubs: (GraphicSubCategory | "All")[] = ["All", "Social Media Graphics", "3D Work", "Logos"];
 const videoFilters: ("All" | VideoPlatform)[] = ["All", "Instagram", "YouTube", "Facebook"];
 const GRAPHIC_BATCH_SIZE = 15;
+const graphicFilters: { value: GraphicSubCategory | "All"; label: string }[] = [
+  { value: "All", label: "All" },
+  { value: "Logos", label: "Logo" },
+  { value: "Packaging", label: "Packaging" },
+  { value: "Social Media Graphics", label: "Social Media" },
+  { value: "3D Work", label: "3D Work" },
+];
 
 // Stagger container — cards enter one by one
 const gridVariants = {
@@ -67,6 +73,34 @@ function FilterChips<T extends string>({ options, active, onChange }: { options:
           )}
         >
           {opt}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function GraphicFilterChips({
+  active,
+  onChange,
+}: {
+  active: GraphicSubCategory | "All";
+  onChange: (v: GraphicSubCategory | "All") => void;
+}) {
+  return (
+    <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:justify-center">
+      {graphicFilters.map((opt) => (
+        <button
+          key={opt.value}
+          type="button"
+          onClick={() => onChange(opt.value)}
+          className={cn(
+            "rounded-full border px-2 py-1.5 text-[11px] font-semibold transition-all duration-150 sm:px-3.5 sm:py-1.5 sm:text-xs",
+            active === opt.value
+              ? "border-groxOrange bg-groxOrange text-white shadow-sm"
+              : "border-gray-200 bg-white text-gray-500 hover:border-groxOrange hover:text-groxOrange"
+          )}
+        >
+          {opt.label}
         </button>
       ))}
     </div>
@@ -185,7 +219,7 @@ export default function PortfolioPreview() {
           {activeTab === "graphic" && (
             <motion.div key="graphic" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.22 }}>
               <div className="py-6">
-                <FilterChips options={graphicSubs} active={graphicFilter} onChange={setGraphicFilter} />
+                <GraphicFilterChips active={graphicFilter} onChange={setGraphicFilter} />
               </div>
               <AnimatePresence mode="wait">
                 <motion.div key={graphicFilter} variants={gridVariants} initial="hidden" animate="show" exit="exit"
