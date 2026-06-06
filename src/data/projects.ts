@@ -9,7 +9,7 @@ export type Project = {
   filter?: string;
 };
 
-export type GraphicSubCategory = "Social Media Graphics" | "3D Work";
+export type GraphicSubCategory = "Social Media Graphics" | "3D Work" | "Logos";
 
 export type GraphicItem = {
   title: string;
@@ -176,9 +176,17 @@ const _3dWork: GraphicItem[] = [
   { title: "3D Work 8",        image: `${_3D_BASE}/3d-work%20(8).jpg`,  subCategory: "3D Work" },
 ];
 
+const _LOGO_BASE = `${_BASE}/logos`;
+const _logos: GraphicItem[] = Array.from({ length: 96 }, (_, i) => ({
+  title: `Logo ${i + 1}`,
+  image: `${_LOGO_BASE}/logo%20(${i + 1}).jpg`,
+  subCategory: "Logos" as GraphicSubCategory,
+}));
+
 export const graphicItems: GraphicItem[] = [
   ..._socialMediaGraphics,
   ..._3dWork,
+  ..._logos,
 ];
 
 const _VID_BASE = "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/video-editing";

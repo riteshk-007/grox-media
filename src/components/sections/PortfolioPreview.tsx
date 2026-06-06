@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionBadge from "@/components/ui/SectionBadge";
 import Lightbox from "@/components/ui/Lightbox";
@@ -28,8 +28,9 @@ const tabs: { id: Tab; label: string; icon: React.ElementType }[] = [
 
 type WebFilter = "All" | "E-commerce" | "Web Development" | "Healthcare" | "EdTech" | "Travel" | "Finance";
 const webFilters: WebFilter[] = ["All", "E-commerce", "Web Development", "Healthcare", "EdTech", "Travel", "Finance"];
-const graphicSubs: (GraphicSubCategory | "All")[] = ["All", "Social Media Graphics", "3D Work"];
+const graphicSubs: (GraphicSubCategory | "All")[] = ["All", "Social Media Graphics", "3D Work", "Logos"];
 const videoFilters: ("All" | VideoPlatform)[] = ["All", "Instagram", "YouTube", "Facebook"];
+const GRAPHIC_BATCH_SIZE = 15;
 
 // Stagger container — cards enter one by one
 const gridVariants = {
@@ -78,10 +79,37 @@ export default function PortfolioPreview() {
   const [graphicFilter, setGraphicFilter] = useState<GraphicSubCategory | "All">("All");
   const [videoFilter, setVideoFilter]     = useState<"All" | VideoPlatform>("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [graphicVisibleCount, setGraphicVisibleCount] = useState(GRAPHIC_BATCH_SIZE);
 
   const websiteItems = (webFilter === "All" ? projects : projects.filter((p) => p.filter === webFilter)).slice(0, 6);
-  const filteredGraphic = (graphicFilter === "All" ? graphicItems : graphicItems.filter((g) => g.subCategory === graphicFilter)).slice(0, 15);
+  const filteredGraphic = graphicFilter === "All" ? graphicItems : graphicItems.filter((g) => g.subCategory === graphicFilter);
+  const visibleGraphic = filteredGraphic.slice(0, graphicVisibleCount);
   const filteredVideo = (videoFilter === "All" ? videoItems : videoItems.filter((v) => v.platform === videoFilter)).slice(0, 8);
+
+  useEffect(() => {
+    if (activeTab !== "graphic") return;
+    setGraphicVisibleCount(GRAPHIC_BATCH_SIZE);
+  }, [activeTab, graphicFilter]);
+
+  useEffect(() => {
+    if (activeTab !== "graphic") return;
+    const onScroll = () => {
+      const distanceFromBottom =
+        document.documentElement.scrollHeight -
+        (window.scrollY + window.innerHeight);
+
+      if (distanceFromBottom > 1200) return;
+
+      setGraphicVisibleCount((current) => {
+        if (current >= filteredGraphic.length) return current;
+        return Math.min(current + GRAPHIC_BATCH_SIZE, filteredGraphic.length);
+      });
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [activeTab, filteredGraphic.length, graphicVisibleCount]);
 
   return (
     <section id="portfolio" className="py-16 md:py-24 overflow-x-hidden">
@@ -162,7 +190,7 @@ export default function PortfolioPreview() {
               <AnimatePresence mode="wait">
                 <motion.div key={graphicFilter} variants={gridVariants} initial="hidden" animate="show" exit="exit"
                   className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                  {filteredGraphic.map((item) => (
+                  {visibleGraphic.map((item) => (
                     <motion.div key={item.title} variants={graphicCardVariants}
                       onClick={() => setLightboxIndex(graphicItems.indexOf(item))}
                       className="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-zoom-in">
@@ -171,6 +199,11 @@ export default function PortfolioPreview() {
                       </div>
                     </motion.div>
                   ))}
+                  {graphicVisibleCount < filteredGraphic.length && (
+                    <div className="col-span-full flex items-center justify-center py-4 text-xs font-medium text-gray-400">
+                      Loading more on scroll...
+                    </div>
+                  )}
                 </motion.div>
               </AnimatePresence>
             </motion.div>
