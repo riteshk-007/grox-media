@@ -135,7 +135,7 @@ export default function AboutPage() {
             transition={{ duration: 0.45, delay: 0.15 }}
             className="mt-6 text-2xl sm:text-3xl font-extrabold text-[#111827] md:text-5xl lg:text-6xl"
           >
-            We Are Grox Media
+            We Are Grox Media LLP
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -143,7 +143,7 @@ export default function AboutPage() {
             transition={{ duration: 0.45, delay: 0.3 }}
             className="mx-auto mt-6 max-w-4xl text-lg leading-relaxed text-gray-500 md:text-xl md:leading-relaxed"
           >
-            At Grox Media, we believe in the power of digital transformation.
+            At Grox Media LLP, we believe in the power of digital transformation.
             We are a team of passionate developers, designers, and strategists
             dedicated to helping businesses thrive in the digital age.
           </motion.p>
@@ -199,7 +199,7 @@ export default function AboutPage() {
               Crafting Digital Excellence Since Day One
             </h2>
             <p className="mb-6 text-base leading-loose text-gray-500 md:text-lg">
-              Grox Media is a small, focused team of designers, developers and
+              Grox Media LLP is a small, focused team of designers, developers and
               strategists. We partner with founders and teams to ship usable,
               delightful products — from marketing websites to MVP apps.
             </p>

@@ -42,7 +42,7 @@ const CallDialog = ({
           <FaPhoneAlt className="w-8 h-8 text-gray-800" />
         </div>
         <h3 className="text-xl font-bold mb-2 text-gray-800">Make a Call?</h3>
-        <p className="text-gray-600 mb-2">Do you want to call Grox Media?</p>
+        <p className="text-gray-600 mb-2">Do you want to call Grox Media LLP?</p>
         <p className="text-lg font-semibold text-gray-800 mb-6">
           {phoneNumber}
         </p>
@@ -91,7 +91,7 @@ const WhatsAppDialog = ({
           <FaWhatsapp className="w-8 h-8 text-green-600" />
         </div>
         <h3 className="text-xl font-bold mb-2 text-gray-800">Open WhatsApp?</h3>
-        <p className="text-gray-600 mb-2">Chat with Grox Media on WhatsApp</p>
+        <p className="text-gray-600 mb-2">Chat with Grox Media LLP on WhatsApp</p>
         <p className="text-lg font-semibold text-gray-800 mb-4">
           {phoneNumber}
         </p>
@@ -221,7 +221,7 @@ const ContactSection = () => {
           icon={<Send className="w-4 h-4" />}
           icontitle="GET IN TOUCH"
           description={
-            "Let's discuss your ideas and turn them into reality. Get a free consultation and project estimate."
+            "Let's discuss your ideas and turn them into reality with Grox Media LLP. Get a free consultation and project estimate."
           }
         />
 
@@ -391,7 +391,7 @@ const ContactSection = () => {
                 Get in touch
               </h3>
               <p className="text-gray-600">
-                We currently operate online and are planning our physical
+                Grox Media LLP currently operates online and is planning its physical
                 presence soon. Meanwhile, we&apos;re fully equipped to work
                 remotely.
               </p>

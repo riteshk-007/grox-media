@@ -98,7 +98,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-8 text-center text-xs text-[#6b7280] sm:flex-row sm:text-left">
           <p>
-            © {new Date().getFullYear()} Grox Media. All rights reserved.
+            © {new Date().getFullYear()} Grox Media LLP. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2">
             <Link href="/privacy" className="hover:text-groxBlue">

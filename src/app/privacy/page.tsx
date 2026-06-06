@@ -86,7 +86,7 @@ export default function PrivacyPage() {
               Information we collect
             </h2>
             <p className="mb-8 mt-4 leading-relaxed text-gray-600">
-              We collect only the data you give us directly — for example,
+              At Grox Media LLP, we value your privacy. We collect only the data you give us directly — for example,
               contact info you submit through forms (name, email, phone,
               message). We don&apos;t collect payment information on this site.
             </p>

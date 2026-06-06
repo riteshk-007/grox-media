@@ -85,7 +85,7 @@ const CallDialog: React.FC<CallDialogProps> = ({
 
           {/* Title */}
           <h3 className="text-xl font-bold text-gray-900 mb-2">Make a Call?</h3>
-          <p className="text-gray-600 mb-2">Do you want to call Grox Media?</p>
+          <p className="text-gray-600 mb-2">Do you want to call Grox Media LLP?</p>
 
           {/* Phone number with highlight */}
           <div className="bg-blue-50 border-l-4 border-groxBlue p-3 my-4">

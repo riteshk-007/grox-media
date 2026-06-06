@@ -160,7 +160,7 @@ const Footer: React.FC = () => {
             {/* Copyright */}
             <div className="text-center sm:text-left">
               © {new Date().getFullYear()}{" "}
-              <span className="font-semibold text-groxBlue">Grox Media</span>.
+              <span className="font-semibold text-groxBlue">Grox Media LLP</span>.
               All rights reserved.
             </div>
 

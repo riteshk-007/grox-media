@@ -196,7 +196,7 @@ export default function ContactPage() {
             transition={{ duration: 0.45, delay: 0.3 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-gray-500"
           >
-            Have a project in mind? We&apos;d love to hear from you. Send us a
+            Have a project in mind? Grox Media LLP would love to hear from you. Send us a
             message and we&apos;ll get back to you shortly.
           </motion.p>
         </div>

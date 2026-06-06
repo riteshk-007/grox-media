@@ -85,7 +85,7 @@ export default function TermsPage() {
               Acceptance of terms
             </h2>
             <p className="mb-8 mt-4 leading-relaxed text-gray-600">
-              By using the site you agree to these terms. If you don&apos;t
+              By using this website, you agree to these terms of service of Grox Media LLP. If you don&apos;t
               agree, please don&apos;t use the site.
             </p>
 

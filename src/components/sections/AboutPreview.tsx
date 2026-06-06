@@ -41,10 +41,10 @@ export default function AboutPreview() {
             transition={{ duration: 0.55 }}
           >
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] md:text-4xl">
-              We Are Grox Media
+              We Are Grox Media LLP
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#6b7280]">
-              At Grox Media, we believe in the power of digital transformation.
+              At Grox Media LLP, we believe in the power of digital transformation.
               We are a team of passionate developers, designers, and strategists
               dedicated to helping businesses thrive in the digital age.
             </p>
