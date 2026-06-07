@@ -251,7 +251,7 @@ const ContactSection = () => {
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
                   Thank you!
                 </h4>
-                <p className="text-gray-600">We've received your message.</p>
+                <p className="text-gray-600">We&apos;ve received your message.</p>
                 <p className="text-sm text-gray-500 mt-2">
                   Our team will try to call you within 12 hours (between 10 AM -
                   7 PM).
@@ -390,7 +390,7 @@ const ContactSection = () => {
                 Get in touch
               </h3>
               <p className="text-gray-600">
-                Grox Media LLP - Digital Excellence Redefined. Let's discuss your project.
+                Grox Media LLP - Digital Excellence Redefined. Let&apos;s discuss your project.
               </p>
             </div>
 
