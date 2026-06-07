@@ -124,10 +124,10 @@ export default function TermsPage() {
             <p className="mt-4 leading-relaxed text-gray-600">
               Questions about these terms? Email{" "}
               <a
-                href="mailto:groxmedia55@gmail.com"
+                href="mailto:info@groxmedia.in"
                 className="font-semibold text-[#1e40af] underline hover:no-underline"
               >
-                groxmedia55@gmail.com
+                info@groxmedia.in
               </a>
               .
             </p>

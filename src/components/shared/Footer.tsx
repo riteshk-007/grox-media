@@ -24,6 +24,9 @@ const Footer: React.FC = () => {
               />
             </Link>
 
+            {/* LLP Text */}
+            <p className="font-bold text-orange-600 mb-2">Grox Media LLP</p>
+
             {/* Description */}
             <p className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed max-w-md">
               We build modern websites, digital products and marketing that help
@@ -31,9 +34,12 @@ const Footer: React.FC = () => {
             </p>
 
             {/* Location */}
-            <div className="flex items-center gap-3 text-gray-600 text-sm sm:text-base">
-              <MapPin className="w-4 h-4 flex-shrink-0" />
-              <span>Online-first — serving clients remotely</span>
+            <div className="flex items-start gap-3 text-gray-600 text-sm sm:text-base">
+              <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+              <span>
+                Noida Office Address:<br />
+                Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
+              </span>
             </div>
           </div>
 
@@ -109,10 +115,10 @@ const Footer: React.FC = () => {
               </div>
               <div className="min-w-0 flex-1">
                 <a
-                  href="mailto:groxmedia55@gmail.com"
+                  href="mailto:info@groxmedia.in"
                   className="text-gray-700 font-semibold text-sm sm:text-base hover:text-groxOrange transition-colors duration-200 block break-all"
                 >
-                  groxmedia55@gmail.com
+                  info@groxmedia.in
                 </a>
                 <div className="text-gray-500 text-xs sm:text-sm mt-0.5">
                   24-hour response time

@@ -107,27 +107,30 @@ export default function ContactPage() {
         </a>
       ),
     },
-    {
-      icon: Mail,
-      circle: "bg-orange-50 text-[#ea580c]",
-      label: "Email",
-      value: (
-        <a
-          href="mailto:groxmedia55@gmail.com"
-          className="font-semibold text-[#111827]"
-        >
-          groxmedia55@gmail.com
-        </a>
-      ),
-    },
-    {
-      icon: MapPin,
-      circle: "bg-green-50 text-green-600",
-      label: "Location",
-      value: (
-        <span className="font-semibold text-[#111827]">New Delhi, India</span>
-      ),
-    },
+{
+       icon: Mail,
+       circle: "bg-orange-50 text-[#ea580c]",
+       label: "Email",
+       value: (
+         <a
+           href="mailto:info@groxmedia.in"
+           className="font-semibold text-[#111827]"
+         >
+           info@groxmedia.in
+         </a>
+       ),
+     },
+{
+       icon: MapPin,
+       circle: "bg-green-50 text-green-600",
+       label: "Location",
+       value: (
+         <span className="font-semibold text-[#111827]">
+           <span className="text-orange-600 font-bold">Noida Office Address:</span><br />
+           Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
+         </span>
+       ),
+     },
     {
       icon: Share2,
       circle: "bg-purple-50 text-purple-600",
@@ -359,17 +362,17 @@ export default function ContactPage() {
         </div>
       </motion.section>
 
-      <div className="mx-auto max-w-6xl px-6 pb-12 pt-8">
-        <div className="overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
-          <iframe
-            title="Map of New Delhi"
-            className="h-64 w-full grayscale-[20%] md:h-80"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=New%20Delhi%20India&output=embed"
-          />
-        </div>
-      </div>
+<div className="mx-auto max-w-6xl px-6 pb-12 pt-8">
+         <div className="overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
+           <iframe
+             title="Map of Noida Office"
+             className="h-64 w-full grayscale-[20%] md:h-80"
+             loading="lazy"
+             referrerPolicy="no-referrer-when-downgrade"
+             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3505.873910907143!2d77.40826037549647!3d28.51344107573003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMwJzQ4LjQiTiA3N8KwMjQnMzkuMCJF!5e0!3m2!1sen!2sin!4v1780820263351!5m2!1sen!2sin"
+           />
+         </div>
+       </div>
     </main>
   );
 }

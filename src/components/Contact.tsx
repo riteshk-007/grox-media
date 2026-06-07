@@ -161,16 +161,19 @@ const Contact = ({ showIntro = true }: ContactProps) => {
               <Mail className="h-6 w-6 text-groxOrange" />,
               "Email",
               <a
-                href="mailto:groxmedia55@gmail.com"
+                href="mailto:info@groxmedia.in"
                 className="break-all hover:text-groxOrange"
               >
-                groxmedia55@gmail.com
+                info@groxmedia.in
               </a>
             )}
             {infoCard(
               <MapPin className="h-6 w-6 text-groxBlue" />,
               "Location",
-              <span>New Delhi, India</span>
+              <span className="font-bold text-orange-600">
+                Noida Office Address:<br />
+                Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
+              </span>
             )}
             {infoCard(
               <Instagram className="h-6 w-6 text-pink-600" />,

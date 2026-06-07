@@ -29,12 +29,10 @@ export default function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </Link>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#6b7280]">
-              We build modern websites, digital products and marketing that help
-              businesses grow.
-            </p>
+            <p className="mt-2 font-bold text-orange-600">Grox Media LLP</p>
             <p className="mt-3 text-sm text-[#6b7280]">
-              Online-first — serving clients remotely
+              Noida Office Address:<br />
+              Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
             </p>
           </div>
 
@@ -66,10 +64,10 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-groxOrange" />
                 <a
-                  href="mailto:groxmedia55@gmail.com"
+                  href="mailto:info@groxmedia.in"
                   className="break-all hover:text-groxOrange"
                 >
-                  groxmedia55@gmail.com
+                  info@groxmedia.in
                 </a>
               </li>
               <li className="flex items-center gap-4 pt-2">

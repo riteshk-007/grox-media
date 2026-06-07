@@ -127,7 +127,7 @@ export default function PrivacyPage() {
             </h2>
             <p className="mb-8 mt-4 leading-relaxed text-gray-600">
               You can ask us to remove your data by contacting
-              groxmedia55@gmail.com. We&apos;ll respond quickly and delete your
+              info@groxmedia.in. We&apos;ll respond quickly and delete your
               personal information where required.
             </p>
 
@@ -139,10 +139,10 @@ export default function PrivacyPage() {
             <p className="mt-4 leading-relaxed text-gray-600">
               If you have questions about privacy, email us at{" "}
               <a
-                href="mailto:groxmedia55@gmail.com"
+                href="mailto:info@groxmedia.in"
                 className="font-semibold text-[#1e40af] underline hover:no-underline"
               >
-                groxmedia55@gmail.com
+                info@groxmedia.in
               </a>
               .
             </p>

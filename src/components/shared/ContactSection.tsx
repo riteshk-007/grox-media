@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { toast } from "sonner";
-import { Phone, Mail, Clock, Send, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, Clock, Send, Instagram, Linkedin, MapPin } from "lucide-react";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { MdCheck } from "react-icons/md";
@@ -150,7 +150,6 @@ const ContactSection = () => {
     const cleaned = formData.phone.replace(/[^0-9]/g, "");
     if (!phoneRe.test(cleaned)) newErrors.phone = "Enter a valid phone number";
 
-    // Age validation (optional)
     if (formData.age && formData.age.trim()) {
       const ageClean = formData.age.replace(/[^0-9]/g, "");
       const ageNum = Number(ageClean || 0);
@@ -252,7 +251,7 @@ const ContactSection = () => {
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
                   Thank you!
                 </h4>
-                <p className="text-gray-600">We’ve received your message.</p>
+                <p className="text-gray-600">We've received your message.</p>
                 <p className="text-sm text-gray-500 mt-2">
                   Our team will try to call you within 12 hours (between 10 AM -
                   7 PM).
@@ -391,9 +390,7 @@ const ContactSection = () => {
                 Get in touch
               </h3>
               <p className="text-gray-600">
-                Grox Media LLP currently operates online and is planning its physical
-                presence soon. Meanwhile, we&apos;re fully equipped to work
-                remotely.
+                Grox Media LLP - Digital Excellence Redefined. Let's discuss your project.
               </p>
             </div>
 
@@ -414,7 +411,22 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Email</h4>
-                  <p className="text-gray-600">groxmedia55@gmail.com</p>
+                  <p className="text-gray-600">info@groxmedia.in</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-1">Location</h4>
+                  <p className="text-gray-600">
+                    <span className="font-bold text-orange-600">
+                      Noida Office Address:<br />
+                      Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
+                    </span>
+                  </p>
                 </div>
               </div>
 
@@ -430,60 +442,80 @@ const ContactSection = () => {
                     Monday - Saturday: 10:00 AM - 7:00 PM
                   </p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
-                    <Instagram className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Instagram</h4>
-                    <a href="https://www.instagram.com/groxmedia1?igsh=MW5wYTA4aTQ2aWt6bw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 block break-all">
-                      @groxmedia1
-                    </a>
-                  </div>
-                </div>
+              </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
-                    <Linkedin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/manish-kumar-7a757b211/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 block break-all">
-                      Manish Kumar
-                    </a>
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                  <Instagram className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-1">Instagram</h4>
+                  <a
+                    href="https://www.instagram.com/groxmedia1?igsh=MW5wYTA4aTQ2aWt6bw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-gray-900 block break-all"
+                  >
+                    @groxmedia1
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                  <Linkedin className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-1">LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/manish-kumar-7a757b211/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-gray-900 block break-all"
+                  >
+                    Manish Kumar
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Dialogs */}
-        {showCallDialog && (
-          <CallDialog
-            phoneNumber={PHONE_NUMBER}
-            onClose={() => setShowCallDialog(false)}
-            onConfirm={() => {
-              callPhone();
-
-              setShowCallDialog(false);
-            }}
-          />
-        )}
-
-        {showWhatsAppDialog && (
-          <WhatsAppDialog
-            phoneNumber={PHONE_NUMBER}
-            message={WHATSAPP_MESSAGE}
-            onClose={() => setShowWhatsAppDialog(false)}
-            onConfirm={() => {
-              openWhatsApp();
-
-              setShowWhatsAppDialog(false);
-            }}
-          />
-        )}
       </div>
+
+      {/* Map */}
+      <div className="mt-12 overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
+        <iframe
+          title="Map of Noida Office"
+          className="h-64 w-full grayscale-[20%] md:h-80"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3505.873910907143!2d77.40826037549647!3d28.51344107573003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMwJzQ4LjQiTiA3N8KwMjQnMzkuMCJF!5e0!3m2!1sen!2sin!4v1780820263351!5m2!1sen!2sin"
+        />
+      </div>
+
+      {/* Dialogs */}
+      {showCallDialog && (
+        <CallDialog
+          phoneNumber={PHONE_NUMBER}
+          onClose={() => setShowCallDialog(false)}
+          onConfirm={() => {
+            callPhone();
+            setShowCallDialog(false);
+          }}
+        />
+      )}
+
+      {showWhatsAppDialog && (
+        <WhatsAppDialog
+          phoneNumber={PHONE_NUMBER}
+          message={WHATSAPP_MESSAGE}
+          onClose={() => setShowWhatsAppDialog(false)}
+          onConfirm={() => {
+            openWhatsApp();
+            setShowWhatsAppDialog(false);
+          }}
+        />
+      )}
     </section>
   );
 };

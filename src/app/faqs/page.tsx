@@ -157,13 +157,13 @@ export default function FaqsPage() {
               <Phone className="h-4 w-4" />
               +91 92668 06477
             </a>
-            <a
-              href="mailto:groxmedia55@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-groxBlue transition hover:bg-gray-100"
-            >
-              <Mail className="h-4 w-4" />
-              groxmedia55@gmail.com
-            </a>
+<a
+               href="mailto:info@groxmedia.in"
+               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-groxBlue transition hover:bg-gray-100"
+             >
+               <Mail className="h-4 w-4" />
+               info@groxmedia.in
+             </a>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full border-2 border-white/60 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"

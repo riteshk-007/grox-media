@@ -142,13 +142,13 @@ function buildUserTemplate({
         <p>If this is urgent, please call us directly at <strong>+91 92668 06477</strong>.</p>
         <p>Best Regards,<br/><strong>The Grox Media Team</strong></p>
       </div>
-      <div class="footer">
-        <strong>Grox Media</strong><br/>
-        Your Trusted IT Service Partner<br/>
-        Web Development | Digital Marketing | Graphic Design | MVP Development<br/><br/>
-        📞 +91 92668 06477 • ✉️ groxmedia55@gmail.com<br/>
-        🌐 www.groxmedia.in
-      </div>
+<div class="footer">
+         <strong>Grox Media</strong><br/>
+         Your Trusted IT Service Partner<br/>
+         Web Development | Digital Marketing | Graphic Design | MVP Development<br/><br/>
+         📞 +91 92668 06477 • ✉️ info@groxmedia.in<br/>
+         🌐 www.groxmedia.in
+       </div>
     </div>
   </body>
   </html>`;
