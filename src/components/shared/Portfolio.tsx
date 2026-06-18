@@ -22,6 +22,56 @@ interface PortfolioProps {
 
 const projects: Project[] = [
     {
+        title: "MBD Copper",
+        category: "B2B Manufacturing",
+        description:
+            "A professional B2B WordPress website for MBD Copper, a leading manufacturer and exporter of high-grade copper products.",
+        image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/mbdcopper.png",
+        tags: ["WordPress", "B2B", "Manufacturing", "PHP"],
+        results: "Enhanced digital presence and inquiry management",
+        link: "https://mbdcopper.in/",
+    },
+    {
+        title: "Rajiv Phylon",
+        category: "B2B Manufacturing",
+        description:
+            "A premium B2B platform for shoe sole manufacturing, built with a Next.js front-end, React.js admin portal, and Node.js backend with PostgreSQL database.",
+        image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/rajivphylon.png",
+        tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "B2B"],
+        results: "Seamless product showcase and inquiry system",
+        link: "https://rajivphylon.com/",
+    },
+    // {
+    //     title: "Elite Edge Fitness",
+    //     category: "Gym & E-commerce",
+    //     description:
+    //         "A modern fitness website offering memberships and selling PDF courses, designed with Next.js and PostgreSQL database.",
+    //     image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/elite-edge.png",
+    //     tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "E-commerce"],
+    //     results: "Streamlined memberships and digital course delivery",
+    //     link: "https://eliteedgefitness.in/",
+    // },
+    {
+        title: "Wool Jute Rug",
+        category: "Carpets E-commerce",
+        description:
+            "An international B2C e-commerce platform for selling carpets, featuring custom checkout with PayPal and Payoneer integration.",
+        image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/wooljuterug.png",
+        tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "PayPal", "Payoneer"],
+        results: "Fully integrated global B2C payment and shopping",
+        link: "https://www.wooljuterug.com/",
+    },
+    {
+        title: "Radiant Rays India",
+        category: "Medical B2B & B2C",
+        description:
+            "A robust medical supply website supporting both B2B and B2C channels, integrated with Razorpay payment gateway and Shiprocket shipping services.",
+        image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/radiantraysindia.png",
+        tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "Razorpay", "Shiprocket"],
+        results: "End-to-end payment and logistics integration",
+        link: "https://radiantraysindia.com/",
+    },
+    {
         title: "Monark FX",
         category: "Financial Services",
         description:

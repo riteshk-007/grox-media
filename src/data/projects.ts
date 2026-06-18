@@ -30,6 +30,61 @@ export type VideoItem = {
 
 export const projects: Project[] = [
   {
+    title: "MBD Copper",
+    category: "B2B Manufacturing",
+    description:
+      "A professional B2B WordPress website for MBD Copper, a leading manufacturer and exporter of high-grade copper products.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/mbdcopper.png",
+    tags: ["WordPress", "B2B", "Manufacturing", "PHP"],
+    results: "Enhanced digital presence and inquiry management",
+    link: "https://mbdcopper.in/",
+    filter: "Web Development",
+  },
+  {
+    title: "Rajiv Phylon",
+    category: "B2B Manufacturing",
+    description:
+      "A premium B2B platform for shoe sole manufacturing, built with a Next.js front-end, React.js admin portal, and Node.js backend with PostgreSQL database.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/rajivphylon.png",
+    tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "B2B"],
+    results: "Seamless product showcase and inquiry system",
+    link: "https://rajivphylon.com/",
+    filter: "Web Development",
+  },
+  // {
+  //   title: "Elite Edge Fitness",
+  //   category: "Gym & E-commerce",
+  //   description:
+  //     "A modern fitness website offering memberships and selling PDF courses, designed with Next.js and PostgreSQL database.",
+  //   image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/elite-edge.png",
+  //   tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "E-commerce"],
+  //   results: "Streamlined memberships and digital course delivery",
+  //   link: "https://eliteedgefitness.in/",
+  //   filter: "E-commerce",
+  // },
+  {
+    title: "Wool Jute Rug",
+    category: "Carpets E-commerce",
+    description:
+      "An international B2C e-commerce platform for selling carpets, featuring custom checkout with PayPal and Payoneer integration.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/wooljuterug.png",
+    tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "PayPal", "Payoneer"],
+    results: "Fully integrated global B2C payment and shopping",
+    link: "https://www.wooljuterug.com/",
+    filter: "E-commerce",
+  },
+  {
+    title: "Radiant Rays India",
+    category: "Medical B2B & B2C",
+    description:
+      "A robust medical supply website supporting both B2B and B2C channels, integrated with Razorpay payment gateway and Shiprocket shipping services.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/radiantraysindia.png",
+    tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "Razorpay", "Shiprocket"],
+    results: "End-to-end payment and logistics integration",
+    link: "https://radiantraysindia.com/",
+    filter: "Healthcare",
+  },
+  {
     title: "Aashey",
     category: "Ecommerce (Ghee)",
     description:
@@ -153,7 +208,7 @@ export const projects: Project[] = [
 ];
 
 const _BASE = "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev";
-const _SM  = `${_BASE}/graphic/social-media-graphics`;
+const _SM = `${_BASE}/graphic/social-media-graphics`;
 
 const _socialMediaGraphics: GraphicItem[] = Array.from({ length: 53 }, (_, i) => ({
   title: `Social Media Graphic ${i + 1}`,
@@ -166,16 +221,16 @@ const _packaging: GraphicItem[] = [];
 const _3D_BASE = `${_BASE}/graphic/3d-work`;
 const _3dWork: GraphicItem[] = [
   { title: "3D Work 1 (JPEG)", image: `${_3D_BASE}/3d-work%20(1).jpeg`, subCategory: "3D Work" },
-  { title: "3D Work 1 (JPG)",  image: `${_3D_BASE}/3d-work%20(1).jpg`,  subCategory: "3D Work" },
-  { title: "3D Work 1 (PNG)",  image: `${_3D_BASE}/3d-work%20(1).png`,  subCategory: "3D Work" },
+  { title: "3D Work 1 (JPG)", image: `${_3D_BASE}/3d-work%20(1).jpg`, subCategory: "3D Work" },
+  { title: "3D Work 1 (PNG)", image: `${_3D_BASE}/3d-work%20(1).png`, subCategory: "3D Work" },
   { title: "3D Work 2 (JPEG)", image: `${_3D_BASE}/3d-work%20(2).jpeg`, subCategory: "3D Work" },
-  { title: "3D Work 2 (JPG)",  image: `${_3D_BASE}/3d-work%20(2).jpg`,  subCategory: "3D Work" },
-  { title: "3D Work 3",        image: `${_3D_BASE}/3d-work%20(3).jpg`,  subCategory: "3D Work" },
-  { title: "3D Work 4",        image: `${_3D_BASE}/3d-work%20(4).jpg`,  subCategory: "3D Work" },
-  { title: "3D Work 5",        image: `${_3D_BASE}/3d-work%20(5).jpg`,  subCategory: "3D Work" },
-  { title: "3D Work 6",        image: `${_3D_BASE}/3d-work%20(6).jpg`,  subCategory: "3D Work" },
-  { title: "3D Work 7",        image: `${_3D_BASE}/3d-work%20(7).jpg`,  subCategory: "3D Work" },
-  { title: "3D Work 8",        image: `${_3D_BASE}/3d-work%20(8).jpg`,  subCategory: "3D Work" },
+  { title: "3D Work 2 (JPG)", image: `${_3D_BASE}/3d-work%20(2).jpg`, subCategory: "3D Work" },
+  { title: "3D Work 3", image: `${_3D_BASE}/3d-work%20(3).jpg`, subCategory: "3D Work" },
+  { title: "3D Work 4", image: `${_3D_BASE}/3d-work%20(4).jpg`, subCategory: "3D Work" },
+  { title: "3D Work 5", image: `${_3D_BASE}/3d-work%20(5).jpg`, subCategory: "3D Work" },
+  { title: "3D Work 6", image: `${_3D_BASE}/3d-work%20(6).jpg`, subCategory: "3D Work" },
+  { title: "3D Work 7", image: `${_3D_BASE}/3d-work%20(7).jpg`, subCategory: "3D Work" },
+  { title: "3D Work 8", image: `${_3D_BASE}/3d-work%20(8).jpg`, subCategory: "3D Work" },
 ];
 
 const _LOGO_BASE = `${_BASE}/logos`;
