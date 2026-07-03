@@ -101,10 +101,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18058800777"
-        />
+
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-79WH26B6DY"
