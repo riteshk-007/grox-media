@@ -51,17 +51,17 @@ export const projects: Project[] = [
     link: "https://rajivphylon.com/",
     filter: "Web Development",
   },
-  // {
-  //   title: "Elite Edge Fitness",
-  //   category: "Gym & E-commerce",
-  //   description:
-  //     "A modern fitness website offering memberships and selling PDF courses, designed with Next.js and PostgreSQL database.",
-  //   image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/elite-edge.png",
-  //   tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "E-commerce"],
-  //   results: "Streamlined memberships and digital course delivery",
-  //   link: "https://eliteedgefitness.in/",
-  //   filter: "E-commerce",
-  // },
+  {
+    title: "Elite Edge Fitness",
+    category: "Gym & E-commerce",
+    description:
+      "A modern fitness website offering memberships and selling PDF courses, designed with Next.js and PostgreSQL database.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/elite-edge.png",
+    tags: ["Next.js", "React.js", "Node.js", "PostgreSQL", "E-commerce"],
+    results: "Streamlined memberships and digital course delivery",
+    link: "https://eliteedgefitness.in/",
+    filter: "E-commerce",
+  },
   {
     title: "Wool Jute Rug",
     category: "Carpets E-commerce",
