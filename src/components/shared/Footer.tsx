@@ -25,7 +25,10 @@ const Footer: React.FC = () => {
             </Link>
 
             {/* LLP Text */}
-            <p className="font-bold text-orange-600 mb-2">Grox Media LLP</p>
+            <p className="font-bold text-orange-600 mb-1">Grox Media LLP</p>
+            <p className="text-gray-500 text-xs mb-2">
+              LLPIN: ACZ-6112 | GSTIN: 09ABEFG8952C1Z9
+            </p>
 
             {/* Description */}
             <p className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed max-w-md">

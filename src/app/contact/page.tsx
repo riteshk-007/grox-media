@@ -107,30 +107,41 @@ export default function ContactPage() {
         </a>
       ),
     },
-{
-       icon: Mail,
-       circle: "bg-orange-50 text-[#ea580c]",
-       label: "Email",
-       value: (
-         <a
-           href="mailto:info@groxmedia.in"
-           className="font-semibold text-[#111827]"
-         >
-           info@groxmedia.in
-         </a>
-       ),
-     },
-{
-       icon: MapPin,
-       circle: "bg-green-50 text-green-600",
-       label: "Location",
-       value: (
-         <span className="font-semibold text-[#111827]">
-           <span className="text-orange-600 font-bold">Noida Office Address:</span><br />
-           Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
-         </span>
-       ),
-     },
+    {
+      icon: Mail,
+      circle: "bg-orange-50 text-[#ea580c]",
+      label: "Email",
+      value: (
+        <a
+          href="mailto:info@groxmedia.in"
+          className="font-semibold text-[#111827]"
+        >
+          info@groxmedia.in
+        </a>
+      ),
+    },
+    {
+      icon: MapPin,
+      circle: "bg-green-50 text-green-600",
+      label: "Location",
+      value: (
+        <span className="font-semibold text-[#111827]">
+          <span className="text-orange-600 font-bold">Noida Office Address:</span><br />
+          Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
+        </span>
+      ),
+    },
+    {
+      icon: Check,
+      circle: "bg-teal-50 text-teal-600",
+      label: "Registration Info",
+      value: (
+        <div className="text-sm font-semibold text-[#111827] space-y-1">
+          <p>LLPIN: <span className="font-bold text-orange-600">ACZ-6112</span></p>
+          <p>GSTIN: <span className="font-bold text-blue-800">09ABEFG8952C1Z9</span></p>
+        </div>
+      ),
+    },
     {
       icon: Share2,
       circle: "bg-purple-50 text-purple-600",

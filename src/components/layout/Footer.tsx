@@ -30,6 +30,11 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-2 font-bold text-orange-600">Grox Media LLP</p>
+            <div className="mt-1 text-xs text-gray-500 font-medium">
+              <span>LLPIN: ACZ-6112</span>
+              <span className="mx-2">|</span>
+              <span>GSTIN: 09ABEFG8952C1Z9</span>
+            </div>
             <p className="mt-3 text-sm text-[#6b7280]">
               Noida Office Address:<br />
               Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India

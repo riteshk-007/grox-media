@@ -95,17 +95,17 @@ export const projects: Project[] = [
     link: "https://aashey.com/",
     filter: "E-commerce",
   },
-  {
-    title: "Nutry Bites",
-    category: "Ecommerce (Makhana)",
-    description:
-      "A specialized ecommerce platform for selling healthy Makhana snacks, developed using Next.js, React, and Node.js.",
-    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/nutrybites.jpeg",
-    tags: ["Next.js", "React", "Node.js", "Tailwind CSS"],
-    results: "Seamless shopping experience for healthy snacks",
-    link: "https://nutrybites.co.in/",
-    filter: "E-commerce",
-  },
+  // {
+  //   title: "Nutry Bites",
+  //   category: "Ecommerce (Makhana)",
+  //   description:
+  //     "A specialized ecommerce platform for selling healthy Makhana snacks, developed using Next.js, React, and Node.js.",
+  //   image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/nutrybites.jpeg",
+  //   tags: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+  //   results: "Seamless shopping experience for healthy snacks",
+  //   link: "https://nutrybites.co.in/",
+  //   filter: "E-commerce",
+  // },
   {
     title: "Shree Ganesh Traders",
     category: "B2B Trading Platform",

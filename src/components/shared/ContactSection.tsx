@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { toast } from "sonner";
-import { Phone, Mail, Clock, Send, Instagram, Linkedin, MapPin } from "lucide-react";
+import { Phone, Mail, Clock, Send, Instagram, Linkedin, MapPin, Check } from "lucide-react";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { MdCheck } from "react-icons/md";
@@ -426,6 +426,19 @@ const ContactSection = () => {
                       Noida Office Address:<br />
                       Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
                     </span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                  <Check className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-1">Registration Details</h4>
+                  <p className="text-gray-600 text-sm">
+                    LLPIN: <span className="font-bold text-orange-600">ACZ-6112</span><br />
+                    GSTIN: <span className="font-bold text-groxBlue">09ABEFG8952C1Z9</span>
                   </p>
                 </div>
               </div>

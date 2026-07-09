@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Instagram, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Linkedin, Check } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
@@ -173,6 +173,14 @@ const Contact = ({ showIntro = true }: ContactProps) => {
               <span className="font-bold text-orange-600">
                 Noida Office Address:<br />
                 Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
+              </span>
+            )}
+            {infoCard(
+              <Check className="h-6 w-6 text-teal-600" />,
+              "Registration Details",
+              <span className="block text-[#374151]">
+                LLPIN: <span className="font-bold text-orange-600">ACZ-6112</span><br />
+                GSTIN: <span className="font-bold text-groxBlue">09ABEFG8952C1Z9</span>
               </span>
             )}
             {infoCard(
