@@ -1,9 +1,4 @@
 import type { MetadataRoute } from "next";
-import { groq } from "next-sanity";
-import { isSanityConfigured } from "@/sanity/config";
-import { sanityClient } from "@/sanity/client";
-
-const blogSlugsForSitemap = groq`*[_type == "blog" && defined(slug.current)]{ "slug": slug.current, publishedAt }`;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
@@ -28,12 +23,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blogs`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.85,
     },
     {
       url: `${baseUrl}/portfolio`,
@@ -67,24 +56,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  let blogUrls: MetadataRoute.Sitemap = [];
-  if (isSanityConfigured()) {
-    try {
-      const blogs = await sanityClient.fetch<
-        { slug: string; publishedAt: string }[]
-      >(blogSlugsForSitemap);
-      blogUrls = (blogs ?? []).map((post) => ({
-        url: `${baseUrl}/blogs/${post.slug}`,
-        lastModified: post.publishedAt
-          ? new Date(post.publishedAt)
-          : new Date(),
-        changeFrequency: "weekly" as const,
-        priority: 0.7,
-      }));
-    } catch (e) {
-      console.error("Sitemap blog fetch error:", e);
-    }
-  }
-
-  return [...staticPages, ...blogUrls];
+  return staticPages;
 }
