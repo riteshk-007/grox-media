@@ -191,7 +191,7 @@ const techStack = [
   "Figma",
 ];
 
-export default function WebsiteDevelopmentGurgaon() {
+export default function WebsiteDevelopmentDelhi() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -261,7 +261,6 @@ export default function WebsiteDevelopmentGurgaon() {
         <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-400/25 via-indigo-400/20 to-purple-400/25 blur-3xl -z-10" />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-            {/* Left Content */}
             <div className="text-center lg:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -270,7 +269,7 @@ export default function WebsiteDevelopmentGurgaon() {
                 className="flex justify-center lg:justify-start"
               >
                 <SectionBadge>
-                  Website Development Company in Gurgaon
+                  Website Development Company in Delhi
                 </SectionBadge>
               </motion.div>
               <motion.h1
@@ -279,7 +278,7 @@ export default function WebsiteDevelopmentGurgaon() {
                 transition={{ duration: 0.45, delay: 0.15 }}
                 className="mt-6 text-2xl sm:text-3xl font-extrabold text-[#111827] md:text-5xl lg:text-5xl"
               >
-                Website Development Company in Gurgaon
+                Website Development Company in Delhi
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -287,7 +286,7 @@ export default function WebsiteDevelopmentGurgaon() {
                 transition={{ duration: 0.45, delay: 0.3 }}
                 className="mx-auto mt-6 max-w-xl text-lg text-gray-500 lg:mx-0"
               >
-                We are Grox Media — a Gurgaon-based website development company
+                We are Grox Media — a Delhi-based website development company
                 that builds fast, clean, and conversion-focused websites for
                 businesses that want real results, not just a pretty homepage.
               </motion.p>
@@ -333,7 +332,6 @@ export default function WebsiteDevelopmentGurgaon() {
               </motion.div>
             </div>
 
-            {/* Right Contact Form */}
             <motion.div
               id="contact-form"
               initial={{ opacity: 0, x: 30 }}
@@ -469,7 +467,7 @@ export default function WebsiteDevelopmentGurgaon() {
               Website Development Services Across India
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              While we are based in Gurgaon, we serve clients across major
+              While we are based in Delhi, we serve clients across major
               Indian cities with the same quality and commitment.
             </p>
           </motion.div>
@@ -663,12 +661,12 @@ export default function WebsiteDevelopmentGurgaon() {
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
-              About Grox Media — Website Development Company in Gurgaon
+              About Grox Media — Website Development Company in Delhi
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Grox Media is a website development company based in Gurgaon,
-                serving clients across Gurugram, Noida, Delhi, Pune, and Mumbai.
+                Grox Media is a website development company based in Delhi,
+                serving clients across Delhi, Gurgaon, Noida, Pune, and Mumbai.
                 We started with one simple idea — build websites that actually
                 work for businesses, not just look good in a portfolio.
               </p>
@@ -789,7 +787,7 @@ export default function WebsiteDevelopmentGurgaon() {
             Let&apos;s Build Something That Works
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Whether you&apos;re in Gurgaon, Delhi, Noida, Pune, or Mumbai —
+            Whether you&apos;re in Delhi, Gurgaon, Noida, Pune, or Mumbai —
             we&apos;re ready to build your website.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
@@ -822,7 +820,7 @@ export default function WebsiteDevelopmentGurgaon() {
           <div className="space-y-6">
             {[
               {
-                q: "How much does a website cost in Gurgaon?",
+                q: "How much does a website cost in Delhi?",
                 a: "It depends on what you need. A basic 5-page business website starts around ₹15,000–₹30,000. E-commerce websites with payment integration start from ₹50,000. We give you an exact quote after understanding your requirements — no hidden charges.",
               },
               {
@@ -830,8 +828,8 @@ export default function WebsiteDevelopmentGurgaon() {
                 a: "A simple business website takes 7–15 days. E-commerce websites take 2–4 weeks. Complex web applications can take 4–8 weeks. We give you a clear timeline before starting and stick to it.",
               },
               {
-                q: "Do you work with clients outside Gurgaon?",
-                a: "Yes. While we are based in Gurgaon, we serve clients across Delhi, Noida, Pune, Mumbai, and all over India. Most of our communication happens over calls and video meetings — location is never a barrier.",
+                q: "Do you work with clients outside Delhi?",
+                a: "Yes. While we are based in Delhi, we serve clients across Gurgaon, Noida, Pune, Mumbai, and all over India. Most of our communication happens over calls and video meetings — location is never a barrier.",
               },
               {
                 q: "Will my website rank on Google?",
