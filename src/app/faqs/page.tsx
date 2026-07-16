@@ -157,6 +157,13 @@ export default function FaqsPage() {
               <Phone className="h-4 w-4" />
               +91 92668 06477
             </a>
+            <a
+              href="tel:+919354734436"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white/60 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              <Phone className="h-4 w-4" />
+              +91 935 473 4436
+            </a>
 <a
                href="mailto:info@groxmedia.in"
                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-groxBlue transition hover:bg-gray-100"

@@ -139,15 +139,15 @@ function buildUserTemplate({
         </div>
         <p>Here is a copy of your message:</p>
         <div class="message-box">${(message || "").replace(/\n/g, "<br>")}</div>
-        <p>If this is urgent, please call us directly at <strong>+91 92668 06477</strong>.</p>
+        <p>If this is urgent, please call us directly at <strong>+91 92668 06477</strong> or <strong>+91 935 473 4436</strong>.</p>
         <p>Best Regards,<br/><strong>The Grox Media Team</strong></p>
       </div>
 <div class="footer">
          <strong>Grox Media</strong><br/>
          Your Trusted IT Service Partner<br/>
          Web Development | Digital Marketing | Graphic Design | MVP Development<br/><br/>
-         📞 +91 92668 06477 • ✉️ info@groxmedia.in<br/>
-         🌐 www.groxmedia.in
+         📞 +91 92668 06477 • +91 935 473 4436<br/>
+         ✉️ info@groxmedia.in • 🌐 www.groxmedia.in
        </div>
     </div>
   </body>

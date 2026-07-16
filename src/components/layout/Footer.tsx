@@ -59,12 +59,17 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-[#111827]">Contact</h4>
-            <ul className="mt-4 space-y-4 text-sm text-[#6b7280]">
+            <ul className="mt-4 space-y-3 text-sm text-[#6b7280]">
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-groxBlue" />
-                <a href="tel:+919266806477" className="hover:text-groxBlue">
-                  +91 92668 06477
-                </a>
+                <div>
+                  <a href="tel:+919266806477" className="hover:text-groxBlue block">
+                    +91 92668 06477
+                  </a>
+                  <a href="tel:+919354734436" className="hover:text-groxBlue block">
+                    +91 935 473 4436
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-groxOrange" />
