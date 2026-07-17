@@ -116,6 +116,10 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-groxBlue">
               Terms of Service
             </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/sitemap" className="hover:text-groxBlue">
+              Sitemap
+            </Link>
           </div>
         </div>
       </div>
