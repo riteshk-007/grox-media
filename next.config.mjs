@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const nextConfig = {
     images: {
         // Cache optimized images for 2 minutes
@@ -25,6 +30,11 @@ const nextConfig = {
                 ],
             },
         ];
+    },
+    experimental: {
+        turbo: {
+            root: __dirname,
+        },
     },
 };
 

@@ -5,6 +5,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
     "https://groxmedia.in";
 
+  const cities = ["gurgaon", "noida", "delhi", "pune", "mumbai"];
+
+  const developmentPages = cities.map((city) => ({
+    url: `${baseUrl}/website-development-company-in-${city}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  const designingPages = cities.map((city) => ({
+    url: `${baseUrl}/website-designing-company-in-${city}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -54,6 +70,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "yearly",
       priority: 0.2,
     },
+    ...developmentPages,
+    ...designingPages,
   ];
 
   return staticPages;
