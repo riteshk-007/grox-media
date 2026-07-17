@@ -47,11 +47,31 @@ const inputCls =
   "mb-4 w-full rounded-xl border border-gray-200 bg-gray-50/50 px-5 py-4 pl-12 text-[#111827] placeholder:text-gray-400 transition-all duration-200 focus:border-[#ea580c] focus:outline-none focus:ring-2 focus:ring-orange-500/30";
 
 const locations = [
-  { city: "Gurugram", label: "Website Designing Company in Gurugram" },
-  { city: "Noida", label: "Website Designing Company in Noida" },
-  { city: "Delhi", label: "Website Designing Company in Delhi" },
-  { city: "Pune", label: "Website Designing Company in Pune" },
-  { city: "Mumbai", label: "Website Designing Company in Mumbai" },
+  {
+    city: "Gurgaon",
+    label: "Premium UI/UX for Gurgaon's corporate and startup market",
+    href: "/website-designing-company-in-gurgaon",
+  },
+  {
+    city: "Noida",
+    label: "B2B and SaaS-focused design for Noida's IT ecosystem",
+    href: "/website-designing-company-in-noida",
+  },
+  {
+    city: "Pune",
+    label: "Clean, purposeful design for Pune's tech-native market",
+    href: "/website-designing-company-in-pune",
+  },
+  {
+    city: "Mumbai",
+    label: "Premium brand and campaign design for Mumbai brands",
+    href: "/website-designing-company-in-mumbai",
+  },
+  {
+    city: "Delhi",
+    label: "Visual identity and web design for Delhi's diverse SME base",
+    href: "/website-designing-company-in-delhi",
+  },
 ];
 
 const services = [
@@ -59,42 +79,42 @@ const services = [
     icon: Layout,
     title: "Custom Website Design",
     description:
-      "No themes, no templates. Every design is built from scratch to match your brand, your audience, and your business goals.",
+      "Designed from the ground up for Delhi's diverse business landscape — whether you're a South Delhi consultancy, a Nehru Place IT vendor, or a retail brand going digital from Lajpat Nagar.",
     bg: "bg-blue-50",
   },
   {
     icon: Smartphone,
     title: "Responsive Web Design",
     description:
-      "Your website will look and work perfectly on every device — phones, tablets, laptops, and large screens. Zero compromise.",
+      "Delhi's web visitors arrive from every device type. We design for consistency — the same brand impression on a basic Android phone as on a high-resolution desktop monitor.",
     bg: "bg-orange-50",
   },
   {
     icon: PenTool,
     title: "UI/UX Design",
     description:
-      "We design interfaces that feel intuitive. Users shouldn't have to think — they should just find what they need and take action.",
+      "User experience design that reduces friction and guides visitors toward conversion. For Delhi's competitive market, clarity and trust signals in the interface matter as much as visual appeal.",
     bg: "bg-green-50",
   },
   {
     icon: Sparkles,
     title: "Landing Page Design",
     description:
-      "Single-page designs built for one purpose — conversions. Whether it's lead capture or product sales, every element has a job.",
+      "Conversion-focused single pages for Delhi businesses running campaigns, promotions, or enquiry-generation for specific services. Each element placed with a clear conversion rationale.",
     bg: "bg-purple-50",
   },
   {
     icon: Monitor,
     title: "Dashboard & Admin Design",
     description:
-      "Clean, organized interfaces for internal tools, CRMs, and dashboards. Your team shouldn't need a training manual to use your software.",
+      "Internal tool interfaces designed for the people who actually use them — your Delhi-based operations team. Clean data presentation, logical workflows, zero unnecessary complexity.",
     bg: "bg-teal-50",
   },
   {
     icon: Palette,
     title: "Brand Identity & Logo Design",
     description:
-      "Complete brand packages — logo, colors, typography, and guidelines. Everything you need for a consistent, professional look.",
+      "For established Delhi businesses that have outgrown their original brand, and for new businesses establishing their visual identity — logos, colour systems, typography, and brand guidelines.",
     bg: "bg-amber-50",
   },
 ];
@@ -103,90 +123,92 @@ const whyUs = [
   {
     icon: Users,
     stat: "50+",
-    label: "Designers",
-    title: "In-House Design Team",
+    label: "In-House Creative Team",
+    title: "Designers Who Own the Brief",
     description:
-      "Our designers are full-time team members, not contractors. You get direct access, fast iterations, and consistent quality.",
+      "The designer who takes your brief is the designer who creates your website — not a junior stand-in working from a senior's notes. Direct ownership produces better work.",
   },
   {
     icon: Clock,
     stat: "98%",
-    label: "On-Time",
-    title: "Respect Your Timelines",
+    label: "On-Time Completion",
+    title: "Schedules That Hold",
     description:
-      "We plan carefully and deliver on schedule. 98% of our design projects are completed on or before the agreed deadline.",
+      "Delhi businesses operate on tight calendars. We build design timelines with milestones and dependencies mapped upfront, so delays are rare and flagged early when they occur.",
   },
   {
     icon: IndianRupee,
     stat: "40%",
-    label: "Savings",
-    title: "No Hidden Design Costs",
+    label: "Cost Advantage",
+    title: "Fair Pricing, No Ambiguity",
     description:
-      "What we quote is what you pay. No surprise charges for revisions, no extra fees for file formats, no catches.",
+      "Every quote breaks down what you're paying for — wireframes, visual design, revision rounds, and final delivery. No bundled packages that obscure where the money goes.",
   },
   {
     icon: Headphones,
     stat: "24/7",
-    label: "Support",
-    title: "Always Available",
+    label: "Ongoing Availability",
+    title: "Support Through the Full Relationship",
     description:
-      "Need a design tweak at 10 PM? We're available. Post-launch changes, new pages, seasonal updates — just reach out.",
+      "After the design is delivered, we remain available for asset requests, updates, and new design work. No need to re-brief a new team every time something changes.",
   },
   {
     icon: TrendingUp,
     stat: "100%",
-    label: "Responsive",
-    title: "Mobile-First Design",
+    label: "Conversion-Oriented",
+    title: "Designed to Convert, Not Just Impress",
     description:
-      "Over 70% of web traffic is mobile. We design for thumb-friendly navigation and fast loading on phones first.",
+      "Visual design decisions are grounded in user behaviour research — where users look, what builds trust, and what reduces hesitation in Delhi's specific buyer demographics.",
   },
   {
     icon: Trophy,
     stat: "5000+",
-    label: "Projects",
-    title: "Designs That Convert",
+    label: "Projects Across Industries",
+    title: "Sector Experience at Depth",
     description:
-      "5000+ design projects delivered. Our designs don't just look good — they drive leads, sales, and business growth.",
+      "Delhi's business diversity means we've designed for most sectors you'd find in the city — retail, professional services, education, healthcare, government, and more.",
   },
 ];
 
-const designProcess = [
+const processSteps = [
   {
-    title: "Discovery Call",
+    title: "Discovery Session",
     description:
-      "We sit with you, understand your brand, your customers, your competitors, and what you want your website to achieve.",
+      "We understand your business category, your customers' expectations, and the visual language your sector responds to — before deciding on any design direction.",
   },
   {
-    title: "Wireframes",
+    title: "Direction Alignment",
     description:
-      "Low-fidelity layouts to map out structure, user flow, and content hierarchy before any visual work begins.",
+      "A curated moodboard and visual direction brief approved before any Figma work begins. Avoids expensive creative rework from misaligned early assumptions.",
   },
   {
-    title: "Visual Design",
+    title: "Wireframing",
     description:
-      "High-fidelity mockups with your brand colors, typography, imagery, and spacing — pixel by pixel.",
+      "Structural layout and content hierarchy mapped as low-fidelity wireframes. You approve the flow and structure before colour and typography are layered on.",
   },
   {
-    title: "Interactive Prototype",
+    title: "Full Design Build",
     description:
-      "Clickable prototype so you can experience the design before a single line of code is written.",
+      "High-fidelity mockups with all design components — hero sections, typography, iconography, CTAs, mobile views. Reviewed in Figma before any development involvement.",
   },
   {
-    title: "Design Handoff",
+    title: "Asset Delivery",
     description:
-      "Complete design files, style guides, and asset libraries delivered to the development team for pixel-perfect coding.",
+      "Complete Figma project files, brand style guide, and exported assets. Delivered with developer specs if our team is building, or ready for your own developers.",
   },
 ];
 
 const designTools = [
   "Figma",
-  "Adobe XD",
-  "Photoshop",
-  "Illustrator",
-  "After Effects",
+  "Adobe Illustrator",
+  "Adobe Photoshop",
   "Framer",
   "Webflow",
-  "Canva",
+  "After Effects",
+  "Principle",
+  "Zeplin",
+  "InVision",
+  "Lottie",
 ];
 
 export default function WebsiteDesigningDelhi() {
@@ -254,9 +276,8 @@ export default function WebsiteDesigningDelhi() {
 
   return (
     <main className="min-h-screen overflow-x-hidden">
-      {/* Hero + Contact Form */}
       <section className="relative overflow-hidden pt-24 pb-12">
-        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/25 via-amber-400/20 to-yellow-400/25 blur-3xl -z-10" />
+        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/20 via-pink-400/15 to-purple-400/20 blur-3xl -z-10" />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
             <div className="text-center lg:text-left">
@@ -266,9 +287,7 @@ export default function WebsiteDesigningDelhi() {
                 transition={{ duration: 0.45 }}
                 className="flex justify-center lg:justify-start"
               >
-                <SectionBadge>
-                  Website Designing Company in Delhi
-                </SectionBadge>
+                <SectionBadge>Website Designing Company in Delhi</SectionBadge>
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -284,10 +303,12 @@ export default function WebsiteDesigningDelhi() {
                 transition={{ duration: 0.45, delay: 0.3 }}
                 className="mx-auto mt-6 max-w-xl text-lg text-gray-500 lg:mx-0"
               >
-                We are Grox Media — a Delhi-based website designing company
-                that creates clean, conversion-focused designs. No fluff, no
-                fancy gimmicks — just designs that make your business look
-                professional and make visitors take action.
+                Delhi&apos;s business community ranges from legacy trading
+                houses to first-generation digital brands. Good website design
+                reads that context — it doesn&apos;t apply the same visual
+                language to a Karol Bagh retail business and a Connaught Place
+                financial consultancy. We design for the specific audience and
+                sector, not for a generic brief.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -299,7 +320,7 @@ export default function WebsiteDesigningDelhi() {
                   href="#contact-form"
                   className="inline-flex items-center gap-2 rounded-full bg-[#ea580c] px-8 py-4 font-semibold text-white transition hover:bg-[#c2410c]"
                 >
-                  Get Free Design Quote
+                  Get Free Consultation
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <a
@@ -318,15 +339,15 @@ export default function WebsiteDesigningDelhi() {
               >
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  500+ Websites Designed
+                  5000+ Designs Delivered
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  100% Responsive
+                  Industry-Specific Design
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  Free Mockups
+                  24/7 Support
                 </span>
               </motion.div>
             </div>
@@ -339,11 +360,11 @@ export default function WebsiteDesigningDelhi() {
               className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8"
             >
               <h2 className="mb-2 text-2xl font-bold text-[#111827]">
-                Get a Free Design Quote
+                Get a Free Quote
               </h2>
               <p className="mb-6 text-sm text-gray-400">
-                Tell us about your project and we&apos;ll share a free design
-                mockup
+                Tell us about your design project and we&apos;ll get back to you
+                within 24 hours
               </p>
               {isSubmitted ? (
                 <div className="py-12 text-center">
@@ -354,8 +375,8 @@ export default function WebsiteDesigningDelhi() {
                     Thank you!
                   </p>
                   <p className="mt-2 text-[#6b7280]">
-                    We&apos;ve received your message. Our design team will
-                    contact you shortly.
+                    We&apos;ve received your message. Our team will contact you
+                    shortly.
                   </p>
                 </div>
               ) : (
@@ -415,7 +436,7 @@ export default function WebsiteDesigningDelhi() {
                     )}
                   </div>
                   <textarea
-                    placeholder="Tell us about your design project..."
+                    placeholder="Tell us about your design needs..."
                     rows={4}
                     value={formData.message}
                     onChange={(e) =>
@@ -457,17 +478,16 @@ export default function WebsiteDesigningDelhi() {
         </div>
       </section>
 
-      {/* Prime Locations */}
       <section className="py-16 bg-gray-50/50">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Our Presence</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Website Designing Services Across India
+              Website Designing Across India
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              Based in Delhi, designing for businesses across all major
-              Indian cities.
+              Rooted in the NCR, designing for clients in Delhi, Gurgaon, Noida,
+              Pune, and Mumbai — with the same rigour across every city.
             </p>
           </motion.div>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
@@ -487,13 +507,18 @@ export default function WebsiteDesigningDelhi() {
                 <p className="text-xs text-gray-400 leading-snug">
                   {loc.label}
                 </p>
+                <Link
+                  href={loc.href}
+                  className="mt-1 text-xs font-medium text-[#ea580c] hover:underline"
+                >
+                  View →
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services */}
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
@@ -502,8 +527,14 @@ export default function WebsiteDesigningDelhi() {
               Website Designing Services We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              From brand new designs to complete redesigns — we handle
-              everything from concept to final deliverables.
+              From logos to full UX systems — see our{" "}
+              <Link
+                href="/services"
+                className="text-[#ea580c] hover:underline"
+              >
+                complete design services
+              </Link>{" "}
+              for the full picture.
             </p>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -536,19 +567,18 @@ export default function WebsiteDesigningDelhi() {
         </div>
       </section>
 
-      {/* Design Process */}
       <section className="bg-gray-50/50 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>How We Design</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Our Website Designing Process
+              Our Website Design Process
             </h2>
           </motion.div>
           <div className="relative mt-16 hidden md:block">
             <div className="absolute left-0 right-0 top-8 h-0.5 bg-gray-200" />
             <div className="relative z-10 flex justify-between">
-              {designProcess.map((step, idx) => (
+              {processSteps.map((step, idx) => (
                 <motion.div
                   key={step.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -572,7 +602,7 @@ export default function WebsiteDesigningDelhi() {
           </div>
           <div className="relative mt-10 space-y-8 md:hidden">
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200" />
-            {designProcess.map((step, idx) => (
+            {processSteps.map((step, idx) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, x: -12 }}
@@ -596,13 +626,12 @@ export default function WebsiteDesigningDelhi() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Why Businesses Choose Us for Website Designing
+              Why Delhi Businesses Choose Our Design Team
             </h2>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -633,13 +662,12 @@ export default function WebsiteDesigningDelhi() {
         </div>
       </section>
 
-      {/* Design Tools */}
       <section className="bg-gray-50/50 py-16">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUp}>
-            <SectionBadge>Tools We Use</SectionBadge>
+            <SectionBadge>Design Tools</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Design Software We Work With
+              Tools We Design With
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               {designTools.map((tool) => (
@@ -655,48 +683,64 @@ export default function WebsiteDesigningDelhi() {
         </div>
       </section>
 
-      {/* SEO Content */}
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
-              About Grox Media — Website Designing Company in Delhi
+              About Our Website Designing Company in Delhi
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Grox Media is a website designing company based in Delhi. We
-                serve clients in Delhi, Gurgaon, Noida, Pune, Mumbai, and
-                across India. Our focus is simple — create designs that look
-                professional, load fast, and turn visitors into customers.
+                Delhi&apos;s business diversity is its defining characteristic
+                — and it&apos;s what makes generic web design particularly
+                ineffective here. A visual language that works for a South Delhi
+                law firm looks wrong for a Chandni Chowk wholesale business, and
+                vice versa. The audiences have different aesthetic expectations,
+                different trust signals, and different conversion triggers. We
+                approach every Delhi project by studying the specific audience
+                first — not by applying a design style we&apos;re comfortable
+                with and hoping it fits.
               </p>
               <p>
-                We don&apos;t believe in using pre-made themes or templates.
-                Every design we deliver is custom-built for the client. This
-                means your website won&apos;t look like hundreds of others
-                out there. It will look like yours — unique, clean, and
-                purposeful.
+                What we&apos;ve found consistently across Delhi&apos;s business
+                landscape is that established businesses tend to undervalue
+                design investment relative to the trust it generates. A firm
+                that has been operating for 15 years and has strong offline
+                relationships often has a website that doesn&apos;t reflect that
+                track record at all — dated visuals, no clear service hierarchy,
+                and a contact page that asks for effort before delivering any
+                value. We redesign with a specific objective: make the website
+                as credible and easy to engage with as your best in-person sales
+                conversation. See examples in our{" "}
+                <Link
+                  href="/portfolio"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  portfolio
+                </Link>
+                .
               </p>
               <p>
-                Our design team uses Figma, Adobe XD, Photoshop, and other
-                industry tools to create wireframes, mockups, and interactive
-                prototypes. You see exactly what your website will look like
-                before any development begins. This saves time, reduces
-                revisions, and ensures you&apos;re happy with the final
-                result.
-              </p>
-              <p>
-                Over 5000 businesses have trusted us with their website design.
-                From startups in Delhi to established brands in Mumbai —
-                we bring the same level of care and attention to every project.
-                Our 100% responsive designs guarantee your website looks
-                great on every screen size.
+                For newer Delhi businesses building their digital presence from
+                scratch, the challenge is different: establishing credibility
+                without years of history to point to. This is where design
+                carries significant weight — the right visual identity, a
+                well-structured website, and clear UX can close the credibility
+                gap faster than almost anything else. If you&apos;re looking for{" "}
+                <Link
+                  href="/services"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  web design services in Delhi
+                </Link>{" "}
+                that understand both of these contexts, we&apos;re ready to
+                start with a conversation about your specific situation.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Info */}
       <section className="bg-gray-50/50 py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-10">
@@ -740,8 +784,8 @@ export default function WebsiteDesigningDelhi() {
               transition={{ delay: 0.1 }}
               className="flex items-start gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50">
-                <Mail className="h-6 w-6 text-[#1e40af]" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+                <Mail className="h-6 w-6 text-[#ea580c]" />
               </div>
               <div>
                 <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
@@ -749,7 +793,7 @@ export default function WebsiteDesigningDelhi() {
                 </p>
                 <a
                   href="mailto:info@groxmedia.in"
-                  className="mt-1 block font-semibold text-[#111827] hover:text-[#1e40af]"
+                  className="mt-1 block font-semibold text-[#111827] hover:text-[#ea580c]"
                 >
                   info@groxmedia.in
                 </a>
@@ -779,25 +823,24 @@ export default function WebsiteDesigningDelhi() {
         </div>
       </section>
 
-      {/* CTA */}
       <motion.section
         {...fadeUp}
-        className="bg-gradient-to-r from-orange-500 via-orange-600 to-[#1a1a2e] py-20"
+        className="bg-gradient-to-r from-[#ea580c] to-[#111827] py-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Let&apos;s Design Something That Works
+            Delhi&apos;s Diverse Market Deserves Design That Understands It
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Whether you&apos;re in Delhi, Gurgaon, Noida, Pune, or Mumbai —
-            we&apos;re ready to design your website.
+            Generic design fails in Delhi&apos;s competitive market. We design
+            for your specific audience, sector, and business goals.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link
               href="#contact-form"
               className="inline-flex rounded-full bg-white px-8 py-4 font-semibold text-[#ea580c] transition hover:bg-gray-100"
             >
-              Get Free Design Quote →
+              Get Free Consultation →
             </Link>
             <a
               href="tel:+919266806477"
@@ -810,7 +853,6 @@ export default function WebsiteDesigningDelhi() {
         </div>
       </motion.section>
 
-      {/* FAQs */}
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-12">
@@ -822,24 +864,24 @@ export default function WebsiteDesigningDelhi() {
           <div className="space-y-6">
             {[
               {
-                q: "How much does website designing cost in Delhi?",
-                a: "Website designing costs depend on pages, complexity, and features. A basic 5-page business website design starts around ₹10,000–₹25,000. E-commerce or complex designs cost more. We provide an exact quote after understanding your needs — no hidden charges.",
+                q: "How much does professional website design cost in Delhi?",
+                a: "For Delhi businesses, a professionally designed website starts at ₹14,000–₹30,000 depending on page count and complexity. E-commerce design with product page templates starts from ₹30,000. We give an exact quote after understanding your brand, audience, and business goals — no approximations upfront.",
               },
               {
-                q: "How long does it take to design a website?",
-                a: "A simple business website design takes 5–10 days. E-commerce or multi-page designs take 2–3 weeks. We share a realistic timeline before starting and stick to it.",
+                q: "How long does the full website design process take?",
+                a: "Initial wireframes are delivered within 3–4 days of project kickoff. Full high-fidelity design across all pages takes 10–18 working days depending on scope. We share progress at every milestone — you're reviewing real work, not waiting for a final reveal.",
               },
               {
-                q: "Do you redesign existing websites?",
-                a: "Yes. We regularly redesign outdated websites. The process includes a design audit, new wireframes, modern visual design, and a smooth handoff to development. Most redesigns are completed within 2–3 weeks.",
+                q: "Our Delhi business has a strong offline reputation — can you translate that into a website design?",
+                a: "That's one of the most common briefs we work with for established Delhi businesses. We start with a brand discovery session — understanding your history, values, target customers, and competitive positioning. The design reflects your reputation visually: trustworthy, professional, and specific to your sector.",
               },
               {
-                q: "Will the design be mobile-friendly?",
-                a: "Every design we create is 100% responsive. We design mobile-first, which means your website will look and work perfectly on phones, tablets, and desktops.",
+                q: "Do you provide the design files after the project?",
+                a: "Yes. Every client receives their complete Figma project files, exported assets, and a basic style guide documenting colors, typography, and component usage. These are yours to use independently — whether for printing, presentations, or future design work.",
               },
               {
-                q: "Do you work with clients outside Delhi?",
-                a: "Yes. We serve clients across Gurgaon, Noida, Pune, Mumbai, and all over India. Most of our work happens over calls and screen shares — location is never an issue.",
+                q: "We serve customers across India from our Delhi base — will the design work for all regions?",
+                a: "Yes. We design for national reach from the start — no regional visual clichés that only resonate locally, fast load times that work across India's varied internet infrastructure, and accessibility considerations for users on older devices. Your Delhi base shouldn't limit your website's national appeal.",
               },
             ].map((faq, i) => (
               <motion.div

@@ -47,11 +47,31 @@ const inputCls =
   "mb-4 w-full rounded-xl border border-gray-200 bg-gray-50/50 px-5 py-4 pl-12 text-[#111827] placeholder:text-gray-400 transition-all duration-200 focus:border-[#ea580c] focus:outline-none focus:ring-2 focus:ring-orange-500/30";
 
 const locations = [
-  { city: "Gurugram", label: "Website Designing Company in Gurugram" },
-  { city: "Noida", label: "Website Designing Company in Noida" },
-  { city: "Delhi", label: "Website Designing Company in Delhi" },
-  { city: "Pune", label: "Website Designing Company in Pune" },
-  { city: "Mumbai", label: "Website Designing Company in Mumbai" },
+  {
+    city: "Gurgaon",
+    label: "Premium design for Gurgaon's corporate and startup market",
+    href: "/website-designing-company-in-gurgaon",
+  },
+  {
+    city: "Delhi",
+    label: "Brand-aligned design for Delhi's diverse business community",
+    href: "/website-designing-company-in-delhi",
+  },
+  {
+    city: "Pune",
+    label: "UI/UX for Pune's IT companies and D2C brands",
+    href: "/website-designing-company-in-pune",
+  },
+  {
+    city: "Mumbai",
+    label: "Premium design for Mumbai's finance and media brands",
+    href: "/website-designing-company-in-mumbai",
+  },
+  {
+    city: "Noida",
+    label: "Local team designing for Noida's IT and tech ecosystem",
+    href: "/website-designing-company-in-noida",
+  },
 ];
 
 const services = [
@@ -59,42 +79,42 @@ const services = [
     icon: Layout,
     title: "Custom Website Design",
     description:
-      "No themes, no templates. Every design is built from scratch to match your brand, your audience, and your business goals.",
+      "Tailored to Noida's B2B-heavy market — clean layouts that communicate technical credibility, service clarity, and professional positioning from the first scroll.",
     bg: "bg-blue-50",
   },
   {
     icon: Smartphone,
     title: "Responsive Web Design",
     description:
-      "Your website will look and work perfectly on every device — phones, tablets, laptops, and large screens. Zero compromise.",
+      "Pixel-perfect on every device — from the phones used by Noida's young professional workforce to the large monitors in IT park offices. Tested on real devices, not just responsive toggles.",
     bg: "bg-orange-50",
   },
   {
     icon: PenTool,
     title: "UI/UX Design",
     description:
-      "We design interfaces that feel intuitive. Users shouldn't have to think — they should just find what they need and take action.",
+      "User research, information architecture, interaction design, and usability testing. For Noida's SaaS companies and IT firms, UX quality is often the differentiator.",
     bg: "bg-green-50",
   },
   {
     icon: Sparkles,
     title: "Landing Page Design",
     description:
-      "Single-page designs built for one purpose — conversions. Whether it's lead capture or product sales, every element has a job.",
+      "High-conversion pages for product launches, service campaigns, and inbound lead generation. Noida's IT market benefits from pages that qualify the right visitors and convert them.",
     bg: "bg-purple-50",
   },
   {
     icon: Monitor,
     title: "Dashboard & Admin Design",
     description:
-      "Clean, organized interfaces for internal tools, CRMs, and dashboards. Your team shouldn't need a training manual to use your software.",
+      "Noida's tech companies often need internal tools designed as carefully as their customer-facing products. We design dashboards that make complex data accessible and actionable.",
     bg: "bg-teal-50",
   },
   {
     icon: Palette,
     title: "Brand Identity & Logo Design",
     description:
-      "Complete brand packages — logo, colors, typography, and guidelines. Everything you need for a consistent, professional look.",
+      "For Noida's growing businesses establishing their brand presence — logomark, brand colours, typography system, and usage guidelines that scale across digital and print.",
     bg: "bg-amber-50",
   },
 ];
@@ -103,90 +123,92 @@ const whyUs = [
   {
     icon: Users,
     stat: "50+",
-    label: "Designers",
-    title: "In-House Design Team",
+    label: "In-House Design Team",
+    title: "Local Team, Direct Communication",
     description:
-      "Our designers are full-time team members, not contractors. You get direct access, fast iterations, and consistent quality.",
+      "Based in Noida, our design team understands the local market without needing a briefing on it. Client meetings are possible — remote collaboration is even more efficient.",
   },
   {
     icon: Clock,
     stat: "98%",
-    label: "On-Time",
-    title: "Respect Your Timelines",
+    label: "On-Time Delivery",
+    title: "Design on Schedule",
     description:
-      "We plan carefully and deliver on schedule. 98% of our design projects are completed on or before the agreed deadline.",
+      "Creative work with reliable timelines — a combination that's rarer than it should be. Our structured process and milestone-based tracking make this consistent.",
   },
   {
     icon: IndianRupee,
     stat: "40%",
-    label: "Savings",
-    title: "No Hidden Design Costs",
+    label: "Cost Advantage",
+    title: "Quality Without Premium Pricing",
     description:
-      "What we quote is what you pay. No surprise charges for revisions, no extra fees for file formats, no catches.",
+      "Noida's market is competitive on price. Our in-house model removes agency overhead and delivers work that competes with larger creative studios at a fraction of the cost.",
   },
   {
     icon: Headphones,
     stat: "24/7",
-    label: "Support",
-    title: "Always Available",
+    label: "Support Available",
+    title: "Ongoing Creative Support",
     description:
-      "Need a design tweak at 10 PM? We're available. Post-launch changes, new pages, seasonal updates — just reach out.",
+      "Post-delivery updates, new asset requests, and minor design changes are handled as they come up — not as a new project negotiation every time.",
   },
   {
     icon: TrendingUp,
     stat: "100%",
-    label: "Responsive",
-    title: "Mobile-First Design",
+    label: "Conversion-Focused",
+    title: "Design Tied to Business Outcomes",
     description:
-      "Over 70% of web traffic is mobile. We design for thumb-friendly navigation and fast loading on phones first.",
+      "Every layout, CTA placement, and visual hierarchy decision is made to guide users toward the action your business needs — not just to look impressive in a screenshot.",
   },
   {
     icon: Trophy,
     stat: "5000+",
-    label: "Projects",
-    title: "Designs That Convert",
+    label: "Design Projects",
+    title: "Pattern Recognition at Scale",
     description:
-      "5000+ design projects delivered. Our designs don't just look good — they drive leads, sales, and business growth.",
+      "Five thousand design projects means we've seen what works and what doesn't across most industries — and we bring that pattern recognition to every new brief.",
   },
 ];
 
-const designProcess = [
+const processSteps = [
   {
-    title: "Discovery Call",
+    title: "Brief & Context",
     description:
-      "We sit with you, understand your brand, your customers, your competitors, and what you want your website to achieve.",
+      "A structured brief call covering your brand, audience, competitors, and what success looks like — so every design decision has context behind it.",
+  },
+  {
+    title: "Research & Moodboard",
+    description:
+      "Visual direction aligned through reference curation and a style brief. We get creative alignment before opening Figma — saving revision cycles later.",
   },
   {
     title: "Wireframes",
     description:
-      "Low-fidelity layouts to map out structure, user flow, and content hierarchy before any visual work begins.",
+      "Structural layout planning reviewed and approved before visual design begins. Content hierarchy, navigation flow, and CTA placement are locked at this stage.",
   },
   {
     title: "Visual Design",
     description:
-      "High-fidelity mockups with your brand colors, typography, imagery, and spacing — pixel by pixel.",
+      "Full high-fidelity mockups with your brand applied — typography, colour, iconography, imagery. Reviewed on both desktop and mobile before finalisation.",
   },
   {
-    title: "Interactive Prototype",
+    title: "Delivery & Handoff",
     description:
-      "Clickable prototype so you can experience the design before a single line of code is written.",
-  },
-  {
-    title: "Design Handoff",
-    description:
-      "Complete design files, style guides, and asset libraries delivered to the development team for pixel-perfect coding.",
+      "Figma project files, exported assets, style guide, and developer-ready specs. Ready for direct use or for our own development team to build from.",
   },
 ];
 
 const designTools = [
   "Figma",
-  "Adobe XD",
-  "Photoshop",
-  "Illustrator",
-  "After Effects",
+  "Adobe Illustrator",
+  "Adobe Photoshop",
   "Framer",
   "Webflow",
-  "Canva",
+  "After Effects",
+  "Principle",
+  "Zeplin",
+  "InVision",
+  "Lottie",
 ];
 
 export default function WebsiteDesigningNoida() {
@@ -256,7 +278,7 @@ export default function WebsiteDesigningNoida() {
     <main className="min-h-screen overflow-x-hidden">
       {/* Hero + Contact Form */}
       <section className="relative overflow-hidden pt-24 pb-12">
-        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/25 via-amber-400/20 to-yellow-400/25 blur-3xl -z-10" />
+        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/20 via-pink-400/15 to-purple-400/20 blur-3xl -z-10" />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
             <div className="text-center lg:text-left">
@@ -266,9 +288,7 @@ export default function WebsiteDesigningNoida() {
                 transition={{ duration: 0.45 }}
                 className="flex justify-center lg:justify-start"
               >
-                <SectionBadge>
-                  Website Designing Company in Noida
-                </SectionBadge>
+                <SectionBadge>Website Designing Company in Noida</SectionBadge>
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -284,10 +304,10 @@ export default function WebsiteDesigningNoida() {
                 transition={{ duration: 0.45, delay: 0.3 }}
                 className="mx-auto mt-6 max-w-xl text-lg text-gray-500 lg:mx-0"
               >
-                We are Grox Media — a Noida-based website designing company
-                that creates clean, conversion-focused designs. No fluff, no
-                fancy gimmicks — just designs that make your business look
-                professional and make visitors take action.
+                Noida&apos;s IT sector evaluates websites with an engineer&apos;s
+                eye for detail. Our design team — based right here in Noida —
+                creates interfaces that communicate technical credibility while
+                remaining visually sharp and conversion-focused.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -299,7 +319,7 @@ export default function WebsiteDesigningNoida() {
                   href="#contact-form"
                   className="inline-flex items-center gap-2 rounded-full bg-[#ea580c] px-8 py-4 font-semibold text-white transition hover:bg-[#c2410c]"
                 >
-                  Get Free Design Quote
+                  Get Free Consultation
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <a
@@ -318,15 +338,15 @@ export default function WebsiteDesigningNoida() {
               >
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  500+ Websites Designed
+                  Local Noida Team
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  100% Responsive
+                  5000+ Designs Delivered
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  Free Mockups
+                  Figma-First Process
                 </span>
               </motion.div>
             </div>
@@ -339,11 +359,11 @@ export default function WebsiteDesigningNoida() {
               className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8"
             >
               <h2 className="mb-2 text-2xl font-bold text-[#111827]">
-                Get a Free Design Quote
+                Get a Free Quote
               </h2>
               <p className="mb-6 text-sm text-gray-400">
-                Tell us about your project and we&apos;ll share a free design
-                mockup
+                Tell us about your design project and we&apos;ll get back to you
+                within 24 hours
               </p>
               {isSubmitted ? (
                 <div className="py-12 text-center">
@@ -354,8 +374,8 @@ export default function WebsiteDesigningNoida() {
                     Thank you!
                   </p>
                   <p className="mt-2 text-[#6b7280]">
-                    We&apos;ve received your message. Our design team will
-                    contact you shortly.
+                    We&apos;ve received your message. Our team will contact you
+                    shortly.
                   </p>
                 </div>
               ) : (
@@ -415,7 +435,7 @@ export default function WebsiteDesigningNoida() {
                     )}
                   </div>
                   <textarea
-                    placeholder="Tell us about your design project..."
+                    placeholder="Tell us about your design needs..."
                     rows={4}
                     value={formData.message}
                     onChange={(e) =>
@@ -457,7 +477,7 @@ export default function WebsiteDesigningNoida() {
         </div>
       </section>
 
-      {/* Prime Locations */}
+      {/* Locations */}
       <section className="py-16 bg-gray-50/50">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
@@ -466,8 +486,8 @@ export default function WebsiteDesigningNoida() {
               Website Designing Services Across India
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              Based in Noida, designing for businesses across all major
-              Indian cities.
+              One design team, consistent creative standards — serving Noida,
+              Gurgaon, Delhi, Pune, and Mumbai from our NCR base.
             </p>
           </motion.div>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
@@ -487,6 +507,12 @@ export default function WebsiteDesigningNoida() {
                 <p className="text-xs text-gray-400 leading-snug">
                   {loc.label}
                 </p>
+                <Link
+                  href={loc.href}
+                  className="mt-1 text-xs font-medium text-[#ea580c] hover:underline"
+                >
+                  View →
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -502,8 +528,14 @@ export default function WebsiteDesigningNoida() {
               Website Designing Services We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              From brand new designs to complete redesigns — we handle
-              everything from concept to final deliverables.
+              From brand identity systems to complex SaaS UI — see our{" "}
+              <Link
+                href="/services"
+                className="text-[#ea580c] hover:underline"
+              >
+                complete design services
+              </Link>
+              .
             </p>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -536,19 +568,19 @@ export default function WebsiteDesigningNoida() {
         </div>
       </section>
 
-      {/* Design Process */}
+      {/* Process */}
       <section className="bg-gray-50/50 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>How We Design</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Our Website Designing Process
+              Our Website Design Process
             </h2>
           </motion.div>
           <div className="relative mt-16 hidden md:block">
             <div className="absolute left-0 right-0 top-8 h-0.5 bg-gray-200" />
             <div className="relative z-10 flex justify-between">
-              {designProcess.map((step, idx) => (
+              {processSteps.map((step, idx) => (
                 <motion.div
                   key={step.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -572,7 +604,7 @@ export default function WebsiteDesigningNoida() {
           </div>
           <div className="relative mt-10 space-y-8 md:hidden">
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200" />
-            {designProcess.map((step, idx) => (
+            {processSteps.map((step, idx) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, x: -12 }}
@@ -602,7 +634,7 @@ export default function WebsiteDesigningNoida() {
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Why Businesses Choose Us for Website Designing
+              Why Noida Businesses Choose Our Design Team
             </h2>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -637,9 +669,9 @@ export default function WebsiteDesigningNoida() {
       <section className="bg-gray-50/50 py-16">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUp}>
-            <SectionBadge>Tools We Use</SectionBadge>
+            <SectionBadge>Design Tools</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Design Software We Work With
+              Tools We Design With
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               {designTools.map((tool) => (
@@ -660,36 +692,52 @@ export default function WebsiteDesigningNoida() {
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
-              About Grox Media — Website Designing Company in Noida
+              About Our Website Designing Company in Noida
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Grox Media is a website designing company based in Noida. We
-                serve clients in Noida, Gurgaon, Delhi, Pune, Mumbai, and
-                across India. Our focus is simple — create designs that look
-                professional, load fast, and turn visitors into customers.
+                Noida&apos;s IT and technology sector has an interesting design
+                problem: businesses in this market are often technically
+                sophisticated but visually underserved. The engineering quality
+                of their products and services is high, but the website design
+                lags behind — generic templates, outdated layouts, and unclear
+                visual hierarchies that don&apos;t communicate the company&apos;s
+                actual capabilities. This is the gap we fill. Our design team
+                works specifically on making the visual presentation match the
+                technical quality of what Noida&apos;s best companies actually
+                deliver.
               </p>
               <p>
-                We don&apos;t believe in using pre-made themes or templates.
-                Every design we deliver is custom-built for the client. This
-                means your website won&apos;t look like hundreds of others
-                out there. It will look like yours — unique, clean, and
-                purposeful.
+                For Noida&apos;s startups and product companies, website design
+                is often the first real test of how a brand presents itself to
+                investors and enterprise buyers. The stakes are high, and the
+                margin for visual error is low — a potential investor who
+                clicks your website link forms an opinion faster than your
+                elevator pitch. We approach these projects with that pressure in
+                mind: rigorous briefing, structured wireframing, and visual
+                design that earns attention before any copy is read. Our{" "}
+                <Link
+                  href="/portfolio"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  portfolio
+                </Link>{" "}
+                includes examples from companies at exactly this stage.
               </p>
               <p>
-                Our design team uses Figma, Adobe XD, Photoshop, and other
-                industry tools to create wireframes, mockups, and interactive
-                prototypes. You see exactly what your website will look like
-                before any development begins. This saves time, reduces
-                revisions, and ensures you&apos;re happy with the final
-                result.
-              </p>
-              <p>
-                Over 5000 businesses have trusted us with their website design.
-                From startups in Noida to established brands in Mumbai —
-                we bring the same level of care and attention to every project.
-                Our 100% responsive designs guarantee your website looks
-                great on every screen size.
+                Being based in Noida makes collaboration straightforward for
+                local clients. Most of our work happens over structured async
+                communication — Figma comments, video review calls, and shared
+                project documentation — but in-person sessions at kickoff or key
+                milestones are available. If you&apos;re evaluating{" "}
+                <Link
+                  href="/services"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  web design services in Noida
+                </Link>
+                , we&apos;re happy to share work samples relevant to your
+                specific sector before you commit to anything.
               </p>
             </div>
           </motion.div>
@@ -740,8 +788,8 @@ export default function WebsiteDesigningNoida() {
               transition={{ delay: 0.1 }}
               className="flex items-start gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50">
-                <Mail className="h-6 w-6 text-[#1e40af]" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+                <Mail className="h-6 w-6 text-[#ea580c]" />
               </div>
               <div>
                 <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
@@ -749,7 +797,7 @@ export default function WebsiteDesigningNoida() {
                 </p>
                 <a
                   href="mailto:info@groxmedia.in"
-                  className="mt-1 block font-semibold text-[#111827] hover:text-[#1e40af]"
+                  className="mt-1 block font-semibold text-[#111827] hover:text-[#ea580c]"
                 >
                   info@groxmedia.in
                 </a>
@@ -782,22 +830,22 @@ export default function WebsiteDesigningNoida() {
       {/* CTA */}
       <motion.section
         {...fadeUp}
-        className="bg-gradient-to-r from-orange-500 via-orange-600 to-[#1a1a2e] py-20"
+        className="bg-gradient-to-r from-[#ea580c] to-[#111827] py-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Let&apos;s Design Something That Works
+            Design That Reflects the Quality of Your Noida Business
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Whether you&apos;re in Noida, Gurgaon, Delhi, Pune, or Mumbai —
-            we&apos;re ready to design your website.
+            Your technical excellence deserves a visual presentation that matches
+            it. Let&apos;s design that together.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link
               href="#contact-form"
               className="inline-flex rounded-full bg-white px-8 py-4 font-semibold text-[#ea580c] transition hover:bg-gray-100"
             >
-              Get Free Design Quote →
+              Get Free Consultation →
             </Link>
             <a
               href="tel:+919266806477"
@@ -822,24 +870,24 @@ export default function WebsiteDesigningNoida() {
           <div className="space-y-6">
             {[
               {
-                q: "How much does website designing cost in Noida?",
-                a: "Website designing costs depend on pages, complexity, and features. A basic 5-page business website design starts around ₹10,000–₹25,000. E-commerce or complex designs cost more. We provide an exact quote after understanding your needs — no hidden charges.",
+                q: "How much does website design cost in Noida?",
+                a: "Website design pricing in Noida starts at ₹10,000–₹25,000 for a professional business site. Landing pages and campaign pages start at ₹7,000. Full UI/UX design for web applications or SaaS dashboards is scoped after a requirements call. All pricing is fixed and itemised — no vague 'design package' charges.",
               },
               {
-                q: "How long does it take to design a website?",
-                a: "A simple business website design takes 5–10 days. E-commerce or multi-page designs take 2–3 weeks. We share a realistic timeline before starting and stick to it.",
+                q: "What's the difference between website design and development — do you do both?",
+                a: "Design is the visual and UX layer — layouts, typography, color systems, and user flows. Development is converting those designs into working code. We do both in-house, which means your Figma designs get built exactly as they look — no interpretation errors between teams.",
               },
               {
-                q: "Do you redesign existing websites?",
-                a: "Yes. We regularly redesign outdated websites. The process includes a design audit, new wireframes, modern visual design, and a smooth handoff to development. Most redesigns are completed within 2–3 weeks.",
+                q: "We're an IT company in Sector 62 — do you design for B2B audiences?",
+                a: "Yes. B2B web design has different priorities than B2C — credibility signals, services clarity, case study presentation, and lead capture flows matter more than flashy animations. We design for how B2B buyers actually evaluate vendors: systematically and with high scrutiny.",
               },
               {
-                q: "Will the design be mobile-friendly?",
-                a: "Every design we create is 100% responsive. We design mobile-first, which means your website will look and work perfectly on phones, tablets, and desktops.",
+                q: "Can you redesign our website without breaking our current Google rankings?",
+                a: "Yes. Before the visual redesign starts, we map your current indexed pages, ranking keywords, and internal link structure. The new design preserves these signals — URL structures stay intact, heading hierarchies are improved not disrupted, and page load times typically improve, which benefits rankings.",
               },
               {
-                q: "Do you work with clients outside Noida?",
-                a: "Yes. We serve clients across Gurgaon, Delhi, Pune, Mumbai, and all over India. Most of our work happens over calls and screen shares — location is never an issue.",
+                q: "How many design revisions do we get?",
+                a: "We include two rounds of design revisions for each deliverable — homepage, inner pages, and mobile views. Additional revision rounds are available at a transparent hourly rate. Most Noida clients finalise designs within the included rounds because we validate direction with wireframes before investing in full visual design.",
               },
             ].map((faq, i) => (
               <motion.div

@@ -47,11 +47,31 @@ const inputCls =
   "mb-4 w-full rounded-xl border border-gray-200 bg-gray-50/50 px-5 py-4 pl-12 text-[#111827] placeholder:text-gray-400 transition-all duration-200 focus:border-[#ea580c] focus:outline-none focus:ring-2 focus:ring-orange-500/30";
 
 const locations = [
-  { city: "Gurugram", label: "Website Designing Company in Gurugram" },
-  { city: "Noida", label: "Website Designing Company in Noida" },
-  { city: "Delhi", label: "Website Designing Company in Delhi" },
-  { city: "Pune", label: "Website Designing Company in Pune" },
-  { city: "Mumbai", label: "Website Designing Company in Mumbai" },
+  {
+    city: "Noida",
+    label: "UI/UX design for Noida's IT companies and tech startups",
+    href: "/website-designing-company-in-noida",
+  },
+  {
+    city: "Delhi",
+    label: "Brand-aligned design for Delhi's SMEs and retail brands",
+    href: "/website-designing-company-in-delhi",
+  },
+  {
+    city: "Pune",
+    label: "Clean, purposeful design for Pune's tech-native market",
+    href: "/website-designing-company-in-pune",
+  },
+  {
+    city: "Mumbai",
+    label: "Premium design for Mumbai's finance and D2C brands",
+    href: "/website-designing-company-in-mumbai",
+  },
+  {
+    city: "Gurugram",
+    label: "Corporate and startup design for Gurgaon's competitive market",
+    href: "/website-designing-company-in-gurgaon",
+  },
 ];
 
 const services = [
@@ -59,42 +79,42 @@ const services = [
     icon: Layout,
     title: "Custom Website Design",
     description:
-      "No themes, no templates. Every design is built from scratch to match your brand, your audience, and your business goals.",
+      "Design built from a blank canvas — no theme modifications, no compromise on brand consistency. Gurgaon's corporate market demands visual precision; we deliver it.",
     bg: "bg-blue-50",
   },
   {
     icon: Smartphone,
     title: "Responsive Web Design",
     description:
-      "Your website will look and work perfectly on every device — phones, tablets, laptops, and large screens. Zero compromise.",
+      "From Cyber City executives checking proposals on their phones to customers browsing on tablets — your design adapts without breaking, degrading, or losing brand coherence.",
     bg: "bg-orange-50",
   },
   {
     icon: PenTool,
     title: "UI/UX Design",
     description:
-      "We design interfaces that feel intuitive. Users shouldn't have to think — they should just find what they need and take action.",
+      "Interface design rooted in user research — not aesthetic preference. Navigation that feels obvious, forms that get completed, CTAs that get clicked.",
     bg: "bg-green-50",
   },
   {
     icon: Sparkles,
     title: "Landing Page Design",
     description:
-      "Single-page designs built for one purpose — conversions. Whether it's lead capture or product sales, every element has a job.",
+      "High-conversion single pages for Gurgaon's corporate campaigns, product launches, and lead generation. Every visual element is placed with a purpose.",
     bg: "bg-purple-50",
   },
   {
     icon: Monitor,
     title: "Dashboard & Admin Design",
     description:
-      "Clean, organized interfaces for internal tools, CRMs, and dashboards. Your team shouldn't need a training manual to use your software.",
+      "Internal tool and admin interface design that your team can actually use — clear data hierarchy, sensible navigation patterns, no design-for-design's-sake complexity.",
     bg: "bg-teal-50",
   },
   {
     icon: Palette,
     title: "Brand Identity & Logo Design",
     description:
-      "Complete brand packages — logo, colors, typography, and guidelines. Everything you need for a consistent, professional look.",
+      "Complete visual identity systems: logomark, color palette, typography, and brand guidelines. Everything needed for consistent presentation across your Gurgaon office and online.",
     bg: "bg-amber-50",
   },
 ];
@@ -103,90 +123,92 @@ const whyUs = [
   {
     icon: Users,
     stat: "50+",
-    label: "Designers",
-    title: "In-House Design Team",
+    label: "Creative & UX Team",
+    title: "Designers Who Think Strategically",
     description:
-      "Our designers are full-time team members, not contractors. You get direct access, fast iterations, and consistent quality.",
+      "Our designers combine visual craft with UX thinking. Beautiful isn't enough — the design has to guide users toward the actions that matter for your business.",
   },
   {
     icon: Clock,
     stat: "98%",
-    label: "On-Time",
-    title: "Respect Your Timelines",
+    label: "On-Time Delivery",
+    title: "Design Delivered on Schedule",
     description:
-      "We plan carefully and deliver on schedule. 98% of our design projects are completed on or before the agreed deadline.",
+      "Creative projects have a reputation for overrunning. Ours don't. We set clear design milestones at kickoff and hit them consistently.",
   },
   {
     icon: IndianRupee,
     stat: "40%",
-    label: "Savings",
-    title: "No Hidden Design Costs",
+    label: "Cost Advantage",
+    title: "Studio-Quality Without Agency Pricing",
     description:
-      "What we quote is what you pay. No surprise charges for revisions, no extra fees for file formats, no catches.",
+      "Premium design doesn't require a premium agency retainer. Our in-house team delivers work that competes with larger studios at a fraction of the cost.",
   },
   {
     icon: Headphones,
     stat: "24/7",
-    label: "Support",
-    title: "Always Available",
+    label: "Design Support",
+    title: "Ongoing Creative Partnership",
     description:
-      "Need a design tweak at 10 PM? We're available. Post-launch changes, new pages, seasonal updates — just reach out.",
+      "Beyond project delivery, we stay available for updates, new assets, and design decisions that come up as your Gurgaon business grows.",
   },
   {
     icon: TrendingUp,
     stat: "100%",
-    label: "Responsive",
-    title: "Mobile-First Design",
+    label: "Conversion-Focused",
+    title: "Design That Earns Its Keep",
     description:
-      "Over 70% of web traffic is mobile. We design for thumb-friendly navigation and fast loading on phones first.",
+      "Every layout decision is made with user behaviour in mind — where the eye goes first, what creates trust, and what removes hesitation from the buyer journey.",
   },
   {
     icon: Trophy,
     stat: "5000+",
-    label: "Projects",
-    title: "Designs That Convert",
+    label: "Designs Delivered",
+    title: "Experience Across Industries",
     description:
-      "5000+ design projects delivered. Our designs don't just look good — they drive leads, sales, and business growth.",
+      "Five thousand delivered design projects means we've faced most creative challenges before — and we know the difference between a design that looks good and one that performs.",
   },
 ];
 
-const designProcess = [
+const processSteps = [
   {
-    title: "Discovery Call",
+    title: "Brand Discovery",
     description:
-      "We sit with you, understand your brand, your customers, your competitors, and what you want your website to achieve.",
+      "We study your business, your audience, and your competitors before drawing a single element. Design without context is decoration.",
   },
   {
     title: "Wireframes",
     description:
-      "Low-fidelity layouts to map out structure, user flow, and content hierarchy before any visual work begins.",
+      "Low-fidelity layout planning approved before visual design begins. This is where we align on structure, content hierarchy, and user flow.",
   },
   {
     title: "Visual Design",
     description:
-      "High-fidelity mockups with your brand colors, typography, imagery, and spacing — pixel by pixel.",
+      "Full high-fidelity mockups in Figma — color, typography, imagery, and component detail. You review on desktop and mobile before anything is finalised.",
   },
   {
-    title: "Interactive Prototype",
+    title: "Revision & Refinement",
     description:
-      "Clickable prototype so you can experience the design before a single line of code is written.",
+      "Structured feedback rounds with tracked changes. We refine until the design is exactly what you need — not just something we're comfortable delivering.",
   },
   {
-    title: "Design Handoff",
+    title: "Handover",
     description:
-      "Complete design files, style guides, and asset libraries delivered to the development team for pixel-perfect coding.",
+      "Final Figma files, exported assets, style guide, and developer specs. If we're also building it, design feeds directly into our development pipeline.",
   },
 ];
 
 const designTools = [
   "Figma",
-  "Adobe XD",
-  "Photoshop",
-  "Illustrator",
-  "After Effects",
+  "Adobe Illustrator",
+  "Adobe Photoshop",
   "Framer",
   "Webflow",
-  "Canva",
+  "After Effects",
+  "Principle",
+  "Zeplin",
+  "InVision",
+  "Lottie",
 ];
 
 export default function WebsiteDesigningGurgaon() {
@@ -256,10 +278,9 @@ export default function WebsiteDesigningGurgaon() {
     <main className="min-h-screen overflow-x-hidden">
       {/* Hero + Contact Form */}
       <section className="relative overflow-hidden pt-24 pb-12">
-        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/25 via-amber-400/20 to-yellow-400/25 blur-3xl -z-10" />
+        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/20 via-pink-400/15 to-purple-400/20 blur-3xl -z-10" />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-            {/* Left Content */}
             <div className="text-center lg:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -285,10 +306,11 @@ export default function WebsiteDesigningGurgaon() {
                 transition={{ duration: 0.45, delay: 0.3 }}
                 className="mx-auto mt-6 max-w-xl text-lg text-gray-500 lg:mx-0"
               >
-                We are Grox Media — a Gurgaon-based website designing company
-                that creates clean, conversion-focused designs. No fluff, no
-                fancy gimmicks — just designs that make your business look
-                professional and make visitors take action.
+                Gurgaon&apos;s corporate market is visually discerning. A
+                prospect visiting your website from Cyber City or DLF Cyber Hub
+                makes a judgement within seconds — and that judgement is design.
+                We create interfaces that communicate credibility before a word
+                is read.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -300,7 +322,7 @@ export default function WebsiteDesigningGurgaon() {
                   href="#contact-form"
                   className="inline-flex items-center gap-2 rounded-full bg-[#ea580c] px-8 py-4 font-semibold text-white transition hover:bg-[#c2410c]"
                 >
-                  Get Free Design Quote
+                  Get Free Consultation
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <a
@@ -319,20 +341,19 @@ export default function WebsiteDesigningGurgaon() {
               >
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  500+ Websites Designed
+                  5000+ Designs Delivered
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  100% Responsive
+                  Figma-First Process
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  Free Mockups
+                  24/7 Support
                 </span>
               </motion.div>
             </div>
 
-            {/* Right Contact Form */}
             <motion.div
               id="contact-form"
               initial={{ opacity: 0, x: 30 }}
@@ -341,11 +362,11 @@ export default function WebsiteDesigningGurgaon() {
               className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8"
             >
               <h2 className="mb-2 text-2xl font-bold text-[#111827]">
-                Get a Free Design Quote
+                Get a Free Quote
               </h2>
               <p className="mb-6 text-sm text-gray-400">
-                Tell us about your project and we&apos;ll share a free design
-                mockup
+                Tell us about your project and we&apos;ll get back to you
+                within 24 hours
               </p>
               {isSubmitted ? (
                 <div className="py-12 text-center">
@@ -356,8 +377,8 @@ export default function WebsiteDesigningGurgaon() {
                     Thank you!
                   </p>
                   <p className="mt-2 text-[#6b7280]">
-                    We&apos;ve received your message. Our design team will
-                    contact you shortly.
+                    We&apos;ve received your message. Our team will contact you
+                    shortly.
                   </p>
                 </div>
               ) : (
@@ -417,7 +438,7 @@ export default function WebsiteDesigningGurgaon() {
                     )}
                   </div>
                   <textarea
-                    placeholder="Tell us about your design project..."
+                    placeholder="Tell us about your design needs..."
                     rows={4}
                     value={formData.message}
                     onChange={(e) =>
@@ -459,7 +480,7 @@ export default function WebsiteDesigningGurgaon() {
         </div>
       </section>
 
-      {/* Prime Locations */}
+      {/* Locations */}
       <section className="py-16 bg-gray-50/50">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
@@ -468,8 +489,8 @@ export default function WebsiteDesigningGurgaon() {
               Website Designing Services Across India
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              Based in Gurgaon, designing for businesses across all major
-              Indian cities.
+              From Gurgaon to Mumbai — one design team with consistent
+              standards, serving clients across every major Indian city.
             </p>
           </motion.div>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
@@ -489,6 +510,12 @@ export default function WebsiteDesigningGurgaon() {
                 <p className="text-xs text-gray-400 leading-snug">
                   {loc.label}
                 </p>
+                <Link
+                  href={loc.href}
+                  className="mt-1 text-xs font-medium text-[#ea580c] hover:underline"
+                >
+                  View →
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -504,8 +531,14 @@ export default function WebsiteDesigningGurgaon() {
               Website Designing Services We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              From brand new designs to complete redesigns — we handle
-              everything from concept to final deliverables.
+              From brand identity to full UI/UX systems — view our{" "}
+              <Link
+                href="/services"
+                className="text-[#ea580c] hover:underline"
+              >
+                complete design services
+              </Link>{" "}
+              for the full picture.
             </p>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -538,19 +571,19 @@ export default function WebsiteDesigningGurgaon() {
         </div>
       </section>
 
-      {/* Design Process */}
+      {/* Process */}
       <section className="bg-gray-50/50 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>How We Design</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Our Website Designing Process
+              Our Website Design Process
             </h2>
           </motion.div>
           <div className="relative mt-16 hidden md:block">
             <div className="absolute left-0 right-0 top-8 h-0.5 bg-gray-200" />
             <div className="relative z-10 flex justify-between">
-              {designProcess.map((step, idx) => (
+              {processSteps.map((step, idx) => (
                 <motion.div
                   key={step.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -574,7 +607,7 @@ export default function WebsiteDesigningGurgaon() {
           </div>
           <div className="relative mt-10 space-y-8 md:hidden">
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200" />
-            {designProcess.map((step, idx) => (
+            {processSteps.map((step, idx) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, x: -12 }}
@@ -604,7 +637,7 @@ export default function WebsiteDesigningGurgaon() {
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Why Businesses Choose Us for Website Designing
+              Why Gurgaon Businesses Choose Our Design Team
             </h2>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -639,9 +672,9 @@ export default function WebsiteDesigningGurgaon() {
       <section className="bg-gray-50/50 py-16">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUp}>
-            <SectionBadge>Tools We Use</SectionBadge>
+            <SectionBadge>Design Tools</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Design Software We Work With
+              Tools We Design With
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               {designTools.map((tool) => (
@@ -662,36 +695,53 @@ export default function WebsiteDesigningGurgaon() {
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
-              About Grox Media — Website Designing Company in Gurgaon
+              About Our Website Designing Company in Gurgaon
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Grox Media is a website designing company based in Gurgaon. We
-                serve clients in Gurugram, Noida, Delhi, Pune, Mumbai, and
-                across India. Our focus is simple — create designs that look
-                professional, load fast, and turn visitors into customers.
+                Gurgaon occupies a specific position in India&apos;s business
+                landscape — it&apos;s where global companies open their India
+                offices, where ambitious startups position themselves to attract
+                institutional funding, and where professionals in finance, real
+                estate, and consulting operate from. This context shapes the
+                visual standard that online visitors from this market apply when
+                they arrive at a website. A design that would perform adequately
+                in other markets can look underdeveloped against the Gurgaon
+                benchmark. We design with that benchmark in mind.
               </p>
               <p>
-                We don&apos;t believe in using pre-made themes or templates.
-                Every design we deliver is custom-built for the client. This
-                means your website won&apos;t look like hundreds of others
-                out there. It will look like yours — unique, clean, and
-                purposeful.
+                Our approach to website designing for Gurgaon clients starts
+                with understanding the brand before touching any design tool.
+                Who is this site for? What do they already believe about your
+                category when they arrive? What would make them trust you
+                immediately — and what would make them leave? These are
+                primarily UX questions, and the visual layer is built on top of
+                those answers. The result is design that communicates credibility
+                through its structure, not just its colour palette. Explore how
+                we&apos;ve applied this for other clients in our{" "}
+                <Link
+                  href="/portfolio"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  portfolio
+                </Link>
+                .
               </p>
               <p>
-                Our design team uses Figma, Adobe XD, Photoshop, and other
-                industry tools to create wireframes, mockups, and interactive
-                prototypes. You see exactly what your website will look like
-                before any development begins. This saves time, reduces
-                revisions, and ensures you&apos;re happy with the final
-                result.
-              </p>
-              <p>
-                Over 5000 businesses have trusted us with their website design.
-                From startups in Gurgaon to established brands in Mumbai —
-                we bring the same level of care and attention to every project.
-                Our 100% responsive designs guarantee your website looks
-                great on every screen size.
+                For Gurgaon&apos;s startup community in particular, the website
+                often has to do heavy lifting — it&apos;s where investors,
+                potential hires, and enterprise clients form their first
+                impression. We&apos;ve designed websites for businesses at this
+                stage that needed to look credible and established before they
+                had years of track record to point to. If you need{" "}
+                <Link
+                  href="/services"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  professional design services
+                </Link>{" "}
+                that understand both the craft and the commercial context, let&apos;s
+                start with a conversation about what your site needs to achieve.
               </p>
             </div>
           </motion.div>
@@ -742,8 +792,8 @@ export default function WebsiteDesigningGurgaon() {
               transition={{ delay: 0.1 }}
               className="flex items-start gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50">
-                <Mail className="h-6 w-6 text-[#1e40af]" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+                <Mail className="h-6 w-6 text-[#ea580c]" />
               </div>
               <div>
                 <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
@@ -751,7 +801,7 @@ export default function WebsiteDesigningGurgaon() {
                 </p>
                 <a
                   href="mailto:info@groxmedia.in"
-                  className="mt-1 block font-semibold text-[#111827] hover:text-[#1e40af]"
+                  className="mt-1 block font-semibold text-[#111827] hover:text-[#ea580c]"
                 >
                   info@groxmedia.in
                 </a>
@@ -784,22 +834,22 @@ export default function WebsiteDesigningGurgaon() {
       {/* CTA */}
       <motion.section
         {...fadeUp}
-        className="bg-gradient-to-r from-orange-500 via-orange-600 to-[#1a1a2e] py-20"
+        className="bg-gradient-to-r from-[#ea580c] to-[#111827] py-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Let&apos;s Design Something That Works
+            Design That Gurgaon&apos;s Market Will Notice
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Whether you&apos;re in Gurgaon, Delhi, Noida, Pune, or Mumbai —
-            we&apos;re ready to design your website.
+            Your first impression is visual. We make sure it&apos;s the right
+            one — credible, clean, and crafted for your specific audience.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link
               href="#contact-form"
               className="inline-flex rounded-full bg-white px-8 py-4 font-semibold text-[#ea580c] transition hover:bg-gray-100"
             >
-              Get Free Design Quote →
+              Get Free Consultation →
             </Link>
             <a
               href="tel:+919266806477"
@@ -824,24 +874,24 @@ export default function WebsiteDesigningGurgaon() {
           <div className="space-y-6">
             {[
               {
-                q: "How much does website designing cost in Gurgaon?",
-                a: "Website designing costs depend on pages, complexity, and features. A basic 5-page business website design starts around ₹10,000–₹25,000. E-commerce or complex designs cost more. We provide an exact quote after understanding your needs — no hidden charges.",
+                q: "How much does website design cost for a Gurgaon business?",
+                a: "For Gurgaon businesses, a professionally designed business website starts at ₹12,000–₹28,000. Landing pages and campaign microsites start at ₹8,000. Full brand identity packages with website design start from ₹35,000. Every quote is scoped and fixed — no open-ended pricing.",
               },
               {
-                q: "How long does it take to design a website?",
-                a: "A simple business website design takes 5–10 days. E-commerce or multi-page designs take 2–3 weeks. We share a realistic timeline before starting and stick to it.",
+                q: "How long does the website design process take?",
+                a: "A complete website design — wireframes, mockups, revisions, and final assets — typically takes 7–14 working days. Rush timelines for campaign pages are available. We share work-in-progress at every stage so you're not waiting for a single big reveal.",
               },
               {
-                q: "Do you redesign existing websites?",
-                a: "Yes. We regularly redesign outdated websites. The process includes a design audit, new wireframes, modern visual design, and a smooth handoff to development. Most redesigns are completed within 2–3 weeks.",
+                q: "Can you redesign an existing website while keeping the same domain?",
+                a: "Yes. We design the new version on a staging environment and migrate live when approved — no downtime, same domain. For Gurgaon businesses with existing SEO rankings, we preserve URL structures and redirect paths to protect search visibility during the transition.",
               },
               {
-                q: "Will the design be mobile-friendly?",
-                a: "Every design we create is 100% responsive. We design mobile-first, which means your website will look and work perfectly on phones, tablets, and desktops.",
+                q: "Will my redesigned website work on mobile phones?",
+                a: "Mobile-first design is our default, not an option. We design for small screens first, then scale up — not the other way around. The result is a layout that works naturally on phones rather than a desktop design squeezed into a mobile viewport.",
               },
               {
-                q: "Do you work with clients outside Gurgaon?",
-                a: "Yes. We serve clients across Delhi, Noida, Pune, Mumbai, and all over India. Most of our work happens over calls and screen shares — location is never an issue.",
+                q: "Do you also handle the development after designing?",
+                a: "Yes. Our design and development teams work under the same roof. If you need just the design files, we deliver Figma exports and a style guide. If you want us to build from those designs, our development team picks up from handover. Many Gurgaon clients prefer the integrated approach for consistency.",
               },
             ].map((faq, i) => (
               <motion.div

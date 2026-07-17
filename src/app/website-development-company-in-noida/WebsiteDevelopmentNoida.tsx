@@ -47,11 +47,31 @@ const inputCls =
   "mb-4 w-full rounded-xl border border-gray-200 bg-gray-50/50 px-5 py-4 pl-12 text-[#111827] placeholder:text-gray-400 transition-all duration-200 focus:border-[#1e40af] focus:outline-none focus:ring-2 focus:ring-blue-500/30";
 
 const locations = [
-  { city: "Gurugram", label: "Website Development Company in Gurugram" },
-  { city: "Noida", label: "Website Development Company in Noida" },
-  { city: "Delhi", label: "Website Development Company in Delhi" },
-  { city: "Pune", label: "Website Development Company in Pune" },
-  { city: "Mumbai", label: "Website Development Company in Mumbai" },
+  {
+    city: "Gurgaon",
+    label: "Web development for Cyber City & Golf Course Road businesses",
+    href: "/website-development-company-in-gurgaon",
+  },
+  {
+    city: "Delhi",
+    label: "Websites for Delhi's trading, retail & services sectors",
+    href: "/website-development-company-in-delhi",
+  },
+  {
+    city: "Pune",
+    label: "Scalable builds for Pune's IT parks & D2C brands",
+    href: "/website-development-company-in-pune",
+  },
+  {
+    city: "Mumbai",
+    label: "Enterprise web for Mumbai's finance & media companies",
+    href: "/website-development-company-in-mumbai",
+  },
+  {
+    city: "Noida",
+    label: "Headquartered in Noida — Sector 62, 63, Expressway belt",
+    href: "/website-development-company-in-noida",
+  },
 ];
 
 const services = [
@@ -59,42 +79,42 @@ const services = [
     icon: Globe,
     title: "Custom Website Development",
     description:
-      "We build websites from the ground up — no templates, no shortcuts. Every page is coded to match your brand, your goals, and your customers.",
+      "Architectured from scratch to suit your business model — whether you're an IT services firm in Sector 62 or a manufacturing company near Noida Phase 2. Clean code, zero bloat.",
     bg: "bg-blue-50",
   },
   {
     icon: ShoppingCart,
     title: "E-commerce Website Development",
     description:
-      "Online stores with secure payment gateways, product management, order tracking, and a checkout flow that actually converts visitors into buyers.",
+      "Feature-complete online stores: multi-vendor support, COD + digital payment options, GST invoicing, and catalogue management built for Noida's growing D2C and B2B sellers.",
     bg: "bg-orange-50",
   },
   {
     icon: Code,
     title: "Web Application Development",
     description:
-      "Complex web apps built with React, Next.js, Node.js. Dashboards, SaaS platforms, booking systems — we handle the tough stuff.",
+      "SaaS platforms, ERP dashboards, employee portals, and client management tools built with modern frameworks. We work across the full stack — front to back.",
     bg: "bg-green-50",
   },
   {
     icon: Smartphone,
     title: "Responsive & Mobile-First Development",
     description:
-      "Every website we deliver works flawlessly on phones, tablets, and desktops. No broken layouts, no zooming issues.",
+      "Mobile traffic from Noida accounts for the majority of most site visits. We build for that reality — thumb-friendly navigation, fast load on 4G, optimised images for every screen.",
     bg: "bg-purple-50",
   },
   {
     icon: Shield,
     title: "CMS & Content Management",
     description:
-      "WordPress, Headless CMS, or custom admin panels — you get full control to update your website without calling a developer.",
+      "Headless CMS setups, WordPress development, and custom content dashboards — giving your internal team the ability to publish and update without waiting on a developer queue.",
     bg: "bg-teal-50",
   },
   {
     icon: Zap,
     title: "Website Speed & Performance",
     description:
-      "Slow websites lose customers. We optimize load times, compress images, implement CDNs, and deliver sub-2-second page speeds.",
+      "Lazy loading, code splitting, CDN setup, and database query optimisation — we treat performance as a feature, not a checkbox item at the end of the project.",
     bg: "bg-amber-50",
   },
 ];
@@ -103,78 +123,78 @@ const whyUs = [
   {
     icon: Users,
     stat: "50+",
-    label: "Team Members",
-    title: "In-House Development Team",
+    label: "Full-Time Team",
+    title: "No Outsourcing, Ever",
     description:
-      "No freelancers, no outsourcing. Our own developers handle every project with direct communication and full accountability.",
+      "Our developers, designers, and QA engineers all work under one roof in Noida. You deal with one team from kickoff to launch — no handoff gaps.",
   },
   {
     icon: Clock,
     stat: "98%",
-    label: "On-Time",
-    title: "Deadlines That Matter",
+    label: "On-Time Rate",
+    title: "Schedules That Hold",
     description:
-      "We plan realistically and deliver on time. 98% of our projects launch exactly when we say they will.",
+      "We build realistic timelines by scoping thoroughly before we start. When scope changes, we communicate immediately — not when the deadline arrives.",
   },
   {
     icon: IndianRupee,
     stat: "40%",
-    label: "Cost Savings",
-    title: "Transparent Pricing",
+    label: "Cost Advantage",
+    title: "Honest, Itemised Quotes",
     description:
-      "No hidden charges, no surprise invoices. You know exactly what you're paying for before we write a single line of code.",
+      "No bundled packages that hide what you're paying for. Every line in the quote corresponds to actual work — you approve the scope, we build it.",
   },
   {
     icon: Headphones,
     stat: "24/7",
-    label: "Support",
-    title: "Post-Launch Support",
+    label: "Support Available",
+    title: "Always Reachable",
     description:
-      "We don't disappear after delivery. Our team is available round the clock for updates, fixes, and technical support.",
+      "Post-launch issues don't follow business hours. Our support team handles urgent fixes around the clock so your site doesn't stay broken over a weekend.",
   },
   {
     icon: TrendingUp,
     stat: "100%",
-    label: "SEO-Ready",
-    title: "Built for Search Engines",
+    label: "SEO-Ready Output",
+    title: "Rank-Ready from Day One",
     description:
-      "Clean code, fast loading, proper meta tags, schema markup — every website is built to rank from day one.",
+      "Schema markup, canonical tags, sitemap generation, meta structure — every project ships with the SEO foundations in place before the first Google crawl.",
   },
   {
     icon: Trophy,
     stat: "5000+",
-    label: "Projects",
-    title: "Work That Speaks",
+    label: "Projects Shipped",
+    title: "Broad Industry Experience",
     description:
-      "5000+ websites delivered across industries — healthcare, e-commerce, education, finance, travel, and more.",
+      "From healthcare portals to e-commerce catalogues to SaaS tools — we've seen most build challenges before. Experience means fewer surprises for you.",
   },
 ];
 
 const processSteps = [
   {
-    title: "We Listen First",
+    title: "Discovery Call",
     description:
-      "Before writing any code, we sit with you. Understand your business, your customers, your competition, and what success looks like.",
+      "We start by understanding your business, your users, and what success means for this project — not just what pages you want built.",
   },
   {
-    title: "Plan & Design",
+    title: "Scope & Planning",
     description:
-      "Wireframes, sitemaps, and visual designs — you see exactly what you're getting before development begins.",
+      "Sitemap, tech stack selection, timeline, and cost breakdown — all confirmed in writing before development begins. No scope creep surprises.",
   },
   {
-    title: "Build It Right",
+    title: "Design & Prototype",
     description:
-      "Clean, scalable code using modern frameworks. No messy shortcuts that break later.",
+      "Figma wireframes and high-fidelity mockups for your review. You see and approve the visual design before a single line of code is written.",
   },
   {
-    title: "Test Everything",
+    title: "Development & QA",
     description:
-      "Cross-browser testing, mobile testing, speed testing, security testing — we catch problems before your users do.",
+      "Structured development with QA running in parallel. Every feature is tested for functionality, accessibility, and cross-browser compatibility as it's built.",
   },
   {
-    title: "Launch & Grow",
+    title: "Launch & Sustain",
     description:
-      "We deploy your website, monitor performance, and keep supporting you as your business grows.",
+      "We manage deployment, configure hosting, connect analytics, and hand over with documentation. Post-launch support begins from day one.",
   },
 ];
 
@@ -261,6 +281,7 @@ export default function WebsiteDevelopmentNoida() {
         <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-400/25 via-indigo-400/20 to-purple-400/25 blur-3xl -z-10" />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+            {/* Left Content */}
             <div className="text-center lg:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -286,9 +307,10 @@ export default function WebsiteDevelopmentNoida() {
                 transition={{ duration: 0.45, delay: 0.3 }}
                 className="mx-auto mt-6 max-w-xl text-lg text-gray-500 lg:mx-0"
               >
-                We are Grox Media — a Noida-based website development company
-                that builds fast, clean, and conversion-focused websites for
-                businesses that want real results, not just a pretty homepage.
+                Grox Media is headquartered in Noida — which means when we say
+                we understand the local market, we&apos;re not speaking in
+                generalities. We build for IT companies in Sector 62, startups
+                on the Expressway, and businesses across the NCR.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -319,11 +341,11 @@ export default function WebsiteDevelopmentNoida() {
               >
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  500+ Websites Built
+                  Local Noida Team
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  98% On-Time Delivery
+                  5000+ Projects Delivered
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
@@ -332,6 +354,7 @@ export default function WebsiteDevelopmentNoida() {
               </motion.div>
             </div>
 
+            {/* Right Contact Form */}
             <motion.div
               id="contact-form"
               initial={{ opacity: 0, x: 30 }}
@@ -464,11 +487,12 @@ export default function WebsiteDevelopmentNoida() {
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Our Presence</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Website Development Services Across India
+              Web Development Services Across Major Indian Cities
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              While we are based in Noida, we serve clients across major
-              Indian cities with the same quality and commitment.
+              Rooted in Noida, we serve clients across India&apos;s top
+              business cities — with the same dedicated team handling every
+              project regardless of location.
             </p>
           </motion.div>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
@@ -488,6 +512,12 @@ export default function WebsiteDevelopmentNoida() {
                 <p className="text-xs text-gray-400 leading-snug">
                   {loc.label}
                 </p>
+                <Link
+                  href={loc.href}
+                  className="mt-1 text-xs font-medium text-[#1e40af] hover:underline"
+                >
+                  View →
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -503,8 +533,15 @@ export default function WebsiteDevelopmentNoida() {
               Website Development Services We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              From simple business websites to complex web applications — we
-              handle everything in-house.
+              Tailored web solutions for every stage of your business — from
+              your first website to a full-scale platform. See our{" "}
+              <Link
+                href="/services"
+                className="text-[#1e40af] hover:underline"
+              >
+                complete services list
+              </Link>
+              .
             </p>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -603,7 +640,7 @@ export default function WebsiteDevelopmentNoida() {
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Why Businesses Choose Us for Website Development
+              Why Noida Businesses Work With Us
             </h2>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -661,33 +698,53 @@ export default function WebsiteDevelopmentNoida() {
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
-              About Grox Media — Website Development Company in Noida
+              About Our Website Development Company in Noida
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Grox Media is a website development company based in Noida,
-                serving clients across Noida, Gurgaon, Delhi, Pune, and Mumbai.
-                We started with one simple idea — build websites that actually
-                work for businesses, not just look good in a portfolio.
+                Noida&apos;s business profile is genuinely varied — IT services
+                companies with international clients in Sector 62 and 63,
+                manufacturing operations in Phase II, startups along the
+                Expressway, and a growing number of D2C brands that were born
+                digital. Each of these businesses has a different web
+                requirement, and the ones that treat their website as strategic
+                infrastructure rather than a one-time expense tend to outgrow
+                their competitors online. Grox Media builds for that
+                ambition — not just the current state of your business.
               </p>
               <p>
-                Our team handles everything in-house. From the first design
-                mockup to the final deployment, nothing is outsourced. This
-                means faster turnaround, better quality control, and a single
-                point of contact for all your queries.
+                Being headquartered in Noida gives us a particular advantage
+                when working with local clients: we understand the competitive
+                landscape. Noida&apos;s IT sector is dense, and ranking for
+                service keywords in a market this crowded requires more than a
+                good-looking page — it requires technical SEO precision, fast
+                Core Web Vitals, and content depth. Every website we deliver is
+                built with those requirements addressed from the ground up, not
+                patched in afterwards. If you want to see examples of the work,
+                our{" "}
+                <Link
+                  href="/portfolio"
+                  className="text-[#1e40af] hover:underline"
+                >
+                  portfolio section
+                </Link>{" "}
+                is a good place to start.
               </p>
               <p>
-                We have built 5000+ websites across industries — healthcare,
-                e-commerce, education, real estate, finance, travel, and more.
-                Whether you need a 5-page business website or a complex web
-                application with thousands of users, we have the team and the
-                experience to deliver.
-              </p>
-              <p>
-                Our clients keep coming back because we treat their business
-                like our own. We don&apos;t just hand over a website and disappear.
-                We provide ongoing support, performance monitoring, and regular
-                updates to ensure your website keeps performing.
+                What differentiates us from the many development vendors
+                operating in the NCR market is accountability. We don&apos;t
+                sub-contract projects to junior developers or offshore teams.
+                When you brief us, the people in the room are the people
+                building your product. This matters when timelines are tight,
+                when requirements shift mid-project, or when something needs
+                fixing quickly after launch. If you&apos;re comparing{" "}
+                <Link
+                  href="/services"
+                  className="text-[#1e40af] hover:underline"
+                >
+                  web development services
+                </Link>
+                , we encourage you to ask any vendor that question directly.
               </p>
             </div>
           </motion.div>
@@ -784,11 +841,11 @@ export default function WebsiteDevelopmentNoida() {
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Let&apos;s Build Something That Works
+            Let&apos;s Ship Something Your Noida Competitors Will Envy
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Whether you&apos;re in Noida, Gurgaon, Delhi, Pune, or Mumbai —
-            we&apos;re ready to build your website.
+            Share your project requirements and we&apos;ll send a detailed scope
+            and quote within one business day.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link
@@ -820,24 +877,24 @@ export default function WebsiteDevelopmentNoida() {
           <div className="space-y-6">
             {[
               {
-                q: "How much does a website cost in Noida?",
-                a: "It depends on what you need. A basic 5-page business website starts around ₹15,000–₹30,000. E-commerce websites with payment integration start from ₹50,000. We give you an exact quote after understanding your requirements — no hidden charges.",
+                q: "How much does website development cost in Noida?",
+                a: "A basic business website for Noida companies starts at ₹12,000–₹28,000. E-commerce platforms with Razorpay or PayU integration start from ₹45,000. Web applications and SaaS tools are scoped individually. We provide a fixed-price quote after understanding your requirements — no variable billing surprises.",
               },
               {
-                q: "How long does it take to build a website?",
-                a: "A simple business website takes 7–15 days. E-commerce websites take 2–4 weeks. Complex web applications can take 4–8 weeks. We give you a clear timeline before starting and stick to it.",
+                q: "How long does website development take for a Noida business?",
+                a: "Simple business websites take 5–12 working days. E-commerce stores typically need 3–4 weeks. Complex platforms with custom integrations run 6–10 weeks. We've delivered rush projects for Noida clients in under a week when needed — at no compromise on code quality.",
               },
               {
-                q: "Do you work with clients outside Noida?",
-                a: "Yes. While we are based in Noida, we serve clients across Gurgaon, Delhi, Pune, Mumbai, and all over India. Most of our communication happens over calls and video meetings — location is never a barrier.",
+                q: "My current website looks outdated. Can you redesign it without losing my SEO rankings?",
+                a: "Yes. We carry out an SEO audit of your existing site before touching anything — mapping every indexed URL, current rankings, and backlink profile. The redesign preserves your URL structure and all technical SEO signals while modernising the design and improving Core Web Vitals.",
               },
               {
-                q: "Will my website rank on Google?",
-                a: "Every website we build is SEO-ready with clean code, fast loading speeds, proper meta tags, and schema markup. For ongoing SEO growth, we also offer dedicated SEO services to help you rank for your target keywords.",
+                q: "Will the website load properly on all devices?",
+                a: "Every build we deliver is tested across phones, tablets, and desktops before launch. We code mobile-first — smallest screen first, scaling up — so the experience on a ₹12,000 Android phone is as solid as on a MacBook. No afterthought responsiveness.",
               },
               {
-                q: "Do you provide support after the website is live?",
-                a: "Absolutely. We provide 24/7 post-launch support. Whether you need content updates, bug fixes, feature additions, or performance monitoring — our team is always available.",
+                q: "We're in Noida — do you need to visit us to start the project?",
+                a: "No, we're based in Noida and happy to meet local clients when helpful. Most projects run efficiently over structured calls and shared documents — we use Notion for project tracking and Google Meet for reviews. If an in-person workshop helps at kickoff, we can arrange that.",
               },
             ].map((faq, i) => (
               <motion.div

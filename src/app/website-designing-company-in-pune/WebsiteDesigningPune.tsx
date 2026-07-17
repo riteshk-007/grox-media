@@ -47,11 +47,31 @@ const inputCls =
   "mb-4 w-full rounded-xl border border-gray-200 bg-gray-50/50 px-5 py-4 pl-12 text-[#111827] placeholder:text-gray-400 transition-all duration-200 focus:border-[#ea580c] focus:outline-none focus:ring-2 focus:ring-orange-500/30";
 
 const locations = [
-  { city: "Gurugram", label: "Website Designing Company in Gurugram" },
-  { city: "Noida", label: "Website Designing Company in Noida" },
-  { city: "Delhi", label: "Website Designing Company in Delhi" },
-  { city: "Pune", label: "Website Designing Company in Pune" },
-  { city: "Mumbai", label: "Website Designing Company in Mumbai" },
+  {
+    city: "Gurgaon",
+    label: "Premium design for Gurgaon's corporate and startup ecosystem",
+    href: "/website-designing-company-in-gurgaon",
+  },
+  {
+    city: "Noida",
+    label: "B2B and SaaS UI/UX for Noida's IT companies",
+    href: "/website-designing-company-in-noida",
+  },
+  {
+    city: "Delhi",
+    label: "Industry-specific design for Delhi's diverse business base",
+    href: "/website-designing-company-in-delhi",
+  },
+  {
+    city: "Mumbai",
+    label: "Premium brand and D2C design for Mumbai businesses",
+    href: "/website-designing-company-in-mumbai",
+  },
+  {
+    city: "Pune",
+    label: "Design systems and product UI for Pune's tech market",
+    href: "/website-designing-company-in-pune",
+  },
 ];
 
 const services = [
@@ -59,42 +79,42 @@ const services = [
     icon: Layout,
     title: "Custom Website Design",
     description:
-      "No themes, no templates. Every design is built from scratch to match your brand, your audience, and your business goals.",
+      "For Pune's dual market — technically rigorous for IT companies in Hinjewadi, visually compelling for D2C brands building their consumer presence. Design that reads the brief accurately.",
     bg: "bg-blue-50",
   },
   {
     icon: Smartphone,
     title: "Responsive Web Design",
     description:
-      "Your website will look and work perfectly on every device — phones, tablets, laptops, and large screens. Zero compromise.",
+      "Pune's tech-native audience uses every device type — and judges your mobile experience against the apps they use daily. We design mobile-first and verify on real hardware.",
     bg: "bg-orange-50",
   },
   {
     icon: PenTool,
     title: "UI/UX Design",
     description:
-      "We design interfaces that feel intuitive. Users shouldn't have to think — they should just find what they need and take action.",
+      "End-to-end UX design — user flows, information architecture, interaction patterns, and usability testing. For Pune's product companies, UX is a competitive differentiator.",
     bg: "bg-green-50",
   },
   {
     icon: Sparkles,
     title: "Landing Page Design",
     description:
-      "Single-page designs built for one purpose — conversions. Whether it's lead capture or product sales, every element has a job.",
+      "Conversion-optimised landing pages for Pune's D2C brands, SaaS products, and service businesses running digital campaigns. Designed with clear hypotheses about what will convert.",
     bg: "bg-purple-50",
   },
   {
     icon: Monitor,
-    title: "Dashboard & Admin Design",
+    title: "Design System & Component Library",
     description:
-      "Clean, organized interfaces for internal tools, CRMs, and dashboards. Your team shouldn't need a training manual to use your software.",
+      "Structured design systems in Figma — component libraries, token documentation, and pattern guides — that enable Pune's product teams to build consistently at speed.",
     bg: "bg-teal-50",
   },
   {
     icon: Palette,
     title: "Brand Identity & Logo Design",
     description:
-      "Complete brand packages — logo, colors, typography, and guidelines. Everything you need for a consistent, professional look.",
+      "Visual identity from the ground up for Pune's emerging businesses — logomark, brand color palette, typography selection, and a guidelines document your team can actually use.",
     bg: "bg-amber-50",
   },
 ];
@@ -103,90 +123,92 @@ const whyUs = [
   {
     icon: Users,
     stat: "50+",
-    label: "Designers",
-    title: "In-House Design Team",
+    label: "In-House Design Team",
+    title: "Specialists, Not Generalists",
     description:
-      "Our designers are full-time team members, not contractors. You get direct access, fast iterations, and consistent quality.",
+      "Our design team includes dedicated UX researchers, visual designers, and motion specialists — not one person doing all three. Pune's technical market benefits from that specialisation.",
   },
   {
     icon: Clock,
     stat: "98%",
-    label: "On-Time",
-    title: "Respect Your Timelines",
+    label: "On-Time Delivery",
+    title: "Predictable Creative Timelines",
     description:
-      "We plan carefully and deliver on schedule. 98% of our design projects are completed on or before the agreed deadline.",
+      "We structure design projects like product sprints — milestones, reviews, and deliverables mapped upfront. Pune's agile teams appreciate the transparency.",
   },
   {
     icon: IndianRupee,
     stat: "40%",
-    label: "Savings",
-    title: "No Hidden Design Costs",
+    label: "Cost Advantage",
+    title: "Value-Driven Pricing",
     description:
-      "What we quote is what you pay. No surprise charges for revisions, no extra fees for file formats, no catches.",
+      "Pune's market evaluates cost per value, not cost per deliverable. Our pricing reflects what the work delivers — a functional design system that scales, not a pretty screenshot.",
   },
   {
     icon: Headphones,
     stat: "24/7",
-    label: "Support",
-    title: "Always Available",
+    label: "Design Support",
+    title: "Ongoing Creative Partnership",
     description:
-      "Need a design tweak at 10 PM? We're available. Post-launch changes, new pages, seasonal updates — just reach out.",
+      "Designs evolve as products grow. We stay available for iterations, new feature UI, and design updates after the initial delivery — without re-briefing from scratch.",
   },
   {
     icon: TrendingUp,
     stat: "100%",
-    label: "Responsive",
-    title: "Mobile-First Design",
+    label: "UX-First Approach",
+    title: "Function Before Form",
     description:
-      "Over 70% of web traffic is mobile. We design for thumb-friendly navigation and fast loading on phones first.",
+      "Every visual decision is preceded by a functional question. Why is this here? What should the user do next? How does this layout build trust? Form follows that logic.",
   },
   {
     icon: Trophy,
     stat: "5000+",
-    label: "Projects",
-    title: "Designs That Convert",
+    label: "Design Projects Completed",
+    title: "Cross-Industry Pattern Knowledge",
     description:
-      "5000+ design projects delivered. Our designs don't just look good — they drive leads, sales, and business growth.",
+      "Education, healthcare, SaaS, e-commerce, manufacturing — we've designed across every sector with significant presence in Pune and know what visual language resonates where.",
   },
 ];
 
-const designProcess = [
+const processSteps = [
   {
-    title: "Discovery Call",
+    title: "Problem Framing",
     description:
-      "We sit with you, understand your brand, your customers, your competitors, and what you want your website to achieve.",
+      "Design starts with a problem, not a preference. We define what the website needs to solve before deciding what it should look like.",
   },
   {
-    title: "Wireframes",
+    title: "User Research",
     description:
-      "Low-fidelity layouts to map out structure, user flow, and content hierarchy before any visual work begins.",
+      "Understanding your user's mental models, expectations, and decision-making process — particularly relevant for Pune's technically sophisticated B2B buyers.",
+  },
+  {
+    title: "Information Architecture",
+    description:
+      "Content structure, navigation design, and user flow mapping validated before visual design begins. The right structure makes the visual layer exponentially more effective.",
   },
   {
     title: "Visual Design",
     description:
-      "High-fidelity mockups with your brand colors, typography, imagery, and spacing — pixel by pixel.",
+      "High-fidelity designs in Figma with your brand applied across all components. Desktop and mobile reviewed in parallel — no afterthought responsive adaptation.",
   },
   {
-    title: "Interactive Prototype",
+    title: "Handover & Documentation",
     description:
-      "Clickable prototype so you can experience the design before a single line of code is written.",
-  },
-  {
-    title: "Design Handoff",
-    description:
-      "Complete design files, style guides, and asset libraries delivered to the development team for pixel-perfect coding.",
+      "Figma files, component documentation, design tokens, and developer annotations. Pune's product teams get a handover package that enables autonomous build.",
   },
 ];
 
 const designTools = [
   "Figma",
-  "Adobe XD",
-  "Photoshop",
-  "Illustrator",
-  "After Effects",
+  "Adobe Illustrator",
+  "Adobe Photoshop",
   "Framer",
   "Webflow",
-  "Canva",
+  "After Effects",
+  "Principle",
+  "Zeplin",
+  "InVision",
+  "Lottie",
 ];
 
 export default function WebsiteDesigningPune() {
@@ -254,9 +276,8 @@ export default function WebsiteDesigningPune() {
 
   return (
     <main className="min-h-screen overflow-x-hidden">
-      {/* Hero + Contact Form */}
       <section className="relative overflow-hidden pt-24 pb-12">
-        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/25 via-amber-400/20 to-yellow-400/25 blur-3xl -z-10" />
+        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/20 via-pink-400/15 to-purple-400/20 blur-3xl -z-10" />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
             <div className="text-center lg:text-left">
@@ -266,9 +287,7 @@ export default function WebsiteDesigningPune() {
                 transition={{ duration: 0.45 }}
                 className="flex justify-center lg:justify-start"
               >
-                <SectionBadge>
-                  Website Designing Company in Pune
-                </SectionBadge>
+                <SectionBadge>Website Designing Company in Pune</SectionBadge>
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -284,10 +303,11 @@ export default function WebsiteDesigningPune() {
                 transition={{ duration: 0.45, delay: 0.3 }}
                 className="mx-auto mt-6 max-w-xl text-lg text-gray-500 lg:mx-0"
               >
-                We are Grox Media — a Pune-based website designing company
-                that creates clean, conversion-focused designs. No fluff, no
-                fancy gimmicks — just designs that make your business look
-                professional and make visitors take action.
+                Pune&apos;s market spans two very different buyer profiles —
+                the technical rigour of IT park companies and the brand
+                consciousness of D2C founders. Good website design for Pune
+                starts with understanding which you&apos;re talking to, and what
+                that audience needs to see before they trust you.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -299,7 +319,7 @@ export default function WebsiteDesigningPune() {
                   href="#contact-form"
                   className="inline-flex items-center gap-2 rounded-full bg-[#ea580c] px-8 py-4 font-semibold text-white transition hover:bg-[#c2410c]"
                 >
-                  Get Free Design Quote
+                  Get Free Consultation
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <a
@@ -318,15 +338,15 @@ export default function WebsiteDesigningPune() {
               >
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  500+ Websites Designed
+                  UX-First Design
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  100% Responsive
+                  Design Systems Expertise
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  Free Mockups
+                  5000+ Projects
                 </span>
               </motion.div>
             </div>
@@ -339,11 +359,11 @@ export default function WebsiteDesigningPune() {
               className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8"
             >
               <h2 className="mb-2 text-2xl font-bold text-[#111827]">
-                Get a Free Design Quote
+                Get a Free Quote
               </h2>
               <p className="mb-6 text-sm text-gray-400">
-                Tell us about your project and we&apos;ll share a free design
-                mockup
+                Tell us about your design project and we&apos;ll get back to you
+                within 24 hours
               </p>
               {isSubmitted ? (
                 <div className="py-12 text-center">
@@ -354,8 +374,8 @@ export default function WebsiteDesigningPune() {
                     Thank you!
                   </p>
                   <p className="mt-2 text-[#6b7280]">
-                    We&apos;ve received your message. Our design team will
-                    contact you shortly.
+                    We&apos;ve received your message. Our team will contact you
+                    shortly.
                   </p>
                 </div>
               ) : (
@@ -415,7 +435,7 @@ export default function WebsiteDesigningPune() {
                     )}
                   </div>
                   <textarea
-                    placeholder="Tell us about your design project..."
+                    placeholder="Tell us about your design needs..."
                     rows={4}
                     value={formData.message}
                     onChange={(e) =>
@@ -457,7 +477,6 @@ export default function WebsiteDesigningPune() {
         </div>
       </section>
 
-      {/* Prime Locations */}
       <section className="py-16 bg-gray-50/50">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
@@ -465,10 +484,6 @@ export default function WebsiteDesigningPune() {
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
               Website Designing Services Across India
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              Based in Pune, designing for businesses across all major
-              Indian cities.
-            </p>
           </motion.div>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
             {locations.map((loc, i) => (
@@ -487,13 +502,18 @@ export default function WebsiteDesigningPune() {
                 <p className="text-xs text-gray-400 leading-snug">
                   {loc.label}
                 </p>
+                <Link
+                  href={loc.href}
+                  className="mt-1 text-xs font-medium text-[#ea580c] hover:underline"
+                >
+                  View →
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services */}
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
@@ -502,8 +522,14 @@ export default function WebsiteDesigningPune() {
               Website Designing Services We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              From brand new designs to complete redesigns — we handle
-              everything from concept to final deliverables.
+              From design systems to consumer product pages — see our{" "}
+              <Link
+                href="/services"
+                className="text-[#ea580c] hover:underline"
+              >
+                complete design services
+              </Link>
+              .
             </p>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -536,19 +562,18 @@ export default function WebsiteDesigningPune() {
         </div>
       </section>
 
-      {/* Design Process */}
       <section className="bg-gray-50/50 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>How We Design</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Our Website Designing Process
+              Our Website Design Process
             </h2>
           </motion.div>
           <div className="relative mt-16 hidden md:block">
             <div className="absolute left-0 right-0 top-8 h-0.5 bg-gray-200" />
             <div className="relative z-10 flex justify-between">
-              {designProcess.map((step, idx) => (
+              {processSteps.map((step, idx) => (
                 <motion.div
                   key={step.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -572,7 +597,7 @@ export default function WebsiteDesigningPune() {
           </div>
           <div className="relative mt-10 space-y-8 md:hidden">
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200" />
-            {designProcess.map((step, idx) => (
+            {processSteps.map((step, idx) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, x: -12 }}
@@ -596,13 +621,12 @@ export default function WebsiteDesigningPune() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Why Businesses Choose Us for Website Designing
+              Why Pune Businesses Trust Our Design Team
             </h2>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -633,13 +657,12 @@ export default function WebsiteDesigningPune() {
         </div>
       </section>
 
-      {/* Design Tools */}
       <section className="bg-gray-50/50 py-16">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUp}>
-            <SectionBadge>Tools We Use</SectionBadge>
+            <SectionBadge>Design Tools</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Design Software We Work With
+              Tools We Design With
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               {designTools.map((tool) => (
@@ -655,48 +678,61 @@ export default function WebsiteDesigningPune() {
         </div>
       </section>
 
-      {/* SEO Content */}
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
-              About Grox Media — Website Designing Company in Pune
+              About Our Website Designing Company in Pune
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Grox Media is a website designing company based in Pune. We
-                serve clients in Pune, Gurgaon, Noida, Delhi, Mumbai, and
-                across India. Our focus is simple — create designs that look
-                professional, load fast, and turn visitors into customers.
+                Pune&apos;s design market has a distinct characteristic that we
+                find genuinely interesting: the audience is often better at
+                evaluating design quality than the clients who are commissioning
+                it. A Hinjewadi IT company&apos;s website is visited by
+                developers, product managers, and technical decision-makers who
+                use beautifully designed software products every day. They notice
+                padding inconsistencies, they notice when the mobile layout
+                breaks, and they notice when the visual hierarchy doesn&apos;t
+                guide them naturally to the information they&apos;re looking
+                for. Designing for Pune means designing for that level of
+                scrutiny.
               </p>
               <p>
-                We don&apos;t believe in using pre-made themes or templates.
-                Every design we deliver is custom-built for the client. This
-                means your website won&apos;t look like hundreds of others
-                out there. It will look like yours — unique, clean, and
-                purposeful.
+                For Pune&apos;s D2C brands, the design challenge is different —
+                it&apos;s about building enough emotional and visual trust to
+                drive an online transaction from a customer who has never met
+                you. Colour palette consistency, photography quality, product
+                presentation, and checkout UX all contribute to that trust in
+                ways that are measurable in conversion rate data. We bring both
+                lenses — the technical and the consumer — to every Pune design
+                project depending on the audience. See examples of both in our{" "}
+                <Link
+                  href="/portfolio"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  portfolio
+                </Link>
+                .
               </p>
               <p>
-                Our design team uses Figma, Adobe XD, Photoshop, and other
-                industry tools to create wireframes, mockups, and interactive
-                prototypes. You see exactly what your website will look like
-                before any development begins. This saves time, reduces
-                revisions, and ensures you&apos;re happy with the final
-                result.
-              </p>
-              <p>
-                Over 5000 businesses have trusted us with their website design.
-                From startups in Pune to established brands in Mumbai —
-                we bring the same level of care and attention to every project.
-                Our 100% responsive designs guarantee your website looks
-                great on every screen size.
+                If you&apos;re looking for{" "}
+                <Link
+                  href="/services"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  web design services in Pune
+                </Link>{" "}
+                that go beyond templates and theme customisation, we&apos;re the
+                team that has built design systems for growing product companies
+                and consumer brands alike. The starting point is always the same:
+                understanding your user before we pick up a design tool.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Info */}
       <section className="bg-gray-50/50 py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-10">
@@ -740,8 +776,8 @@ export default function WebsiteDesigningPune() {
               transition={{ delay: 0.1 }}
               className="flex items-start gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50">
-                <Mail className="h-6 w-6 text-[#1e40af]" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+                <Mail className="h-6 w-6 text-[#ea580c]" />
               </div>
               <div>
                 <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
@@ -749,7 +785,7 @@ export default function WebsiteDesigningPune() {
                 </p>
                 <a
                   href="mailto:info@groxmedia.in"
-                  className="mt-1 block font-semibold text-[#111827] hover:text-[#1e40af]"
+                  className="mt-1 block font-semibold text-[#111827] hover:text-[#ea580c]"
                 >
                   info@groxmedia.in
                 </a>
@@ -779,25 +815,24 @@ export default function WebsiteDesigningPune() {
         </div>
       </section>
 
-      {/* CTA */}
       <motion.section
         {...fadeUp}
-        className="bg-gradient-to-r from-orange-500 via-orange-600 to-[#1a1a2e] py-20"
+        className="bg-gradient-to-r from-[#ea580c] to-[#111827] py-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Let&apos;s Design Something That Works
+            Design That Holds Up to Pune&apos;s High Standard
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Whether you&apos;re in Pune, Gurgaon, Noida, Delhi, or Mumbai —
-            we&apos;re ready to design your website.
+            Pune&apos;s users know good design when they see it. We build for
+            that knowledge — functional, precise, and purposeful.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link
               href="#contact-form"
               className="inline-flex rounded-full bg-white px-8 py-4 font-semibold text-[#ea580c] transition hover:bg-gray-100"
             >
-              Get Free Design Quote →
+              Get Free Consultation →
             </Link>
             <a
               href="tel:+919266806477"
@@ -810,7 +845,6 @@ export default function WebsiteDesigningPune() {
         </div>
       </motion.section>
 
-      {/* FAQs */}
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-12">
@@ -822,24 +856,24 @@ export default function WebsiteDesigningPune() {
           <div className="space-y-6">
             {[
               {
-                q: "How much does website designing cost in Pune?",
-                a: "Website designing costs depend on pages, complexity, and features. A basic 5-page business website design starts around ₹10,000–₹25,000. E-commerce or complex designs cost more. We provide an exact quote after understanding your needs — no hidden charges.",
+                q: "How much does website design cost in Pune?",
+                a: "Pune's market values quality at a reasonable price point. A professionally designed business website starts at ₹10,000–₹22,000. D2C product site designs with full e-commerce UI start from ₹28,000. Dashboard and web app UI/UX is quoted after scoping. All quotes are fixed and include revision rounds.",
               },
               {
-                q: "How long does it take to design a website?",
-                a: "A simple business website design takes 5–10 days. E-commerce or multi-page designs take 2–3 weeks. We share a realistic timeline before starting and stick to it.",
+                q: "We're a tech company in Pune — do you understand SaaS product design?",
+                a: "Yes. Product design for SaaS and web applications is a distinct discipline — information architecture, user flows, empty states, error handling, and progressive disclosure all matter. We've designed dashboards and admin interfaces that Pune's IT companies have deployed to thousands of end users.",
               },
               {
-                q: "Do you redesign existing websites?",
-                a: "Yes. We regularly redesign outdated websites. The process includes a design audit, new wireframes, modern visual design, and a smooth handoff to development. Most redesigns are completed within 2–3 weeks.",
+                q: "Can you create a design system alongside the website design?",
+                a: "Yes. For Pune's product companies that will be building on the website design over time, we create a design system in Figma — components, tokens, patterns, and usage documentation. This gives your in-house or extended development team a consistent reference instead of re-designing from scratch for every new feature.",
               },
               {
-                q: "Will the design be mobile-friendly?",
-                a: "Every design we create is 100% responsive. We design mobile-first, which means your website will look and work perfectly on phones, tablets, and desktops.",
+                q: "My website has high bounce rates — can redesign fix that?",
+                a: "Often yes — but we diagnose before we prescribe. High bounce rates can be caused by slow loading, irrelevant traffic, confusing layout, or weak value proposition communication. We review your analytics and current user behaviour before designing the solution, so the redesign targets the actual problem.",
               },
               {
-                q: "Do you work with clients outside Pune?",
-                a: "Yes. We serve clients across Gurgaon, Noida, Delhi, Mumbai, and all over India. Most of our work happens over calls and screen shares — location is never an issue.",
+                q: "Do you work with education institutions and colleges in Pune?",
+                a: "Yes. Education website design has specific requirements — course catalogue structure, admission workflow, faculty presentation, and accessibility for students with varying tech literacy. We've designed for institutions with student counts ranging from a few hundred to tens of thousands.",
               },
             ].map((faq, i) => (
               <motion.div

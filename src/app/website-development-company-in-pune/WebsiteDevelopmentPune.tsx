@@ -47,11 +47,31 @@ const inputCls =
   "mb-4 w-full rounded-xl border border-gray-200 bg-gray-50/50 px-5 py-4 pl-12 text-[#111827] placeholder:text-gray-400 transition-all duration-200 focus:border-[#1e40af] focus:outline-none focus:ring-2 focus:ring-blue-500/30";
 
 const locations = [
-  { city: "Gurugram", label: "Website Development Company in Gurugram" },
-  { city: "Noida", label: "Website Development Company in Noida" },
-  { city: "Delhi", label: "Website Development Company in Delhi" },
-  { city: "Pune", label: "Website Development Company in Pune" },
-  { city: "Mumbai", label: "Website Development Company in Mumbai" },
+  {
+    city: "Gurgaon",
+    label: "Corporate & MNC web builds for Cyber City businesses",
+    href: "/website-development-company-in-gurgaon",
+  },
+  {
+    city: "Noida",
+    label: "IT company & startup development from our Noida HQ",
+    href: "/website-development-company-in-noida",
+  },
+  {
+    city: "Delhi",
+    label: "SME, retail & professional services across Delhi NCR",
+    href: "/website-development-company-in-delhi",
+  },
+  {
+    city: "Mumbai",
+    label: "Enterprise and D2C builds for Mumbai's competitive market",
+    href: "/website-development-company-in-mumbai",
+  },
+  {
+    city: "Pune",
+    label: "IT parks, D2C brands & manufacturing — built for Pune",
+    href: "/website-development-company-in-pune",
+  },
 ];
 
 const services = [
@@ -59,42 +79,42 @@ const services = [
     icon: Globe,
     title: "Custom Website Development",
     description:
-      "We build websites from the ground up — no templates, no shortcuts. Every page is coded to match your brand, your goals, and your customers.",
+      "Precision-built websites for Pune's tech-savvy market. Whether you're in Hinjewadi's IT park or launching a D2C brand from Kharadi, the build is engineered for your specific audience.",
     bg: "bg-blue-50",
   },
   {
     icon: ShoppingCart,
     title: "E-commerce Website Development",
     description:
-      "Online stores with secure payment gateways, product management, order tracking, and a checkout flow that actually converts visitors into buyers.",
+      "Online stores built for Pune's growing D2C and B2B market — from clean single-product pages to complex multi-category catalogues with GST invoicing and returns management.",
     bg: "bg-orange-50",
   },
   {
     icon: Code,
     title: "Web Application Development",
     description:
-      "Complex web apps built with React, Next.js, Node.js. Dashboards, SaaS platforms, booking systems — we handle the tough stuff.",
+      "Custom SaaS platforms, ERP-connected portals, and internal tools. Pune's IT sector generates complex web application requirements — we build the full stack, not just the frontend.",
     bg: "bg-green-50",
   },
   {
     icon: Smartphone,
     title: "Responsive & Mobile-First Development",
     description:
-      "Every website we deliver works flawlessly on phones, tablets, and desktops. No broken layouts, no zooming issues.",
+      "Pune's young, tech-native user base expects fluid mobile experiences. We design and test on actual devices — from mid-range Android to the latest iOS — before any delivery.",
     bg: "bg-purple-50",
   },
   {
     icon: Shield,
     title: "CMS & Content Management",
     description:
-      "WordPress, Headless CMS, or custom admin panels — you get full control to update your website without calling a developer.",
+      "Editable websites your team can manage without coding. WordPress, Contentful, or a custom admin panel — your marketing team updates pages independently without IT involvement.",
     bg: "bg-teal-50",
   },
   {
     icon: Zap,
     title: "Website Speed & Performance",
     description:
-      "Slow websites lose customers. We optimize load times, compress images, implement CDNs, and deliver sub-2-second page speeds.",
+      "Pune's market is price-conscious but performance-demanding. We deliver sub-2-second load times through code optimisation, CDN setup, and image compression pipelines.",
     bg: "bg-amber-50",
   },
 ];
@@ -103,78 +123,78 @@ const whyUs = [
   {
     icon: Users,
     stat: "50+",
-    label: "Team Members",
-    title: "In-House Development Team",
+    label: "In-House Specialists",
+    title: "One Team, Full Accountability",
     description:
-      "No freelancers, no outsourcing. Our own developers handle every project with direct communication and full accountability.",
+      "Frontend, backend, design, and QA — all in-house. Pune clients don't get handed to subcontractors. The same team that scopes your project builds and tests it.",
   },
   {
     icon: Clock,
     stat: "98%",
-    label: "On-Time",
-    title: "Deadlines That Matter",
+    label: "Delivery Rate",
+    title: "Timelines That Don't Slip",
     description:
-      "We plan realistically and deliver on time. 98% of our projects launch exactly when we say they will.",
+      "We build delivery confidence through detailed scoping upfront. If something changes during development, you know about it before it affects your launch date.",
   },
   {
     icon: IndianRupee,
     stat: "40%",
-    label: "Cost Savings",
-    title: "Transparent Pricing",
+    label: "Cost Advantage",
+    title: "Pricing That Makes Sense",
     description:
-      "No hidden charges, no surprise invoices. You know exactly what you're paying for before we write a single line of code.",
+      "Pune's market is value-conscious. Our in-house model removes the agency markup layer — you pay for development time, not for account management overhead.",
   },
   {
     icon: Headphones,
     stat: "24/7",
-    label: "Support",
-    title: "Post-Launch Support",
+    label: "Ongoing Support",
+    title: "Support Beyond the Invoice",
     description:
-      "We don't disappear after delivery. Our team is available round the clock for updates, fixes, and technical support.",
+      "Post-launch support is included in every engagement. When something needs fixing or updating, you're not raising a new project — you're calling your existing team.",
   },
   {
     icon: TrendingUp,
     stat: "100%",
-    label: "SEO-Ready",
-    title: "Built for Search Engines",
+    label: "SEO Foundation",
+    title: "Technically Sound for Search",
     description:
-      "Clean code, fast loading, proper meta tags, schema markup — every website is built to rank from day one.",
+      "Core Web Vitals scores, schema markup, sitemap generation, and proper meta structures — everything a Pune business needs to compete in local search from launch day.",
   },
   {
     icon: Trophy,
     stat: "5000+",
-    label: "Projects",
-    title: "Work That Speaks",
+    label: "Delivered Projects",
+    title: "Experience Across Every Vertical",
     description:
-      "5000+ websites delivered across industries — healthcare, e-commerce, education, finance, travel, and more.",
+      "Education, healthcare, manufacturing, SaaS, e-commerce — 5000+ delivered websites means we've seen your type of project before and know where it gets complicated.",
   },
 ];
 
 const processSteps = [
   {
-    title: "We Listen First",
+    title: "Requirements Workshop",
     description:
-      "Before writing any code, we sit with you. Understand your business, your customers, your competition, and what success looks like.",
+      "A focused call to understand your business model, target user, and success metrics. For Pune's IT businesses this often includes API requirements and integration planning.",
   },
   {
-    title: "Plan & Design",
+    title: "Technical Proposal",
     description:
-      "Wireframes, sitemaps, and visual designs — you see exactly what you're getting before development begins.",
+      "Written scope with tech stack rationale, architecture decisions, page inventory, and a fixed timeline. You know exactly what you're getting before we start.",
   },
   {
-    title: "Build It Right",
+    title: "Design Review",
     description:
-      "Clean, scalable code using modern frameworks. No messy shortcuts that break later.",
+      "Figma wireframes and visual designs reviewed before code is written. We iterate quickly and document feedback so nothing is lost between reviews.",
   },
   {
-    title: "Test Everything",
+    title: "Iterative Build",
     description:
-      "Cross-browser testing, mobile testing, speed testing, security testing — we catch problems before your users do.",
+      "Development progresses in visible stages with staging links shared regularly. No waiting until the end to see what you've paid for.",
   },
   {
-    title: "Launch & Grow",
+    title: "Go-Live & Handover",
     description:
-      "We deploy your website, monitor performance, and keep supporting you as your business grows.",
+      "Deployment, Google Search Console setup, analytics installation, and a training session for your team. Full handover documentation included.",
   },
 ];
 
@@ -268,9 +288,7 @@ export default function WebsiteDevelopmentPune() {
                 transition={{ duration: 0.45 }}
                 className="flex justify-center lg:justify-start"
               >
-                <SectionBadge>
-                  Website Development Company in Pune
-                </SectionBadge>
+                <SectionBadge>Website Development Company in Pune</SectionBadge>
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -286,9 +304,11 @@ export default function WebsiteDevelopmentPune() {
                 transition={{ duration: 0.45, delay: 0.3 }}
                 className="mx-auto mt-6 max-w-xl text-lg text-gray-500 lg:mx-0"
               >
-                We are Grox Media — a Pune-based website development company
-                that builds fast, clean, and conversion-focused websites for
-                businesses that want real results, not just a pretty homepage.
+                Pune&apos;s buyers are technically literate. A slow website or
+                broken mobile layout isn&apos;t just an inconvenience — it
+                signals that your business isn&apos;t serious. We build for
+                that audience: performance-first, SEO-ready, and architectured
+                to scale.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -319,15 +339,15 @@ export default function WebsiteDevelopmentPune() {
               >
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  500+ Websites Built
+                  Performance-First Builds
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  98% On-Time Delivery
+                  5000+ Projects Delivered
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  24/7 Support
+                  Fixed Pricing
                 </span>
               </motion.div>
             </div>
@@ -458,17 +478,17 @@ export default function WebsiteDevelopmentPune() {
         </div>
       </section>
 
-      {/* Prime Locations */}
+      {/* Locations */}
       <section className="py-16 bg-gray-50/50">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Our Presence</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Website Development Services Across India
+              Website Development Across India
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              While we are based in Pune, we serve clients across major
-              Indian cities with the same quality and commitment.
+              One consistent team serving Pune, Mumbai, Delhi, Noida, and
+              Gurgaon — without the multi-office overhead passed to the client.
             </p>
           </motion.div>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
@@ -488,6 +508,12 @@ export default function WebsiteDevelopmentPune() {
                 <p className="text-xs text-gray-400 leading-snug">
                   {loc.label}
                 </p>
+                <Link
+                  href={loc.href}
+                  className="mt-1 text-xs font-medium text-[#1e40af] hover:underline"
+                >
+                  View →
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -503,8 +529,14 @@ export default function WebsiteDevelopmentPune() {
               Website Development Services We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              From simple business websites to complex web applications — we
-              handle everything in-house.
+              Every type of web project handled in-house. View our{" "}
+              <Link
+                href="/services"
+                className="text-[#1e40af] hover:underline"
+              >
+                full services
+              </Link>{" "}
+              for the complete picture.
             </p>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -603,7 +635,7 @@ export default function WebsiteDevelopmentPune() {
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Why Businesses Choose Us for Website Development
+              Why Pune Businesses Trust Grox Media
             </h2>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -661,33 +693,54 @@ export default function WebsiteDevelopmentPune() {
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
-              About Grox Media — Website Development Company in Pune
+              About Our Website Development Company in Pune
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Grox Media is a website development company based in Pune,
-                serving clients across Pune, Gurgaon, Noida, Delhi, and Mumbai.
-                We started with one simple idea — build websites that actually
-                work for businesses, not just look good in a portfolio.
+                Pune has become one of India&apos;s most interesting markets for
+                web development because it contains two distinct buyer types
+                within the same city. The IT services sector — centred in
+                Hinjewadi, Kharadi, and Magarpatta — generates demand for
+                technically sophisticated web applications, employee portals,
+                and SaaS platforms. The manufacturing, education, and emerging
+                D2C sector generates demand for clean, fast, conversion-optimised
+                websites that don&apos;t require a computer science background
+                to manage. Grox Media builds for both, and the approach is
+                different for each.
               </p>
               <p>
-                Our team handles everything in-house. From the first design
-                mockup to the final deployment, nothing is outsourced. This
-                means faster turnaround, better quality control, and a single
-                point of contact for all your queries.
+                For Pune&apos;s tech-first businesses, the bar is high. Your
+                clients and partners evaluate your online presence with the same
+                lens they apply to software products — they notice if your site
+                scores poorly on Core Web Vitals, if your API integrations look
+                like afterthoughts, or if your mobile experience was clearly
+                tested only on a desktop browser in responsive mode. We build to
+                that standard. Every web application we deliver goes through
+                functional QA, cross-device testing, and a performance audit
+                before handover. Browse our{" "}
+                <Link
+                  href="/portfolio"
+                  className="text-[#1e40af] hover:underline"
+                >
+                  project portfolio
+                </Link>{" "}
+                for examples from similar sectors.
               </p>
               <p>
-                We have built 5000+ websites across industries — healthcare,
-                e-commerce, education, real estate, finance, travel, and more.
-                Whether you need a 5-page business website or a complex web
-                application with thousands of users, we have the team and the
-                experience to deliver.
-              </p>
-              <p>
-                Our clients keep coming back because we treat their business
-                like our own. We don&apos;t just hand over a website and disappear.
-                We provide ongoing support, performance monitoring, and regular
-                updates to ensure your website keeps performing.
+                For Pune&apos;s D2C brands and growing businesses, the primary
+                challenge is often cost-efficiency combined with quality. We
+                solve that through our in-house model — no subcontracting means
+                no markup on top of a markup, and direct developer-to-client
+                communication means requirements are captured correctly the
+                first time. If you&apos;re comparing vendors for{" "}
+                <Link
+                  href="/services"
+                  className="text-[#1e40af] hover:underline"
+                >
+                  web development services in Pune
+                </Link>
+                , ask each of them who actually writes the code. The answer
+                changes the risk profile of the project significantly.
               </p>
             </div>
           </motion.div>
@@ -784,11 +837,12 @@ export default function WebsiteDevelopmentPune() {
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Let&apos;s Build Something That Works
+            Build Something Pune&apos;s Market Will Respect
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Whether you&apos;re in Pune, Gurgaon, Noida, Delhi, or Mumbai —
-            we&apos;re ready to build your website.
+            Your website is often the first technical impression you make. Make
+            it count with a team that builds for performance, not just
+            presentation.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link
@@ -820,24 +874,24 @@ export default function WebsiteDevelopmentPune() {
           <div className="space-y-6">
             {[
               {
-                q: "How much does a website cost in Pune?",
-                a: "It depends on what you need. A basic 5-page business website starts around ₹15,000–₹30,000. E-commerce websites with payment integration start from ₹50,000. We give you an exact quote after understanding your requirements — no hidden charges.",
+                q: "How much does website development cost in Pune?",
+                a: "Pune's market is competitive and price-conscious, so we offer clear tiered pricing. A business website starts at ₹12,000–₹25,000. E-commerce platforms start from ₹40,000. Web applications and SaaS products are priced based on scope after a discovery call. Every quote is fixed — no billing-by-the-hour surprises.",
               },
               {
-                q: "How long does it take to build a website?",
-                a: "A simple business website takes 7–15 days. E-commerce websites take 2–4 weeks. Complex web applications can take 4–8 weeks. We give you a clear timeline before starting and stick to it.",
+                q: "How long does web development take for a Pune business?",
+                a: "A straightforward business website ships in 7–12 working days. E-commerce with product feeds and payment integration takes 3–4 weeks. For Pune's IT and SaaS businesses needing custom platforms, we scope timelines project by project — typically 4–10 weeks.",
               },
               {
-                q: "Do you work with clients outside Pune?",
-                a: "Yes. While we are based in Pune, we serve clients across Gurgaon, Noida, Delhi, Mumbai, and all over India. Most of our communication happens over calls and video meetings — location is never a barrier.",
+                q: "Can you build websites that work well on slow internet connections?",
+                a: "Yes. Performance optimisation is standard in every build — image compression, lazy loading, server-side rendering for critical pages, and CDN setup. The goal is a site that feels fast even on a 3G connection, which matters for reaching customers outside Pune's core IT belt.",
               },
               {
-                q: "Will my website rank on Google?",
-                a: "Every website we build is SEO-ready with clean code, fast loading speeds, proper meta tags, and schema markup. For ongoing SEO growth, we also offer dedicated SEO services to help you rank for your target keywords.",
+                q: "We're a D2C brand in Pune — what e-commerce platform do you recommend?",
+                a: "It depends on your product range, order volume, and growth plans. We build on Shopify, WooCommerce, and custom Next.js storefronts — and we'll recommend the right option after understanding your business, not default to one platform for everyone. Many Pune D2C brands benefit from custom builds that control their full tech stack.",
               },
               {
-                q: "Do you provide support after the website is live?",
-                a: "Absolutely. We provide 24/7 post-launch support. Whether you need content updates, bug fixes, feature additions, or performance monitoring — our team is always available.",
+                q: "Do you support clients who are located outside Noida, like in Pune?",
+                a: "Absolutely — most of our client base is outside Noida. We run all projects remotely using structured communication: a dedicated project manager, weekly progress calls, staging links for review, and full documentation at handover. Distance has never caused a project to underperform.",
               },
             ].map((faq, i) => (
               <motion.div

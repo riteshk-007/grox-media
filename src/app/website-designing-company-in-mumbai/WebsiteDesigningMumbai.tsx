@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -47,11 +47,31 @@ const inputCls =
   "mb-4 w-full rounded-xl border border-gray-200 bg-gray-50/50 px-5 py-4 pl-12 text-[#111827] placeholder:text-gray-400 transition-all duration-200 focus:border-[#ea580c] focus:outline-none focus:ring-2 focus:ring-orange-500/30";
 
 const locations = [
-  { city: "Gurugram", label: "Website Designing Company in Gurugram" },
-  { city: "Noida", label: "Website Designing Company in Noida" },
-  { city: "Delhi", label: "Website Designing Company in Delhi" },
-  { city: "Pune", label: "Website Designing Company in Pune" },
-  { city: "Mumbai", label: "Website Designing Company in Mumbai" },
+  {
+    city: "Gurgaon",
+    label: "Corporate and startup design for Gurgaon's competitive market",
+    href: "/website-designing-company-in-gurgaon",
+  },
+  {
+    city: "Noida",
+    label: "B2B and SaaS-focused UI/UX for Noida's IT sector",
+    href: "/website-designing-company-in-noida",
+  },
+  {
+    city: "Delhi",
+    label: "Industry-specific design for Delhi's diverse SME market",
+    href: "/website-designing-company-in-delhi",
+  },
+  {
+    city: "Pune",
+    label: "Design systems and product UI for Pune's tech businesses",
+    href: "/website-designing-company-in-pune",
+  },
+  {
+    city: "Mumbai",
+    label: "Premium design for Mumbai's finance and D2C brands",
+    href: "/website-designing-company-in-mumbai",
+  },
 ];
 
 const services = [
@@ -59,42 +79,42 @@ const services = [
     icon: Layout,
     title: "Custom Website Design",
     description:
-      "No themes, no templates. Every design is built from scratch to match your brand, your audience, and your business goals.",
+      "Premium, bespoke design for Mumbai's most demanding clients — finance companies evaluating their digital credibility, D2C founders building brand equity, and media businesses shaping editorial identity.",
     bg: "bg-blue-50",
   },
   {
     icon: Smartphone,
     title: "Responsive Web Design",
     description:
-      "Your website will look and work perfectly on every device â€” phones, tablets, laptops, and large screens. Zero compromise.",
+      "Mumbai's commute culture makes mobile the primary screen. We design mobile-first for Andheri's startups and BKC's enterprises alike — lightweight, fast, and brand-consistent at every breakpoint.",
     bg: "bg-orange-50",
   },
   {
     icon: PenTool,
     title: "UI/UX Design",
     description:
-      "We design interfaces that feel intuitive. Users shouldn't have to think â€” they should just find what they need and take action.",
+      "Strategic UX design for complex platforms — financial dashboards, multi-step booking systems, content portals, and high-conversion product flows that Mumbai's competitive market demands.",
     bg: "bg-green-50",
   },
   {
     icon: Sparkles,
-    title: "Landing Page Design",
+    title: "Landing Page & Campaign Design",
     description:
-      "Single-page designs built for one purpose â€” conversions. Whether it's lead capture or product sales, every element has a job.",
+      "Mumbai's D2C brands move at campaign speed. We design high-conversion launch pages, limited-time offer pages, and seasonal campaign microsites that are ready to go live in days, not weeks.",
     bg: "bg-purple-50",
   },
   {
     icon: Monitor,
-    title: "Dashboard & Admin Design",
+    title: "Brand Identity & Visual Design",
     description:
-      "Clean, organized interfaces for internal tools, CRMs, and dashboards. Your team shouldn't need a training manual to use your software.",
+      "From startup logomarks to full enterprise brand systems — visual identity designed for Mumbai's audience, where brand presence is table stakes in both BKC boardrooms and consumer social feeds.",
     bg: "bg-teal-50",
   },
   {
     icon: Palette,
-    title: "Brand Identity & Logo Design",
+    title: "Design System & Style Guide",
     description:
-      "Complete brand packages â€” logo, colors, typography, and guidelines. Everything you need for a consistent, professional look.",
+      "Enterprise-grade design systems for Mumbai's product-heavy businesses — component libraries, brand tokens, usage documentation, and Figma handoff ready for large development teams.",
     bg: "bg-amber-50",
   },
 ];
@@ -103,90 +123,92 @@ const whyUs = [
   {
     icon: Users,
     stat: "50+",
-    label: "Designers",
-    title: "In-House Design Team",
+    label: "In-House Design Team",
+    title: "No Relay, No Dilution",
     description:
-      "Our designers are full-time team members, not contractors. You get direct access, fast iterations, and consistent quality.",
+      "Mumbai clients don't get briefed by an account manager who then briefs a designer. The people who receive your brief are the people who create your design — accountability flows directly.",
   },
   {
     icon: Clock,
     stat: "98%",
-    label: "On-Time",
-    title: "Respect Your Timelines",
+    label: "On-Time Delivery",
+    title: "Mumbai Pace, Maintained",
     description:
-      "We plan carefully and deliver on schedule. 98% of our design projects are completed on or before the agreed deadline.",
+      "We don't slow down because we're remote. Our structured sprint model — brief, wireframe, design, review — keeps projects on schedule even for complex briefs.",
   },
   {
     icon: IndianRupee,
     stat: "40%",
-    label: "Savings",
-    title: "No Hidden Design Costs",
+    label: "Cost Advantage",
+    title: "Premium Quality, Not Premium Pricing",
     description:
-      "What we quote is what you pay. No surprise charges for revisions, no extra fees for file formats, no catches.",
+      "Mumbai's design agency market carries significant overhead. Our in-house model removes that layer — you get senior-level creative work without the senior agency rate card.",
   },
   {
     icon: Headphones,
     stat: "24/7",
-    label: "Support",
-    title: "Always Available",
+    label: "Creative Support",
+    title: "Available at Mumbai's Pace",
     description:
-      "Need a design tweak at 10 PM? We're available. Post-launch changes, new pages, seasonal updates â€” just reach out.",
+      "Mumbai businesses don't wait. We stay available for rapid asset requests, urgent campaign pages, and design updates — without a new contract for every change.",
   },
   {
     icon: TrendingUp,
     stat: "100%",
-    label: "Responsive",
-    title: "Mobile-First Design",
+    label: "Brand-First Approach",
+    title: "Design That Builds Equity",
     description:
-      "Over 70% of web traffic is mobile. We design for thumb-friendly navigation and fast loading on phones first.",
+      "Every design decision contributes to brand perception. We make choices that build cumulative trust over time — not one-off creative that looks great in isolation but fragments the brand over multiple touchpoints.",
   },
   {
     icon: Trophy,
     stat: "5000+",
-    label: "Projects",
-    title: "Designs That Convert",
+    label: "Projects Delivered",
+    title: "Mumbai-Calibre Experience",
     description:
-      "5000+ design projects delivered. Our designs don't just look good â€” they drive leads, sales, and business growth.",
+      "High-traffic D2C launches, complex financial product interfaces, editorial brand identities — 5000+ projects across industries means we've done it before at the scale Mumbai requires.",
   },
 ];
 
-const designProcess = [
+const processSteps = [
   {
-    title: "Discovery Call",
+    title: "Brand Immersion",
     description:
-      "We sit with you, understand your brand, your customers, your competitors, and what you want your website to achieve.",
+      "For Mumbai clients, we go deep before we start — studying your competitors, your audience's visual expectations, and your brand's existing equity. First impressions are built on this foundation.",
   },
   {
-    title: "Wireframes",
+    title: "Creative Direction",
     description:
-      "Low-fidelity layouts to map out structure, user flow, and content hierarchy before any visual work begins.",
+      "Moodboard and visual direction alignment before any design work. Mumbai brands with strong opinions benefit from this structured alignment — fewer expensive revisions downstream.",
   },
   {
-    title: "Visual Design",
+    title: "UX Architecture",
     description:
-      "High-fidelity mockups with your brand colors, typography, imagery, and spacing â€” pixel by pixel.",
+      "User journey mapping and wireframe approval before visual design begins. Structure is decided rationally, visual is applied creatively — in that order.",
   },
   {
-    title: "Interactive Prototype",
+    title: "Premium Visual Design",
     description:
-      "Clickable prototype so you can experience the design before a single line of code is written.",
+      "Full high-fidelity Figma designs with premium typography, curated imagery direction, refined colour system, and micro-interaction specifications.",
   },
   {
-    title: "Design Handoff",
+    title: "Enterprise Handover",
     description:
-      "Complete design files, style guides, and asset libraries delivered to the development team for pixel-perfect coding.",
+      "Figma files, design system documentation, brand guidelines, and developer handoff with annotated specs. Mumbai's larger teams get everything needed for consistent implementation.",
   },
 ];
 
 const designTools = [
   "Figma",
-  "Adobe XD",
-  "Photoshop",
-  "Illustrator",
-  "After Effects",
+  "Adobe Illustrator",
+  "Adobe Photoshop",
   "Framer",
   "Webflow",
-  "Canva",
+  "After Effects",
+  "Principle",
+  "Zeplin",
+  "InVision",
+  "Lottie",
 ];
 
 export default function WebsiteDesigningMumbai() {
@@ -254,9 +276,8 @@ export default function WebsiteDesigningMumbai() {
 
   return (
     <main className="min-h-screen overflow-x-hidden">
-      {/* Hero + Contact Form */}
       <section className="relative overflow-hidden pt-24 pb-12">
-        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/25 via-amber-400/20 to-yellow-400/25 blur-3xl -z-10" />
+        <div className="pointer-events-none absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-400/20 via-pink-400/15 to-purple-400/20 blur-3xl -z-10" />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
             <div className="text-center lg:text-left">
@@ -284,10 +305,11 @@ export default function WebsiteDesigningMumbai() {
                 transition={{ duration: 0.45, delay: 0.3 }}
                 className="mx-auto mt-6 max-w-xl text-lg text-gray-500 lg:mx-0"
               >
-                We are Grox Media â€” a Mumbai-based website designing company
-                that creates clean, conversion-focused designs. No fluff, no
-                fancy gimmicks â€” just designs that make your business look
-                professional and make visitors take action.
+                Mumbai&apos;s market doesn&apos;t forgive weak design.
+                Finance companies are judged by their digital presence before a
+                meeting is booked. D2C brands live or die by conversion rates
+                tied directly to design quality. We build for that standard —
+                premium, purposeful, and brand-defining.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -299,7 +321,7 @@ export default function WebsiteDesigningMumbai() {
                   href="#contact-form"
                   className="inline-flex items-center gap-2 rounded-full bg-[#ea580c] px-8 py-4 font-semibold text-white transition hover:bg-[#c2410c]"
                 >
-                  Get Free Design Quote
+                  Get Free Consultation
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <a
@@ -318,15 +340,15 @@ export default function WebsiteDesigningMumbai() {
               >
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  500+ Websites Designed
+                  Premium Quality Design
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  100% Responsive
+                  Brand-Building Focus
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-green-600" />
-                  Free Mockups
+                  24/7 Support
                 </span>
               </motion.div>
             </div>
@@ -339,11 +361,11 @@ export default function WebsiteDesigningMumbai() {
               className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8"
             >
               <h2 className="mb-2 text-2xl font-bold text-[#111827]">
-                Get a Free Design Quote
+                Get a Free Quote
               </h2>
               <p className="mb-6 text-sm text-gray-400">
-                Tell us about your project and we&apos;ll share a free design
-                mockup
+                Tell us about your design project and we&apos;ll get back to you
+                within 24 hours
               </p>
               {isSubmitted ? (
                 <div className="py-12 text-center">
@@ -354,8 +376,8 @@ export default function WebsiteDesigningMumbai() {
                     Thank you!
                   </p>
                   <p className="mt-2 text-[#6b7280]">
-                    We&apos;ve received your message. Our design team will
-                    contact you shortly.
+                    We&apos;ve received your message. Our team will contact you
+                    shortly.
                   </p>
                 </div>
               ) : (
@@ -415,7 +437,7 @@ export default function WebsiteDesigningMumbai() {
                     )}
                   </div>
                   <textarea
-                    placeholder="Tell us about your design project..."
+                    placeholder="Tell us about your design needs..."
                     rows={4}
                     value={formData.message}
                     onChange={(e) =>
@@ -457,18 +479,13 @@ export default function WebsiteDesigningMumbai() {
         </div>
       </section>
 
-      {/* Prime Locations */}
       <section className="py-16 bg-gray-50/50">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Our Presence</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Website Designing Services Across India
+              Website Designing Across India&apos;s Business Cities
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              Based in Mumbai, designing for businesses across all major
-              Indian cities.
-            </p>
           </motion.div>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
             {locations.map((loc, i) => (
@@ -487,13 +504,18 @@ export default function WebsiteDesigningMumbai() {
                 <p className="text-xs text-gray-400 leading-snug">
                   {loc.label}
                 </p>
+                <Link
+                  href={loc.href}
+                  className="mt-1 text-xs font-medium text-[#ea580c] hover:underline"
+                >
+                  View →
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services */}
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
@@ -502,8 +524,14 @@ export default function WebsiteDesigningMumbai() {
               Website Designing Services We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
-              From brand new designs to complete redesigns â€” we handle
-              everything from concept to final deliverables.
+              From brand systems to campaign pages — explore our{" "}
+              <Link
+                href="/services"
+                className="text-[#ea580c] hover:underline"
+              >
+                complete design services
+              </Link>{" "}
+              for the full picture.
             </p>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -536,19 +564,18 @@ export default function WebsiteDesigningMumbai() {
         </div>
       </section>
 
-      {/* Design Process */}
       <section className="bg-gray-50/50 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>How We Design</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Our Website Designing Process
+              Our Website Design Process
             </h2>
           </motion.div>
           <div className="relative mt-16 hidden md:block">
             <div className="absolute left-0 right-0 top-8 h-0.5 bg-gray-200" />
             <div className="relative z-10 flex justify-between">
-              {designProcess.map((step, idx) => (
+              {processSteps.map((step, idx) => (
                 <motion.div
                   key={step.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -572,7 +599,7 @@ export default function WebsiteDesigningMumbai() {
           </div>
           <div className="relative mt-10 space-y-8 md:hidden">
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200" />
-            {designProcess.map((step, idx) => (
+            {processSteps.map((step, idx) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, x: -12 }}
@@ -596,13 +623,12 @@ export default function WebsiteDesigningMumbai() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Why Businesses Choose Us for Website Designing
+              Why Mumbai Businesses Choose Our Design Team
             </h2>
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -633,13 +659,12 @@ export default function WebsiteDesigningMumbai() {
         </div>
       </section>
 
-      {/* Design Tools */}
       <section className="bg-gray-50/50 py-16">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUp}>
-            <SectionBadge>Tools We Use</SectionBadge>
+            <SectionBadge>Design Tools</SectionBadge>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
-              Design Software We Work With
+              Tools We Design With
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               {designTools.map((tool) => (
@@ -655,48 +680,64 @@ export default function WebsiteDesigningMumbai() {
         </div>
       </section>
 
-      {/* SEO Content */}
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
-              About Grox Media â€” Website Designing Company in Mumbai
+              About Our Website Designing Company in Mumbai
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Grox Media is a website designing company Based in Mumbai. We
-                serve clients in Mumbai, Gurgaon, Noida, Delhi, Pune, and
-                across India. Our focus is simple â€” create designs that look
-                professional, load fast, and turn visitors into customers.
+                Mumbai is India&apos;s benchmark city for brand quality — in
+                advertising, in media, in finance, and increasingly in digital.
+                Businesses operating here compete against companies that have
+                invested significantly in their digital brand presence, and the
+                visual standard that Mumbai&apos;s audiences apply reflects
+                that. A website that would perform adequately in a smaller
+                market can look genuinely underdeveloped against Mumbai&apos;s
+                benchmark. We design with that calibration in mind.
               </p>
               <p>
-                We don&apos;t believe in using pre-made themes or templates.
-                Every design we deliver is custom-built for the client. This
-                means your website won&apos;t look like hundreds of others
-                out there. It will look like yours â€” unique, clean, and
-                purposeful.
+                For Mumbai&apos;s D2C brands, design is directly monetised —
+                every layout decision is measurable in conversion rate data.
+                The distance between the hero image and the CTA button, the copy
+                on the primary button, the trust signals placed above the fold,
+                the number of form fields at checkout — these are design
+                decisions with quantifiable commercial impact. We approach D2C
+                design with that discipline: every visual element is placed with
+                a hypothesis about how it affects user behaviour, and we use
+                analytics data where available to validate those hypotheses. See
+                examples in our{" "}
+                <Link
+                  href="/portfolio"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  portfolio
+                </Link>
+                .
               </p>
               <p>
-                Our design team uses Figma, Adobe XD, Photoshop, and other
-                industry tools to create wireframes, mockups, and interactive
-                prototypes. You see exactly what your website will look like
-                before any development begins. This saves time, reduces
-                revisions, and ensures you&apos;re happy with the final
-                result.
-              </p>
-              <p>
-                Over 5000 businesses have trusted us with their website design.
-                From startups in Mumbai to established brands in Delhi â€”
-                we bring the same level of care and attention to every project.
-                Our 100% responsive designs guarantee your website looks
-                great on every screen size.
+                For Mumbai&apos;s finance and enterprise sector, website design
+                serves a different purpose — it&apos;s a credibility signal
+                evaluated before any commercial conversation begins. A financial
+                services company with a dated or inconsistent website is starting
+                that conversation at a disadvantage. We&apos;ve designed for
+                this context specifically, understanding the visual language that
+                builds institutional trust without sacrificing clarity. If
+                you&apos;re evaluating{" "}
+                <Link
+                  href="/services"
+                  className="text-[#ea580c] hover:underline"
+                >
+                  web design services in Mumbai
+                </Link>
+                , we&apos;re happy to share relevant work before you brief us.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Info */}
       <section className="bg-gray-50/50 py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-10">
@@ -740,8 +781,8 @@ export default function WebsiteDesigningMumbai() {
               transition={{ delay: 0.1 }}
               className="flex items-start gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50">
-                <Mail className="h-6 w-6 text-[#1e40af]" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+                <Mail className="h-6 w-6 text-[#ea580c]" />
               </div>
               <div>
                 <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
@@ -749,7 +790,7 @@ export default function WebsiteDesigningMumbai() {
                 </p>
                 <a
                   href="mailto:info@groxmedia.in"
-                  className="mt-1 block font-semibold text-[#111827] hover:text-[#1e40af]"
+                  className="mt-1 block font-semibold text-[#111827] hover:text-[#ea580c]"
                 >
                   info@groxmedia.in
                 </a>
@@ -779,25 +820,25 @@ export default function WebsiteDesigningMumbai() {
         </div>
       </section>
 
-      {/* CTA */}
       <motion.section
         {...fadeUp}
-        className="bg-gradient-to-r from-orange-500 via-orange-600 to-[#1a1a2e] py-20"
+        className="bg-gradient-to-r from-[#ea580c] to-[#111827] py-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Let&apos;s Design Something That Works
+            Mumbai&apos;s Market Sets a High Bar. We Design to Clear It.
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Whether you&apos;re in Pune, Gurgaon, Noida, Delhi, or Mumbai â€”
-            we&apos;re ready to design your website.
+            Premium design, precise UX, and brand-building focus — for a market
+            where your visual presence is a commercial asset, not just a
+            formality.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link
               href="#contact-form"
               className="inline-flex rounded-full bg-white px-8 py-4 font-semibold text-[#ea580c] transition hover:bg-gray-100"
             >
-              Get Free Design Quote â†’
+              Get Free Consultation →
             </Link>
             <a
               href="tel:+919266806477"
@@ -810,7 +851,6 @@ export default function WebsiteDesigningMumbai() {
         </div>
       </motion.section>
 
-      {/* FAQs */}
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-12">
@@ -822,24 +862,24 @@ export default function WebsiteDesigningMumbai() {
           <div className="space-y-6">
             {[
               {
-                q: "How much does website designing cost in Mumbai?",
-                a: "Website designing costs depend on pages, complexity, and features. A basic 5-page business website design starts around â‚¹10,000â€“â‚¹25,000. E-commerce or complex designs cost more. We provide an exact quote after understanding your needs â€” no hidden charges.",
+                q: "How much does premium website design cost in Mumbai?",
+                a: "For Mumbai businesses, a professionally designed website starts at ₹18,000–₹40,000. Premium brand-aligned websites for finance and enterprise clients start from ₹50,000. D2C product design with full e-commerce UI is scoped individually. Every engagement starts with a clear brief and fixed pricing.",
               },
               {
-                q: "How long does it take to design a website?",
-                a: "A simple business website design takes 5â€“10 days. E-commerce or multi-page designs take 2â€“3 weeks. We share a realistic timeline before starting and stick to it.",
+                q: "Our brand needs to feel premium — how do you achieve that in web design?",
+                a: "Premium in design is about restraint, consistency, and intentionality — not just expensive-looking typography. We achieve it through a tight color palette, generous whitespace, consistent component language, and micro-interactions that feel considered rather than decorative. Mumbai's premium market can tell the difference, and so can we.",
               },
               {
-                q: "Do you redesign existing websites?",
-                a: "Yes. We regularly redesign outdated websites. The process includes a design audit, new wireframes, modern visual design, and a smooth handoff to development. Most redesigns are completed within 2â€“3 weeks.",
+                q: "We're a D2C brand — can you design for product launches and campaigns?",
+                a: "Yes. Campaign landing pages, product launch microsites, and seasonal sale pages are a regular part of our work for D2C brands. We design them for speed — fast to build, fast to load, and fast to convert — so you can move at the pace Mumbai's consumer market demands.",
               },
               {
-                q: "Will the design be mobile-friendly?",
-                a: "Every design we create is 100% responsive. We design mobile-first, which means your website will look and work perfectly on phones, tablets, and desktops.",
+                q: "What design tools and formats do you work in?",
+                a: "All our design work is done in Figma. You receive the original project file, exportable assets in standard web formats (SVG, WebP, PNG), and a basic component library. If you work with a development team that uses a different handoff format, we can accommodate that during delivery.",
               },
               {
-                q: "Do you work with clients outside Mumbai?",
-                a: "Yes. We serve clients across Gurgaon, Noida, Delhi, Pune, and all over India. Most of our work happens over calls and screen shares â€” location is never an issue.",
+                q: "How do you handle design projects for Mumbai clients remotely?",
+                a: "We run design projects through structured async communication — a brief document, mood board alignment call, wireframe review, and then full design review. For Mumbai clients who prefer synchronous check-ins, we schedule them around your team's availability. Feedback is tracked in Figma comments, not scattered across email threads.",
               },
             ].map((faq, i) => (
               <motion.div
@@ -862,4 +902,3 @@ export default function WebsiteDesigningMumbai() {
     </main>
   );
 }
-
