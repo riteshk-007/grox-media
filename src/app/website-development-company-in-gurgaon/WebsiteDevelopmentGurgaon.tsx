@@ -68,7 +68,7 @@ const locations = [
     href: "/website-development-company-in-mumbai",
   },
   {
-    city: "Gurugram",
+    city: "Gurgaon",
     label: "Serving Cyber City, Sector 44, Golf Course Road & beyond",
     href: "/website-development-company-in-gurgaon",
   },

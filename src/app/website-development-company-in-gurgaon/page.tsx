@@ -10,8 +10,7 @@ export const metadata: Metadata = {
     "web development agency gurgaon",
     "custom website development cyber city",
     "website development company sector 44 gurgaon",
-    "affordable web development gurugram",
-    "web development company gurugram",
+    "affordable web development gurgaon",
     "website developer gurgaon",
     "next.js development company gurgaon",
   ],
@@ -51,7 +50,7 @@ export default function WebsiteDevelopmentGurgaonPage() {
       "@type": "ProfessionalService",
       name: "Grox Media LLP",
       description:
-        "Website development company in Gurgaon offering custom web development, e-commerce, and enterprise web applications for businesses in Cyber City, Sector 44, Golf Course Road, and across Gurugram.",
+        "Website development company in Gurgaon offering custom web development, e-commerce, and enterprise web applications for businesses in Cyber City, Sector 44, Golf Course Road, and across the city.",
       url: "https://groxmedia.in",
       telephone: "+919266806477",
       email: "info@groxmedia.in",
@@ -66,7 +65,6 @@ export default function WebsiteDevelopmentGurgaonPage() {
       },
       areaServed: [
         { "@type": "City", name: "Gurgaon" },
-        { "@type": "City", name: "Gurugram" },
         { "@type": "City", name: "Noida" },
         { "@type": "City", name: "Delhi" },
         { "@type": "City", name: "Pune" },

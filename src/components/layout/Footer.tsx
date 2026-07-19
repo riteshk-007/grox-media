@@ -36,7 +36,7 @@ export default function Footer() {
               <span>GSTIN: 09ABEFG8952C1Z9</span>
             </div>
             <p className="mt-3 text-sm text-[#6b7280]">
-              Noida Office Address:<br />
+              Registered Office:<br />
               Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201305, India
             </p>
           </div>

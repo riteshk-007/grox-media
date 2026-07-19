@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     "web design agency gurgaon",
     "ui ux design company cyber city gurgaon",
     "website designer sector 44 gurgaon",
-    "responsive web design gurugram",
+    "responsive web design gurgaon",
     "brand identity design gurgaon",
     "landing page design gurgaon",
-    "premium web design company gurugram",
+    "premium web design company gurgaon",
   ],
   alternates: {
     canonical: "/website-designing-company-in-gurgaon",
@@ -51,7 +51,7 @@ export default function WebsiteDesigningGurgaonPage() {
       "@type": "ProfessionalService",
       name: "Grox Media LLP",
       description:
-        "Website designing company in Gurgaon offering UI/UX design, brand identity, responsive web design, and landing page design for businesses in Cyber City, Sector 44, Golf Course Road, and across Gurugram.",
+        "Website designing company in Gurgaon offering UI/UX design, brand identity, responsive web design, and landing page design for businesses in Cyber City, Sector 44, Golf Course Road, and across the city.",
       url: "https://groxmedia.in",
       telephone: "+919266806477",
       email: "info@groxmedia.in",
@@ -66,7 +66,6 @@ export default function WebsiteDesigningGurgaonPage() {
       },
       areaServed: [
         { "@type": "City", name: "Gurgaon" },
-        { "@type": "City", name: "Gurugram" },
         { "@type": "City", name: "Noida" },
         { "@type": "City", name: "Delhi" },
         { "@type": "City", name: "Pune" },

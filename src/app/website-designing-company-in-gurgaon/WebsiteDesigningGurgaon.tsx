@@ -68,7 +68,7 @@ const locations = [
     href: "/website-designing-company-in-mumbai",
   },
   {
-    city: "Gurugram",
+    city: "Gurgaon",
     label: "Corporate and startup design for Gurgaon's competitive market",
     href: "/website-designing-company-in-gurgaon",
   },
