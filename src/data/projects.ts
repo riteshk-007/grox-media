@@ -30,6 +30,17 @@ export type VideoItem = {
 
 export const projects: Project[] = [
   {
+    title: "Fitovance",
+    category: "Ecommerce (Protein bar & etc.)",
+    description:
+      "A specialized ecommerce platform for selling protein bar and etc., developed using Next.js, React, and Node.js.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/fitovance.png",
+    tags: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+    results: "Seamless shopping experience for protein bar and etc.",
+    link: "https://fitovance.com",
+    filter: "E-commerce",
+  },
+  {
     title: "MBD Copper",
     category: "B2B Manufacturing",
     description:
