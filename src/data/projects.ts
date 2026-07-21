@@ -41,6 +41,28 @@ export const projects: Project[] = [
     filter: "E-commerce",
   },
   {
+    title: "Brighto",
+    category: "Risk Management & Compliance",
+    description:
+      "A secure verification and due diligence platform for financial institutions, delivering technology-driven risk management solutions and compliance workflows.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/brighto.png",
+    tags: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+    results: "Streamlined due diligence, risk verification, and compliance reporting for financial enterprises.",
+    link: "https://www.brightoindia.com",
+    filter: "Finance",
+  },
+  {
+    title: "HubCheck",
+    category: "Warehouse Audit Services",
+    description:
+      "A warehouse audit and verification platform for financial institutions, enabling independent inspections, document review, and risk validation for collateral and inventory monitoring.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/hubcheck.png",
+    tags: ["Next.js", "React", "Node.js", "Tailwind CSS", "Audit", "Warehouse"],
+    results: "Improved warehouse visibility, audit compliance, and secured collateral monitoring for lending and enterprise risk teams.",
+    link: "https://hubcheck.in/",
+    filter: "Finance",
+  },
+  {
     title: "MBD Copper",
     category: "B2B Manufacturing",
     description:
