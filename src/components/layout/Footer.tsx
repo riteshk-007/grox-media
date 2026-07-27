@@ -20,15 +20,36 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
-            <Link href="/" className="inline-block">
-              <Image
-                src="/groX-Logo.png"
-                alt="Grox Media Logo"
-                width={180}
-                height={72}
-                className="h-14 w-auto object-contain"
-              />
-            </Link>
+            <div className="flex items-center gap-3">
+              <Link href="/" className="inline-block">
+                <Image
+                  src="/groX-Logo.png"
+                  alt="Grox Media Logo"
+                  width={180}
+                  height={72}
+                  className="h-14 w-auto object-contain"
+                />
+              </Link>
+
+              {/* TradingView style "MADE BY HUMANS" badge */}
+              <div className="inline-flex items-center gap-1.5 rounded-md bg-[#eef2ff] px-2.5 py-1 text-[11px] font-bold tracking-wider text-[#1e293b] shadow-sm ring-1 ring-inset ring-indigo-500/10">
+                <span>MADE BY HUMANS</span>
+                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#3b82f6] text-white">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-2.5 w-2.5"
+                  >
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+            </div>
             <p className="mt-2 font-bold text-orange-600">Grox Media LLP</p>
             <div className="mt-1 text-xs text-gray-500 font-medium">
               <span>LLPIN: ACZ-6112</span>

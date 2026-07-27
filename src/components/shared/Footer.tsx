@@ -13,16 +13,35 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Company Info Section */}
           <div className="sm:col-span-2 lg:col-span-2">
-            {/* Logo */}
-            <Link href="/" className="inline-block mb-4">
-              <Image
-                src={"/groX-Logo.png"}
-                alt="Grox Media Logo"
-                width={200}
-                height={100}
-                className="h-16 w-auto object-cover"
-              />
-            </Link>
+            {/* Logo + Badge */}
+            <div className="flex items-center gap-3 mb-4">
+              <Link href="/" className="inline-block">
+                <Image
+                  src={"/groX-Logo.png"}
+                  alt="Grox Media Logo"
+                  width={200}
+                  height={100}
+                  className="h-16 w-auto object-cover"
+                />
+              </Link>
+              <div className="inline-flex items-center gap-1.5 rounded-md bg-[#eef2ff] px-2.5 py-1 text-[11px] font-bold tracking-wider text-[#1e293b] shadow-sm ring-1 ring-inset ring-indigo-500/10">
+                <span>MADE BY HUMANS</span>
+                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#3b82f6] text-white">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-2.5 w-2.5"
+                  >
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+            </div>
 
             {/* LLP Text */}
             <p className="font-bold text-orange-600 mb-1">Grox Media LLP</p>
