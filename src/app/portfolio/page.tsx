@@ -25,8 +25,8 @@ const tabs: { id: Tab; label: string; icon: React.ElementType }[] = [
   { id: "video", label: "Video Editing", icon: Video },
 ];
 
-type WebFilter = "All" | "E-commerce" | "Web Development" | "Healthcare" | "EdTech" | "Travel" | "Finance";
-const webFilters: WebFilter[] = ["All", "E-commerce", "Web Development", "Healthcare", "EdTech", "Travel", "Finance"];
+type WebFilter = "All" | "Shopify" | "E-commerce" | "Web Development" | "Healthcare" | "EdTech" | "Travel" | "Finance";
+const webFilters: WebFilter[] = ["All", "Shopify", "E-commerce", "Web Development", "Healthcare", "EdTech", "Travel", "Finance"];
 const videoFilters: ("All" | VideoPlatform)[] = ["All", "Instagram", "YouTube", "Facebook"];
 const GRAPHIC_BATCH_SIZE = 15;
 const graphicFilters: { value: GraphicSubCategory | "All"; label: string }[] = [

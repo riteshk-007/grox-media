@@ -30,6 +30,50 @@ export type VideoItem = {
 
 export const projects: Project[] = [
   {
+    title: "NYX Cosmetics",
+    category: "Shopify (Cosmetics)",
+    description:
+      "A high-performance Shopify e-commerce store for iconic beauty and cosmetic products, offering an interactive digital shopping experience.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/nyxcosmetics.png",
+    tags: ["Shopify", "E-commerce", "Cosmetics", "UI/UX"],
+    results: "Interactive and high-converting cosmetic shopping experience",
+    link: "https://www.nyxcosmetics.com/",
+    filter: "Shopify",
+  },
+  {
+    title: "Spacemilk",
+    category: "Shopify (Nutrition)",
+    description:
+      "The protein your sensitive stomach has been waiting for. A sleek Shopify e-commerce brand experience built for gut-friendly nutrition.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/spacemilk.png",
+    tags: ["Shopify", "E-commerce", "Nutrition", "Health"],
+    results: "High-converting Shopify store for plant-based nutrition",
+    link: "https://spacemilk.com/",
+    filter: "Shopify",
+  },
+  {
+    title: "Style Union",
+    category: "Shopify (Fashion & Apparel)",
+    description:
+      "A trendsetting Shopify fashion e-commerce storefront showcasing modern clothing and apparel collections with smooth navigation.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/styleunion.png",
+    tags: ["Shopify", "E-commerce", "Fashion", "Clothing"],
+    results: "Elevated online fashion storefront and seamless checkout",
+    link: "https://styleunion.in/",
+    filter: "Shopify",
+  },
+  {
+    title: "Gibson Athletic",
+    category: "Shopify (Sports Gear)",
+    description:
+      "Built for Gymnasts, Made in the USA. A robust Shopify e-commerce store delivering handcrafted gymnastics gear, grips, and wrist supports with 50+ years of legacy.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/gibsonathletic.png",
+    tags: ["Shopify", "E-commerce", "Sports Gear", "Handcrafted"],
+    results: "Empowered 50+ year legacy brand with modern Shopify store",
+    link: "https://gibsonathletic.com/",
+    filter: "Shopify",
+  },
+  {
     title: "Fitovance",
     category: "Ecommerce (Protein bar & etc.)",
     description:
