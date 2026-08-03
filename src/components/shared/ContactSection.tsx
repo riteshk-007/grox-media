@@ -401,8 +401,14 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Phone Number</h4>
-                  <a href="tel:+919266806477" className="text-gray-600 block hover:text-gray-900">+91 92668 06477</a>
-                  <a href="tel:+919354734436" className="text-gray-600 block hover:text-gray-900">+91 935 473 4436</a>
+                  <div className="text-sm">
+                    <span className="text-gray-400 font-normal block">Enquire:</span>
+                    <a href="tel:+919266806477" className="text-gray-700 font-semibold block hover:text-gray-900">+91 92668 06477</a>
+                  </div>
+                  <div className="text-sm mt-1">
+                    <span className="text-gray-400 font-normal block">Support:</span>
+                    <a href="tel:+919354734436" className="text-gray-700 font-semibold block hover:text-gray-900">+91 935 473 4436</a>
+                  </div>
                 </div>
               </div>
 

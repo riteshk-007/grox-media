@@ -102,13 +102,19 @@ export default function ContactPage() {
       circle: "bg-blue-50 text-[#1e40af]",
       label: "Phone",
       value: (
-        <div>
-          <a href="tel:+919266806477" className="font-semibold text-[#111827] block">
-            +91 92668 06477
-          </a>
-          <a href="tel:+919354734436" className="font-semibold text-[#111827] block">
-            +91 935 473 4436
-          </a>
+        <div className="space-y-1">
+          <div>
+            <span className="text-xs text-gray-500 font-medium block">Enquire:</span>
+            <a href="tel:+919266806477" className="font-semibold text-[#111827] hover:text-[#1e40af] block">
+              +91 92668 06477
+            </a>
+          </div>
+          <div>
+            <span className="text-xs text-gray-500 font-medium block">Support:</span>
+            <a href="tel:+919354734436" className="font-semibold text-[#111827] hover:text-[#1e40af] block">
+              +91 935 473 4436
+            </a>
+          </div>
         </div>
       ),
     },

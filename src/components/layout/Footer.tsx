@@ -85,10 +85,10 @@ export default function Footer() {
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-groxBlue" />
                 <div>
                   <a href="tel:+919266806477" className="hover:text-groxBlue block">
-                    +91 92668 06477
+                    <span className="text-xs text-gray-400 font-normal">Enquire: </span>+91 92668 06477
                   </a>
                   <a href="tel:+919354734436" className="hover:text-groxBlue block">
-                    +91 935 473 4436
+                    <span className="text-xs text-gray-400 font-normal">Support: </span>+91 935 473 4436
                   </a>
                 </div>
               </li>
