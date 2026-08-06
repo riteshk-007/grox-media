@@ -22,6 +22,16 @@ interface PortfolioProps {
 
 const projects: Project[] = [
     {
+        title: "Shrestha IT",
+        category: "Share Market Education",
+        description:
+            "A static Share Market education website built with Next.js and Tailwind CSS for stock market training, trading courses, and financial literacy.",
+        image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/shresthait.png",
+        tags: ["Next.js", "Tailwind CSS", "React", "Share Market", "Stock Market"],
+        results: "Fast and responsive static platform for Share Market education",
+        link: "https://www.shresthait.com/",
+    },
+    {
         title: "NYX Cosmetics",
         category: "Shopify (Cosmetics)",
         description:
