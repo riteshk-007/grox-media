@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import SectionBadge from "@/components/ui/SectionBadge";
 import {
+  Users,
+  Share2,
+  Video,
   Code,
   Megaphone,
   Smartphone,
@@ -15,6 +18,33 @@ import ServiceVideoCard from "./ServiceVideoCard";
 
 
 const services = [
+  {
+    title: "Influencer Marketing",
+    description:
+      "Connect your brand with top influencers and content creators to amplify reach, build trust, and drive engagement.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/influencer-marketing.mp4",
+    posterSrc: digital,
+    Icon: Users,
+  },
+  {
+    title: "Social Media Marketing",
+    description:
+      "Strategic social media management and targeted campaigns to scale your brand presence across platforms.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/social-media-marketing.mp4",
+    posterSrc: digital,
+    Icon: Share2,
+  },
+  {
+    title: "Video Editing",
+    description:
+      "Professional video editing, motion graphics, and reel creation designed to capture attention and tell your story.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/video-editing.mp4",
+    posterSrc: graphic,
+    Icon: Video,
+  },
   {
     title: "Website Development",
     description:
