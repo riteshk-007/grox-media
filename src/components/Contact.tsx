@@ -150,12 +150,12 @@ const Contact = ({ showIntro = true }: ContactProps) => {
             {infoCard(
               <Phone className="h-6 w-6 text-groxBlue" />,
               "Phone",
-              <div className="space-y-1">
+              <div className="space-y-1.5">
                 <div>
-                  <span className="text-xs text-gray-400 block font-normal">Enquire:</span>
+                  <span className="text-xs text-orange-600 font-bold block uppercase tracking-wide">Enquire:</span>
                   <a
                     href="tel:+919266806477"
-                    className="text-[#374151] hover:text-groxBlue font-semibold block"
+                    className="text-[#111827] hover:text-groxBlue font-extrabold text-base block"
                   >
                     +91 92668 06477
                   </a>
@@ -164,7 +164,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
                   <span className="text-xs text-gray-400 block font-normal">Support:</span>
                   <a
                     href="tel:+919354734436"
-                    className="text-[#374151] hover:text-groxBlue font-semibold block"
+                    className="text-gray-500 hover:text-groxBlue font-normal text-sm block"
                   >
                     +91 935 473 4436
                   </a>

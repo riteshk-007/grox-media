@@ -102,16 +102,16 @@ export default function ContactPage() {
       circle: "bg-blue-50 text-[#1e40af]",
       label: "Phone",
       value: (
-        <div className="space-y-1">
+        <div className="space-y-1.5">
           <div>
-            <span className="text-xs text-gray-500 font-medium block">Enquire:</span>
-            <a href="tel:+919266806477" className="font-semibold text-[#111827] hover:text-[#1e40af] block">
+            <span className="text-xs text-orange-600 font-bold uppercase tracking-wide block">Enquire:</span>
+            <a href="tel:+919266806477" className="font-extrabold text-[#111827] text-base hover:text-[#1e40af] block">
               +91 92668 06477
             </a>
           </div>
           <div>
-            <span className="text-xs text-gray-500 font-medium block">Support:</span>
-            <a href="tel:+919354734436" className="font-semibold text-[#111827] hover:text-[#1e40af] block">
+            <span className="text-xs text-gray-400 font-normal block">Support:</span>
+            <a href="tel:+919354734436" className="font-normal text-gray-500 text-sm hover:text-[#1e40af] block">
               +91 935 473 4436
             </a>
           </div>

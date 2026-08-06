@@ -120,13 +120,14 @@ const Footer: React.FC = () => {
               <div className="min-w-0 flex-1">
                 <a
                   href="tel:+919266806477"
-                  className="text-gray-700 font-semibold text-xs sm:text-sm hover:text-groxBlue transition-colors duration-200 block"
+                  className="hover:text-groxBlue transition-colors duration-200 block"
                 >
-                  <span className="text-gray-400 font-normal">Enquire: </span>+91 92668 06477
+                  <span className="text-orange-600 font-bold text-xs sm:text-sm">Enquire: </span>
+                  <span className="text-gray-900 font-bold text-xs sm:text-sm">+91 92668 06477</span>
                 </a>
                 <a
                   href="tel:+919354734436"
-                  className="text-gray-700 font-semibold text-xs sm:text-sm hover:text-groxBlue transition-colors duration-200 block mt-1"
+                  className="text-gray-500 font-normal text-xs sm:text-sm hover:text-groxBlue transition-colors duration-200 block mt-1"
                 >
                   <span className="text-gray-400 font-normal">Support: </span>+91 935 473 4436
                 </a>

@@ -402,12 +402,12 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Phone Number</h4>
                   <div className="text-sm">
-                    <span className="text-gray-400 font-normal block">Enquire:</span>
-                    <a href="tel:+919266806477" className="text-gray-700 font-semibold block hover:text-gray-900">+91 92668 06477</a>
+                    <span className="text-orange-600 font-bold text-xs uppercase tracking-wide block">Enquire:</span>
+                    <a href="tel:+919266806477" className="text-gray-900 font-extrabold text-base block hover:text-orange-600">+91 92668 06477</a>
                   </div>
-                  <div className="text-sm mt-1">
-                    <span className="text-gray-400 font-normal block">Support:</span>
-                    <a href="tel:+919354734436" className="text-gray-700 font-semibold block hover:text-gray-900">+91 935 473 4436</a>
+                  <div className="text-sm mt-1.5">
+                    <span className="text-gray-400 font-normal text-xs block">Support:</span>
+                    <a href="tel:+919354734436" className="text-gray-500 font-normal block hover:text-gray-900">+91 935 473 4436</a>
                   </div>
                 </div>
               </div>

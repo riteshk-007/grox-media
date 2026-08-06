@@ -85,10 +85,12 @@ export default function Footer() {
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-groxBlue" />
                 <div>
                   <a href="tel:+919266806477" className="hover:text-groxBlue block">
-                    <span className="text-xs text-gray-400 font-normal">Enquire: </span>+91 92668 06477
+                    <span className="text-xs text-orange-600 font-bold">Enquire: </span>
+                    <span className="font-bold text-[#111827] text-sm">+91 92668 06477</span>
                   </a>
-                  <a href="tel:+919354734436" className="hover:text-groxBlue block">
-                    <span className="text-xs text-gray-400 font-normal">Support: </span>+91 935 473 4436
+                  <a href="tel:+919354734436" className="hover:text-groxBlue block mt-0.5">
+                    <span className="text-xs text-gray-400 font-normal">Support: </span>
+                    <span className="text-gray-500 font-normal">+91 935 473 4436</span>
                   </a>
                 </div>
               </li>
