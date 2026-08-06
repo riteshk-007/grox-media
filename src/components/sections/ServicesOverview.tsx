@@ -19,33 +19,6 @@ import ServiceVideoCard from "./ServiceVideoCard";
 
 const services = [
   {
-    title: "Influencer Marketing",
-    description:
-      "Connect your brand with top influencers and content creators to amplify reach, build trust, and drive engagement.",
-    videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/influencer-marketing.mp4",
-    posterSrc: digital,
-    Icon: Users,
-  },
-  {
-    title: "Social Media Marketing",
-    description:
-      "Strategic social media management and targeted campaigns to scale your brand presence across platforms.",
-    videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/social-media-marketing.mp4",
-    posterSrc: digital,
-    Icon: Share2,
-  },
-  {
-    title: "Video Editing",
-    description:
-      "Professional video editing, motion graphics, and reel creation designed to capture attention and tell your story.",
-    videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/video-editing.mp4",
-    posterSrc: graphic,
-    Icon: Video,
-  },
-  {
     title: "Website Development",
     description:
       "Custom websites built with modern technologies for speed, performance, and SEO-ready structure.",
@@ -53,15 +26,6 @@ const services = [
       "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/website.mp4",
     posterSrc: web,
     Icon: Code,
-  },
-  {
-    title: "Lead Generation & Performance Marketing",
-    description:
-      "Performance-focused marketing campaigns that generate qualified leads and improve conversions.",
-    videoSrc:
-      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/digital%20marketing.mp4",
-    posterSrc: digital,
-    Icon: Megaphone,
   },
   {
     title: "Android/iOS App Development",
@@ -89,6 +53,42 @@ const services = [
       "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/branding.mp4",
     posterSrc: graphic,
     Icon: Palette,
+  },
+  {
+    title: "Influencer Marketing",
+    description:
+      "Connect your brand with top influencers and content creators to amplify reach, build trust, and drive engagement.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/influencer-marketing.mp4",
+    posterSrc: digital,
+    Icon: Users,
+  },
+  {
+    title: "Social Media Marketing",
+    description:
+      "Strategic social media management and targeted campaigns to scale your brand presence across platforms.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/social-media-marketing.mp4",
+    posterSrc: digital,
+    Icon: Share2,
+  },
+  {
+    title: "Video Editing",
+    description:
+      "Professional video editing, motion graphics, and reel creation designed to capture attention and tell your story.",
+    videoSrc:
+      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/video-editing.mp4",
+    posterSrc: graphic,
+    Icon: Video,
+  },
+  {
+    title: "Lead Generation & Performance Marketing",
+    description:
+      "Performance-focused marketing campaigns that generate qualified leads and improve conversions.",
+    videoSrc:
+      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/digital%20marketing.mp4",
+    posterSrc: digital,
+    Icon: Megaphone,
   },
   {
     title: "IT Support",
