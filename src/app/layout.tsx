@@ -84,6 +84,15 @@ export const metadata: Metadata = {
   verification: {
     google: "kl3KrAuftEaXlH475jPnakvVDqu5tiZwG7tK7X98eqw",
   },
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/icon-192.png",
+    apple: "/icon-192.png",
+  },
+};
+
+export const viewport = {
+  themeColor: "#f97316",
 };
 
 export default function RootLayout({
@@ -101,6 +110,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Grox Media" />
+        <link rel="apple-touch-icon" href="/icon-192.png" />
 
         <Script
           async
