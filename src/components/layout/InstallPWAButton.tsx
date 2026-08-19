@@ -45,7 +45,7 @@ export default function InstallPWAButton() {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed left-1/2 top-4 z-[60] w-[92%] max-w-sm -translate-x-1/2 md:bottom-8 md:left-8 md:right-auto md:top-auto md:w-80 md:translate-x-0"
+        className="fixed left-4 right-4 top-4 z-[60] mx-auto max-w-sm md:bottom-8 md:left-8 md:right-auto md:top-auto md:w-80"
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: -40, opacity: 0 }}
