@@ -45,32 +45,34 @@ export default function InstallPWAButton() {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed bottom-24 left-1/2 z-50 w-[90%] max-w-sm -translate-x-1/2 md:bottom-8 md:left-8 md:right-auto md:w-auto md:translate-x-0"
-        initial={{ y: 40, opacity: 0 }}
+        className="fixed left-1/2 top-4 z-[60] w-[92%] max-w-sm -translate-x-1/2 md:bottom-8 md:left-8 md:right-auto md:top-auto md:w-80 md:translate-x-0"
+        initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 40, opacity: 0 }}
+        exit={{ y: -40, opacity: 0 }}
         transition={{ delay: 0.4 }}
       >
-        <div className="flex items-center gap-3 rounded-2xl border border-orange-200 bg-white px-4 py-3 shadow-xl">
-          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-100 text-orange-600">
-            <Download className="h-5 w-5" />
-          </div>
-          <div className="flex-1">
-            <p className="text-sm font-semibold text-neutral-900">Install Grox Media App</p>
-            <p className="text-xs text-neutral-500">Quick access from your home screen</p>
-          </div>
-          <button
-            onClick={handleInstall}
-            className="flex-shrink-0 rounded-full bg-orange-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-600"
-          >
-            Install
-          </button>
+        <div className="relative rounded-2xl border border-orange-200 bg-white p-4 pr-8 shadow-xl">
           <button
             onClick={handleDismiss}
             aria-label="Dismiss"
-            className="flex-shrink-0 text-neutral-400 hover:text-neutral-600"
+            className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full text-neutral-400 hover:bg-neutral-100 hover:text-neutral-600"
           >
             <X className="h-4 w-4" />
+          </button>
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-100 text-orange-600">
+              <Download className="h-5 w-5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-semibold text-neutral-900">Install Grox Media App</p>
+              <p className="truncate text-xs text-neutral-500">Quick access from your home screen</p>
+            </div>
+          </div>
+          <button
+            onClick={handleInstall}
+            className="mt-3 w-full rounded-full bg-orange-500 px-3 py-2 text-sm font-semibold text-white hover:bg-orange-600"
+          >
+            Install
           </button>
         </div>
       </motion.div>
