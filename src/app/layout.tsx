@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import AppShell from "@/components/layout/AppShell";
 import Script from "next/script";
+import PwaRegister from "@/components/PwaRegister";
 
 const sharpLight = localFont({
   src: [{ path: "../fonts/SharpGrotesk-Light20.otf", weight: "300", style: "normal" }],
@@ -84,7 +85,6 @@ export const metadata: Metadata = {
   verification: {
     google: "kl3KrAuftEaXlH475jPnakvVDqu5tiZwG7tK7X98eqw",
   },
-  manifest: "/manifest.json",
   icons: {
     icon: "/icon-192.png",
     apple: "/icon-192.png",
@@ -115,6 +115,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Grox Media" />
         <link rel="apple-touch-icon" href="/icon-192.png" />
+        <link rel="manifest" href="/manifest.json" />
 
         <Script
           async
@@ -134,6 +135,7 @@ export default function RootLayout({
       <body
         className={`${sharpLight.variable} ${sharpHeading.variable} font-jakarta antialiased pb-24 md:pb-16 overflow-x-hidden`}
       >
+        <PwaRegister />
         <AppShell>{children}</AppShell>
       </body>
     </html>

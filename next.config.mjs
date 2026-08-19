@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const withPWA = withPWAInit({
     dest: "public",
-    register: true,
+    register: false,
     skipWaiting: true,
     disable: process.env.NODE_ENV === "development",
 });
