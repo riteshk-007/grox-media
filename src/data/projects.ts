@@ -30,6 +30,39 @@ export type VideoItem = {
 
 export const projects: Project[] = [
   {
+    title: "Humsafar Event",
+    category: "Event Booking Platform",
+    description:
+      "A full-stack event booking website built with Next.js, featuring a custom backend and admin panel for managing events, bookings, and customers.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/humsafarevent.png",
+    tags: ["Next.js", "React", "Node.js", "Admin Panel", "Event Booking"],
+    results: "Streamlined event bookings with full admin control",
+    link: "https://humsafarevent.com/",
+    filter: "Web Development",
+  },
+  {
+    title: "Truering",
+    category: "Cloud Communication Services",
+    description:
+      "Connecting Businesses Through Smarter Conversations. A static Next.js website for Truering, helping companies build better customer connections with smart cloud communication services that streamline communication, enhance collaboration, and drive smooth customer experiences.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/truering.png",
+    tags: ["Next.js", "Static Site", "Cloud Communication"],
+    results: "Secure, scalable communication technology showcase since 2015",
+    link: "https://www.truering.in/",
+    filter: "Web Development",
+  },
+  {
+    title: "Solera Solar System",
+    category: "Solar Kits & Equipment",
+    description:
+      "A static website for Solera Solar System showcasing solar kits and equipment for residential and commercial solar solutions.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/solerasolarsystem.png",
+    tags: ["Static Site", "Solar Energy", "Web Development"],
+    results: "Clean product showcase for solar kits and equipment",
+    link: "http://solerasolarsystem.com",
+    filter: "Web Development",
+  },
+  {
     title: "Shrestha IT",
     category: "Share Market Education",
     description:
