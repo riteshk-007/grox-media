@@ -337,7 +337,12 @@ const _socialMediaGraphics: GraphicItem[] = Array.from({ length: 53 }, (_, i) =>
   subCategory: "Social Media Graphics" as GraphicSubCategory,
 }));
 
-const _packaging: GraphicItem[] = [];
+const _PACKAGING_BASE = `${_BASE}/packaging`;
+const _packaging: GraphicItem[] = Array.from({ length: 31 }, (_, i) => ({
+  title: `Packaging ${i + 1}`,
+  image: `${_PACKAGING_BASE}/${i + 1}.jpg`,
+  subCategory: "Packaging" as GraphicSubCategory,
+}));
 
 const _3D_BASE = `${_BASE}/graphic/3d-work`;
 const _3dWork: GraphicItem[] = [
