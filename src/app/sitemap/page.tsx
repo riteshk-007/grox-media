@@ -15,6 +15,7 @@ const corePages = [
     path: "/custom-web-development",
   },
   { name: "Portfolio", url: "https://groxmedia.in/portfolio", path: "/portfolio" },
+  { name: "Blog", url: "https://groxmedia.in/blog/", path: "/blog/", external: true },
   { name: "Contact", url: "https://groxmedia.in/contact", path: "/contact" },
   { name: "FAQs", url: "https://groxmedia.in/faqs", path: "/faqs" },
 ];
@@ -100,12 +101,9 @@ export default function SitemapPage() {
               <h2 className="text-xl font-bold text-[#111827]">Core Pages</h2>
             </div>
             <ul className="space-y-4">
-              {corePages.map((page) => (
-                <li key={page.path}>
-                  <Link
-                    href={page.path}
-                    className="group block p-3 rounded-2xl hover:bg-slate-50 transition duration-200"
-                  >
+              {corePages.map((page) => {
+                const content = (
+                  <>
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-gray-800 group-hover:text-blue-600 transition">
                         {page.name}
@@ -115,9 +113,30 @@ export default function SitemapPage() {
                     <span className="text-xs text-gray-400 mt-1 block font-mono break-all">
                       {page.url}
                     </span>
-                  </Link>
-                </li>
-              ))}
+                  </>
+                );
+                return (
+                  <li key={page.path}>
+                    {page.external ? (
+                      <a
+                        href={page.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block p-3 rounded-2xl hover:bg-slate-50 transition duration-200"
+                      >
+                        {content}
+                      </a>
+                    ) : (
+                      <Link
+                        href={page.path}
+                        className="group block p-3 rounded-2xl hover:bg-slate-50 transition duration-200"
+                      >
+                        {content}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
 

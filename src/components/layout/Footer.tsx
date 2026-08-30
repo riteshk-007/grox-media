@@ -9,6 +9,7 @@ const quickLinks = [
   { name: "Services", href: "/services" },
   { name: "Custom Web Development", href: "/custom-web-development" },
   { name: "Portfolio", href: "/portfolio" },
+  { name: "Blog", href: "https://groxmedia.in/blog/" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "FAQs", href: "/faqs" },
