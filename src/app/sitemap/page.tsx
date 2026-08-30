@@ -9,6 +9,11 @@ const corePages = [
   { name: "Home", url: "https://groxmedia.in/", path: "/" },
   { name: "About Us", url: "https://groxmedia.in/about", path: "/about" },
   { name: "Services", url: "https://groxmedia.in/services", path: "/services" },
+  {
+    name: "Custom Web Development",
+    url: "https://groxmedia.in/custom-web-development",
+    path: "/custom-web-development",
+  },
   { name: "Portfolio", url: "https://groxmedia.in/portfolio", path: "/portfolio" },
   { name: "Contact", url: "https://groxmedia.in/contact", path: "/contact" },
   { name: "FAQs", url: "https://groxmedia.in/faqs", path: "/faqs" },

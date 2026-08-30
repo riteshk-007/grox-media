@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import WebsiteDevelopmentGurgaon from "./WebsiteDevelopmentGurgaon";
 
 export const metadata: Metadata = {
-  title: "Website Development Company in Gurgaon | Grox Media",
+  title: "Professional Website Development in Gurgaon | Grox Media",
   description:
-    "Grox Media builds high-performance websites for Gurgaon businesses — from Cyber City startups to Golf Course Road enterprises. Fast, SEO-ready, built in-house. Call +91 92668 06477.",
+    "Grox Media is a renowned website development company in Gurgaon building future-ready websites for ambitious brands — custom web apps, enterprise sites, and scalable digital solutions. Call +91 92668 06477.",
   keywords: [
     "website development company in gurgaon",
     "web development agency gurgaon",
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     canonical: "/website-development-company-in-gurgaon",
   },
   openGraph: {
-    title: "Website Development Company in Gurgaon | Grox Media",
+    title: "Professional Website Development in Gurgaon | Grox Media",
     description:
-      "High-performance websites for Gurgaon businesses. In-house team, 98% on-time delivery, SEO-ready builds. Serving Cyber City, Sector 44, Golf Course Road & beyond.",
+      "Building future-ready websites for ambitious brands in Gurgaon. Custom-built, scalable, SEO-optimized digital solutions across every industry.",
     url: "https://groxmedia.in/website-development-company-in-gurgaon",
     siteName: "Grox Media",
     locale: "en_IN",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Company in Gurgaon | Grox Media",
+    title: "Professional Website Development in Gurgaon | Grox Media",
     description:
-      "In-house web development for Gurgaon businesses. Fast delivery, clean code, SEO-ready. Get a free quote today.",
+      "Future-ready, scalable website development for Gurgaon businesses ready to scale. Get a free consultation today.",
     images: ["/og-image.jpg"],
   },
 };
@@ -103,42 +103,82 @@ export default function WebsiteDevelopmentGurgaonPage() {
       mainEntity: [
         {
           "@type": "Question",
-          name: "How much does website development cost in Gurgaon?",
+          name: "Why should I choose Grox Media for website development in Gurgaon?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For Gurgaon businesses, a professional 5-page business website starts at ₹15,000–₹30,000. E-commerce stores with payment gateway integration start from ₹50,000. Corporate portals or web applications are quoted individually after scoping. Every quote is itemised — no vague packages.",
+            text: "At Grox Media, we design and develop custom websites that are scalable and SEO optimized. The websites are developed through technology-based solutions and industry best practices.",
           },
         },
         {
           "@type": "Question",
-          name: "How long does it take to build a website?",
+          name: "How much does it cost to develop websites in Gurgaon?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A standard business website takes 7–15 working days. E-commerce builds run 3–5 weeks depending on catalogue size and custom features. We share a project timeline on day one and flag delays proactively — not after the deadline passes.",
+            text: "The cost depends on the requirement of the website that you wish to get developed. After we have understood your requirements, we will provide you with a quotation with no hidden costs involved.",
           },
         },
         {
           "@type": "Question",
-          name: "Can you redesign our existing website?",
+          name: "How long does it take to develop a website?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. We audit your current site first — loading speed, mobile usability, SEO structure, and conversion flow — then redesign with those gaps fixed. Many Gurgaon clients come to us specifically to modernise legacy sites that were built 4–5 years ago and are now losing search rankings.",
+            text: "The time taken to complete a project depends upon the project requirements. A basic business website requires only a few weeks; however, web application development may require more time. We provide a complete project timeline for your review before starting development work.",
           },
         },
         {
           "@type": "Question",
-          name: "Will my website work properly on mobile phones?",
+          name: "Do you build custom websites or use templates?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Every website we build is mobile-first. We test on actual devices across Android and iOS — not just browser emulators — before handover. Gurgaon has one of the highest smartphone penetration rates among Indian metros, so a broken mobile experience directly costs you leads.",
+            text: "We generally develop customized websites based on your brand, business goals, and user experience needs. On some occasions, customization of a CMS-based solution is also possible.",
           },
         },
         {
           "@type": "Question",
-          name: "Do you work with Gurgaon clients remotely or do you need to meet in person?",
+          name: "Would my website be mobile-friendly?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We work fully remotely with most clients across India. Project kickoffs, design reviews, and progress updates happen over Google Meet or Zoom. For Gurgaon clients who prefer in-person meetings, we can schedule visits — but most projects move faster when handled over structured calls.",
+            text: "Yes, all our websites are 100 percent responsive and work on both the desktops as well as on the smartphones.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you make SEO-friendly websites?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we make SEO-friendly websites that have all the characteristics, like optimized code, loading speed, mobile compatibility, etc.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can you redesign my existing website?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, our service includes redesigning an existing website through better design and performance without affecting your brand image.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you maintain my website after the launch?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we provide a variety of services that include website maintenance after its launch.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can you integrate third-party tools and business systems into my website?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Of course, we can integrate third-party tools and business applications like CRM systems, payment gateway services, ERP solutions, marketing tools, analytics platforms, and other applications depending upon your website's needs.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I begin working with Grox Media?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "All you have to do is contact us to book a free consultation where we will understand your needs and provide you with a solution tailored for your project.",
           },
         },
       ],

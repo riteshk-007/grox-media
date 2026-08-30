@@ -30,6 +30,28 @@ export type VideoItem = {
 
 export const projects: Project[] = [
   {
+    title: "Credify India",
+    category: "Background Verification & KYC API",
+    description:
+      "India's trusted background verification and verification API platform. Strengthen hiring, accelerate customer onboarding, and simplify compliance with comprehensive background verification services and secure verification APIs for KYC, identity verification, business verification, and risk intelligence.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/credifyindia.png",
+    tags: ["Next.js", "Static Site", "KYC", "Verification API"],
+    results: "Streamlined hiring, onboarding, and compliance verification workflows",
+    link: "https://www.credifyindia.com/",
+    filter: "Finance",
+  },
+  {
+    title: "CrediScout",
+    category: "Banking Verification & Field Investigation",
+    description:
+      "Banking verification and field investigation solutions for smarter risk decisions. CrediScout helps banks, NBFCs, and financial institutions manage banking verification and field investigation through structured processes and a technology-driven CRM — from case allocation and field visits to evidence capture and reporting.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/crediscout.png",
+    tags: ["Next.js", "Static Site", "CRM", "Banking", "Field Investigation"],
+    results: "Greater visibility and control over verification operations for banks and NBFCs",
+    link: "https://www.crediscout.in/",
+    filter: "Finance",
+  },
+  {
     title: "Humsafar Event",
     category: "Event Booking Platform",
     description:
