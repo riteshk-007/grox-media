@@ -173,7 +173,7 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose }) =>
                                 </svg>
                             </div>
                             <h4 className="text-2xl font-semibold text-gray-800 mb-2">Thank you!</h4>
-                            <p className="lead-success-msg text-gray-600 text-lg">We&apos;ve received your message.</p>
+                            <p id="lead-form-success-msg" className="lead-success-msg text-gray-600 text-lg">We&apos;ve received your message.</p>
                             <p className="text-sm text-gray-500 mt-2">
                                 Our team will contact you within 24 hours.
                             </p>

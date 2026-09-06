@@ -261,7 +261,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
                 <h4 className="text-xl font-semibold text-gray-800">
                   Thank you!
                 </h4>
-                <p className="lead-success-msg text-gray-600">We&apos;ve received your message.</p>
+                <p id="lead-form-success-msg" className="lead-success-msg text-gray-600">We&apos;ve received your message.</p>
                 <p className="mt-2 text-sm text-gray-500">
                   Our team will contact you within 24 hours.
                 </p>

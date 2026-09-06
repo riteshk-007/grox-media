@@ -253,7 +253,7 @@ const ContactSection = () => {
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
                   Thank you!
                 </h4>
-                <p className="lead-success-msg text-gray-600">We&apos;ve received your message.</p>
+                <p id="lead-form-success-msg" className="lead-success-msg text-gray-600">We&apos;ve received your message.</p>
                 <p className="text-sm text-gray-500 mt-2">
                   Our team will try to call you within 12 hours (between 10 AM -
                   7 PM).

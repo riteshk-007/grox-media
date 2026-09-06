@@ -378,7 +378,7 @@ export default function WebsiteDesigningGurgaon() {
                   <p className="text-lg font-semibold text-[#111827]">
                     Thank you!
                   </p>
-                  <p className="lead-success-msg mt-2 text-[#6b7280]">
+                  <p id="lead-form-success-msg" className="lead-success-msg mt-2 text-[#6b7280]">
                     We&apos;ve received your message. Our team will contact you
                     shortly.
                   </p>
