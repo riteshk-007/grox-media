@@ -117,9 +117,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon-192.png" />
         <link rel="manifest" href="/manifest.json" />
 
+        {/* Google tag (gtag.js) */}
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-79WH26B6DY"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18372249208"
         />
         <Script id="google-analytics">
           {`
@@ -127,8 +128,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'AW-18058800777');
-            gtag('config', 'G-79WH26B6DY');
+            gtag('config', 'AW-18372249208');
           `}
         </Script>
         {/* Google Tag Manager */}
