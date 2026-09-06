@@ -28,6 +28,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { trackLeadSubmission } from "@/lib/gtm";
 import SectionBadge from "@/components/ui/SectionBadge";
 
 type FormData = {
@@ -261,6 +262,7 @@ export default function WebsiteDesigningPune() {
         return;
       }
       toast.success(json?.message || "Message sent successfully!");
+      trackLeadSubmission("website_designing_pune_form");
       setIsSubmitted(true);
       setIsSubmitting(false);
       setTimeout(() => {
@@ -373,7 +375,7 @@ export default function WebsiteDesigningPune() {
                   <p className="text-lg font-semibold text-[#111827]">
                     Thank you!
                   </p>
-                  <p className="mt-2 text-[#6b7280]">
+                  <p className="lead-success-msg mt-2 text-[#6b7280]">
                     We&apos;ve received your message. Our team will contact you
                     shortly.
                   </p>

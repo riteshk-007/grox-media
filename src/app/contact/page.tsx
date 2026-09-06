@@ -17,6 +17,7 @@ import {
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import SectionBadge from "@/components/ui/SectionBadge";
+import { trackLeadSubmission } from "@/lib/gtm";
 
 type FormData = {
   name: string;
@@ -83,6 +84,7 @@ export default function ContactPage() {
         return;
       }
       toast.success(json?.message || "Message sent successfully!");
+      trackLeadSubmission("contact_page_form");
       setIsSubmitted(true);
       setIsSubmitting(false);
       setTimeout(() => {
@@ -278,7 +280,7 @@ export default function ContactPage() {
                 <p className="text-lg font-semibold text-[#111827]">
                   Thank you!
                 </p>
-                <p className="mt-2 text-[#6b7280]">
+                <p className="lead-success-msg mt-2 text-[#6b7280]">
                   We&apos;ve received your message.
                 </p>
               </div>

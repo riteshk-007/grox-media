@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { trackLeadSubmission } from "@/lib/gtm";
 
 interface GetStartedDialogProps {
     show: boolean;
@@ -77,8 +78,7 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose }) =>
             }
 
             toast.success(json?.message || "Message sent successfully!");
-
-
+            trackLeadSubmission("get_started_dialog_form");
 
             setIsSubmitted(true);
             setIsSubmitting(false);
@@ -173,7 +173,7 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose }) =>
                                 </svg>
                             </div>
                             <h4 className="text-2xl font-semibold text-gray-800 mb-2">Thank you!</h4>
-                            <p className="text-gray-600 text-lg">We&apos;ve received your message.</p>
+                            <p className="lead-success-msg text-gray-600 text-lg">We&apos;ve received your message.</p>
                             <p className="text-sm text-gray-500 mt-2">
                                 Our team will contact you within 24 hours.
                             </p>

@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Instagram, Linkedin, Check } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { trackLeadSubmission } from "@/lib/gtm";
 
 type FormData = {
   name: string;
@@ -82,6 +83,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
       }
 
       toast.success(json?.message || "Message sent successfully!");
+      trackLeadSubmission("home_contact_form");
 
       setIsSubmitted(true);
       setIsSubmitting(false);
@@ -259,7 +261,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
                 <h4 className="text-xl font-semibold text-gray-800">
                   Thank you!
                 </h4>
-                <p className="text-gray-600">We&apos;ve received your message.</p>
+                <p className="lead-success-msg text-gray-600">We&apos;ve received your message.</p>
                 <p className="mt-2 text-sm text-gray-500">
                   Our team will contact you within 24 hours.
                 </p>
