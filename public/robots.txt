@@ -1,7 +1,26 @@
 User-agent: *
 Allow: /
-Disallow: /private/
-Sitemap: https://groxmedia.in/sitemap.xml
+Disallow: /cgi-bin/
 
-# Crawl-delay can be added if you want to slow down bots
-# Crawl-delay: 10
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+Sitemap: https://groxmedia.in/sitemap.xml

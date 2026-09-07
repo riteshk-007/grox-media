@@ -8,23 +8,36 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/api/', '/admin/', '/_next/'],
+                disallow: '/cgi-bin/',
             },
             {
-                userAgent: 'Googlebot',
+                userAgent: 'OAI-SearchBot',
                 allow: '/',
-                crawlDelay: 0,
             },
             {
-                userAgent: 'Bingbot',
+                userAgent: 'ChatGPT-User',
                 allow: '/',
-                crawlDelay: 5,
             },
             {
-                userAgent: 'Yandex',
+                userAgent: 'GPTBot',
                 allow: '/',
-                crawlDelay: 10,
-            }
+            },
+            {
+                userAgent: 'ClaudeBot',
+                allow: '/',
+            },
+            {
+                userAgent: 'Claude-User',
+                allow: '/',
+            },
+            {
+                userAgent: 'PerplexityBot',
+                allow: '/',
+            },
+            {
+                userAgent: 'Perplexity-User',
+                allow: '/',
+            },
         ],
         sitemap: `${baseUrl}/sitemap.xml`,
     };
