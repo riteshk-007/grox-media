@@ -27,18 +27,18 @@ export default function Hero() {
           className="mt-6 text-balance text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight text-[#111827] md:text-7xl"
         >
           We Build{" "}
-          <span className="text-groxOrange">Digital</span>{" "}
+          <span className="text-groxOrange">Websites</span> &{" "}
           <br className="hidden sm:block" />
-          <span className="text-groxOrange">Experiences</span> That Matter
+          <span className="text-groxOrange">Digital Solutions</span> That Grow Your Business
         </motion.h1>
         <motion.p
           {...fade}
           transition={{ duration: 0.55, delay: 0.24 }}
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#6b7280]"
         >
-          Grox Media transforms your vision into powerful digital solutions. We
-          specialize in cutting-edge web development, stunning design, and
-          strategic growth.
+          Grox Media is a Delhi NCR-based IT company specialising in custom web
+          development, mobile apps, SEO, and performance marketing — helping
+          businesses across India grow their digital presence.
         </motion.p>
         <motion.div
           {...fade}

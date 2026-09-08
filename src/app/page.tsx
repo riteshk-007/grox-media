@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import ServicesOverview from "@/components/sections/ServicesOverview";
@@ -10,6 +11,42 @@ import TechStack from "@/components/sections/TechStack";
 import FAQPreview from "@/components/sections/FAQPreview";
 import Contact from "@/components/Contact";
 
+export const metadata: Metadata = {
+  title:
+    "Grox Media — Web Development, SEO & Digital Marketing Company in India",
+  description:
+    "Grox Media LLP is a Delhi NCR-based web development, SEO, and digital marketing company. We build custom websites, mobile apps, branding, and performance marketing solutions for businesses across India.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title:
+      "Grox Media — Web Development, SEO & Digital Marketing Company in India",
+    description:
+      "Custom website development, mobile apps, SEO, branding, and digital marketing for businesses across India. Based in Delhi NCR, serving Gurgaon, Noida, Mumbai, and Pune.",
+    url: "https://groxmedia.in",
+    siteName: "Grox Media",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Grox Media — Web Development & Digital Marketing Company",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Grox Media — Web Development, SEO & Digital Marketing Company in India",
+    description:
+      "Custom websites, mobile apps, SEO, and digital marketing for Indian businesses. Get a free consultation.",
+    images: ["/og-image.jpg"],
+  },
+};
+
 const jsonLd = [
   {
     "@context": "https://schema.org",
@@ -17,7 +54,7 @@ const jsonLd = [
     name: "Grox Media LLP",
     alternateName: "Grox Media",
     description:
-      "Grox Media provides top-quality IT services: web development, mobile app development, graphic designing, SEO, and digital marketing for businesses across India.",
+      "Grox Media LLP is a Delhi NCR-based IT services company offering web development, mobile app development, SEO, branding, and digital marketing for businesses across India.",
     url: "https://groxmedia.in",
     logo: "https://groxmedia.in/groX-Logo.png",
     image: "https://groxmedia.in/og-image.jpg",
@@ -31,6 +68,13 @@ const jsonLd = [
       postalCode: "201305",
       addressCountry: "IN",
     },
+    areaServed: [
+      { "@type": "City", name: "Noida" },
+      { "@type": "City", name: "Delhi" },
+      { "@type": "City", name: "Gurgaon" },
+      { "@type": "City", name: "Mumbai" },
+      { "@type": "City", name: "Pune" },
+    ],
     sameAs: [
       "https://www.instagram.com/groxmedia1",
       "https://www.linkedin.com/in/manish-kumar-7a757b211/",
@@ -41,6 +85,10 @@ const jsonLd = [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Search Engine Optimization" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Branding" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Social Media Marketing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Influencer Marketing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Video Editing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Lead Generation & Performance Marketing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "IT Support" } },
     ],
   },
   {

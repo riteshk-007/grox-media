@@ -23,17 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Grox Media",
   },
   description:
-    "Grox Media provides top-quality IT services. Expert web development, graphic designing, digital marketing, and complete IT solutions for businesses.",
-  keywords: [
-    "IT services",
-    "web development",
-    "graphic designing",
-    "digital marketing",
-    "Grox Media",
-    "IT company",
-    "SEO services",
-    "social media marketing",
-  ],
+    "Grox Media LLP is a full-service IT company based in Delhi NCR, India. We deliver custom web development, mobile apps, SEO, branding, and digital marketing for businesses across India.",
   authors: [{ name: "Grox Media Team" }],
   creator: "Grox Media",
   publisher: "Grox Media",
