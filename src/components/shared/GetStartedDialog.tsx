@@ -12,6 +12,8 @@ import { trackLeadSubmission } from "@/lib/gtm";
 interface GetStartedDialogProps {
     show: boolean;
     onClose: () => void;
+    formName?: string;
+    serviceName?: string;
 }
 
 type FormData = {
@@ -21,7 +23,7 @@ type FormData = {
     message: string;
 };
 
-const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose }) => {
+const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose, formName = "get_started_dialog_form", serviceName }) => {
     const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
@@ -65,7 +67,9 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose }) =>
                     name: formData.name,
                     email: formData.email,
                     mobileNumber: formData.phone,
-                    message: formData.message,
+                    message: serviceName
+                        ? `[Enquiry: ${serviceName}] ${formData.message}`
+                        : formData.message,
                 }),
             });
 
@@ -78,7 +82,7 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose }) =>
             }
 
             toast.success(json?.message || "Message sent successfully!");
-            trackLeadSubmission("get_started_dialog_form");
+            trackLeadSubmission(formName);
 
             setIsSubmitted(true);
             setIsSubmitting(false);

@@ -2,104 +2,8 @@
 
 import { motion } from "framer-motion";
 import SectionBadge from "@/components/ui/SectionBadge";
-import {
-  Users,
-  Share2,
-  Video,
-  Code,
-  Megaphone,
-  Smartphone,
-  Search,
-  Palette,
-  Headphones,
-} from "lucide-react";
-import { web, digital, mvp, graphic, about } from "@/assets";
+import { services } from "@/data/services";
 import ServiceVideoCard from "./ServiceVideoCard";
-
-
-const services = [
-  {
-    title: "Website Development",
-    description:
-      "Custom websites built with modern technologies for speed, performance, and SEO-ready structure.",
-    videoSrc:
-      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/website.mp4",
-    posterSrc: web,
-    Icon: Code,
-  },
-  {
-    title: "Android/iOS App Development",
-    description:
-      "Native and cross-platform mobile applications for iOS and Android with smooth user experiences.",
-    videoSrc:
-      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/mobile%20app.mp4",
-    posterSrc: mvp,
-    Icon: Smartphone,
-  },
-  {
-    title: "Search Engine Optimization",
-    description:
-      "Technical SEO, content optimization, and performance improvements to help you rank higher and grow organically.",
-    videoSrc:
-      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/SEO.mp4",
-    posterSrc: web,
-    Icon: Search,
-  },
-  {
-    title: "Branding",
-    description:
-      "Logos, brand identity, and creative assets that make your business recognizable and trustworthy.",
-    videoSrc:
-      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/branding.mp4",
-    posterSrc: graphic,
-    Icon: Palette,
-  },
-  {
-    title: "Influencer Marketing",
-    description:
-      "Connect your brand with top influencers and content creators to amplify reach, build trust, and drive engagement.",
-    videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/influencer-marketing.mp4",
-    posterSrc: digital,
-    Icon: Users,
-  },
-  {
-    title: "Social Media Marketing",
-    description:
-      "Strategic social media management and targeted campaigns to scale your brand presence across platforms.",
-    videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/social-media-marketing.mp4",
-    posterSrc: digital,
-    Icon: Share2,
-  },
-  {
-    title: "Video Editing",
-    description:
-      "Professional video editing, motion graphics, and reel creation designed to capture attention and tell your story.",
-    videoSrc:
-      "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/video-editing.mp4",
-    posterSrc: graphic,
-    Icon: Video,
-  },
-  {
-    title: "Lead Generation & Performance Marketing",
-    description:
-      "Performance-focused marketing campaigns that generate qualified leads and improve conversions.",
-    videoSrc:
-      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/digital%20marketing.mp4",
-    posterSrc: digital,
-    Icon: Megaphone,
-  },
-  {
-    title: "IT Support",
-    description:
-      "Reliable IT support and maintenance to keep your systems fast, secure, and always available.",
-    videoSrc:
-      "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/IT%20Support.mov",
-    posterSrc: about,
-    Icon: Headphones,
-  },
-];
 
 export default function ServicesOverview() {
   return (
@@ -121,12 +25,12 @@ export default function ServicesOverview() {
         >
           {services.map((svc) => (
             <ServiceVideoCard
-              key={svc.title}
+              key={svc.slug}
               title={svc.title}
-              description={svc.description}
+              description={svc.shortDescription}
               videoSrc={svc.videoSrc}
               icon={svc.Icon}
-
+              href={`/services/${svc.slug}`}
             />
           ))}
         </motion.div>

@@ -89,6 +89,9 @@ const jsonLd = [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Video Editing" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Lead Generation & Performance Marketing" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "IT Support" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Amazon Listing (India & USA)" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "eBay Listing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Etsy Listing" } },
     ],
   },
   {

@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import type { LucideIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 type ServiceVideoCardProps = {
   title: string;
@@ -10,6 +12,7 @@ type ServiceVideoCardProps = {
   videoSrc: string;
   icon?: LucideIcon;
   delay?: number;
+  href?: string;
 };
 
 export default function ServiceVideoCard({
@@ -18,6 +21,7 @@ export default function ServiceVideoCard({
   videoSrc,
   icon: Icon,
   delay = 0,
+  href,
 }: ServiceVideoCardProps) {
   const cardRef = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -45,18 +49,8 @@ export default function ServiceVideoCard({
     }
   }, [activated]);
 
-  return (
-    <motion.div
-      ref={(el) => {
-        cardRef.current = el;
-      }}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay }}
-      whileHover={{ y: -4 }}
-      className="min-w-0 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-3 md:p-5 shadow-sm transition-shadow hover:shadow-lg"
-    >
+  const cardBody = (
+    <>
       <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-gray-100">
         {/* Skeleton shimmer until video activates */}
         {!activated && (
@@ -83,7 +77,39 @@ export default function ServiceVideoCard({
         <p className="mt-2 leading-relaxed text-xs md:text-sm text-[#6b7280]">
           {description}
         </p>
+        {href ? (
+          <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-groxBlue md:text-sm">
+            Learn more
+            <ArrowRight className="h-3 w-3 md:h-3.5 md:w-3.5" />
+          </span>
+        ) : null}
       </div>
+    </>
+  );
+
+  const className =
+    "min-w-0 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-3 md:p-5 shadow-sm transition-shadow hover:shadow-lg" +
+    (href ? " cursor-pointer" : "");
+
+  return (
+    <motion.div
+      ref={(el) => {
+        cardRef.current = el;
+      }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay }}
+      whileHover={{ y: -4 }}
+      className={className}
+    >
+      {href ? (
+        <Link href={href} className="flex h-full w-full flex-col" aria-label={`Learn more about ${title}`}>
+          {cardBody}
+        </Link>
+      ) : (
+        cardBody
+      )}
     </motion.div>
   );
 }

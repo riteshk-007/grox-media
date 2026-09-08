@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicesContent from "./ServicesContent";
+import { services } from "@/data/services";
 
 export const metadata: Metadata = {
   title:
@@ -37,18 +38,6 @@ export const metadata: Metadata = {
   },
 };
 
-const SERVICE_NAMES = [
-  "Website Development",
-  "Android/iOS App Development",
-  "Search Engine Optimization",
-  "Branding",
-  "Influencer Marketing",
-  "Social Media Marketing",
-  "Video Editing",
-  "Lead Generation & Performance Marketing",
-  "IT Support",
-];
-
 const jsonLd = [
   {
     "@context": "https://schema.org",
@@ -65,11 +54,12 @@ const jsonLd = [
     mainEntity: {
       "@type": "OfferCatalog",
       name: "Grox Media Service Catalogue",
-      itemListElement: SERVICE_NAMES.map((name) => ({
+      itemListElement: services.map((svc) => ({
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name,
+          name: svc.title,
+          url: `https://groxmedia.in/services/${svc.slug}`,
           provider: {
             "@type": "Organization",
             name: "Grox Media LLP",

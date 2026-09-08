@@ -5,13 +5,9 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useDragControls } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const leftLinks = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-];
+import { services } from "@/data/services";
 
 const rightLinks = [
   { name: "Portfolio", href: "/portfolio" },
@@ -19,12 +15,13 @@ const rightLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-const navLinks = [...leftLinks, ...rightLinks];
-
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dragControls = useDragControls();
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -37,6 +34,8 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false);
+    setMobileServicesOpen(false);
+    setServicesOpen(false);
   }, [pathname]);
 
   // Prevent body scroll when drawer open
@@ -64,12 +63,21 @@ export default function Navbar() {
         : "text-gray-800 hover:bg-gray-50"
     );
 
+  const openServices = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setServicesOpen(true);
+  };
+
+  const scheduleCloseServices = () => {
+    closeTimer.current = setTimeout(() => setServicesOpen(false), 150);
+  };
+
   return (
     <>
       <header className="sticky top-5 z-50 flex justify-center px-4 pt-4">
         <nav
           className={cn(
-            "w-full max-w-5xl rounded-full border border-gray-200 bg-white/80 px-3 py-2 text-[#111827] shadow-sm backdrop-blur-md transition-shadow md:px-5 md:py-2.5",
+            "relative w-full max-w-5xl rounded-full border border-gray-200 bg-white/80 px-3 py-2 text-[#111827] shadow-sm backdrop-blur-md transition-shadow md:px-5 md:py-2.5",
             scrolled && "shadow-lg"
           )}
           aria-label="Main"
@@ -112,7 +120,91 @@ export default function Navbar() {
               className="flex shrink-0 items-center justify-center gap-3 lg:gap-5"
               aria-label="Primary"
             >
-              {navLinks.map((l) => (
+              <Link href="/" className={linkClass("/")}>
+                Home
+              </Link>
+
+              {/* Services dropdown */}
+              <div
+                onMouseEnter={openServices}
+                onMouseLeave={scheduleCloseServices}
+              >
+                <button
+                  type="button"
+                  className={cn(linkClass("/services"), "flex items-center gap-1")}
+                  onClick={() => setServicesOpen((v) => !v)}
+                  aria-haspopup="true"
+                  aria-expanded={servicesOpen}
+                >
+                  Services
+                  <ChevronDown
+                    className={cn(
+                      "h-3.5 w-3.5 transition-transform duration-200",
+                      servicesOpen && "rotate-180"
+                    )}
+                  />
+                </button>
+
+                <AnimatePresence>
+                  {servicesOpen && (
+                    <motion.div
+                      // `x: "-50%"` must live inside the animation, not as a
+                      // `-translate-x-1/2` class: framer-motion writes an inline
+                      // `transform` that would otherwise wipe the class out and
+                      // push the panel off-centre.
+                      initial={{ opacity: 0, y: 8, x: "-50%" }}
+                      animate={{ opacity: 1, y: 0, x: "-50%" }}
+                      exit={{ opacity: 0, y: 8, x: "-50%" }}
+                      transition={{ duration: 0.15 }}
+                      onMouseEnter={openServices}
+                      onMouseLeave={scheduleCloseServices}
+                      style={{ width: "min(40rem, calc(100vw - 2rem))" }}
+                      className="absolute left-1/2 top-full z-50 mt-4 rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl"
+                    >
+                      {/* Invisible bridge so the pointer can travel from the
+                          button into the panel without the gap closing it. */}
+                      <span
+                        aria-hidden
+                        className="absolute inset-x-0 -top-4 h-4"
+                      />
+                      <div className="grid grid-cols-2 gap-1">
+                        {services.map((svc) => (
+                          <Link
+                            key={svc.slug}
+                            href={`/services/${svc.slug}`}
+                            className="group/item flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-groxBlue/5"
+                          >
+                            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-groxBlue/10 text-groxBlue transition-colors duration-200 group-hover/item:bg-groxBlue group-hover/item:text-white">
+                              <svc.Icon className="h-4 w-4" aria-hidden />
+                            </span>
+                            <span className="min-w-0 flex-1 truncate whitespace-nowrap text-sm font-semibold text-[#111827] transition-colors duration-200 group-hover/item:text-groxBlue">
+                              {svc.navLabel}
+                            </span>
+                            <ChevronDown
+                              aria-hidden
+                              className="h-3.5 w-3.5 shrink-0 -rotate-90 text-gray-300 opacity-0 transition-all duration-200 group-hover/item:translate-x-0.5 group-hover/item:text-groxBlue group-hover/item:opacity-100"
+                            />
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="mt-2 border-t border-gray-100 pt-2">
+                        <Link
+                          href="/services"
+                          className="group/all flex items-center justify-center gap-1.5 rounded-xl px-3 py-2.5 text-sm font-semibold text-groxBlue transition-colors duration-200 hover:bg-groxBlue/5"
+                        >
+                          View All Services
+                          <ArrowRight
+                            aria-hidden
+                            className="h-4 w-4 transition-transform duration-200 group-hover/all:translate-x-1"
+                          />
+                        </Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {rightLinks.map((l) => (
                 <Link key={l.href} href={l.href} className={linkClass(l.href)}>
                   {l.name}
                 </Link>
@@ -186,12 +278,60 @@ export default function Navbar() {
               </div>
 
               <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-4">
-                {navLinks.map((l, i) => (
+                <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.02 }}>
+                  <Link href="/" className={mobileLinkClass("/")}>
+                    Home
+                  </Link>
+                </motion.div>
+
+                {/* Services accordion */}
+                <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.06 }}>
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen((v) => !v)}
+                    className={cn(mobileLinkClass("/services"), "flex w-full items-center justify-between")}
+                    aria-expanded={mobileServicesOpen}
+                  >
+                    Services
+                    <ChevronDown
+                      className={cn("h-5 w-5 transition-transform duration-200", mobileServicesOpen && "rotate-180")}
+                    />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {mobileServicesOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden pl-3"
+                      >
+                        {services.map((svc) => (
+                          <Link
+                            key={svc.slug}
+                            href={`/services/${svc.slug}`}
+                            className="block rounded-lg px-4 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-groxBlue"
+                          >
+                            {svc.navLabel}
+                          </Link>
+                        ))}
+                        <Link
+                          href="/services"
+                          className="mt-1 block rounded-lg px-4 py-2.5 text-sm font-semibold text-groxBlue hover:bg-groxBlue/5"
+                        >
+                          View All Services →
+                        </Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+
+                {rightLinks.map((l, i) => (
                   <motion.div
                     key={l.href}
                     initial={{ opacity: 0, x: 24 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.06 }}
+                    transition={{ delay: 0.1 + i * 0.06 }}
                   >
                     <Link href={l.href} className={mobileLinkClass(l.href)}>
                       {l.name}

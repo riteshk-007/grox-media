@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { services } from "@/data/services";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
@@ -34,6 +35,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified,
     changeFrequency: "weekly" as const,
     priority: cityPriority[city],
+  }));
+
+  const serviceDetailPages = services.map((svc) => ({
+    url: `${baseUrl}/services/${svc.slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
   }));
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -99,6 +107,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...developmentPages,
     ...designingPages,
+    ...serviceDetailPages,
   ];
 
   return staticPages;
