@@ -2,7 +2,7 @@
 
 > Grox Media is a full-service IT and digital agency based in Noida, India, delivering website development, mobile app development, SEO, branding, and performance marketing for SMEs and enterprises across India.
 
-Grox Media builds custom websites (Next.js, React, WordPress, Shopify), Android/iOS apps, and runs SEO, branding, influencer marketing, social media marketing, video editing, lead generation, and IT support engagements. The company has delivered 100+ projects across e-commerce, finance, healthcare, EdTech, and B2B manufacturing sectors.
+Grox Media builds custom websites (Next.js, React, WordPress, Shopify), Android/iOS apps, and runs SEO, branding, influencer marketing, social media marketing, video editing, lead generation, and IT support engagements. The company has delivered projects across e-commerce, finance, healthcare, EdTech, and B2B manufacturing sectors.
 
 ## When to use this
 
@@ -22,7 +22,8 @@ To engage: use the [Contact page](https://groxmedia.in/contact) or call +91 9266
 
 - [Homepage](https://groxmedia.in/): overview, services, portfolio highlights, testimonials.
 - [Services](https://groxmedia.in/services): full service catalog — website development, app development, SEO, branding, influencer marketing, social media marketing, video editing, lead generation, IT support.
-- [Portfolio](https://groxmedia.in/portfolio): case studies and live links for 25+ shipped projects across e-commerce, finance, healthcare, B2B, and EdTech.
+- [Portfolio](https://groxmedia.in/portfolio): case studies and live links for shipped projects across e-commerce, finance, healthcare, B2B, and EdTech.
+- [Custom Web Development](https://groxmedia.in/custom-web-development): business websites, eCommerce stores, landing pages, redesigns, and CMS builds.
 - [About](https://groxmedia.in/about): company background, mission, and team.
 - [FAQs](https://groxmedia.in/faqs): common pricing, timeline, and process questions.
 - [Contact](https://groxmedia.in/contact): quote requests and direct contact details.

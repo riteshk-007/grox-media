@@ -61,7 +61,7 @@ const EnquiryDialog: React.FC<EnquiryDialogProps> = ({
 
     // Validation
     if (!formData.name.trim()) newErrors.name = "Name is required";
-    const emailRe = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const emailRe = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
     if (!emailRe.test(formData.email)) newErrors.email = "Enter a valid email";
     const phoneRe = /^[0-9]{7,15}$/;
     const cleaned = formData.phone.replace(/[^0-9]/g, "");

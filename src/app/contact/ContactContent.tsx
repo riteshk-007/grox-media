@@ -56,7 +56,7 @@ export default function ContactContent() {
     e.preventDefault();
     const newErrors: typeof errors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";
-    const emailRe = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const emailRe = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
     if (!emailRe.test(formData.email)) newErrors.email = "Enter a valid email";
     const phoneRe = /^[0-9]{7,15}$/;
     const cleaned = formData.phone.replace(/[^0-9]/g, "");
@@ -216,7 +216,7 @@ export default function ContactContent() {
             transition={{ duration: 0.45, delay: 0.15 }}
             className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight text-[#111827] md:text-5xl lg:text-6xl"
           >
-            Let&apos;s Build Something Amazing Together
+            Contact Grox Media — Let&apos;s Build Something Great
           </motion.h1>
           <motion.p
             {...fadeUp}

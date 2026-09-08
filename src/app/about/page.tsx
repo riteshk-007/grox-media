@@ -34,6 +34,60 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Grox Media LLP",
+    url: "https://groxmedia.in/about",
+    description:
+      "Grox Media LLP is a Noida-headquartered digital agency delivering website development, mobile apps, SEO, branding, and performance marketing for businesses across India.",
+    mainEntity: {
+      "@type": "Organization",
+      name: "Grox Media LLP",
+      url: "https://groxmedia.in",
+      logo: "https://groxmedia.in/groX-Logo.png",
+      email: "info@groxmedia.in",
+      telephone: "+919266806477",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90",
+        addressLocality: "Noida",
+        addressRegion: "Uttar Pradesh",
+        postalCode: "201305",
+        addressCountry: "IN",
+      },
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://groxmedia.in",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: "https://groxmedia.in/about",
+      },
+    ],
+  },
+];
+
 export default function AboutPage() {
-  return <AboutContent />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AboutContent />
+    </>
+  );
 }

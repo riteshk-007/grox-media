@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 
 function MarqueeBand() {
-  const phrase = "Develop it from Best   •   Develop it Once   •   ";
+  const phrase = "Build It Right   •   Build It Once   •   ";
   const repeated = Array(14).fill(phrase).join("");
   return (
     <div className="w-full overflow-hidden border-y border-white/10 bg-black/25 py-4 md:py-5">
@@ -46,8 +46,13 @@ export default function VideoShowcase() {
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_50%)] opacity-40" />
       <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-        <p className="text-lg font-semibold italic leading-relaxed text-white/95 md:text-xl md:leading-relaxed">
+        <h2 className="text-2xl font-extrabold leading-snug text-white sm:text-3xl md:text-4xl md:leading-snug">
           Building Digital Excellence
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg md:leading-relaxed">
+          From custom websites and mobile apps to branding, video, and
+          performance marketing — see how we bring a brand together across
+          every digital surface.
         </p>
         <div className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-2 shadow-2xl backdrop-blur-md lg:max-w-7xl">
           <div className="relative aspect-video overflow-hidden rounded-2xl bg-black/40">

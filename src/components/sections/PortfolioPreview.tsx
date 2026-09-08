@@ -191,7 +191,7 @@ export default function PortfolioPreview() {
                       className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
                       <Link href={project.link || "#"} target="_blank" rel="noopener noreferrer" className="block h-full">
                         <div className="relative aspect-video overflow-hidden">
-                          <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="33vw" />
+                          <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           <div className="absolute right-3 top-3 h-8 w-8 flex items-center justify-center rounded-full bg-white/90 shadow opacity-0 group-hover:opacity-100 transition-opacity">
                             <ExternalLink className="h-3.5 w-3.5 text-groxBlue" />
@@ -229,7 +229,7 @@ export default function PortfolioPreview() {
                       onClick={() => setLightboxIndex(graphicItems.indexOf(item))}
                       className="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-zoom-in">
                       <div className="relative aspect-square overflow-hidden rounded-xl">
-                        <LazyImage src={item.image} alt={item.title} sizes="20vw" className="transition-transform duration-500 group-hover:scale-110" />
+                        <LazyImage src={item.image} alt={item.title} sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw" className="transition-transform duration-500 group-hover:scale-110" />
                       </div>
                     </motion.div>
                   ))}

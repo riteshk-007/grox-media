@@ -143,9 +143,9 @@ export default function AboutContent() {
             transition={{ duration: 0.45, delay: 0.3 }}
             className="mx-auto mt-6 max-w-4xl text-lg leading-relaxed text-gray-500 md:text-xl md:leading-relaxed"
           >
-            At Grox Media LLP, we believe in the power of digital transformation.
-            We are a team of passionate developers, designers, and strategists
-            dedicated to helping businesses thrive in the digital age.
+            A Noida-headquartered digital agency building websites, mobile apps,
+            and marketing programmes for businesses across India — registered as
+            an LLP, with in-house designers, developers, and strategists.
           </motion.p>
         </div>
       </section>
@@ -165,9 +165,9 @@ export default function AboutContent() {
               Our Mission
             </h2>
             <p className="text-base leading-loose text-gray-500 md:text-lg">
-              To deliver exceptional digital experiences that drive results.
-              From pixel-perfect designs to robust code, we handle every aspect
-              of your digital presence with precision and care.
+              To give Indian businesses a digital presence that earns trust and
+              converts — handling design, code, and marketing with the same
+              standard of care at every stage.
             </p>
           </motion.div>
           <motion.div
@@ -199,9 +199,10 @@ export default function AboutContent() {
               Crafting Digital Excellence Since Day One
             </h2>
             <p className="mb-6 text-base leading-loose text-gray-500 md:text-lg">
-              Grox Media LLP is a small, focused team of designers, developers and
-              strategists. We partner with founders and teams to ship usable,
-              delightful products — from marketing websites to MVP apps.
+              Grox Media LLP brings designers, developers and strategists together
+              under one roof in Noida. We partner with founders and teams to ship
+              usable, delightful products — from marketing websites to full
+              platforms with admin panels.
             </p>
             <p className="text-base leading-loose text-gray-500 md:text-lg">
               We keep things practical. Rapid research, pragmatic design and

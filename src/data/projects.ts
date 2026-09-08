@@ -354,36 +354,36 @@ const _BASE = "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev";
 const _SM = `${_BASE}/graphic/social-media-graphics`;
 
 const _socialMediaGraphics: GraphicItem[] = Array.from({ length: 53 }, (_, i) => ({
-  title: `Social Media Graphic ${i + 1}`,
+  title: `Social media creative ${i + 1}`,
   image: `${_SM}/social-media-graphics%20(${i + 1}).jpeg`,
   subCategory: "Social Media Graphics" as GraphicSubCategory,
 }));
 
 const _PACKAGING_BASE = `${_BASE}/packaging`;
 const _packaging: GraphicItem[] = Array.from({ length: 31 }, (_, i) => ({
-  title: `Packaging ${i + 1}`,
+  title: `Product packaging design ${i + 1}`,
   image: `${_PACKAGING_BASE}/${i + 1}.jpg`,
   subCategory: "Packaging" as GraphicSubCategory,
 }));
 
 const _3D_BASE = `${_BASE}/graphic/3d-work`;
 const _3dWork: GraphicItem[] = [
-  { title: "3D Work 1 (JPEG)", image: `${_3D_BASE}/3d-work%20(1).jpeg`, subCategory: "3D Work" },
-  { title: "3D Work 1 (JPG)", image: `${_3D_BASE}/3d-work%20(1).jpg`, subCategory: "3D Work" },
-  { title: "3D Work 1 (PNG)", image: `${_3D_BASE}/3d-work%20(1).png`, subCategory: "3D Work" },
-  { title: "3D Work 2 (JPEG)", image: `${_3D_BASE}/3d-work%20(2).jpeg`, subCategory: "3D Work" },
-  { title: "3D Work 2 (JPG)", image: `${_3D_BASE}/3d-work%20(2).jpg`, subCategory: "3D Work" },
-  { title: "3D Work 3", image: `${_3D_BASE}/3d-work%20(3).jpg`, subCategory: "3D Work" },
-  { title: "3D Work 4", image: `${_3D_BASE}/3d-work%20(4).jpg`, subCategory: "3D Work" },
-  { title: "3D Work 5", image: `${_3D_BASE}/3d-work%20(5).jpg`, subCategory: "3D Work" },
-  { title: "3D Work 6", image: `${_3D_BASE}/3d-work%20(6).jpg`, subCategory: "3D Work" },
-  { title: "3D Work 7", image: `${_3D_BASE}/3d-work%20(7).jpg`, subCategory: "3D Work" },
-  { title: "3D Work 8", image: `${_3D_BASE}/3d-work%20(8).jpg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 1 (JPEG)", image: `${_3D_BASE}/3d-work%20(1).jpeg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 1 (JPG)", image: `${_3D_BASE}/3d-work%20(1).jpg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 1 (PNG)", image: `${_3D_BASE}/3d-work%20(1).png`, subCategory: "3D Work" },
+  { title: "3D product visualisation 2 (JPEG)", image: `${_3D_BASE}/3d-work%20(2).jpeg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 2 (JPG)", image: `${_3D_BASE}/3d-work%20(2).jpg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 3", image: `${_3D_BASE}/3d-work%20(3).jpg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 4", image: `${_3D_BASE}/3d-work%20(4).jpg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 5", image: `${_3D_BASE}/3d-work%20(5).jpg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 6", image: `${_3D_BASE}/3d-work%20(6).jpg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 7", image: `${_3D_BASE}/3d-work%20(7).jpg`, subCategory: "3D Work" },
+  { title: "3D product visualisation 8", image: `${_3D_BASE}/3d-work%20(8).jpg`, subCategory: "3D Work" },
 ];
 
 const _LOGO_BASE = `${_BASE}/logos`;
 const _logos: GraphicItem[] = Array.from({ length: 96 }, (_, i) => ({
-  title: `Logo ${i + 1}`,
+  title: `Brand logo design ${i + 1}`,
   image: `${_LOGO_BASE}/logo%20(${i + 1}).jpg`,
   subCategory: "Logos" as GraphicSubCategory,
 }));
@@ -401,7 +401,7 @@ const _platforms: VideoPlatform[] = ["Instagram", "Instagram", "Instagram", "Ins
 const _types = ["Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film", "Brand Film"];
 
 export const videoItems: VideoItem[] = Array.from({ length: 9 }, (_, i) => ({
-  title: `Video Edit ${i + 1}`,
+  title: `Brand film edit ${i + 1}`,
   videoSrc: `${_VID_BASE}/video-editing%20(${i + 1}).mp4`,
   thumbnail: `${_VID_BASE}/video-editing%20(${i + 1}).mp4`,
   client: "Grox Media",

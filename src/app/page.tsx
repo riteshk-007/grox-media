@@ -96,11 +96,47 @@ const jsonLd = [
     "@type": "WebSite",
     name: "Grox Media",
     url: "https://groxmedia.in",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://groxmedia.in/portfolio?q={search_term_string}",
-      "query-input": "required name=search_term_string",
+    inLanguage: "en-IN",
+    publisher: {
+      "@type": "Organization",
+      name: "Grox Media LLP",
+      url: "https://groxmedia.in",
     },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://groxmedia.in/#localbusiness",
+    name: "Grox Media LLP",
+    url: "https://groxmedia.in",
+    logo: "https://groxmedia.in/groX-Logo.png",
+    image: "https://groxmedia.in/og-image.jpg",
+    telephone: "+919266806477",
+    email: "info@groxmedia.in",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "Unit No. 604, 6th Floor, Tower B, Bhutani Alphathum, Sector 90",
+      addressLocality: "Noida",
+      addressRegion: "Uttar Pradesh",
+      postalCode: "201305",
+      addressCountry: "IN",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "10:00",
+        closes: "19:00",
+      },
+    ],
   },
 ];
 

@@ -15,6 +15,14 @@ const quickLinks = [
   { name: "FAQs", href: "/faqs" },
 ];
 
+const cityLinks = [
+  { name: "Noida", design: "/website-designing-company-in-noida", dev: "/website-development-company-in-noida" },
+  { name: "Delhi", design: "/website-designing-company-in-delhi", dev: "/website-development-company-in-delhi" },
+  { name: "Gurgaon", design: "/website-designing-company-in-gurgaon", dev: "/website-development-company-in-gurgaon" },
+  { name: "Mumbai", design: "/website-designing-company-in-mumbai", dev: "/website-development-company-in-mumbai" },
+  { name: "Pune", design: "/website-designing-company-in-pune", dev: "/website-development-company-in-pune" },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-white/90 overflow-x-hidden">
@@ -125,6 +133,26 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-gray-100 pt-8">
+          <h4 className="text-sm font-semibold text-[#111827]">
+            Web design &amp; development by city
+          </h4>
+          <div className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-sm text-[#6b7280] sm:grid-cols-2 lg:grid-cols-3">
+            {cityLinks.map((c) => (
+              <p key={c.name} className="flex flex-wrap items-center gap-x-2">
+                <span className="font-medium text-[#374151]">{c.name}:</span>
+                <Link href={c.design} className="transition hover:text-groxBlue">
+                  Website Designing
+                </Link>
+                <span className="text-gray-300">|</span>
+                <Link href={c.dev} className="transition hover:text-groxBlue">
+                  Website Development
+                </Link>
+              </p>
+            ))}
           </div>
         </div>
 

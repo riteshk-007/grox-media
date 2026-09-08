@@ -68,7 +68,7 @@ export default function Hero() {
             {["/user1.jpg", "/user2.jpg", "/user3.jpg"].map(
               (img, i) => (
                 <div key={i}>
-                  <Image src={img} alt="Client" className="object-cover rounded-full h-12 w-12" width={48} height={48} />
+                  <Image src={img} alt={`Grox Media client ${i + 1}`} className="object-cover rounded-full h-12 w-12" width={48} height={48} />
                 </div>
               )
             )}
