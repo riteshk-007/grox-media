@@ -168,7 +168,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
       </section>
 
       {/* ═══ INTRO ═══ */}
-      <section className="py-10 md:py-14" aria-labelledby="overview-heading">
+      <section className="py-8 md:py-12" aria-labelledby="overview-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <motion.div
             {...fadeUp}
@@ -269,7 +269,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
       </section>
 
       {/* ═══ PROCESS ═══ */}
-      <section className="bg-gray-50/60 py-8 md:py-10" aria-labelledby="process-heading">
+      <section className="bg-gray-50/60 py-8 md:py-12" aria-labelledby="process-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mx-auto max-w-2xl text-center">
             <SectionBadge>Our Process</SectionBadge>
