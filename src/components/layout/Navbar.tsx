@@ -57,10 +57,10 @@ export default function Navbar() {
 
   const mobileLinkClass = (href: string) =>
     cn(
-      "block rounded-xl px-4 py-3 text-lg font-medium",
+      "block rounded-xl px-4 py-3.5 text-base font-semibold transition-colors",
       isActive(href)
         ? "bg-groxBlue/10 text-groxBlue"
-        : "text-gray-800 hover:bg-gray-50"
+        : "text-gray-800 active:bg-gray-100 hover:bg-gray-50"
     );
 
   const openServices = () => {
@@ -265,13 +265,21 @@ export default function Navbar() {
                 <div className="absolute left-2 top-1/2 h-12 w-1 -translate-y-1/2 rounded-full bg-gray-300" />
               </div>
 
-              <div className="flex items-center justify-between border-b border-gray-100 px-4 py-4">
-                <span className="text-sm font-semibold text-gray-900">Menu</span>
+              <div className="flex items-center justify-between border-b border-gray-100 px-4 py-3.5">
+                <Link href="/" className="shrink-0" aria-label="Grox Media home">
+                  <Image
+                    src="/groX-Logo.png"
+                    alt="Grox Media"
+                    width={120}
+                    height={48}
+                    className="h-9 w-auto object-contain"
+                  />
+                </Link>
                 <button
                   type="button"
-                  className="rounded-full p-2 hover:bg-gray-100"
+                  className="-mr-1 rounded-full p-2.5 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900"
                   onClick={() => setMobileOpen(false)}
-                  aria-label="Close"
+                  aria-label="Close menu"
                 >
                   <X className="h-6 w-6" />
                 </button>
@@ -304,23 +312,29 @@ export default function Navbar() {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="overflow-hidden pl-3"
+                        className="overflow-hidden"
                       >
-                        {services.map((svc) => (
+                        <div className="mt-1 space-y-0.5 border-l-2 border-gray-100 pl-3">
+                          {services.map((svc) => (
+                            <Link
+                              key={svc.slug}
+                              href={`/services/${svc.slug}`}
+                              className="flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-gray-600 transition-colors active:bg-groxBlue/10 hover:bg-gray-50 hover:text-groxBlue"
+                            >
+                              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-groxBlue/10 text-groxBlue">
+                                <svc.Icon className="h-4 w-4" aria-hidden />
+                              </span>
+                              <span className="min-w-0 flex-1">{svc.navLabel}</span>
+                            </Link>
+                          ))}
                           <Link
-                            key={svc.slug}
-                            href={`/services/${svc.slug}`}
-                            className="block rounded-lg px-4 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-groxBlue"
+                            href="/services"
+                            className="flex items-center gap-2 rounded-xl px-3 py-3 text-sm font-semibold text-groxBlue transition-colors active:bg-groxBlue/10 hover:bg-groxBlue/5"
                           >
-                            {svc.navLabel}
+                            View All Services
+                            <ArrowRight className="h-4 w-4" aria-hidden />
                           </Link>
-                        ))}
-                        <Link
-                          href="/services"
-                          className="mt-1 block rounded-lg px-4 py-2.5 text-sm font-semibold text-groxBlue hover:bg-groxBlue/5"
-                        >
-                          View All Services →
-                        </Link>
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
