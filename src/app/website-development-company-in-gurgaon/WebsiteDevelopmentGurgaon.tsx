@@ -508,7 +508,7 @@ export default function WebsiteDevelopmentGurgaon() {
               transition={{ duration: 0.5 }}
               className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8"
             >
-              <h2 className="mb-2 text-2xl font-bold text-[#111827]">
+              <h2 className="mb-2 text-2xl font-normal text-[#111827]">
                 Get a Free Quote
               </h2>
               <p className="mb-6 text-sm text-gray-400">
@@ -632,7 +632,7 @@ export default function WebsiteDevelopmentGurgaon() {
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Why Businesses in Gurgaon Choose Grox Media
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -656,7 +656,7 @@ export default function WebsiteDevelopmentGurgaon() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
                   <w.Icon className="h-6 w-6 text-[#1e40af]" />
                 </div>
-                <h3 className="text-base font-bold text-[#111827]">
+                <h3 className="text-base font-normal text-[#111827]">
                   {i + 1}. {w.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">
@@ -673,7 +673,7 @@ export default function WebsiteDevelopmentGurgaon() {
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Custom Solutions</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Build Smarter With Our Custom Web Development Solutions
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -696,7 +696,7 @@ export default function WebsiteDevelopmentGurgaon() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50">
                   <c.Icon className="h-6 w-6 text-groxOrange" />
                 </div>
-                <h3 className="text-base font-bold text-[#111827]">
+                <h3 className="text-base font-normal text-[#111827]">
                   {i + 1}. {c.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">
@@ -713,7 +713,7 @@ export default function WebsiteDevelopmentGurgaon() {
         <div className="mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>How We Work</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Our Proven Website Development Process for Businesses in
               Gurgaon
             </h2>
@@ -738,7 +738,7 @@ export default function WebsiteDevelopmentGurgaon() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#1e40af] text-white shadow-md">
                     <step.Icon className="h-7 w-7" />
                   </div>
-                  <p className="mt-4 text-sm font-bold text-[#111827]">
+                  <p className="mt-4 text-sm font-normal text-[#111827]">
                     {idx + 1}. {step.title}
                   </p>
                   <p className="mt-2 text-xs leading-relaxed text-gray-500">
@@ -763,7 +763,7 @@ export default function WebsiteDevelopmentGurgaon() {
                   <step.Icon className="h-7 w-7" />
                 </div>
                 <div>
-                  <p className="font-bold text-[#111827]">
+                  <p className="font-normal text-[#111827]">
                     {idx + 1}. {step.title}
                   </p>
                   <p className="mt-1 text-sm text-gray-500">
@@ -781,7 +781,7 @@ export default function WebsiteDevelopmentGurgaon() {
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Industries</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Which Industries Do We Build Websites For?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -814,7 +814,7 @@ export default function WebsiteDevelopmentGurgaon() {
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Features</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Website Features Designed to Help Gurgaon Businesses Grow
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -838,7 +838,7 @@ export default function WebsiteDevelopmentGurgaon() {
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50">
                   <f.Icon className="h-5 w-5 text-[#1e40af]" />
                 </div>
-                <h3 className="text-sm font-bold text-[#111827]">{f.title}</h3>
+                <h3 className="text-sm font-normal text-[#111827]">{f.title}</h3>
                 <p className="mt-2 text-xs leading-relaxed text-gray-500">
                   {f.description}
                 </p>
@@ -857,7 +857,7 @@ export default function WebsiteDevelopmentGurgaon() {
         className="bg-gradient-to-r from-[#1e40af] to-[#111827] py-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-2xl sm:text-3xl font-normal text-white md:text-4xl">
             Take Your Gurgaon Business Online With Grox Media
           </h2>
           <p className="mt-4 text-lg text-white/70">
@@ -888,7 +888,7 @@ export default function WebsiteDevelopmentGurgaon() {
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-12">
             <SectionBadge>FAQs</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Frequently Asked Questions
             </h2>
           </motion.div>
@@ -902,7 +902,7 @@ export default function WebsiteDevelopmentGurgaon() {
                 transition={{ delay: i * 0.06 }}
                 className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
               >
-                <h3 className="text-lg font-bold text-[#111827]">
+                <h3 className="text-lg font-normal text-[#111827]">
                   {i + 1}. {faq.q}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-gray-500">

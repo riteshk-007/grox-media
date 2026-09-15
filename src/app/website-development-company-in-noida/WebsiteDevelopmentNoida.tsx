@@ -364,7 +364,7 @@ export default function WebsiteDevelopmentNoida() {
               transition={{ duration: 0.5 }}
               className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8"
             >
-              <h2 className="mb-2 text-2xl font-bold text-[#111827]">
+              <h2 className="mb-2 text-2xl font-normal text-[#111827]">
                 Get a Free Quote
               </h2>
               <p className="mb-6 text-sm text-gray-400">
@@ -488,7 +488,7 @@ export default function WebsiteDevelopmentNoida() {
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Our Presence</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Web Development Services Across Major Indian Cities
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -510,7 +510,7 @@ export default function WebsiteDevelopmentNoida() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-50">
                   <MapPin className="h-6 w-6 text-[#1e40af]" />
                 </div>
-                <p className="font-bold text-[#111827]">{loc.city}</p>
+                <p className="font-normal text-[#111827]">{loc.city}</p>
                 <p className="text-xs text-gray-400 leading-snug">
                   {loc.label}
                 </p>
@@ -531,7 +531,7 @@ export default function WebsiteDevelopmentNoida() {
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>What We Build</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Website Development Services We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -564,7 +564,7 @@ export default function WebsiteDevelopmentNoida() {
                 >
                   <svc.icon className="h-7 w-7 text-[#1e40af]" />
                 </div>
-                <h3 className="mb-3 text-lg font-bold text-[#111827]">
+                <h3 className="mb-3 text-lg font-normal text-[#111827]">
                   {svc.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-500">
@@ -581,7 +581,7 @@ export default function WebsiteDevelopmentNoida() {
         <div className="mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>How We Work</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Our Website Development Process
             </h2>
           </motion.div>
@@ -597,10 +597,10 @@ export default function WebsiteDevelopmentNoida() {
                   transition={{ delay: idx * 0.15 }}
                   className="flex max-w-[160px] flex-col items-center text-center"
                 >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#1e40af] text-lg font-bold text-white shadow-md">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#1e40af] text-lg font-semibold text-white shadow-md">
                     {idx + 1}
                   </div>
-                  <p className="mt-4 text-base font-bold text-[#111827]">
+                  <p className="mt-4 text-base font-normal text-[#111827]">
                     {step.title}
                   </p>
                   <p className="mt-2 text-sm text-gray-500">
@@ -621,11 +621,11 @@ export default function WebsiteDevelopmentNoida() {
                 transition={{ delay: idx * 0.1 }}
                 className="relative flex gap-6 pl-4"
               >
-                <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#1e40af] text-lg font-bold text-white">
+                <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#1e40af] text-lg font-semibold text-white">
                   {idx + 1}
                 </div>
                 <div>
-                  <p className="font-bold text-[#111827]">{step.title}</p>
+                  <p className="font-normal text-[#111827]">{step.title}</p>
                   <p className="mt-1 text-sm text-gray-500">
                     {step.description}
                   </p>
@@ -641,7 +641,7 @@ export default function WebsiteDevelopmentNoida() {
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <SectionBadge>Why Grox Media</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Why Noida Businesses Work With Us
             </h2>
           </motion.div>
@@ -659,7 +659,7 @@ export default function WebsiteDevelopmentNoida() {
                   {w.stat}
                 </p>
                 <p className="text-sm text-gray-500">{w.label}</p>
-                <h3 className="mt-2 text-lg font-bold text-[#111827]">
+                <h3 className="mt-2 text-lg font-normal text-[#111827]">
                   {w.title}
                 </h3>
                 <p className="mt-2 text-sm text-gray-500">{w.description}</p>
@@ -678,7 +678,7 @@ export default function WebsiteDevelopmentNoida() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUp}>
             <SectionBadge>Tech Stack</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Technologies We Work With
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -699,7 +699,7 @@ export default function WebsiteDevelopmentNoida() {
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp}>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">
+            <h2 className="text-2xl sm:text-3xl font-normal text-[#111827] mb-6">
               About Our Website Development Company in Noida
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
@@ -758,7 +758,7 @@ export default function WebsiteDevelopmentNoida() {
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-10">
             <SectionBadge>Contact Us</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Get in Touch
             </h2>
           </motion.div>
@@ -842,7 +842,7 @@ export default function WebsiteDevelopmentNoida() {
         className="bg-gradient-to-r from-[#1e40af] to-[#111827] py-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-2xl sm:text-3xl font-normal text-white md:text-4xl">
             Let&apos;s Ship Something Your Noida Competitors Will Envy
           </h2>
           <p className="mt-4 text-lg text-white/70">
@@ -872,7 +872,7 @@ export default function WebsiteDevelopmentNoida() {
         <div className="mx-auto max-w-4xl px-6">
           <motion.div {...fadeUp} className="text-center mb-12">
             <SectionBadge>FAQs</SectionBadge>
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#111827] md:text-4xl">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-normal text-[#111827] md:text-4xl">
               Common Questions
             </h2>
           </motion.div>
@@ -907,7 +907,7 @@ export default function WebsiteDevelopmentNoida() {
                 transition={{ delay: i * 0.08 }}
                 className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
               >
-                <h3 className="text-lg font-bold text-[#111827]">{faq.q}</h3>
+                <h3 className="text-lg font-normal text-[#111827]">{faq.q}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-gray-500">
                   {faq.a}
                 </p>
