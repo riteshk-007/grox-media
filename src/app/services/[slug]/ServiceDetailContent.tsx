@@ -104,8 +104,10 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                 <SectionBadge>{service.navLabel}</SectionBadge>
               </div>
 
-              {/* Single H1 on the page */}
-              <h1 className="mt-5 text-balance text-3xl leading-tight tracking-tight text-[#111827] sm:text-4xl md:text-5xl md:leading-[1.15]">
+              {/* Single H1 on the page — !font-normal wins over the global
+                  `h1{font-weight:500!important}` rule since Tailwind's
+                  `!` prefix also emits `!important`. */}
+              <h1 className="mt-5 text-balance text-3xl !font-normal leading-tight tracking-tight text-[#111827] sm:text-4xl md:text-5xl md:leading-[1.15]">
                 {service.title}
               </h1>
 
@@ -212,7 +214,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
             <SectionBadge>What&apos;s Included</SectionBadge>
             <h2
               id="what-we-do-heading"
-              className="mt-4 text-2xl tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
+              className="mt-4 text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
             >
               What We Do
             </h2>
@@ -231,7 +233,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                 <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-groxOrange/10 text-groxOrange transition-colors duration-300 group-hover:bg-groxOrange group-hover:text-white">
                   <Check className="h-5 w-5" aria-hidden />
                 </span>
-                <h3 className="mt-4 text-base text-[#111827] sm:text-lg">{item.title}</h3>
+                <h3 className="mt-4 text-base !font-normal text-[#111827] sm:text-lg">{item.title}</h3>
                 <p className="mt-2.5 flex-1 text-sm leading-relaxed text-[#6b7280]">
                   {item.description}
                 </p>
@@ -275,7 +277,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
             <SectionBadge>Our Process</SectionBadge>
             <h2
               id="process-heading"
-              className="mt-4 text-2xl tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
+              className="mt-4 text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
             >
               How It Works
             </h2>
@@ -303,7 +305,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                      <h3 className="text-base text-[#111827] sm:text-lg">
+                      <h3 className="text-base !font-normal text-[#111827] sm:text-lg">
                         {step.title}
                       </h3>
                       <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-gray-500">
@@ -328,7 +330,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
             <SectionBadge>Why Grox Media</SectionBadge>
             <h2
               id="why-us-heading"
-              className="mt-4 text-2xl tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
+              className="mt-4 text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
             >
               Working With Us
             </h2>
@@ -349,7 +351,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                   <span className="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-xl bg-groxBlue/10 text-groxBlue">
                     <PointIcon className="h-5 w-5" aria-hidden />
                   </span>
-                  <h3 className="mt-4 text-sm text-[#111827] sm:text-base">
+                  <h3 className="mt-4 text-sm !font-normal text-[#111827] sm:text-base">
                     {point.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#6b7280]">
@@ -369,7 +371,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
             <SectionBadge>FAQs</SectionBadge>
             <h2
               id="faq-heading"
-              className="mt-4 text-2xl tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
+              className="mt-4 text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
             >
               Frequently Asked Questions
             </h2>
@@ -461,7 +463,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
             <SectionBadge>Explore More</SectionBadge>
             <h2
               id="other-services-heading"
-              className="mt-4 text-2xl tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
+              className="mt-4 text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
             >
               Other Services
             </h2>
@@ -490,7 +492,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                     <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-groxBlue/10 text-groxBlue transition-colors duration-300 group-hover:bg-groxBlue group-hover:text-white">
                       <OtherIcon className="h-5 w-5" aria-hidden />
                     </span>
-                    <h3 className="mt-4 text-base text-[#111827] transition-colors group-hover:text-groxBlue sm:text-lg">
+                    <h3 className="mt-4 text-base !font-normal text-[#111827] transition-colors group-hover:text-groxBlue sm:text-lg">
                       {other.title}
                     </h3>
                     <p className="mt-2.5 line-clamp-3 flex-1 text-sm leading-relaxed text-[#6b7280]">
@@ -537,7 +539,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
         <motion.div {...fadeUp} className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2
             id="cta-heading"
-            className="text-balance text-2xl !text-white sm:text-3xl md:text-4xl md:leading-tight"
+            className="text-balance text-2xl !font-normal !text-white sm:text-3xl md:text-4xl md:leading-tight"
           >
             Ready to get started with {service.title}?
           </h2>
