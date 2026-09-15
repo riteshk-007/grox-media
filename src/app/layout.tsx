@@ -125,6 +125,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N9RXMV37');`}
         </Script>
         {/* End Google Tag Manager */}
+
+        {/* OpenAI Pixel */}
+        <Script id="openai-pixel" strategy="afterInteractive">
+          {`!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"S5zogTL9MvAiWfuPh1Wz1b"});`}
+        </Script>
+        {/* End OpenAI Pixel */}
       </head>
       <body
         className={`${sharpLight.variable} ${sharpHeading.variable} font-jakarta antialiased pb-24 md:pb-16 overflow-x-hidden`}
