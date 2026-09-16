@@ -3,7 +3,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingButtons from "@/components/layout/FloatingButtons";
-import InstallPWAButton from "@/components/layout/InstallPWAButton";
 import { Toaster } from "@/components/ui/sonner";
 
 export default function AppShell({
@@ -16,7 +15,6 @@ export default function AppShell({
       <Navbar />
       {children}
       <FloatingButtons />
-      <InstallPWAButton />
       <Toaster />
       <Footer />
 

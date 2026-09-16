@@ -1,16 +1,8 @@
 /** @type {import('next').NextConfig} */
 import path from "path";
 import { fileURLToPath } from "url";
-import withPWAInit from "next-pwa";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const withPWA = withPWAInit({
-    dest: "public",
-    register: false,
-    skipWaiting: true,
-    disable: process.env.NODE_ENV === "development",
-});
 
 const nextConfig = {
     images: {
@@ -46,4 +38,4 @@ const nextConfig = {
     },
 };
 
-export default withPWA(nextConfig);
+export default nextConfig;
