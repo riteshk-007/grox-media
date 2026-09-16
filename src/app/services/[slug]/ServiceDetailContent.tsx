@@ -417,7 +417,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                             isOpen ? "h-8 bg-groxOrange" : "h-5 bg-groxBlue"
                           )}
                         />
-                        <span className="text-sm font-semibold text-[#111827] sm:text-base">
+                        <span className="text-sm font-normal text-[#111827] sm:text-base">
                           {faq.question}
                         </span>
                       </span>
