@@ -13,10 +13,13 @@ import {
   Clock,
   ShieldCheck,
   MessageSquare,
+  CheckCircle2,
+  Building2,
 } from "lucide-react";
 import SectionBadge from "@/components/ui/SectionBadge";
 import GetStartedDialog from "@/components/shared/GetStartedDialog";
 import { services, getServiceBySlug } from "@/data/services";
+import { serviceExtras } from "@/data/serviceContent";
 import { cn } from "@/lib/utils";
 
 const fadeUp = {
@@ -65,6 +68,8 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
 
   if (!service) return null;
 
+  const extras = serviceExtras[service.slug];
+  const faqs = [...service.faqs, ...(extras?.extraFaqs ?? [])];
   const otherServices = services.filter((s) => s.slug !== service.slug).slice(0, 3);
   const HeroIcon = service.Icon;
 
@@ -207,6 +212,30 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* ═══ IN-DEPTH OVERVIEW ═══ */}
+      {extras && (
+        <section className="py-8 md:py-12" aria-labelledby="in-depth-heading">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <motion.div {...fadeUp}>
+              <SectionBadge>{service.title}</SectionBadge>
+              <h2
+                id="in-depth-heading"
+                className="mt-4 text-balance text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
+              >
+                {extras.overviewHeading}
+              </h2>
+              <div className="mt-6 space-y-5">
+                {extras.overview.map((para) => (
+                  <p key={para.slice(0, 40)} className="text-base leading-relaxed text-[#4b5563] md:text-[17px] md:leading-[1.85]">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* ═══ WHAT WE DO ═══ */}
       <section className="bg-gray-50/60 py-8 md:py-12" aria-labelledby="what-we-do-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -242,6 +271,83 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
+
+      {/* ═══ BENEFITS ═══ */}
+      {extras && (
+        <section className="py-8 md:py-12" aria-labelledby="benefits-heading">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <motion.div {...fadeUp} className="mx-auto max-w-2xl text-center">
+              <SectionBadge>Benefits</SectionBadge>
+              <h2
+                id="benefits-heading"
+                className="mt-4 text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl md:text-4xl"
+              >
+                Why Choose Our {service.title} Service
+              </h2>
+            </motion.div>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 md:mt-10">
+              {extras.benefits.map((b, i) => (
+                <motion.div
+                  key={b.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.45, delay: i * 0.06, ease: "easeOut" }}
+                  className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-groxBlue/10 text-groxBlue">
+                    <CheckCircle2 className="h-5 w-5" aria-hidden />
+                  </span>
+                  <h3 className="mt-4 text-base !font-normal text-[#111827] sm:text-lg">{b.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[#6b7280]">{b.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ═══ DELIVERABLES & INDUSTRIES ═══ */}
+      {extras && (
+        <section className="bg-gray-50/60 py-8 md:py-12" aria-labelledby="deliverables-heading">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 lg:grid-cols-[1.4fr_1fr] lg:px-8">
+            <motion.div {...fadeUp} className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8">
+              <SectionBadge>Deliverables</SectionBadge>
+              <h2
+                id="deliverables-heading"
+                className="mt-4 text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl"
+              >
+                What You Get
+              </h2>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {extras.deliverables.map((d) => (
+                  <li key={d} className="flex items-start gap-2.5 text-sm leading-relaxed text-[#374151]">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-groxOrange" aria-hidden />
+                    {d}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div {...fadeUp} className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8">
+              <SectionBadge>Industries</SectionBadge>
+              <h2 className="mt-4 text-2xl !font-normal tracking-tight text-[#111827] sm:text-3xl">
+                Who We Work With
+              </h2>
+              <ul className="mt-6 flex flex-wrap gap-2.5">
+                {extras.industries.map((ind) => (
+                  <li
+                    key={ind}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-3.5 py-2 text-sm text-gray-700"
+                  >
+                    <Building2 className="h-3.5 w-3.5 text-groxBlue" aria-hidden />
+                    {ind}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* ═══ VIDEO ═══ */}
       <section className="py-8 md:py-12" aria-labelledby="video-heading">
@@ -378,7 +484,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
           </motion.div>
 
           <div className="mt-8 space-y-3 md:mt-10">
-            {service.faqs.map((faq, i) => {
+            {faqs.map((faq, i) => {
               const isOpen = openFaq === i;
               const panelId = `faq-panel-${i}`;
               const buttonId = `faq-button-${i}`;

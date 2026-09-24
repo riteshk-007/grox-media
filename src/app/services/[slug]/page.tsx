@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { services, getServiceBySlug } from "@/data/services";
+import { serviceExtras } from "@/data/serviceContent";
 import ServiceDetailContent from "./ServiceDetailContent";
 
 type Props = {
@@ -76,7 +77,7 @@ export default function ServiceDetailPage({ params }: Props) {
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: service.faqs.map((f) => ({
+      mainEntity: [...service.faqs, ...(serviceExtras[service.slug]?.extraFaqs ?? [])].map((f) => ({
         "@type": "Question",
         name: f.question,
         acceptedAnswer: {

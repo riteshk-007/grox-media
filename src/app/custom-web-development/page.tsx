@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CustomWebDevelopment from "./CustomWebDevelopment";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development Company | Grox Media",
+  title: "Custom Web Development Company",
   description:
     "Grox Media builds high-performance custom websites that turn visitors into customers — business websites, eCommerce stores, landing pages, redesigns, and CMS builds. Get a free consultation.",
   keywords: [

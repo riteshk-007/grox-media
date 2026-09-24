@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { industryPages } from "@/data/industryPages";
 import { Instagram, Linkedin, Phone, Mail } from "lucide-react";
 
 const quickLinks = [
@@ -154,6 +155,21 @@ export default function Footer() {
               </p>
             ))}
           </div>
+        </div>
+
+        <div className="mt-8 border-t border-gray-100 pt-8">
+          <h4 className="text-sm font-semibold text-[#111827]">
+            Website design by industry
+          </h4>
+          <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-sm text-[#6b7280] sm:grid-cols-2 lg:grid-cols-4">
+            {industryPages.map((p) => (
+              <li key={p.slug}>
+                <Link href={`/${p.slug}`} className="transition hover:text-groxBlue">
+                  {p.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-8 text-center text-xs text-[#6b7280] sm:flex-row sm:text-left">

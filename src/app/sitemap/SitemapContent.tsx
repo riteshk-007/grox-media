@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { Globe, Code, Paintbrush, ShieldCheck, ArrowUpRight } from "lucide-react";
 import SectionBadge from "@/components/ui/SectionBadge";
+import { industryPages } from "@/data/industryPages";
 
 const corePages = [
   { name: "Home", url: "https://groxmedia.in/", path: "/" },
@@ -211,6 +212,34 @@ export default function SitemapContent() {
                   </li>
                 );
               })}
+            </ul>
+          </motion.div>
+
+          {/* Industry Website Design Pages */}
+          <motion.div
+            variants={itemVariants}
+            className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 md:col-span-2 lg:col-span-3"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 bg-blue-50 text-blue-600 rounded-2xl">
+                <Globe className="h-6 w-6" />
+              </div>
+              <h2 className="text-xl font-bold text-[#111827]">Industry Website Design</h2>
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+              {industryPages.map((page) => (
+                <li key={page.slug}>
+                  <Link
+                    href={`/${page.slug}`}
+                    className="group flex justify-between items-center p-3 rounded-2xl hover:bg-slate-50 transition duration-200"
+                  >
+                    <span className="font-semibold text-gray-800 group-hover:text-blue-600 transition">
+                      {page.title}
+                    </span>
+                    <ArrowUpRight className="h-4 w-4 text-gray-400 group-hover:text-blue-600 transition" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </motion.div>
 

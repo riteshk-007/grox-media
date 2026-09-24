@@ -12,8 +12,10 @@ import FAQPreview from "@/components/sections/FAQPreview";
 import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
-  title:
-    "Grox Media — Web Development, SEO & Digital Marketing Company in India",
+  title: {
+    absolute:
+      "Grox Media — Web Development, SEO & Digital Marketing Company in India",
+  },
   description:
     "Grox Media LLP is a Delhi NCR-based web development, SEO, and digital marketing company. We build custom websites, mobile apps, branding, and performance marketing solutions for businesses across India.",
   alternates: {

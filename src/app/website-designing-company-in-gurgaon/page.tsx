@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import WebsiteDesigningGurgaon from "./WebsiteDesigningGurgaon";
 
 export const metadata: Metadata = {
-  title: "Website Designing Company in Gurgaon | Grox Media",
+  title: "Website Designing Company in Gurgaon",
   description:
     "Grox Media designs websites that convert for Gurgaon businesses. Premium UI/UX, brand-aligned visuals, and mobile-first layouts. Cyber City to Sector 44. Call +91 92668 06477.",
   keywords: [

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import WebsiteDevelopmentDelhi from "./WebsiteDevelopmentDelhi";
 
 export const metadata: Metadata = {
-  title: "Website Development Company in Delhi | Grox Media",
+  title: "Website Development Company in Delhi",
   description:
     "Grox Media builds websites for Delhi businesses — trading, retail, professional services & more. Clean code, fast delivery, SEO-ready. Call +91 92668 06477.",
   keywords: [

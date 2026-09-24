@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
+import { industryPages } from "@/data/industryPages";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
@@ -42,6 +43,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.75,
+  }));
+
+  const industryLandingPages = industryPages.map((p) => ({
+    url: `${baseUrl}/${p.slug}`,
+    lastModified: new Date("2026-09-24"),
+    changeFrequency: "monthly" as const,
+    // Gurgaon is the primary target market.
+    priority: p.location.key === "gurgaon" ? 0.85 : 0.75,
   }));
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -108,6 +117,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...developmentPages,
     ...designingPages,
     ...serviceDetailPages,
+    ...industryLandingPages,
   ];
 
   return staticPages;
