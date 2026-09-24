@@ -19,7 +19,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── GYM ───────────────────────── */
   "gym-gurgaon": {
     metaDescription:
-      "Gym website design in Gurgaon (Gurugram) for gyms, CrossFit boxes & fitness studios. Trial booking, membership plans, class schedules & local SEO. Free quote: +91 92668 06477.",
+      "Gym website designing company in Gurgaon (Gurugram) for gyms, CrossFit boxes & fitness studios. Trial booking, membership plans, class schedules & local SEO. Free quote: +91 92668 06477.",
     heading: "Gym Websites for Gurgaon's Fitness Market",
     paragraphs: [
       "Gurgaon's fitness scene ranges from premium clubs inside DLF and Golf Course Road societies to neighbourhood gyms in Sector 14, Palam Vihar, and New Gurgaon, plus a growing number of CrossFit boxes, yoga studios, and functional-training spaces. With so many options within a few kilometres, members choose based on what they see online first.",
@@ -40,7 +40,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "gym-dwarka": {
     metaDescription:
-      "Gym website design in Dwarka, New Delhi for gyms & fitness centres. Trial booking, membership plans, WhatsApp enquiries & sector-level local SEO. Call +91 92668 06477.",
+      "Gym website designing company in Dwarka, New Delhi for gyms & fitness centres. Trial booking, membership plans, WhatsApp enquiries & sector-level local SEO. Call +91 92668 06477.",
     heading: "Gym Websites for Dwarka's Sectors",
     paragraphs: [
       "In Dwarka, most people join a gym within walking or short driving distance of home. That means your real competition is the two or three gyms in your own and neighbouring sectors, and the one with the clearer website and better Google presence usually wins the enquiry.",
@@ -60,7 +60,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── DENTAL ───────────────────────── */
   "dental-clinic-gurgaon": {
     metaDescription:
-      "Dental clinic website design in Gurgaon (Gurugram). Treatment pages, online appointments, doctor profiles & local SEO for dentists and orthodontists. Free quote: +91 92668 06477.",
+      "Dental clinic website designing company in Gurgaon (Gurugram). Treatment pages, online appointments, doctor profiles & local SEO for dentists and orthodontists. Free quote: +91 92668 06477.",
     heading: "Dental Clinic Websites for Gurgaon Patients",
     paragraphs: [
       "Gurgaon patients tend to research treatments in detail before choosing a dentist, especially for higher-value procedures like implants, clear aligners, veneers, and full-mouth rehabilitation. Clinics that explain these treatments clearly online — process, duration, recovery, and what to expect — earn more trust and more consultations.",
@@ -81,7 +81,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "dental-clinic-dwarka": {
     metaDescription:
-      "Dental clinic website design in Dwarka, New Delhi. Online appointments, treatment pages, doctor profiles & Google Maps SEO for family dentists. Call +91 92668 06477.",
+      "Dental clinic website designing company in Dwarka, New Delhi. Online appointments, treatment pages, doctor profiles & Google Maps SEO for family dentists. Call +91 92668 06477.",
     heading: "Dental Clinic Websites for Dwarka Families",
     paragraphs: [
       "Most dental patients in Dwarka are families looking for a trusted clinic close to home for regular check-ups, children's dentistry, fillings, and root canals. Reviews and word of mouth matter a lot, and your website should support that trust with clear doctor information and genuine patient feedback.",
@@ -101,7 +101,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── PET SHOP ───────────────────────── */
   "pet-shop-gurgaon": {
     metaDescription:
-      "Pet shop website design in Gurgaon (Gurugram). Online store, pet food delivery, grooming booking & WhatsApp ordering for pet stores and groomers. Free quote: +91 92668 06477.",
+      "Pet shop website designing company in Gurgaon (Gurugram). Online store, pet food delivery, grooming booking & WhatsApp ordering for pet stores and groomers. Free quote: +91 92668 06477.",
     heading: "Pet Shop Websites for Gurgaon's Pet Parents",
     paragraphs: [
       "Gurgaon's high-rise societies — along Golf Course Road, Golf Course Extension, Sohna Road, and New Gurgaon's sectors — are home to a large community of pet parents who are used to ordering online. They expect to browse products, check prices, and get delivery at their doorstep or society gate.",
@@ -122,7 +122,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "pet-shop-dwarka": {
     metaDescription:
-      "Pet shop website design in Dwarka, New Delhi. Online pet store, local delivery, grooming appointments & WhatsApp orders for pet shops. Call +91 92668 06477.",
+      "Pet shop website designing company in Dwarka, New Delhi. Online pet store, local delivery, grooming appointments & WhatsApp orders for pet shops. Call +91 92668 06477.",
     heading: "Pet Shop Websites for Dwarka",
     paragraphs: [
       "Dwarka's residential sectors and housing societies have many pet-owning families who prefer a reliable neighbourhood store for pet food and supplies. A website lets them check availability and order from home, while keeping the personal relationship they value with a local shop.",
@@ -142,7 +142,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── IMPORT EXPORT ───────────────────────── */
   "import-export-gurgaon": {
     metaDescription:
-      "Import export website design in Gurgaon (Gurugram) for exporters, importers & trading companies. Product catalogues, RFQ forms, certifications & international SEO. Free quote: +91 92668 06477.",
+      "Import export website designing company in Gurgaon (Gurugram) for exporters, importers & trading companies. Product catalogues, RFQ forms, certifications & international SEO. Free quote: +91 92668 06477.",
     heading: "Import Export Websites for Gurgaon Businesses",
     paragraphs: [
       "Gurgaon and its surrounding industrial belts — Udyog Vihar, IMT Manesar, Sector 37, and the areas along NH-48 — host a large number of manufacturers, export houses, and trading companies, particularly in garments, auto components, engineering goods, handicrafts, and processed foods.",
@@ -163,7 +163,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "import-export-dwarka": {
     metaDescription:
-      "Import export website design in Dwarka, New Delhi for traders & exporters near IGI Airport. Product catalogues, RFQ forms & credibility-focused design. Call +91 92668 06477.",
+      "Import export website designing company in Dwarka, New Delhi for traders & exporters near IGI Airport. Product catalogues, RFQ forms & credibility-focused design. Call +91 92668 06477.",
     heading: "Import Export Websites for Dwarka Traders",
     paragraphs: [
       "Dwarka's location beside IGI Airport, along with easy access to the Dwarka Expressway and cargo facilities, makes it a practical base for importers, exporters, freight-linked traders, and small export houses.",
@@ -183,7 +183,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── ECOMMERCE ───────────────────────── */
   "ecommerce-gurgaon": {
     metaDescription:
-      "Ecommerce website design in Gurgaon (Gurugram) for D2C brands & retailers. Shopify, WooCommerce & custom stores with UPI, COD, shipping & SEO. Free quote: +91 92668 06477.",
+      "Ecommerce website designing company in Gurgaon (Gurugram) for D2C brands & retailers. Shopify, WooCommerce & custom stores with UPI, COD, shipping & SEO. Free quote: +91 92668 06477.",
     heading: "Ecommerce Websites for Gurgaon Brands",
     paragraphs: [
       "Gurgaon is one of India's major hubs for D2C brands and ecommerce startups across fashion, beauty, wellness, food, and home products. Many of these brands start on marketplaces and then build their own website to protect margins, own customer data, and build a stronger brand.",
@@ -204,7 +204,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "ecommerce-dwarka": {
     metaDescription:
-      "Ecommerce website design in Dwarka, New Delhi for local retailers & home-based brands. Online stores with UPI, COD, courier integration & easy admin. Call +91 92668 06477.",
+      "Ecommerce website designing company in Dwarka, New Delhi for local retailers & home-based brands. Online stores with UPI, COD, courier integration & easy admin. Call +91 92668 06477.",
     heading: "Ecommerce Websites for Dwarka Retailers",
     paragraphs: [
       "Many Dwarka businesses — from clothing and saree stores to home bakers, handicraft makers, and small brands — want to sell online without the complexity of large platforms. A simple, well-built online store lets them reach customers across Delhi NCR and India.",
@@ -224,7 +224,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── LAWYER ───────────────────────── */
   "lawyer-gurgaon": {
     metaDescription:
-      "Lawyer & law firm website design in Gurgaon (Gurugram). Practice area pages, advocate profiles & consultation forms, built within Bar Council guidelines. Free quote: +91 92668 06477.",
+      "Lawyer & law firm website designing company in Gurgaon (Gurugram). Practice area pages, advocate profiles & consultation forms, built within Bar Council guidelines. Free quote: +91 92668 06477.",
     heading: "Law Firm Websites for Gurgaon Advocates",
     paragraphs: [
       "Legal work in Gurgaon covers a wide range, from corporate, commercial, and employment matters for the city's many companies to real-estate and RERA disputes, matrimonial cases, and property matters for residents. People looking for legal help often start by researching specific issues online.",
@@ -245,7 +245,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "lawyer-dwarka": {
     metaDescription:
-      "Lawyer & advocate website design in Dwarka, New Delhi. Informative practice area pages, profiles & consultation forms, designed within Bar Council guidelines. Call +91 92668 06477.",
+      "Lawyer & advocate website designing company in Dwarka, New Delhi. Informative practice area pages, profiles & consultation forms, designed within Bar Council guidelines. Call +91 92668 06477.",
     heading: "Advocate Websites for Dwarka",
     paragraphs: [
       "With the Dwarka Court complex serving South-West Delhi, many advocates in and around Dwarka handle family, property, civil, criminal, and cheque-bounce matters for local residents. People searching for legal help here want clear, factual information about your experience and areas of practice.",
@@ -265,7 +265,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── EDUCATION ───────────────────────── */
   "education-gurgaon": {
     metaDescription:
-      "School & education website design in Gurgaon (Gurugram). Admission forms, notice boards, fee payment & mandatory disclosure for CBSE, ICSE & IB schools. Free quote: +91 92668 06477.",
+      "School & education website designing company in Gurgaon (Gurugram). Admission forms, notice boards, fee payment & mandatory disclosure for CBSE, ICSE & IB schools. Free quote: +91 92668 06477.",
     heading: "School & Education Websites for Gurgaon",
     paragraphs: [
       "Gurgaon has one of the most competitive school markets in the NCR, with CBSE, ICSE, IB, and Cambridge schools across Golf Course Road, Sohna Road, DLF, and New Gurgaon. Parents here compare schools carefully — curriculum, teaching approach, facilities, transport routes, and fee structure — before shortlisting.",
@@ -286,7 +286,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "education-dwarka": {
     metaDescription:
-      "School & education website design in Dwarka, New Delhi. Admission enquiry forms, notices, events, fee payment & mandatory disclosure pages. Call +91 92668 06477.",
+      "School & education website designing company in Dwarka, New Delhi. Admission enquiry forms, notices, events, fee payment & mandatory disclosure pages. Call +91 92668 06477.",
     heading: "School Websites for Dwarka",
     paragraphs: [
       "Dwarka has a large number of schools across its sectors, and many parents consider several nearby options during admission season, including nursery admissions. A clear, informative website helps your school stand out in that comparison.",
@@ -306,7 +306,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── COACHING ───────────────────────── */
   "coaching-institute-gurgaon": {
     metaDescription:
-      "Coaching institute website design in Gurgaon (Gurugram) for JEE, NEET, CAT, IELTS & tuition centres. Demo class booking, course pages, fee payment & lead-focused SEO. Free quote: +91 92668 06477.",
+      "Coaching institute website designing company in Gurgaon (Gurugram) for JEE, NEET, CAT, IELTS & tuition centres. Demo class booking, course pages, fee payment & lead-focused SEO. Free quote: +91 92668 06477.",
     heading: "Coaching Institute Websites for Gurgaon",
     paragraphs: [
       "Gurgaon's coaching market includes school tuition centres, JEE and NEET coaching, CAT and GMAT preparation, IELTS and study-abroad coaching, and professional upskilling courses in coding, data science, and digital marketing. Each audience searches differently and needs different information.",
@@ -327,7 +327,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "coaching-institute-dwarka": {
     metaDescription:
-      "Coaching institute & tuition centre website design in Dwarka, New Delhi. Demo class booking, course pages, batch timings & results showcase. Call +91 92668 06477.",
+      "Coaching institute & tuition centre website designing company in Dwarka, New Delhi. Demo class booking, course pages, batch timings & results showcase. Call +91 92668 06477.",
     heading: "Coaching Institute Websites for Dwarka",
     paragraphs: [
       "Dwarka has a large school-going population, and many families look for tuition and coaching centres close to home for school subjects, board exam preparation, and competitive exams. Parents compare centres on results, teachers, batch sizes, and distance.",
@@ -347,7 +347,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── TRADING ───────────────────────── */
   "trading-gurgaon": {
     metaDescription:
-      "Trading company website design in Gurgaon (Gurugram) for wholesalers & distributors. Product catalogues, dealer enquiries, bulk quotes & dealer login. Free quote: +91 92668 06477.",
+      "Trading company website designing company in Gurgaon (Gurugram) for wholesalers & distributors. Product catalogues, dealer enquiries, bulk quotes & dealer login. Free quote: +91 92668 06477.",
     heading: "Trading Websites for Gurgaon Wholesalers and Distributors",
     paragraphs: [
       "Gurgaon's trading businesses serve a demanding mix of buyers: retailers across the city's markets, contractors working on its many construction projects, and corporate procurement teams in Cyber City and Udyog Vihar. Each group wants something different from your website — retailers want range and margins, contractors want availability and delivery, corporates want credibility and GST-compliant billing.",
@@ -368,7 +368,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "trading-dwarka": {
     metaDescription:
-      "Trading & wholesale website design in Dwarka, New Delhi. Product catalogues, dealer enquiries, WhatsApp orders & price lists for distributors. Call +91 92668 06477.",
+      "Trading & wholesale website designing company in Dwarka, New Delhi. Product catalogues, dealer enquiries, WhatsApp orders & price lists for distributors. Call +91 92668 06477.",
     heading: "Trading Websites for Dwarka Wholesalers",
     paragraphs: [
       "Wholesalers and distributors around Dwarka supply retailers across West and South-West Delhi, often through long-standing relationships. A website helps you reach new retailers, show your full range, and handle repeat orders more efficiently.",
@@ -388,7 +388,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── B2B ───────────────────────── */
   "b2b-gurgaon": {
     metaDescription:
-      "B2B website design in Gurgaon (Gurugram) for manufacturers & industrial suppliers. Capability pages, RFQ forms, case studies, CRM integration & B2B SEO. Free quote: +91 92668 06477.",
+      "B2B website designing company in Gurgaon (Gurugram) for manufacturers & industrial suppliers. Capability pages, RFQ forms, case studies, CRM integration & B2B SEO. Free quote: +91 92668 06477.",
     heading: "B2B Websites for Gurgaon and Manesar Industry",
     paragraphs: [
       "The Gurgaon–Manesar–Bawal belt is a major hub for automotive components, engineering, electronics, and precision manufacturing, supplying OEMs and global customers. Buyers from these industries evaluate suppliers on capability, quality systems, capacity, and experience — and they increasingly start that evaluation online.",
@@ -409,7 +409,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "b2b-dwarka": {
     metaDescription:
-      "B2B website design in Dwarka, New Delhi for suppliers, service companies & manufacturers. Capability pages, RFQ forms, downloads & lead-focused SEO. Call +91 92668 06477.",
+      "B2B website designing company in Dwarka, New Delhi for suppliers, service companies & manufacturers. Capability pages, RFQ forms, downloads & lead-focused SEO. Call +91 92668 06477.",
     heading: "B2B Websites for Dwarka Businesses",
     paragraphs: [
       "B2B businesses in and around Dwarka — including suppliers, logistics-linked companies, and business service providers — benefit from the area's connectivity to the airport, Gurgaon, and West Delhi's industrial areas.",
@@ -429,7 +429,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── HEALTHCARE ───────────────────────── */
   "healthcare-gurgaon": {
     metaDescription:
-      "Healthcare website design in Gurgaon (Gurugram) for hospitals, clinics, diagnostic labs & physiotherapy centres. Doctor profiles, appointments & report downloads. Free quote: +91 92668 06477.",
+      "Healthcare website designing company in Gurgaon (Gurugram) for hospitals, clinics, diagnostic labs & physiotherapy centres. Doctor profiles, appointments & report downloads. Free quote: +91 92668 06477.",
     heading: "Healthcare Websites for Gurgaon Providers",
     paragraphs: [
       "Gurgaon's healthcare market includes large multi-speciality hospitals, specialist clinics, diagnostic chains, IVF and fertility centres, physiotherapy and rehabilitation centres, and home-healthcare providers. With so many options, patients compare doctors, services, and convenience online before choosing.",
@@ -450,7 +450,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "healthcare-dwarka": {
     metaDescription:
-      "Healthcare website design in Dwarka, New Delhi for clinics, nursing homes, diagnostic labs & physiotherapy centres. Appointments, test booking & local SEO. Call +91 92668 06477.",
+      "Healthcare website designing company in Dwarka, New Delhi for clinics, nursing homes, diagnostic labs & physiotherapy centres. Appointments, test booking & local SEO. Call +91 92668 06477.",
     heading: "Healthcare Websites for Dwarka",
     paragraphs: [
       "Families in Dwarka rely on nearby clinics, nursing homes, diagnostic labs, and physiotherapy centres for everyday healthcare. They want quick answers: which doctor is available, what services you offer, your timings, and how to reach you.",
@@ -470,7 +470,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── PRINTING ───────────────────────── */
   "printing-gurgaon": {
     metaDescription:
-      "Printing website design in Gurgaon (Gurugram) for print shops, presses & packaging printers. Artwork upload, price calculators, quotes & online payments. Free quote: +91 92668 06477.",
+      "Printing website designing company in Gurgaon (Gurugram) for print shops, presses & packaging printers. Artwork upload, price calculators, quotes & online payments. Free quote: +91 92668 06477.",
     heading: "Printing Websites for Gurgaon's Business Market",
     paragraphs: [
       "Gurgaon's corporate offices, startups, co-working spaces, and event companies order printing constantly — business cards for new joiners, brochures, standees, event backdrops, office signage, and branded merchandise. These buyers want fast turnaround and the convenience of ordering online.",
@@ -491,7 +491,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "printing-dwarka": {
     metaDescription:
-      "Printing shop website design in Dwarka, New Delhi. Online orders, artwork upload, wedding cards, flex & visiting cards with quotes and payments. Call +91 92668 06477.",
+      "Printing shop website designing company in Dwarka, New Delhi. Online orders, artwork upload, wedding cards, flex & visiting cards with quotes and payments. Call +91 92668 06477.",
     heading: "Printing Websites for Dwarka Print Shops",
     paragraphs: [
       "Print shops in Dwarka handle a wide variety of work: visiting cards, flex banners, school and coaching material, wedding cards, and printing for local shops and events.",
@@ -511,7 +511,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── PERFUME ───────────────────────── */
   "perfume-gurgaon": {
     metaDescription:
-      "Perfume & attar website design in Gurgaon (Gurugram) for fragrance brands. Premium online stores with scent notes, discovery sets, gifting & checkout. Free quote: +91 92668 06477.",
+      "Perfume & attar website designing company in Gurgaon (Gurugram) for fragrance brands. Premium online stores with scent notes, discovery sets, gifting & checkout. Free quote: +91 92668 06477.",
     heading: "Perfume Websites for Gurgaon Brands",
     paragraphs: [
       "Gurgaon is a strong base for premium and D2C fragrance brands. Shoppers here are familiar with international luxury brands, so a homegrown perfume brand needs a website that feels equally refined — thoughtful typography, rich visuals, and detailed product storytelling.",
@@ -532,7 +532,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "perfume-dwarka": {
     metaDescription:
-      "Perfume & attar shop website design in Dwarka, New Delhi. Online store with scent descriptions, attars, gift sets, UPI & COD checkout. Call +91 92668 06477.",
+      "Perfume & attar shop website designing company in Dwarka, New Delhi. Online store with scent descriptions, attars, gift sets, UPI & COD checkout. Call +91 92668 06477.",
     heading: "Perfume Websites for Dwarka Stores",
     paragraphs: [
       "Perfume and attar stores in Dwarka have loyal customers who know and trust their fragrances. A website helps those customers reorder easily and introduces your collection to new buyers across Delhi and India.",
@@ -552,7 +552,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── BEAUTY ───────────────────────── */
   "beauty-gurgaon": {
     metaDescription:
-      "Beauty salon & spa website design in Gurgaon (Gurugram). Service menus, online booking, bridal makeup portfolios & beauty product stores. Free quote: +91 92668 06477.",
+      "Beauty salon & spa website designing company in Gurgaon (Gurugram). Service menus, online booking, bridal makeup portfolios & beauty product stores. Free quote: +91 92668 06477.",
     heading: "Beauty Websites for Gurgaon Salons, Spas & Artists",
     paragraphs: [
       "Gurgaon's beauty clients range from working professionals booking quick grooming appointments after office to brides planning makeup months in advance. Premium salons, unisex salons, nail studios, spas, skin clinics, and freelance makeup artists all compete for the same searches.",
@@ -573,7 +573,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "beauty-dwarka": {
     metaDescription:
-      "Beauty parlour & salon website design in Dwarka, New Delhi. Service price lists, online booking, bridal makeup galleries & WhatsApp enquiries. Call +91 92668 06477.",
+      "Beauty parlour & salon website designing company in Dwarka, New Delhi. Service price lists, online booking, bridal makeup galleries & WhatsApp enquiries. Call +91 92668 06477.",
     heading: "Beauty Websites for Dwarka Salons",
     paragraphs: [
       "Beauty parlours and salons in Dwarka serve regular clients from nearby sectors, and demand peaks during festivals and wedding season. A clear price list and easy booking help clients choose you quickly.",
@@ -593,7 +593,7 @@ export const localDepth: Record<string, LocalDepth> = {
   /* ───────────────────────── AYURVEDIC ───────────────────────── */
   "ayurvedic-gurgaon": {
     metaDescription:
-      "Ayurvedic website design in Gurgaon (Gurugram) for Ayurveda clinics, Panchakarma centres & Ayurvedic product brands. Consultations, therapies & compliant content. Free quote: +91 92668 06477.",
+      "Ayurvedic website designing company in Gurgaon (Gurugram) for Ayurveda clinics, Panchakarma centres & Ayurvedic product brands. Consultations, therapies & compliant content. Free quote: +91 92668 06477.",
     heading: "Ayurvedic Websites for Gurgaon's Wellness Seekers",
     paragraphs: [
       "Many Gurgaon professionals deal with long working hours, commuting, and stress, and a growing number turn to Ayurveda for lifestyle balance, detox, and rejuvenation. They look for qualified practitioners, clean and calm centres, and clear information about therapies and packages.",
@@ -614,7 +614,7 @@ export const localDepth: Record<string, LocalDepth> = {
   },
   "ayurvedic-dwarka": {
     metaDescription:
-      "Ayurvedic clinic & Panchakarma centre website design in Dwarka, New Delhi. Consultation booking, therapy pages & practitioner profiles with responsible content. Call +91 92668 06477.",
+      "Ayurvedic clinic & Panchakarma centre website designing company in Dwarka, New Delhi. Consultation booking, therapy pages & practitioner profiles with responsible content. Call +91 92668 06477.",
     heading: "Ayurvedic Websites for Dwarka",
     paragraphs: [
       "Families in Dwarka often prefer trusted local Ayurvedic practitioners for consultations and traditional therapies. A clear website that explains your approach and therapies, and presents your qualifications, helps new patients choose you.",

@@ -24,7 +24,7 @@ import { cn } from "@/lib/utils";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
+  animate: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-60px" },
   transition: { duration: 0.5, ease: "easeOut" as const },
 };
@@ -254,7 +254,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
               <motion.article
                 key={item.title}
                 initial={{ opacity: 0, y: 22 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.45, delay: i * 0.07, ease: "easeOut" }}
                 className="group flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-groxBlue/20 hover:shadow-xl md:p-7"
@@ -290,7 +290,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                 <motion.div
                   key={b.title}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.45, delay: i * 0.06, ease: "easeOut" }}
                   className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
@@ -394,7 +394,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
               <motion.li
                 key={step.title}
                 initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.45, delay: idx * 0.07, ease: "easeOut" }}
                 className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-groxBlue/30 hover:shadow-xl sm:p-6"
@@ -449,7 +449,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                 <motion.div
                   key={point.title}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.45, delay: i * 0.07, ease: "easeOut" }}
                   className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
@@ -493,7 +493,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                 <motion.div
                   key={faq.question}
                   initial={{ opacity: 0, y: 14 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-30px" }}
                   transition={{ duration: 0.4, delay: i * 0.05, ease: "easeOut" }}
                   className={cn(
@@ -582,7 +582,7 @@ export default function ServiceDetailContent({ slug }: { slug: string }) {
                 <motion.div
                   key={other.slug}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.45, delay: i * 0.08, ease: "easeOut" }}
                   className="last:sm:col-span-2 last:lg:col-span-1"

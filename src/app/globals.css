@@ -99,6 +99,17 @@
     font-weight: 500 !important;
     color: #111827;
   }
+
+  /* The wide display face reads too heavy at card/FAQ/step-title sizes, so
+     smaller headings use the body face instead. */
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-jakarta);
+    font-weight: 400 !important;
+    letter-spacing: -0.005em;
+  }
 }
 
 @keyframes marquee-left {

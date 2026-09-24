@@ -18,9 +18,11 @@ export function generateMetadata({ params }: Props): Metadata {
 
   const path = `/${page.slug}`;
   return {
-    title: page.metaTitle,
+    // Long titles drop the " | Grox Media" suffix so they are not truncated in results.
+    title: page.metaTitle.length > 46 ? { absolute: page.metaTitle } : page.metaTitle,
     description: page.metaDescription,
     keywords: [
+      `${page.industry.name.toLowerCase()} website designing company in ${page.location.name.toLowerCase()}`,
       `${page.industry.name.toLowerCase()} website design ${page.location.name.toLowerCase()}`,
       `${page.industry.name.toLowerCase()} website development ${page.location.name.toLowerCase()}`,
       `${page.industry.name.toLowerCase()} website ${page.location.name.toLowerCase()}`,

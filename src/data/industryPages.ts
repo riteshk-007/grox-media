@@ -715,7 +715,7 @@ export type IndustryPage = {
 };
 
 export const industrySlug = (i: IndustryKey, l: LocationKey) =>
-  `${i}-website-design-in-${l}`;
+  `${i}-website-designing-company-in-${l}`;
 
 export const industryPages: IndustryPage[] = (Object.keys(industries) as IndustryKey[]).flatMap(
   (ik) =>
@@ -724,7 +724,7 @@ export const industryPages: IndustryPage[] = (Object.keys(industries) as Industr
       const location = locations[lk];
       const copy = localCopy[`${ik}-${lk}`];
       const depth = localDepth[`${ik}-${lk}`];
-      const title = `${industry.name} Website Design in ${location.name}`;
+      const title = `${industry.name} Website Designing Company in ${location.name}`;
       return {
         slug: industrySlug(ik, lk),
         industry,
