@@ -883,7 +883,7 @@ export default function WebsiteDevelopmentDelhi() {
             {[
               {
                 q: "How much does a website cost for a Delhi business?",
-                a: "Pricing depends on the scope. A professional business website for a Delhi SME starts at ₹15,000–₹35,000. E-commerce stores for Delhi's retail and trading businesses start from ₹50,000. We give you a detailed, itemised quote after a brief discovery call — no ambiguous packages.",
+                a: "We keep our pricing affordable and give you the best value for Delhi businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
               },
               {
                 q: "How quickly can you build a website for my Delhi business?",

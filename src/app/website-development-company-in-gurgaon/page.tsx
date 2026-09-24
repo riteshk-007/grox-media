@@ -77,7 +77,6 @@ export default function WebsiteDevelopmentGurgaonPage() {
         "CMS Development",
         "Custom Web Solutions",
       ],
-      priceRange: "$$",
       sameAs: [
         "https://www.instagram.com/groxmedia1",
         "https://www.linkedin.com/in/manish-kumar-7a757b211/",

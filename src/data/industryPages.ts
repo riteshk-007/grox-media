@@ -1,4 +1,6 @@
 import { localDepth, type LocalDepth } from "./industryLocalDepth";
+import { industryExtras, type IndustryExtras } from "./industryExtras";
+import { industryBundles } from "./industries";
 
 /**
  * Industry × location landing pages, e.g. /gym-website-design-in-gurgaon.
@@ -29,7 +31,7 @@ export type LocationKey = "gurgaon" | "dwarka";
 type Faq = { question: string; answer: string };
 
 export type Industry = {
-  key: IndustryKey;
+  key: string;
   /** Used in titles: "Gym Website Design in Gurgaon" */
   name: string;
   /** Plural audience: "gyms and fitness studios" */
@@ -711,33 +713,49 @@ export type IndustryPage = {
   metaDescription: string;
   intro: string;
   depth: LocalDepth;
+  extras: IndustryExtras;
   faqs: Faq[];
 };
 
-export const industrySlug = (i: IndustryKey, l: LocationKey) =>
+export const industrySlug = (i: string, l: LocationKey) =>
   `${i}-website-designing-company-in-${l}`;
 
-export const industryPages: IndustryPage[] = (Object.keys(industries) as IndustryKey[]).flatMap(
-  (ik) =>
-    (Object.keys(locations) as LocationKey[]).map((lk) => {
-      const industry = industries[ik];
-      const location = locations[lk];
-      const copy = localCopy[`${ik}-${lk}`];
-      const depth = localDepth[`${ik}-${lk}`];
-      const title = `${industry.name} Website Designing Company in ${location.name}`;
-      return {
-        slug: industrySlug(ik, lk),
-        industry,
-        location,
-        title,
-        metaTitle: title,
-        metaDescription: depth.metaDescription,
-        intro: copy.intro,
-        depth,
-        faqs: [copy.faq, ...depth.faqs, ...industry.faqs],
-      };
-    })
-);
+function buildPage(
+  industry: Industry,
+  location: Location,
+  copy: { intro: string; faq: Faq },
+  depth: LocalDepth,
+  extras: IndustryExtras
+): IndustryPage {
+  const title = `${industry.name} Website Designing Company in ${location.name}`;
+  return {
+    slug: industrySlug(industry.key, location.key),
+    industry,
+    location,
+    title,
+    metaTitle: title,
+    metaDescription: depth.metaDescription,
+    intro: copy.intro,
+    depth,
+    extras,
+    faqs: [copy.faq, ...depth.faqs, ...industry.faqs],
+  };
+}
+
+const locationKeys = Object.keys(locations) as LocationKey[];
+
+export const industryPages: IndustryPage[] = [
+  ...(Object.keys(industries) as IndustryKey[]).flatMap((ik) =>
+    locationKeys.map((lk) =>
+      buildPage(industries[ik], locations[lk], localCopy[`${ik}-${lk}`], localDepth[`${ik}-${lk}`], industryExtras[ik])
+    )
+  ),
+  ...industryBundles.flatMap((b) =>
+    locationKeys.map((lk) =>
+      buildPage(b.industry, locations[lk], b.local[lk], b.local[lk].depth, b.extras)
+    )
+  ),
+];
 
 export const getIndustryPage = (slug: string) =>
   industryPages.find((p) => p.slug === slug);

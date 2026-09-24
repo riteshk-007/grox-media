@@ -78,7 +78,6 @@ export default function WebsiteDesigningGurgaonPage() {
         "Brand Identity Design",
         "Landing Page Design",
       ],
-      priceRange: "$$",
       sameAs: [
         "https://www.instagram.com/groxmedia1",
         "https://www.linkedin.com/in/manish-kumar-7a757b211/",
@@ -107,7 +106,7 @@ export default function WebsiteDesigningGurgaonPage() {
           name: "How much does website design cost for a Gurgaon business?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For Gurgaon businesses, a professionally designed business website starts at ₹12,000–₹28,000. Landing pages and campaign microsites start at ₹8,000. Full brand identity packages with website design start from ₹35,000. Every quote is scoped and fixed — no open-ended pricing.",
+            text: "We keep our pricing affordable and give you the best value for Gurgaon businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
           },
         },
         {

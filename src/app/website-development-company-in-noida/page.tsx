@@ -78,7 +78,6 @@ export default function WebsiteDevelopmentNoidaPage() {
         "CMS Development",
         "Custom Web Solutions",
       ],
-      priceRange: "$$",
       sameAs: [
         "https://www.instagram.com/groxmedia1",
         "https://www.linkedin.com/in/manish-kumar-7a757b211/",
@@ -107,7 +106,7 @@ export default function WebsiteDevelopmentNoidaPage() {
           name: "How much does website development cost in Noida?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A basic business website for Noida companies starts at ₹12,000–₹28,000. E-commerce platforms with Razorpay or PayU integration start from ₹45,000. Web applications and SaaS tools are scoped individually. We provide a fixed-price quote after understanding your requirements — no variable billing surprises.",
+            text: "We keep our pricing affordable and give you the best value for Noida businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
           },
         },
         {
@@ -131,7 +130,7 @@ export default function WebsiteDevelopmentNoidaPage() {
           name: "Will the website load properly on all devices?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Every build we deliver is tested across phones, tablets, and desktops before launch. We code mobile-first — smallest screen first, scaling up — so the experience on a ₹12,000 Android phone is as solid as on a MacBook. No afterthought responsiveness.",
+            text: "Every build we deliver is tested across phones, tablets, and desktops before launch. We code mobile-first — smallest screen first, scaling up — so the experience on a budget Android phone is as solid as on a MacBook. No afterthought responsiveness.",
           },
         },
         {

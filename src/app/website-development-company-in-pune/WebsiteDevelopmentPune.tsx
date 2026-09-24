@@ -877,7 +877,7 @@ export default function WebsiteDevelopmentPune() {
             {[
               {
                 q: "How much does website development cost in Pune?",
-                a: "Pune's market is competitive and price-conscious, so we offer clear tiered pricing. A business website starts at ₹12,000–₹25,000. E-commerce platforms start from ₹40,000. Web applications and SaaS products are priced based on scope after a discovery call. Every quote is fixed — no billing-by-the-hour surprises.",
+                a: "We keep our pricing affordable and give you the best value for Pune businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
               },
               {
                 q: "How long does web development take for a Pune business?",

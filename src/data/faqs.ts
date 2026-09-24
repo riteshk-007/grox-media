@@ -163,7 +163,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: "General",
     question: "How much does a project cost?",
     answer:
-      "Pricing depends on scope and complexity. A basic business website starts around ₹25,000. An ecommerce platform or SaaS product starts higher. We always share a detailed quote before any work begins — no surprises.",
+      "We keep our pricing affordable and give you the best value for your business. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
   },
   {
     category: "General",

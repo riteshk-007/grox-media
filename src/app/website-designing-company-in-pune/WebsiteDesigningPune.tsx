@@ -859,7 +859,7 @@ export default function WebsiteDesigningPune() {
             {[
               {
                 q: "How much does website design cost in Pune?",
-                a: "Pune's market values quality at a reasonable price point. A professionally designed business website starts at ₹10,000–₹22,000. D2C product site designs with full e-commerce UI start from ₹28,000. Dashboard and web app UI/UX is quoted after scoping. All quotes are fixed and include revision rounds.",
+                a: "We keep our pricing affordable and give you the best value for Pune businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
               },
               {
                 q: "We're a tech company in Pune — do you understand SaaS product design?",

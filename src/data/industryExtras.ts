@@ -15,7 +15,7 @@ export type IndustryExtras = {
 export const industryExtras: Record<IndustryKey, IndustryExtras> = {
   gym: {
     mistakes: [
-      { title: "Hiding the prices", description: "Visitors who can't see even a starting price often assume you're expensive and leave. Show plans or at least a \"starting from\" figure." },
+      { title: "Unclear membership options", description: "Visitors who can't tell which plans you offer and what each includes often leave. Show plans and benefits clearly, with a quick enquiry button for the best offer." },
       { title: "No trial or visit option", description: "Asking people to call for everything loses the ones who browse late at night. A free-trial form captures them." },
       { title: "Stock photos of models", description: "Members want to see your actual equipment, space, and trainers. Real photos build more trust than generic images." },
       { title: "Outdated timings and offers", description: "Old class schedules and expired offers make a gym look inactive. An easy admin panel keeps them current." },
@@ -158,7 +158,7 @@ export const industryExtras: Record<IndustryKey, IndustryExtras> = {
   },
   printing: {
     mistakes: [
-      { title: "No prices or minimum quantities", description: "Customers leave when they can't estimate cost. Show starting prices or a calculator." },
+      { title: "Unclear products and quantities", description: "Customers leave when they can't see what you print, paper options, or minimum quantities. A quick quote form makes it easy to ask for the best price." },
       { title: "No way to upload artwork", description: "Asking customers to email files adds friction. Upload on the order page is simpler." },
       { title: "No samples of finished work", description: "Photos of real print jobs show paper quality and finishes better than descriptions." },
       { title: "Unclear turnaround times", description: "Businesses often need printing urgently. State delivery or pickup timelines clearly." },

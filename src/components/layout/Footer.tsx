@@ -24,6 +24,12 @@ const cityLinks = [
   { name: "Pune", design: "/website-designing-company-in-pune", dev: "/website-development-company-in-pune" },
 ];
 
+// Footer shows a curated set of Gurgaon (primary market) industry pages; the
+// full list of every industry × location page lives on /sitemap.
+const footerIndustryPages = industryPages
+  .filter((p) => p.location.key === "gurgaon")
+  .slice(0, 16);
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-white/90 overflow-x-hidden">
@@ -159,10 +165,10 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-gray-100 pt-8">
           <h4 className="text-sm font-semibold text-[#111827]">
-            Website design by industry
+            Website designing by industry in Gurgaon
           </h4>
           <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-sm text-[#6b7280] sm:grid-cols-2 lg:grid-cols-4">
-            {industryPages.map((p) => (
+            {footerIndustryPages.map((p) => (
               <li key={p.slug}>
                 <Link href={`/${p.slug}`} className="transition hover:text-groxBlue">
                   {p.title}
@@ -170,6 +176,9 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+          <Link href="/sitemap" className="mt-4 inline-block text-sm font-semibold text-groxBlue hover:underline">
+            View all industries in Gurgaon &amp; Dwarka →
+          </Link>
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-8 text-center text-xs text-[#6b7280] sm:flex-row sm:text-left">

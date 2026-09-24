@@ -867,7 +867,7 @@ export default function WebsiteDesigningDelhi() {
             {[
               {
                 q: "How much does professional website design cost in Delhi?",
-                a: "For Delhi businesses, a professionally designed website starts at ₹14,000–₹30,000 depending on page count and complexity. E-commerce design with product page templates starts from ₹30,000. We give an exact quote after understanding your brand, audience, and business goals — no approximations upfront.",
+                a: "We keep our pricing affordable and give you the best value for Delhi businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
               },
               {
                 q: "How long does the full website design process take?",

@@ -18,14 +18,13 @@ import {
   MessageCircle,
   KeyRound,
   Clock,
-  IndianRupee,
+  BadgeCheck,
   ShieldCheck,
   MessageSquare,
 } from "lucide-react";
 import SectionBadge from "@/components/ui/SectionBadge";
 import GetStartedDialog from "@/components/shared/GetStartedDialog";
 import { industryPages, getIndustryPage } from "@/data/industryPages";
-import { industryExtras } from "@/data/industryExtras";
 import { cn } from "@/lib/utils";
 
 // No scroll-triggered entrance animations on this page: content must be
@@ -94,20 +93,24 @@ export default function IndustryPageContent({ slug }: { slug: string }) {
 
   if (!page) return null;
   const { industry, location, depth } = page;
-  const extras = industryExtras[industry.key];
+  const { extras } = page;
 
   const otherLocation = industryPages.find(
     (p) => p.industry.key === industry.key && p.location.key !== location.key
   );
-  const sameLocation = industryPages.filter(
-    (p) => p.location.key === location.key && p.industry.key !== industry.key
+  const locPages = industryPages.filter((p) => p.location.key === location.key);
+  const selfIdx = locPages.findIndex((p) => p.slug === page.slug);
+  // Nine neighbouring industries (wrapping around) keep the list short while
+  // every page still receives internal links from several others.
+  const sameLocation = Array.from({ length: Math.min(9, locPages.length - 1) }, (_, i) =>
+    locPages[(selfIdx + 1 + i) % locPages.length]
   );
 
   const featureTitles = industry.features.map((f) => f.title);
   const packages = [
     {
       name: "Starter",
-      price: "From ₹25,000",
+      price: "Budget-friendly start",
       note: `For new ${industry.name.toLowerCase()} businesses that need a professional presence fast.`,
       highlight: false,
       items: [
@@ -120,7 +123,7 @@ export default function IndustryPageContent({ slug }: { slug: string }) {
     },
     {
       name: "Growth",
-      price: "Custom quote",
+      price: "Best value",
       note: `Our most common choice for established ${industry.name.toLowerCase()} businesses in ${location.name}.`,
       highlight: true,
       items: [
@@ -132,7 +135,7 @@ export default function IndustryPageContent({ slug }: { slug: string }) {
     },
     {
       name: "Complete",
-      price: "Custom quote",
+      price: "All-in-one growth",
       note: "For businesses that want the website plus ongoing marketing.",
       highlight: false,
       items: [
@@ -250,10 +253,10 @@ export default function IndustryPageContent({ slug }: { slug: string }) {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <IndianRupee className="mt-0.5 h-5 w-5 shrink-0 text-groxBlue" aria-hidden />
+                <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-groxBlue" aria-hidden />
                 <div>
-                  <dt className="font-semibold text-[#111827]">Starting price</dt>
-                  <dd className="text-[#6b7280]">From ₹25,000 — fixed quote before work starts</dd>
+                  <dt className="font-semibold text-[#111827]">Affordable pricing</dt>
+                  <dd className="text-[#6b7280]">Best price for your budget — clear, fixed quote after a free call</dd>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -397,11 +400,11 @@ export default function IndustryPageContent({ slug }: { slug: string }) {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Packages"
-            title={`${industry.name} Website Cost in ${location.name}`}
+            title={`Affordable ${industry.name} Website Packages in ${location.name}`}
             id="packages-heading"
           />
           <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-[#6b7280] md:text-base">
-            Every project gets a fixed written quote after a free consultation. These packages show what is typically included at each level.
+            Get a professional {industry.name.toLowerCase()} website at the best price for your budget. After a free consultation we share a clear, fixed quote — no hidden charges, no surprises.
           </p>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {packages.map((pkg) => (
@@ -439,7 +442,7 @@ export default function IndustryPageContent({ slug }: { slug: string }) {
                     focusRing
                   )}
                 >
-                  Get a quote
+                  Get the best price
                 </button>
               </div>
             ))}

@@ -80,7 +80,6 @@ export default function WebsiteDevelopmentMumbaiPage() {
         "Enterprise Web Solutions",
         "CMS Development",
       ],
-      priceRange: "$$",
       sameAs: [
         "https://www.instagram.com/groxmedia1",
         "https://www.linkedin.com/in/manish-kumar-7a757b211/",
@@ -109,7 +108,7 @@ export default function WebsiteDevelopmentMumbaiPage() {
           name: "How much does enterprise website development cost in Mumbai?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For Mumbai businesses, a professional business website starts at ₹20,000–₹40,000. High-traffic e-commerce platforms start from ₹60,000. Enterprise web applications with custom integrations, API layers, and multi-user systems are scoped individually. We quote fixed prices — no time-and-materials billing.",
+            text: "We keep our pricing affordable and give you the best value for Mumbai businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
           },
         },
         {

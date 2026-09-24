@@ -873,7 +873,7 @@ export default function WebsiteDesigningNoida() {
             {[
               {
                 q: "How much does website design cost in Noida?",
-                a: "Website design pricing in Noida starts at ₹10,000–₹25,000 for a professional business site. Landing pages and campaign pages start at ₹7,000. Full UI/UX design for web applications or SaaS dashboards is scoped after a requirements call. All pricing is fixed and itemised — no vague 'design package' charges.",
+                a: "We keep our pricing affordable and give you the best value for Noida businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
               },
               {
                 q: "What's the difference between website design and development — do you do both?",

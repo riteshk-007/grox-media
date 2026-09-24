@@ -81,7 +81,6 @@ export default function WebsiteDesigningMumbaiPage() {
         "Landing Page Design",
         "Dashboard Design",
       ],
-      priceRange: "$$",
       sameAs: [
         "https://www.instagram.com/groxmedia1",
         "https://www.linkedin.com/in/manish-kumar-7a757b211/",
@@ -110,7 +109,7 @@ export default function WebsiteDesigningMumbaiPage() {
           name: "How much does premium website design cost in Mumbai?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For Mumbai businesses, a professionally designed website starts at ₹18,000–₹40,000. Premium brand-aligned websites for finance and enterprise clients start from ₹50,000. D2C product design with full e-commerce UI is scoped individually. Every engagement starts with a clear brief and fixed pricing.",
+            text: "We keep our pricing affordable and give you the best value for Mumbai businesses. The final cost depends on the pages, features, and integrations you need, so after a free consultation we share a clear, fixed quote that fits your budget — with no hidden charges and no surprises later.",
           },
         },
         {
