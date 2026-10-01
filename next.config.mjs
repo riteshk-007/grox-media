@@ -31,6 +31,13 @@ const nextConfig = {
             },
         ];
     },
+    // The old Next.js/Sanity blog lived at /blogs; the blog is now WordPress at /blog/.
+    async redirects() {
+        return [
+            { source: '/blogs', destination: '/blog/', permanent: true },
+            { source: '/blogs/:path*', destination: '/blog/', permanent: true },
+        ];
+    },
     experimental: {
         turbo: {
             root: __dirname,

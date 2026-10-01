@@ -3,6 +3,8 @@ import Link from "next/link";
 export const metadata = {
   title: "404 - Page Not Found",
   robots: { index: false, follow: true },
+  // Do not inherit the layout's canonical, which would point every 404 at the homepage.
+  alternates: { canonical: null },
 };
 
 export default function NotFound() {

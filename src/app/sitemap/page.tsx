@@ -17,8 +17,10 @@ export const metadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
+  // A list of links, not content: keep it crawlable so Google follows the links,
+  // but out of the index (and out of sitemap.xml).
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

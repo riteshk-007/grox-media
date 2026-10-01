@@ -10,7 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Stable content-revision date. Bump this when page content is meaningfully
   // updated — using `new Date()` here would make every URL claim it changed on
   // every build, which devalues the signal for crawlers.
-  const lastModified = new Date("2026-09-08");
+  const lastModified = new Date("2026-10-01");
 
   // Noida is the registered office, so its city pages carry the strongest
   // local signal; the remaining cities are served from there.
@@ -47,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const industryLandingPages = industryPages.map((p) => ({
     url: `${baseUrl}/${p.slug}`,
-    lastModified: new Date("2026-09-24"),
+    lastModified: lastModified,
     changeFrequency: "monthly" as const,
     // Gurgaon is the primary target market.
     priority: p.location.key === "gurgaon" ? 0.85 : 0.75,
@@ -95,12 +95,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/sitemap`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.3,
     },
     {
       url: `${baseUrl}/privacy`,
