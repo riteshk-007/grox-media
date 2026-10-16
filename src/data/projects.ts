@@ -41,6 +41,17 @@ export const projects: Project[] = [
     filter: "Web Development",
   },
   {
+    title: "Basmni",
+    category: "Hydro-Power & Infrastructure Engineering",
+    description:
+      "Corporate website for Basmni Technologies Pvt. Ltd., a Delhi-headquartered engineering company serving India's hydropower and water-resource sectors. The site presents their core capabilities — Pressurized Air Cables (PAC) for high-voltage transmission, trash rack cleaning machines, deep dam dredging, and civil works — along with project highlights and an enquiry flow for consultations.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/basmni.png",
+    tags: ["Next.js", "Static Site", "Hydro-Power", "Engineering", "Infrastructure"],
+    results: "A credible, capability-led web presence for engaging hydropower and infrastructure clients",
+    link: "https://basmni.com/",
+    filter: "Web Development",
+  },
+  {
     title: "Credify India",
     category: "Background Verification & KYC API",
     description:
