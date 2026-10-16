@@ -30,6 +30,17 @@ export type VideoItem = {
 
 export const projects: Project[] = [
   {
+    title: "One Ten Home Solutions",
+    category: "HVAC & Home Comfort Services — Canada",
+    description:
+      "A Canadian-owned residential heating and cooling company serving the GTA. The website presents their repair, installation, and maintenance services — furnaces, air conditioning, heat pumps, and smart thermostats — with a clear four-step approach, trust signals, and a simple request-service flow so homeowners can reach the team quickly.",
+    image: "https://pub-a3d2b35862c1483894ffbee942bb995e.r2.dev/onetenhomesolutions.jpeg",
+    tags: ["Next.js", "Static Site", "HVAC", "Home Services", "Canada"],
+    results: "A clear, trust-building web presence that makes it easy for GTA homeowners to request service",
+    link: "https://onetenhomesolutions.com/",
+    filter: "Web Development",
+  },
+  {
     title: "Credify India",
     category: "Background Verification & KYC API",
     description:
