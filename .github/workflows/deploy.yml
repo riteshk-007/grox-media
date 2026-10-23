@@ -29,6 +29,27 @@ jobs:
             NODE_OPTIONS="--max-old-space-size=1024" pnpm run build
 
             echo "🔄 Restarting PM2 (zero downtime)..."
-            pm2 reload grox-media --update-env || pm2 start ecosystem.config.js
+            # Reload if the process exists, otherwise (re)create it from the
+            # repo's ecosystem file so a missing process can never leave the
+            # site on a 502.
+            if pm2 describe grox-media > /dev/null 2>&1; then
+              pm2 reload ecosystem.config.js --update-env
+            else
+              pm2 start ecosystem.config.js
+            fi
+
+            # Persist the process list so it survives a server reboot.
+            pm2 save
+
+            echo "🩺 Health check..."
+            # Same port resolution as server.mjs: PORT from .env, default 7001.
+            APP_PORT=$(grep -E "^PORT=" .env 2>/dev/null | tail -1 | cut -d= -f2 | tr -d "\"' " || true)
+            APP_PORT=${APP_PORT:-7001}
+            sleep 5
+            curl -fsS -o /dev/null --max-time 20 "http://127.0.0.1:${APP_PORT}/" || {
+              echo "App did not respond on port ${APP_PORT}"
+              pm2 logs grox-media --lines 40 --nostream
+              exit 1
+            }
 
             echo "✅ Deployment Done!"
