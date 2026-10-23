@@ -43,7 +43,7 @@ jobs:
 
             echo "🩺 Health check..."
             # Same port resolution as server.mjs: PORT from .env, default 7001.
-            APP_PORT=$(grep -E "^PORT=" .env 2>/dev/null | tail -1 | cut -d= -f2 | tr -d "\"' " || true)
+            APP_PORT=$(sed -n "s/^PORT=//p" .env 2>/dev/null | tail -1 | tr -cd "0-9")
             APP_PORT=${APP_PORT:-7001}
             sleep 5
             curl -fsS -o /dev/null --max-time 20 "http://127.0.0.1:${APP_PORT}/" || {
