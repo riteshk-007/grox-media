@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import {
-  CONSENT_CHANGED_EVENT,
   OPEN_SETTINGS_EVENT,
   clearTrackingCookies,
   readConsent,
