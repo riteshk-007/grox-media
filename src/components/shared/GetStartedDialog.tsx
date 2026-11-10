@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import ConsentCheckbox from "@/components/shared/ConsentCheckbox";
+import { CONSENT_REQUIRED_MESSAGE, consentPayload } from "@/lib/privacy";
 import { trackLeadSubmission } from "@/lib/gtm";
 
 interface GetStartedDialogProps {
@@ -31,6 +33,8 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose, form
         message: "",
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [consent, setConsent] = useState(false);
+    const [consentError, setConsentError] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
 
@@ -55,7 +59,8 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose, form
         if (!formData.message.trim()) newErrors.message = "Message is required";
 
         setErrors(newErrors);
-        if (Object.keys(newErrors).length > 0) return;
+        if (!consent) setConsentError(CONSENT_REQUIRED_MESSAGE);
+        if (Object.keys(newErrors).length > 0 || !consent) return;
 
         setIsSubmitting(true);
 
@@ -67,6 +72,7 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose, form
                     name: formData.name,
                     email: formData.email,
                     mobileNumber: formData.phone,
+                    ...consentPayload(formName),
                     message: serviceName
                         ? `[Enquiry: ${serviceName}] ${formData.message}`
                         : formData.message,
@@ -85,6 +91,7 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose, form
             trackLeadSubmission(formName);
 
             setIsSubmitted(true);
+            setConsent(false);
             setIsSubmitting(false);
 
             setTimeout(() => {
@@ -242,6 +249,15 @@ const GetStartedDialog: React.FC<GetStartedDialogProps> = ({ show, onClose, form
                                 {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                             </div>
 
+                            <ConsentCheckbox
+                              id="consent-getstarted"
+                              checked={consent}
+                              onChange={(v) => {
+                                setConsent(v);
+                                if (v) setConsentError("");
+                              }}
+                              error={consentError}
+                            />
                             <Button
                                 type="submit"
                                 disabled={isSubmitting}

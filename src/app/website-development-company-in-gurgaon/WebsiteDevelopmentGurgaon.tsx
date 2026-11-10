@@ -53,6 +53,8 @@ import {
   FileText,
 } from "lucide-react";
 import { toast } from "sonner";
+import ConsentCheckbox from "@/components/shared/ConsentCheckbox";
+import { CONSENT_REQUIRED_MESSAGE, consentPayload } from "@/lib/privacy";
 import { cn } from "@/lib/utils";
 import { trackLeadSubmission } from "@/lib/gtm";
 import SectionBadge from "@/components/ui/SectionBadge";
@@ -364,6 +366,8 @@ export default function WebsiteDevelopmentGurgaon() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<
     Partial<Record<keyof FormData, string>>
@@ -385,7 +389,8 @@ export default function WebsiteDevelopmentGurgaon() {
     if (!phoneRe.test(cleaned)) newErrors.phone = "Enter a valid phone number";
     if (!formData.message.trim()) newErrors.message = "Message is required";
     setErrors(newErrors);
-    if (Object.keys(newErrors).length > 0) return;
+    if (!consent) setConsentError(CONSENT_REQUIRED_MESSAGE);
+    if (Object.keys(newErrors).length > 0 || !consent) return;
 
     setIsSubmitting(true);
     try {
@@ -396,6 +401,7 @@ export default function WebsiteDevelopmentGurgaon() {
           name: formData.name,
           email: formData.email,
           mobileNumber: formData.phone,
+          ...consentPayload("website_development_gurgaon_form"),
           message: formData.message,
         }),
       });
@@ -408,6 +414,7 @@ export default function WebsiteDevelopmentGurgaon() {
       toast.success(json?.message || "Message sent successfully!");
       trackLeadSubmission("website_development_gurgaon_form");
       setIsSubmitted(true);
+      setConsent(false);
       setIsSubmitting(false);
       setTimeout(() => {
         setFormData({ name: "", email: "", phone: "", message: "" });
@@ -603,6 +610,15 @@ export default function WebsiteDevelopmentGurgaon() {
                       {errors.message}
                     </p>
                   )}
+                  <ConsentCheckbox
+                    id="consent-development-gurgaon"
+                    checked={consent}
+                    onChange={(v) => {
+                      setConsent(v);
+                      if (v) setConsentError("");
+                    }}
+                    error={consentError}
+                  />
                   <button
                     type="submit"
                     disabled={isSubmitting}

@@ -4,7 +4,7 @@ import PrivacyContent from "./PrivacyContent";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Grox Media LLP collects, uses, and protects the information you share through this website, and how to request removal of your data.",
+    "How Grox Media LLP collects, uses and protects your personal data under India's DPDP Act, who we share it with, how long we keep it, and how to use your rights, withdraw consent or make a complaint.",
   alternates: {
     canonical: "/privacy",
   },

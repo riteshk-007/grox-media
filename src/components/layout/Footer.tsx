@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { industryPages } from "@/data/industryPages";
+import { openCookieSettings } from "@/lib/consent";
 import { Instagram, Linkedin, Phone, Mail } from "lucide-react";
 
 const quickLinks = [
@@ -197,6 +198,14 @@ export default function Footer() {
             <Link href="/sitemap" className="hover:text-groxBlue">
               Sitemap
             </Link>
+            <span className="text-gray-300">|</span>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="hover:text-groxBlue"
+            >
+              Cookie settings
+            </button>
           </div>
         </div>
       </div>

@@ -15,9 +15,12 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { toast } from "sonner";
+import ConsentCheckbox from "@/components/shared/ConsentCheckbox";
+import { CONSENT_REQUIRED_MESSAGE, consentPayload } from "@/lib/privacy";
 import { cn } from "@/lib/utils";
 import SectionBadge from "@/components/ui/SectionBadge";
 import { trackLeadSubmission } from "@/lib/gtm";
+import ConsentMap from "@/components/shared/ConsentMap";
 
 type FormData = {
   name: string;
@@ -42,6 +45,8 @@ export default function ContactContent() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<
     Partial<Record<keyof FormData, string>>
@@ -63,7 +68,8 @@ export default function ContactContent() {
     if (!phoneRe.test(cleaned)) newErrors.phone = "Enter a valid phone number";
     if (!formData.message.trim()) newErrors.message = "Message is required";
     setErrors(newErrors);
-    if (Object.keys(newErrors).length > 0) return;
+    if (!consent) setConsentError(CONSENT_REQUIRED_MESSAGE);
+    if (Object.keys(newErrors).length > 0 || !consent) return;
 
     setIsSubmitting(true);
     try {
@@ -74,6 +80,7 @@ export default function ContactContent() {
           name: formData.name,
           email: formData.email,
           mobileNumber: formData.phone,
+          ...consentPayload("contact_page_form"),
           message: formData.message,
         }),
       });
@@ -86,6 +93,7 @@ export default function ContactContent() {
       toast.success(json?.message || "Message sent successfully!");
       trackLeadSubmission("contact_page_form");
       setIsSubmitted(true);
+      setConsent(false);
       setIsSubmitting(false);
       setTimeout(() => {
         setFormData({ name: "", email: "", phone: "", message: "" });
@@ -347,6 +355,15 @@ export default function ContactContent() {
                     {errors.message}
                   </p>
                 )}
+                <ConsentCheckbox
+                  id="consent-contact"
+                  checked={consent}
+                  onChange={(v) => {
+                    setConsent(v);
+                    if (v) setConsentError("");
+                  }}
+                  error={consentError}
+                />
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -388,11 +405,9 @@ export default function ContactContent() {
 
 <div className="mx-auto max-w-6xl px-6 pb-12 pt-8">
          <div className="overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
-           <iframe
+           <ConsentMap
              title="Map of Noida Office"
              className="h-64 w-full grayscale-[20%] md:h-80"
-             loading="lazy"
-             referrerPolicy="no-referrer-when-downgrade"
              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3505.873910907143!2d77.40826037549647!3d28.51344107573003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMwJzQ4LjQiTiA3N8KwMjQnMzkuMCJF!5e0!3m2!1sen!2sin!4v1780820263351!5m2!1sen!2sin"
            />
          </div>

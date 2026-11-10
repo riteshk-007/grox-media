@@ -28,7 +28,7 @@ export function escapeHtml(value: string): string {
 
 /** Collapse line breaks so user text can never inject e-mail headers. */
 export function singleLine(value: string): string {
-  return value.replace(/[\r\n  ]+/g, " ").trim();
+  return value.replace(/[\r\n\u2028\u2029]+/g, " ").trim();
 }
 
 // ─── rate limiting (in-memory; the app runs as a single PM2 process) ────────
@@ -45,9 +45,9 @@ function allow(key: string, limit: number, windowMs: number, now: number): boole
   hits.set(key, recent);
   // Keep memory bounded: drop stale keys occasionally.
   if (hits.size > 5000) {
-    for (const [k, v] of hits) {
+    hits.forEach((v, k) => {
       if (v.every((t) => now - t >= windowMs)) hits.delete(k);
-    }
+    });
   }
   return true;
 }
@@ -146,7 +146,7 @@ export async function guardSubmission(
   }
 
   const rawForm = typeof body.consentFormName === "string" ? body.consentFormName : "";
-  const formName = /^[a-z0-9_-]{1,60}$/i.test(rawForm) ? rawForm : "unknown";
+  const formName = /^[a-z0-9_-]{1,100}$/i.test(rawForm) ? rawForm : "unknown";
   const rawVersion = typeof body.privacyPolicyVersion === "string" ? body.privacyPolicyVersion : "";
   const clientPolicyVersion = /^[0-9a-z._-]{1,20}$/i.test(rawVersion) ? rawVersion : "unknown";
 

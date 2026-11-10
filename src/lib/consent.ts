@@ -67,7 +67,9 @@ export function clearTrackingCookies(): void {
       if (!name || !TRACKING_COOKIE.test(name)) continue;
       const expire = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
       document.cookie = expire;
-      for (const d of domains) document.cookie = `${expire}; domain=${d}`;
+      domains.forEach((d) => {
+        document.cookie = `${expire}; domain=${d}`;
+      });
     }
   } catch {
     /* ignore */

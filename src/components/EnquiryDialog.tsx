@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import ConsentCheckbox from "@/components/shared/ConsentCheckbox";
+import { CONSENT_REQUIRED_MESSAGE, consentPayload } from "@/lib/privacy";
 
 type Project = {
   title: string;
@@ -43,6 +45,8 @@ const EnquiryDialog: React.FC<EnquiryDialogProps> = ({
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>(
     {}
@@ -69,7 +73,8 @@ const EnquiryDialog: React.FC<EnquiryDialogProps> = ({
     if (!formData.message.trim()) newErrors.message = "Message is required";
 
     setErrors(newErrors);
-    if (Object.keys(newErrors).length > 0) return;
+    if (!consent) setConsentError(CONSENT_REQUIRED_MESSAGE);
+    if (Object.keys(newErrors).length > 0 || !consent) return;
 
     if (!project) {
       toast.error("Project information is missing");
@@ -86,6 +91,7 @@ const EnquiryDialog: React.FC<EnquiryDialogProps> = ({
           name: formData.name,
           email: formData.email,
           mobileNumber: formData.phone,
+          ...consentPayload("portfolio_enquiry_form"),
           message: formData.message,
           projectTitle: project.title,
           projectCategory: project.category,
@@ -104,6 +110,7 @@ const EnquiryDialog: React.FC<EnquiryDialogProps> = ({
       toast.success(json?.message || "Enquiry sent successfully!");
 
       setIsSubmitted(true);
+      setConsent(false);
       setIsSubmitting(false);
 
       setTimeout(() => {
@@ -301,6 +308,15 @@ const EnquiryDialog: React.FC<EnquiryDialogProps> = ({
                 )}
               </div>
 
+              <ConsentCheckbox
+                id="consent-enquiry"
+                checked={consent}
+                onChange={(v) => {
+                  setConsent(v);
+                  if (v) setConsentError("");
+                }}
+                error={consentError}
+              />
               <Button
                 type="submit"
                 disabled={isSubmitting}

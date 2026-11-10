@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Instagram, Linkedin, Check } from "lucide-react";
 import { toast } from "sonner";
+import ConsentCheckbox from "@/components/shared/ConsentCheckbox";
+import { CONSENT_REQUIRED_MESSAGE, consentPayload } from "@/lib/privacy";
 import { cn } from "@/lib/utils";
 import { trackLeadSubmission } from "@/lib/gtm";
 
@@ -33,6 +35,8 @@ const Contact = ({ showIntro = true }: ContactProps) => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<
     Partial<Record<keyof FormData, string>>
@@ -58,7 +62,8 @@ const Contact = ({ showIntro = true }: ContactProps) => {
     if (!formData.message.trim()) newErrors.message = "Message is required";
 
     setErrors(newErrors);
-    if (Object.keys(newErrors).length > 0) return;
+    if (!consent) setConsentError(CONSENT_REQUIRED_MESSAGE);
+    if (Object.keys(newErrors).length > 0 || !consent) return;
 
     setIsSubmitting(true);
 
@@ -70,6 +75,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
           name: formData.name,
           email: formData.email,
           mobileNumber: formData.phone,
+          ...consentPayload("home_contact_form"),
           message: formData.message,
         }),
       });
@@ -86,6 +92,7 @@ const Contact = ({ showIntro = true }: ContactProps) => {
       trackLeadSubmission("home_contact_form");
 
       setIsSubmitted(true);
+      setConsent(false);
       setIsSubmitting(false);
 
       setTimeout(() => {
@@ -347,6 +354,15 @@ const Contact = ({ showIntro = true }: ContactProps) => {
                     <p className="text-sm text-red-500">{errors.message}</p>
                   )}
                 </div>
+                <ConsentCheckbox
+                  id="consent-home"
+                  checked={consent}
+                  onChange={(v) => {
+                    setConsent(v);
+                    if (v) setConsentError("");
+                  }}
+                  error={consentError}
+                />
                 <Button
                   type="submit"
                   disabled={isSubmitting}

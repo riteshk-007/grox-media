@@ -3,6 +3,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingButtons from "@/components/layout/FloatingButtons";
+import CookieConsent from "@/components/layout/CookieConsent";
 import { Toaster } from "@/components/ui/sonner";
 
 export default function AppShell({
@@ -17,6 +18,7 @@ export default function AppShell({
       <FloatingButtons />
       <Toaster />
       <Footer />
+      <CookieConsent />
 
     </>
   );

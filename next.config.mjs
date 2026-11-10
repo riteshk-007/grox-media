@@ -18,6 +18,20 @@ const nextConfig = {
     async headers() {
         return [
             {
+                // Baseline security headers for every page. No Content-Security-Policy on
+                // purpose: Google Tag Manager injects inline scripts and a strict CSP
+                // would silently break it. Add one only after testing it with GTM.
+                source: '/:path*',
+                headers: [
+                    { key: 'X-Content-Type-Options', value: 'nosniff' },
+                    { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+                    { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+                    { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+                    // HTTPS-only site. No includeSubDomains/preload: those are hard to undo.
+                    { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
+                ],
+            },
+            {
                 source: '/_next/image(.*)',
                 headers: [
                     { key: 'Cache-Control', value: 'public, max-age=120, stale-while-revalidate=60' },
