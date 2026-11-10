@@ -1,5 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import {
+  guardSubmission,
+  escapeHtml,
+  singleLine,
+  buildConsentProof,
+  logMailError,
+} from "@/lib/formGuard";
 
 const ALLOWED_ORIGINS = [
   "https://groxmedia.in",
@@ -24,13 +31,13 @@ function buildAdminTemplate({
   email,
   mobileNumber,
   message,
-  age,
+  consentProof,
 }: {
   name: string;
   email: string;
   mobileNumber: string;
   message: string;
-  age?: string;
+  consentProof: string;
 }) {
   return `
   <html>
@@ -67,15 +74,11 @@ function buildAdminTemplate({
           <div class="label">Mobile</div>
           <div class="value">${mobileNumber}</div>
         </div>
-        ${
-          age
-            ? `<div class="field"><div class="label">Age</div><div class="value">${age}</div></div>`
-            : ""
-        }
         <div class="field">
           <div class="label">Message</div>
           <div class="value">${message.replace(/\n/g, "<br>")}</div>
         </div>
+${consentProof}
         <p style="font-size:12px;color:#999;text-align:right;margin-top:20px;">
           Submitted: ${new Date().toLocaleString("en-IN", {
             timeZone: "Asia/Kolkata",
@@ -178,32 +181,44 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const { name, email, mobileNumber, message, age } = await request.json();
-
-    if (!name || !email || !mobileNumber || !message) {
+    // Consent, validation and rate limiting happen before anything is mailed.
+    const guard = await guardSubmission(request);
+    if (!guard.ok) {
       const response = NextResponse.json(
-        { error: "All fields are required" },
-        { status: 400 }
+        { error: guard.error },
+        { status: guard.status }
       );
       return setCorsHeaders(response, origin);
     }
+    const { name, email, mobileNumber, message, consent } = guard.data;
 
     const adminRecipients = process.env.NEXT_PUBLIC_TO_EMAIL?.split(",") || [];
+
+    // Bodies get HTML-escaped text; subjects get plain text with line breaks removed.
+    const safe = {
+      name: escapeHtml(name),
+      email: escapeHtml(email),
+      mobileNumber: escapeHtml(mobileNumber),
+      message: escapeHtml(message),
+    };
 
     // 📨 Send both mails in parallel
     await Promise.all([
       transporter.sendMail({
         from: `"Grox Media" <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
         to: adminRecipients,
-        subject: `New Contact: ${name} | ${mobileNumber}`,
-        html: buildAdminTemplate({ name, email, mobileNumber, message, age }),
+        subject: `New Contact: ${singleLine(name)} | ${singleLine(mobileNumber)}`,
+        html: buildAdminTemplate({
+          ...safe,
+          consentProof: buildConsentProof(consent),
+        }),
         replyTo: email,
       }),
       transporter.sendMail({
         from: `"Grox Media" <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
         to: email,
         subject: `Thanks for contacting Grox Media`,
-        html: buildUserTemplate({ name, message }),
+        html: buildUserTemplate({ name: safe.name, message: safe.message }),
       }),
     ]);
 
@@ -213,7 +228,7 @@ export async function POST(request: NextRequest) {
     });
     return setCorsHeaders(response, origin);
   } catch (error) {
-    console.error("Mail error:", error);
+    logMailError(error);
     const response = NextResponse.json(
       { error: "Failed to send email. Please try again later." },
       { status: 500 }

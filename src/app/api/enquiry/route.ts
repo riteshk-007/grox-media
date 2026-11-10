@@ -1,5 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import {
+  guardSubmission,
+  escapeHtml,
+  singleLine,
+  buildConsentProof,
+  logMailError,
+} from "@/lib/formGuard";
 
 const ALLOWED_ORIGINS = [
   "https://groxmedia.in",
@@ -27,6 +34,7 @@ function buildAdminTemplate({
   projectTitle,
   projectCategory,
   projectDescription,
+  consentProof,
 }: {
   name: string;
   email: string;
@@ -35,6 +43,7 @@ function buildAdminTemplate({
   projectTitle: string;
   projectCategory: string;
   projectDescription: string;
+  consentProof: string;
 }) {
   return `
   <html>
@@ -84,6 +93,7 @@ function buildAdminTemplate({
           <div class="label">Message</div>
           <div class="value">${message.replace(/\n/g, "<br>")}</div>
         </div>
+${consentProof}
         <p style="font-size:12px;color:#999;text-align:right;margin-top:20px;">
           Submitted: ${new Date().toLocaleString("en-IN", {
             timeZone: "Asia/Kolkata",
@@ -192,48 +202,64 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const {
-      name,
-      email,
-      mobileNumber,
-      message,
-      projectTitle,
-      projectCategory,
-      projectDescription,
-    } = await request.json();
+    // Consent, validation and rate limiting happen before anything is mailed.
+    const guard = await guardSubmission(request, {
+      projectTitle: 200,
+      projectCategory: 200,
+      projectDescription: 1000,
+    });
+    if (!guard.ok) {
+      const response = NextResponse.json(
+        { error: guard.error },
+        { status: guard.status }
+      );
+      return setCorsHeaders(response, origin);
+    }
+    const { name, email, mobileNumber, message, extras, consent } = guard.data;
 
-    if (!name || !email || !mobileNumber || !message || !projectTitle) {
+    if (!extras.projectTitle) {
       const response = NextResponse.json(
         { error: "All fields are required" },
         { status: 400 }
       );
       return setCorsHeaders(response, origin);
     }
+    const projectTitle = extras.projectTitle;
 
     const adminRecipients = process.env.NEXT_PUBLIC_TO_EMAIL?.split(",") || [];
+
+    // Bodies get HTML-escaped text; subjects get plain text with line breaks removed.
+    const safe = {
+      name: escapeHtml(name),
+      email: escapeHtml(email),
+      mobileNumber: escapeHtml(mobileNumber),
+      message: escapeHtml(message),
+      projectTitle: escapeHtml(projectTitle),
+      projectCategory: escapeHtml(extras.projectCategory || "Portfolio Project"),
+      projectDescription: escapeHtml(extras.projectDescription || ""),
+    };
 
     // 📨 Send both mails in parallel
     await Promise.all([
       transporter.sendMail({
         from: `"Grox Media" <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
         to: adminRecipients,
-        subject: `New Project Enquiry: ${projectTitle} | ${name} | ${mobileNumber}`,
+        subject: `New Project Enquiry: ${singleLine(projectTitle)} | ${singleLine(name)} | ${singleLine(mobileNumber)}`,
         html: buildAdminTemplate({
-          name,
-          email,
-          mobileNumber,
-          message,
-          projectTitle,
-          projectCategory: projectCategory || "Portfolio Project",
-          projectDescription: projectDescription || "",
+          ...safe,
+          consentProof: buildConsentProof(consent),
         }),
         replyTo: email,
       }),
       transporter.sendMail({
         from: `"Grox Media" <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
         to: email,
-        subject: `Thanks for your enquiry about ${projectTitle}`,
-        html: buildUserTemplate({ name, message, projectTitle }),
+        subject: `Thanks for your enquiry about ${singleLine(projectTitle)}`,
+        html: buildUserTemplate({
+          name: safe.name,
+          message: safe.message,
+          projectTitle: safe.projectTitle,
+        }),
       }),
     ]);
 
@@ -243,7 +269,7 @@ export async function POST(request: NextRequest) {
     });
     return setCorsHeaders(response, origin);
   } catch (error) {
-    console.error("Mail error:", error);
+    logMailError(error);
     const response = NextResponse.json(
       { error: "Failed to send enquiry. Please try again later." },
       { status: 500 }
